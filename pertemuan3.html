@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 3: Identifikasi, Asesmen Awal, RTI, dan UDL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span>ORTOPEDAGOGIK</span>
+        <span class="pill">Pertemuan 3</span>
+      </div>
+      <nav class="view-tabs" role="tablist">
+        <button class="tab-btn active" onclick="switchView('reading-view', this)">Modul Bacaan</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja Siswa</button>
+        <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Dosen</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- =========================================================================
+         BAGIAN 1: WEB PAGE PRESENTATION (BACAAN MANDIRI DOSEN & MAHASISWA)
+         ========================================================================= -->
+    <section id="reading-view" class="view-section active">
+      
+      <!-- HERO BANNER -->
+      <header class="hero-box">
+        <span class="section-label">Modul Pembelajaran Mandiri</span>
+        <h1>Identifikasi, Asesmen Awal, Kerangka Kerja RTI, dan Universal Design for Learning (UDL)</h1>
+        <p>Kajian mendalam tahapan penemuan anak berkebutuhan khusus: dari intervensi pra-rujukan, pencegahan kegagalan belajar berbasis jenjang bertingkat (MTSS/RTI), hingga perancangan kurikulum aksesibel sejak awal.</p>
+        <div class="hero-meta">
+          <span>⏱ Durasi: 2 SKS (100 Menit)</span>
+          <span>📚 Rujukan: Hallahan &amp; Kauffman (2005) &amp; Heward et al. (2017)</span>
+          <span>🎯 Capaian: Perancangan Alur Identifikasi, Skema RTI, &amp; Prinsip UDL</span>
+        </div>
+      </header>
+
+      <!-- SESI 1: PENDAHULUAN (10 MENIT) -->
+      <article class="content-card">
+        <span class="section-label">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
+        <h2>1. Jebakan "Menunggu Anak Gagal" (The Wait-to-Fail Trap)</h2>
+        <p style="margin-top: 0.75rem;">
+          Dalam praktik persekolahan konvensional, seorang murid baru mendapatkan perhatian khusus ketika ia telah berulang kali tertinggal pelajaran, tinggal kelas, atau mengalami frustrasi emosional berat. Pendekatan lama ini dikenal dalam literatur pendidikan khusus sebagai paradigma diskrepansi atau model <em>"wait to fail"</em>.
+        </p>
+
+        <div class="quote-box">
+          “Historically, students with learning disabilities were not identified until they were in the third or fourth grade—after they had already experienced significant, often devastating, academic failure.”
+          <footer>— William L. Heward, Sheila R. Alber-Morgan, &amp; Moira Konrad (2017, hlm. 142)</footer>
+        </div>
+
+        <div class="grid-two-col">
+          <div class="accent-card">
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-matcha);">Mengapa Skrining Awal Krusial?</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Hallahan &amp; Kauffman (2005) menegaskan bahwa menunda intervensi hingga jenjang kelas atas membuat defisit akademik semakin melebar dan berisiko memicu masalah perilaku sekunder, seperti hilangnya motivasi belajar dan penolakan sosial dari teman sebaya.
+            </p>
+          </div>
+          <div class="accent-card lavender">
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-lavender);">Peran Guru Kelas Reguler</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Guru kelas reguler adalah garda terdepan identifikasi. Pendeteksian hambatan bukan ditujukan untuk memberi stempel label medis, melainkan untuk memetakan kekuatan serta kebutuhan dukungan belajar sedini mungkin secara ilmiah.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 2: MATERI INTI (45 MENIT) -->
+      <article class="content-card">
+        <span class="section-label">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
+        <h2>2. Alur Penjaringan dan Penempatan Layanan Pendidikan Khusus</h2>
+        <p style="margin-top: 0.75rem;">
+          Sebagaimana diuraikan oleh <strong>Heward et al. (2017)</strong> pada Bab 2, penentuan apakah seorang siswa memerlukan program pembelajaran khusus melibatkan tahapan berurutan yang sangat ketat:
+        </p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Tahapan Proses</th>
+                <th>Aktivitas Kunci</th>
+                <th>Pihak Bertanggung Jawab</th>
+                <th>Tujuan Pedagogis Utama</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Skrining Universal (*Universal Screening*)</strong></td>
+                <td>Pemberian asesmen singkat yang cepat dan terstandar kepada seluruh siswa di kelas pada awal tahun ajaran.</td>
+                <td>Guru Kelas / Tim Asesmen Sekolah</td>
+                <td>Menjaring siswa yang berada dalam status "berisiko" (*at risk*) mengalami kesulitan belajar sebelum masalah membesar.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Intervensi Pra-rujukan (*Prereferral Intervention*)</strong></td>
+                <td>Memberikan modifikasi metode pengajaran dan bantuan terfokus langsung di kelas reguler sebelum merujuk anak ke uji diagnostik khusus.</td>
+                <td>Tim Bantuan Guru (*Teacher Assistance Team* / Tim Pengembang Inklusi)</td>
+                <td>Mencegah rujukan yang tidak perlu (*over-identification*) dan membedakan antara masalah cara mengajar vs disabilitas murni.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Rujukan Formal (*Referral*)</strong></td>
+                <td>Pengajuan resmi untuk evaluasi komprehensif setelah intervensi pra-rujukan terbukti belum memberikan kemajuan yang memadai.</td>
+                <td>Guru Kelas, Konselor, atau Orang Tua Siswa</td>
+                <td>Memulai proses asesmen multidisipliner resmi dengan izin tertulis orang tua (*informed consent*).</td>
+              </tr>
+              <tr>
+                <td><strong>4. Asesmen Multidisipliner Nondiskriminatif</strong></td>
+                <td>Pengujian menyeluruh mencakup aspek kognitif, akademik fungsional, adaptif, motorik, dan komunikasi.</td>
+                <td>Psikolog Sekolah, Ortopedagog, Terapis, Dokter Spesialis</td>
+                <td>Menentukan kelayakan (*eligibility*) anak dalam kategori layanan serta mengumpulkan data dasar perancangan PPI/IEP.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="quote-box">
+          “Prereferral intervention is a process that provides immediate instructional and/or behavioral assistance to regular education teachers to help them provide effective support to children with learning or behavior problems.”
+          <footer>— William L. Heward et al. (2017, hlm. 43)</footer>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2.1. Model Respons terhadap Intervensi (Response to Intervention / RTI)</h3>
+        <p>
+          Menurut <strong>Hallahan &amp; Kauffman (2005)</strong> serta <strong>Heward et al. (2017)</strong>, model <strong>RTI</strong> adalah sistem pendekatan multitaraf (*multi-tiered system of supports*) yang memantau kemajuan belajar murid secara berkesinambungan melalui instruksi berbasis bukti ilmiah (*evidence-based instruction*):
+        </p>
+
+        <ul style="padding-left: 1.5rem; margin-top: 0.75rem; color: var(--text-muted); line-height: 1.8;">
+          <li><strong>Tingkat 1 (Tier 1: Inti/Universal - Mencakup ~80-85% siswa):</strong> Seluruh siswa menerima pembelajaran berkualitas tinggi berbasis riset di kelas reguler. Guru melakukan skrining berkala minimal tiga kali dalam setahun untuk mengukur ketuntasan belajar universal.</li>
+          <li><strong>Tingkat 2 (Tier 2: Intervensi Terarah - Mencakup ~10-15% siswa):</strong> Murid yang menunjukkan ketertinggalan pada Tier 1 diberikan intervensi tambahan dalam kelompok kecil (3–5 anak), berdurasi 30–45 menit beberapa kali seminggu, dengan pemantauan kemajuan belajar mingguan (*progress monitoring*).</li>
+          <li><strong>Tingkat 3 (Tier 3: Intervensi Intensif Individual - Mencakup ~1-5% siswa):</strong> Siswa yang tidak menunjukkan respons memadai pada Tier 2 menerima intervensi harian yang sangat terfokus dan intensif secara satu-lawan-satu atau kelompok mikro, dan secara resmi dipertimbangkan untuk asesmen kelayakan layanan pendidikan khusus.</li>
+        </ul>
+
+        <div class="quote-box">
+          “In the RTI approach, a student’s response to increasingly intensive, scientifically validated instruction is used to identify whether the student has a disability and to provide immediate help to struggling students.”
+          <footer>— Daniel P. Hallahan &amp; James M. Kauffman (2005, hlm. 23)</footer>
+        </div>
+
+        <h3 style="margin-top: 1.75rem; margin-bottom: 0.75rem;">2.2. Pendekatan Desain Pembelajaran Universal (Universal Design for Learning / UDL)</h3>
+        <p>
+          Alih-alih menunggu murid kesulitan lalu melakukan adaptasi darurat, konsep <strong>Universal Design for Learning (UDL)</strong> menuntut guru merancang lingkungan, materi, dan evaluasi pembelajaran yang fleksibel sejak awal perencanaan kurikulum agar ramah bagi semua peserta didik, termasuk Anak Berkebutuhan Khusus:
+        </p>
+
+        <div class="grid-two-col">
+          <div class="accent-card">
+            <h4 style="color: var(--accent-matcha); margin-bottom: 0.4rem;">1. Representasi Majemuk (Representation)</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Menyediakan materi pelajaran melalui berbagai format sensori: bukan sekadar teks cetak, melainkan teks digital bersuara (*text-to-speech*), diagram grafis, video berteks, maupun peraga manipulatif konkret.
+            </p>
+          </div>
+          <div class="accent-card lavender">
+            <h4 style="color: var(--accent-lavender); margin-bottom: 0.4rem;">2. Aksi &amp; Ekspresi Majemuk (Action &amp; Expression)</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Memberikan kebebasan bagi peserta didik untuk mendemonstrasikan apa yang telah mereka pelajari melalui beragam cara (misalnya presentasi lisan, rekaman suara, poster visual, proyek karya, selain ujian tertulis).
+            </p>
+          </div>
+        </div>
+
+        <div class="accent-card" style="border-left-color: var(--accent-amber); background: #fdfaf5; margin-top: 1rem;">
+          <h4 style="color: var(--accent-amber); margin-bottom: 0.4rem;">3. Keterlibatan Bermakna (Engagement)</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Mempertahankan motivasi siswa dengan menyediakan variasi tingkat tantangan tugas, kesempatan memilih topik minat secara mandiri, dan dukungan regulasi emosi di dalam kelas.
+          </p>
+        </div>
+      </article>
+
+      <!-- SESI 3: GAMES INTERAKTIF (5 MENIT) -->
+      <article class="content-card">
+        <span class="section-label">Fase 3: Game Interaktif (5 Menit)</span>
+        <h2>Uji Kasus Alur: "Pilah Tahapan Intervensi Sekolah"</h2>
+        <p style="margin-top: 0.5rem;">Cermati skenario diagnostik berikut dan tentukan letak tahapannya secara tepat:</p>
+
+        <div class="quiz-container">
+          <p style="font-weight: 600; font-size: 1.05rem; margin-bottom: 1rem;">
+            "Ibu Rini, guru kelas 2 SD, mencermati bahwa Farhan kesulitan mengenali bunyi huruf konsonan. Alih-alih langsung merujuk Farhan ke psikolog untuk tes IQ atau melabelinya disleksia, Tim Bantuan Guru merancang program penguatan fonik kelompok kecil berdurasi 30 menit per hari selama 6 minggu sambil mencatat grafik kemajuannya setiap akhir pekan."
+          </p>
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem;"><strong>Langkah yang diambil oleh sekolah untuk Farhan merupakan implementasi konkret dari tahapan:</strong></p>
+
+          <button class="quiz-option" onclick="checkAnswer('a')">A. Rujukan formal penempatan SLB secara definitif</button>
+          <button class="quiz-option" onclick="checkAnswer('b')">B. Tier 2 dalam kerangka RTI / Intervensi Pra-rujukan (Prereferral Intervention)</button>
+          <button class="quiz-option" onclick="checkAnswer('c')">C. Penetapan status hukum kelayakan IDEA murni</button>
+          <button class="quiz-option" onclick="checkAnswer('d')">D. Evaluasi sumatif tahunan sekolah</button>
+
+          <div id="quiz-feedback" class="quiz-feedback"></div>
+        </div>
+      </article>
+
+      <!-- SESI 4: TANYA JAWAB & CLOSING -->
+      <article class="content-card">
+        <span class="section-label">Fase 4: Refleksi &amp; Pernyataan Penutup</span>
+        <h2>Refleksi Akhir: Menyelamatkan Sebelum Terlambat</h2>
+        <p style="margin-top: 0.75rem;">
+          Tugas utama ortopedagogik bukanlah sekadar menguji dan menyortir anak ke dalam kotak-kotak kategori kecacatan, melainkan mengintervensi sedini mungkin dan memodifikasi instruksi sebelum anak kehilangan rasa percaya dirinya di hadapan ilmu pengetahuan.
+        </p>
+        <div class="quote-box" style="border-left-color: var(--accent-lavender);">
+          “The primary purpose of assessment in special education is to make instructional decisions that directly benefit the child, not merely to sort children into diagnostic categories.”
+          <footer>— Daniel P. Hallahan &amp; James M. Kauffman (2005)</footer>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 2: WORKSHEET MAHASISWA (PRINTABLE TO PDF)
+         ========================================================================= -->
+    <section id="worksheet-view" class="view-section">
+      <div class="print-action-bar">
+        <div>
+          <h3 style="color: var(--accent-lavender);">Lembar Aktivitas Mahasiswa (LKM 03)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan analisis alur identifikasi ini dan unduh dalam format dokumen cetak/PDF.</p>
+        </div>
+        <button class="btn-download-pdf" onclick="window.print()">
+          <span>🖨️ Cetak / Unduh PDF</span>
+        </button>
+      </div>
+
+      <div class="worksheet-paper">
+        <header style="border-bottom: 2px solid #111; padding-bottom: 1rem; margin-bottom: 2rem;">
+          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.3rem;">Lembar Kerja Analisis Identifikasi, Kerangka RTI, &amp; Implementasi UDL</h2>
+          <p style="text-align: center; font-size: 0.9rem; color: #555;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005) &amp; Heward et al. (2017)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem;">
+            <div><strong>Nama Mahasiswa:</strong> ____________________________________</div>
+            <div><strong>NIM / Kelas:</strong> ____________________________________</div>
+            <div><strong>Tanggal Pertemuan:</strong> ____________________________________</div>
+            <div><strong>Paraf / Nilai:</strong> ____________________________________</div>
+          </div>
+        </header>
+
+        <!-- TUGAS 1 -->
+        <div class="worksheet-field">
+          <label>BAGIAN A: KRITIK TERHADAP MODEL IQ-ACHIEVEMENT DISCREPANCY</label>
+          <p style="font-size: 0.9rem; color: #333; margin-bottom: 1rem; line-height: 1.5;">
+            Berdasarkan penjelasan Heward et al. (2017) dan Hallahan &amp; Kauffman (2005), sebutkan minimal 2 (dua) kelemahan fatal penggunaan uji kesenjangan antara skor IQ dan prestasi akademik (<em>IQ-achievement discrepancy model</em>) dalam mengidentifikasi kesulitan belajar, dan jelaskan mengapa model RTI dipandang jauh lebih humanis:
+          </p>
+          <textarea rows="4" placeholder="Uraikan alasan mengapa model kesenjangan IQ menunggu anak gagal terlalu lama..."></textarea>
+        </div>
+
+        <!-- TUGAS 2 -->
+        <div class="worksheet-field">
+          <label>BAGIAN B: PERANCANGAN TINGKATAN INTERVENSI BERDASARKAN SKEMA RTI</label>
+          <p style="font-size: 0.9rem; color: #333; margin-bottom: 1rem; line-height: 1.5;">
+            Seorang peserta didik di kelas 3 SD mengalami hambatan serius dalam pemahaman membaca (*reading comprehension*). Rancanglah langkah aksi spesifik yang membedakan penanganan anak tersebut pada <strong>Tier 1</strong>, <strong>Tier 2</strong>, dan <strong>Tier 3</strong>:
+          </p>
+          <textarea rows="5" placeholder="Tuliskan bentuk strategi pengajaran dan frekuensi intervensi untuk masing-masing tingkatan (Tier)..."></textarea>
+        </div>
+
+        <!-- TUGAS 3 -->
+        <div class="worksheet-field">
+          <label>BAGIAN C: APLIKASI TIGA PILAR UNIVERSAL DESIGN FOR LEARNING (UDL)</label>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+            Pilihlah salah satu topik pelajaran (misal: "Siklus Air" atau "Operasi Hitung Pecahan"). Berikan contoh konkret bagaimana Anda menerapkan 3 prinsip UDL (Representasi, Ekspresi, dan Keterlibatan) agar materi dapat diakses oleh seluruh murid termasuk Anak Berkebutuhan Khusus:
+          </p>
+          <textarea rows="4" placeholder="Jelaskan modifikasi media sajian, variasi asesmen unjuk kerja, dan cara memantik motivasi siswa..."></textarea>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 3: INTERACTIVE PRESENTATION MODE (SLIDE INTERAKTIF DOSEN)
+         ========================================================================= -->
+    <section id="presentation-view" class="view-section">
+      
+      <div class="presentation-frame">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide-item active">
+          <span class="slide-indicator">Slide 1 dari 6 • Orientasi Asesmen</span>
+          <h2>Identifikasi &amp; Asesmen Berbasis Bukti Ilmiah</h2>
+          <div class="slide-body">
+            <p>Meninggalkan Model "Menunggu Siswa Gagal" (*Wait-to-Fail*):</p>
+            <ul>
+              <li>Mendeteksi potensi hambatan sedini mungkin pada anak di kelas reguler.</li>
+              <li>Peran vital guru kelas sebelum merujuk anak ke uji diagnostik khusus.</li>
+              <li>Sintesis kerangka kerja intervensi berbasis riset Hallahan &amp; Kauffman (2005) dan Heward et al. (2017).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen (10 Menit Awal):</strong> Tanyakan kepada mahasiswa: "Jika seorang siswa kelas 1 SD belum lancar membaca huruf, apakah ia langsung berkebutuhan khusus atau guru yang belum menemukan metode yang pas?" Kaitkan dengan bahaya salah label (*mislabeling*).
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 2 dari 6 • Alur Pelayanan</span>
+          <h2>Alur Penjaringan Layanan Pendidikan Khusus</h2>
+          <div class="slide-body">
+            <p>Empat fase terstruktur menurut Heward et al. (2017):</p>
+            <ul>
+              <li><strong>1. Skrining Universal:</strong> Memetakan seluruh murid di awal tahun ajaran.</li>
+              <li><strong>2. Intervensi Pra-rujukan:</strong> Bantuan instruksional segera di kelas reguler.</li>
+              <li><strong>3. Rujukan Formal:</strong> Izin resmi orang tua untuk evaluasi komprehensif.</li>
+              <li><strong>4. Evaluasi Nondiskriminatif:</strong> Penilaian menyeluruh tim lintas profesi.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Tekankan bahwa intervensi pra-rujukan (*prereferral*) bertujuan memvalidasi apakah masalah berasal dari metode mengajar guru atau murni hambatan perkembangan murid.
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 3 dari 6 • Kerangka RTI</span>
+          <h2>Model Respons terhadap Intervensi (RTI)</h2>
+          <div class="slide-body">
+            <p>Piramida Multitaraf Pendukung Belajar (Multi-Tiered System):</p>
+            <ul>
+              <li><strong>Tier 1 (~80-85% Siswa):</strong> Kurikulum inti berbasis bukti di kelas umum.</li>
+              <li><strong>Tier 2 (~10-15% Siswa):</strong> Dukungan kelompok kecil intensif dengan pemantauan grafik mingguan.</li>
+              <li><strong>Tier 3 (~1-5% Siswa):</strong> Intervensi individual spesifik &amp; evaluasi penempatan layanan terindividualisasi.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Jelaskan kelebihan RTI: anak mendapatkan bantuan belajar segera tanpa harus menunggu skor tes psikologis jatuh ke batas kegagalan.
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 4 dari 6 • Fondasi Desain Universal</span>
+          <h2>Universal Design for Learning (UDL)</h2>
+          <div class="slide-body">
+            <p>Merancang Kelas Aksesibel Sejak Desain Awal:</p>
+            <ul>
+              <li>Meminimalisir kebutuhan adaptasi darurat di tengah jalan.</li>
+              <li>Menghargai keragaman gaya proses informasi dan latar belakang neurologis siswa.</li>
+              <li>Menghilangkan hambatan lingkungan (*handicap*) sejak kurikulum dicetak.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Buat analogi trotoar landai (*curb cut effect*): dibuat untuk kursi roda, namun bermanfaat bagi orang yang membawa kereta bayi, sepeda, dan koper. Begitu pula UDL dalam pembelajaran.
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 5 dari 6 • Tiga Pilar UDL</span>
+          <h2>Tiga Pilar Implementasi UDL di Ruang Kelas</h2>
+          <div class="slide-body">
+            <ul>
+              <li><strong>Multiple Means of Representation:</strong> Sajikan informasi dalam teks, audio, visual, dan peraga konkret.</li>
+              <li><strong>Multiple Means of Action &amp; Expression:</strong> Izinkan murid menunjukkan pemahaman melalui tulisan, lisan, atau proyek nyata.</li>
+              <li><strong>Multiple Means of Engagement:</strong> Bangkitkan minat murid lewat pilihan topik yang relevan dan tantangan bertingkat.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Mintalah mahasiswa memberikan satu contoh penyesuaian materi tugas sekolah menggunakan salah satu pilar UDL.
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 6 dari 6 • Rangkuman &amp; Aksi</span>
+          <h2>Closing Thought: Asesmen untuk Melayani</h2>
+          <div class="slide-body">
+            <p>Prinsip Utama Pendidik Ortopedagogik:</p>
+            <ul>
+              <li>Asesmen bukan alat pemilah, melainkan panduan penyesuaian instruksi belajar.</li>
+              <li>RTI dan UDL adalah dua instrumen utama yang menjamin keadilan akses pendidikan bagi setiap Anak Berkebutuhan Khusus.</li>
+              <li>Minggu Depan: Membedah Komponen Perancangan Program Pembelajaran Individual (PPI/IEP) dan Penentuan LRE.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Instruksikan mahasiswa untuk melengkapi tugas LKM 03 sebelum beralih ke materi PPI minggu berikutnya.
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <footer class="slide-controls">
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-ctrl secondary" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+            <button class="btn-ctrl" onclick="changeSlide(1)">Selanjutnya ❯</button>
+          </div>
+          <button class="btn-ctrl secondary" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Dosen</button>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LOGIKA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Logika Pengalihan Tampilan (Modul / Worksheet / Slide)
+    function switchView(targetViewId, buttonElement) {
+      document.querySelectorAll('.view-section').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(targetViewId).classList.add('active');
+      buttonElement.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Logika Mini Game (Pilah Tahapan Intervensi)
+    function checkAnswer(choice) {
+      const feedback = document.getElementById('quiz-feedback');
+      feedback.style.display = 'block';
+
+      if (choice === 'b') {
+        feedback.style.background = '#d8f0e3';
+        feedback.style.color = '#1f6345';
+        feedback.innerHTML = '<strong>Tepat sekali! (100)</strong> Memberikan intervensi terarah dalam kelompok kecil sambil memantau grafik kemajuan mingguan adalah ciri utama intervensi pra-rujukan (Tier 2 RTI) untuk mencegah rujukan khusus yang prematur (Heward et al., 2017).';
+      } else {
+        feedback.style.background = '#fdebe7';
+        feedback.style.color = '#af3923';
+        feedback.innerHTML = '<strong>Kurang tepat.</strong> Tindakan tersebut belum berupa rujukan formal atau tes diagnostik khusus, melainkan intervensi pendampingan pra-rujukan terarah (Tier 2 RTI) di kelas reguler.';
+      }
+    }
+
+    // 3. Logika Presentasi Slide Interaktif Dosen
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+
+    function updateSlideDisplay() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+      updateSlideDisplay();
+    }
+
+    function toggleSpeakerNotes() {
+      const activeSlide = slides[currentSlide];
+      const notes = activeSlide.querySelector('.speaker-notes-box');
+      if (notes) {
+        notes.style.display = (notes.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // Navigasi Keyboard untuk Slide
+    document.addEventListener('keydown', (e) => {
+      const presView = document.getElementById('presentation-view');
+      if (presView.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
