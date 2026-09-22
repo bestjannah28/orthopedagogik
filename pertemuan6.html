@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 6: Kesulitan Belajar Spesifik (SLD) &amp; Pendekatan Direct Instruction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span>ORTOPEDAGOGIK</span>
+        <span class="pill">Pertemuan 6</span>
+      </div>
+      <nav class="view-tabs" role="tablist">
+        <button class="tab-btn active" onclick="switchView('reading-view', this)">Modul Bacaan Lengkap</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja &amp; 20 Soal PG</button>
+        <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Dosen</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- =========================================================================
+         BAGIAN 1: WEB PAGE PRESENTATION (BACAAN MANDIRI DOSEN & MAHASISWA)
+         ========================================================================= -->
+    <section id="reading-view" class="view-section active">
+      
+      <!-- HERO BANNER -->
+      <header class="hero-box">
+        <span class="section-label">Modul Perkuliahan Komprehensif</span>
+        <h1>Anak Berkebutuhan Khusus dengan Kesulitan Belajar Spesifik (Specific Learning Disabilities / SLD)</h1>
+        <p>Telaah teoritis dan aplikatif: klausul eksklusi IDEA, pembedahan disleksia, diskalkulia, dan disgrafia, defisit pemrosesan fonologis serta fungsi eksekutif, hingga implementasi pembelajaran eksplisit (*Direct Instruction*), pengorganisasi grafis, dan instruksi strategi.</p>
+        <div class="hero-meta">
+          <span>⏱ Durasi: 2 SKS (100 Menit)</span>
+          <span>📚 Rujukan: Hallahan &amp; Kauffman (2005, Bab 6) &amp; Heward et al. (2017, Bab 5)</span>
+          <span>🎯 Capaian: Analisis Profil Kognitif SLD, Desain Direct Instruction, &amp; Media Graphic Organizer</span>
+        </div>
+      </header>
+
+      <!-- SESI 1: PENDAHULUAN (10 MENIT) -->
+      <article class="content-card">
+        <span class="section-label">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
+        <h2>1. Paradoks Disabilitas Tersembunyi: Cerdas Namun Terhambat Secara Akademik</h2>
+        <p style="margin-top: 0.75rem;">
+          Di antara beragam kategori Anak Berkebutuhan Khusus, peserta didik dengan <strong>Kesulitan Belajar Spesifik (*Specific Learning Disabilities / SLD*)</strong> kerap menghadapi stereotip sosial yang paling membingungkan. Mereka umumnya memiliki kecerdasan rata-rata bahkan di atas rata-rata, tidak menunjukkan kelainan fisik anatomis yang tampak dari luar, serta mampu berbicara dan bernalar dengan lincah dalam pergaulan harian. Namun, saat dihadapkan pada teks bacaan tertulis, lembar berhitung matematika, atau tugas menulis ekspresif, kinerja akademik mereka merosot drastis.
+        </p>
+
+        <div class="quote-box">
+          “Learning disabilities is by far the largest special education category. It is an often invisible disability; students with learning disabilities look just like their peers without disabilities, yet they experience significant and persistent difficulties in learning to read, write, or calculate.”
+          <footer>— William L. Heward, Sheila R. Alber-Morgan, &amp; Moira Konrad (2017, hlm. 140)</footer>
+        </div>
+
+        <div class="grid-two-col">
+          <div class="accent-card">
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-matcha);">Mitos "Anak Malas atau Ceroboh"</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Hallahan &amp; Kauffman (2005) menggarisbawahi bahwa sebelum diakui secara ilmiah, anak-anak disleksia atau diskalkulia kerap dicap oleh guru sekolah sebagai siswa yang malas belajar, tidak berniat maju, atau bermasalah dalam karakter moral. Padahal, hambatan mereka berakar dari disfungsi neurobiologis dalam memproses simbol bahasa dan visual-spasial.
+            </p>
+          </div>
+          <div class="accent-card lavender">
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-lavender);">Kategori Terbesar di Sekolah Inklusi</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Data empiris Heward et al. (2017) menunjukkan bahwa populasi SLD mencakup hampir 36–40% dari seluruh peserta didik berkebutuhan khusus yang menerima layanan pendidikan khusus. Oleh karena itu, setiap pendidik di kelas umum wajib menguasai kompetensi identifikasi dan intervensi kesulitan belajar spesifik.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 2: MATERI INTI (45 MENIT) -->
+      <article class="content-card">
+        <span class="section-label">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
+        <h2>2. Definisi Resmi Federal IDEA dan Klausul Eksklusi (Exclusionary Clause)</h2>
+        <p style="margin-top: 0.75rem;">
+          Definisi regulasi IDEA sebagaimana dipaparkan secara mendalam oleh <strong>Heward et al. (2017, hlm. 141)</strong> dan <strong>Hallahan &amp; Kauffman (2005, hlm. 172)</strong> merumuskan kesulitan belajar spesifik sebagai gangguan pada satu atau lebih proses psikologis dasar:
+        </p>
+
+        <div class="quote-box">
+          “Specific learning disability means a disorder in one or more of the basic psychological processes involved in understanding or in using language, spoken or written, that may manifest itself in the imperfect ability to listen, think, speak, read, write, spell, or to do mathematical calculations.”
+          <footer>— Individuals with Disabilities Education Act (IDEA, dikutip dalam Heward et al., 2017, hlm. 141)</footer>
+        </div>
+
+        <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-coral);">Klausul Eksklusi Mutlak (Exclusionary Clause)</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          Hallahan &amp; Kauffman (2005) memberikan tekanan yuridis yang sangat tegas: kesulitan belajar spesifik <strong>tidak mencakup</strong> hambatan belajar yang merupakan akibat langsung dari:
+        </p>
+        <ul style="padding-left: 1.5rem; margin-top: 0.4rem; color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+          <li>Disabilitas sensori penglihatan (*visual impairment*) atau pendengaran (*hearing impairment*).</li>
+          <li>Hambatan motorik neurologis (*motor disability*).</li>
+          <li>Hambatan intelektual (*intellectual disability* / retardasi mental).</li>
+          <li>Gangguan emosi atau perilaku berat (*emotional disturbance*).</li>
+          <li>Kerugian lingkungan, kultural, atau faktor ekonomi ekstrem (*environmental, cultural, or economic disadvantage*).</li>
+          <li>Kurangnya instruksi yang layak dan memadai dalam membaca atau berhitung di sekolah sebelumnya.</li>
+        </ul>
+
+        <!-- DIAGRAM 1: TAKSONOMI TRIPARTIT SLD (SVG LENGKAP) -->
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.1. Taksonomi Subtipe Utama Kesulitan Belajar Spesifik</h3>
+        <p>Berdasarkan manifestasi akademiknya, literatur membagi SLD ke dalam tiga domain utama yang saling terkait:</p>
+
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 380" width="100%" height="auto" style="max-height: 400px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="sldDyslexia" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2b7556"/><stop offset="100%" stop-color="#3d9b73"/></linearGradient>
+              <linearGradient id="sldDyscalculia" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7661b6"/><stop offset="100%" stop-color="#937dd4"/></linearGradient>
+              <linearGradient id="sldDysgraphia" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e5983b"/><stop offset="100%" stop-color="#f5b364"/></linearGradient>
+              <linearGradient id="sldBase" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#18221c"/><stop offset="100%" stop-color="#2f4035"/></linearGradient>
+              <filter id="boxDrop6" x="-5%" y="-10%" width="110%" height="125%">
+                <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+              </filter>
+            </defs>
+
+            <!-- Bottom Base: Disfungsi Proses Psikologis Dasar -->
+            <g filter="url(#boxDrop6)">
+              <rect x="40" y="275" width="860" height="75" rx="12" fill="url(#sldBase)"/>
+              <text x="470" y="306" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">FONDASI NEUROBIOLOGIS: DISFUNGSI PROSES PSIKOLOGIS DASAR</text>
+              <text x="470" y="328" fill="#cbf1de" font-size="11.5" text-anchor="middle">Defisit Pemrosesan Fonologis • Defisit Kecepatan Penamaan Cepat (Rapid Naming) • Kelemahan Fungsi Eksekutif &amp; Memori Kerja</text>
+            </g>
+
+            <!-- Kotak 1: Disleksia -->
+            <g filter="url(#boxDrop6)">
+              <rect x="45" y="35" width="265" height="215" rx="12" fill="#ffffff" stroke="#dbe4de" stroke-width="2"/>
+              <rect x="45" y="35" width="265" height="38" rx="12" fill="url(#sldDyslexia)"/>
+              <text x="177" y="60" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">DISLEKSIA (MEMBACA)</text>
+              <text x="177" y="98" fill="#18221c" font-size="12.5" font-weight="800" text-anchor="middle">~80% Kasus SLD</text>
+              <text x="177" y="125" fill="#4e5d54" font-size="10.5" text-anchor="middle">Hambatan kesadaran fonologis</text>
+              <text x="177" y="145" fill="#4e5d54" font-size="10.5" text-anchor="middle">Kesulitan dekoding kata &amp; mengeja</text>
+              <text x="177" y="165" fill="#4e5d54" font-size="10.5" text-anchor="middle">Kelambanan kelancaran baca (*fluency*)</text>
+              <text x="177" y="185" fill="#4e5d54" font-size="10.5" text-anchor="middle">Gangguan pemahaman teks bacaan</text>
+              <text x="177" y="215" fill="#7c8e83" font-size="9.5" text-anchor="middle">"Subtipe Paling Dominan"</text>
+            </g>
+
+            <!-- Kotak 2: Diskalkulia -->
+            <g filter="url(#boxDrop6)">
+              <rect x="337" y="35" width="265" height="215" rx="12" fill="#ffffff" stroke="#dbe4de" stroke-width="2"/>
+              <rect x="337" y="35" width="265" height="38" rx="12" fill="url(#sldDyscalculia)"/>
+              <text x="470" y="60" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">DISKALKULIA (MATEMATIKA)</text>
+              <text x="470" y="98" fill="#18221c" font-size="12.5" font-weight="800" text-anchor="middle">Numerasi &amp; Penalaran</text>
+              <text x="470" y="125" fill="#4e5d54" font-size="10.5" text-anchor="middle">Defisit pemahaman sensibilitas angka (*number sense*)</text>
+              <text x="470" y="145" fill="#4e5d54" font-size="10.5" text-anchor="middle">Kesulitan mengingat fakta aritmetika dasar</text>
+              <text x="470" y="165" fill="#4e5d54" font-size="10.5" text-anchor="middle">Kesalahan algoritma komputasi bertingkat</text>
+              <text x="470" y="185" fill="#4e5d54" font-size="10.5" text-anchor="middle">Hambatan memahami soal cerita abstrak</text>
+              <text x="470" y="215" fill="#7c8e83" font-size="9.5" text-anchor="middle">"Disfungsi Hubungan Kuantitatif"</text>
+            </g>
+
+            <!-- Kotak 3: Disgrafia -->
+            <g filter="url(#boxDrop6)">
+              <rect x="630" y="35" width="265" height="215" rx="12" fill="#ffffff" stroke="#dbe4de" stroke-width="2"/>
+              <rect x="630" y="35" width="265" height="38" rx="12" fill="url(#sldDysgraphia)"/>
+              <text x="762" y="60" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">DISGRAFIA (MENULIS)</text>
+              <text x="762" y="98" fill="#18221c" font-size="12.5" font-weight="800" text-anchor="middle">Ekspresi Tulis &amp; Motorik</text>
+              <text x="762" y="125" fill="#4e5d54" font-size="10.5" text-anchor="middle">Tulisan tangan tidak terbaca (*illegible*)</text>
+              <text x="762" y="145" fill="#4e5d54" font-size="10.5" text-anchor="middle">Pena ditekan berlebihan &amp; kram tangan</text>
+              <text x="762" y="165" fill="#4e5d54" font-size="10.5" text-anchor="middle">Ejaan kata tidak konsisten secara fonetis</text>
+              <text x="762" y="185" fill="#4e5d54" font-size="10.5" text-anchor="middle">Kesenjangan ide lisan vs struktur teks tulis</text>
+              <text x="762" y="215" fill="#7c8e83" font-size="9.5" text-anchor="middle">"Hambatan Integrasi Grafomotorik"</text>
+            </g>
+          </svg>
+          <div class="diagram-caption">Diagram 1: Taksonomi Tiga Pilar Kesulitan Belajar Spesifik (SLD) Menurut Hallahan &amp; Kauffman (2005) &amp; Heward et al. (2017)</div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2.2. Pembedahan Mendalam Karakteristik Kognitif</h3>
+        <p>
+          Menurut <strong>Hallahan &amp; Kauffman (2005, hlm. 176–185)</strong>, kesulitan belajar spesifik berakar dari kelemahan pada area pemrosesan internal:
+        </p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Area Pemrosesan Kognitif</th>
+                <th>Defisit Spesifik yang Terjadi</th>
+                <th>Manifestasi Perilaku di Kelas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Kesadaran Fonologis (*Phonological Awareness*)</strong></td>
+                <td>Ketidakmampuan mengidentifikasi, memecah, dan memanipulasi unit bunyi bahasa terkecil (fonem).</td>
+                <td>Siswa tidak dapat memadukan bunyi /k/-/u/-/d/-/a/ menjadi kata "kuda", bingung membedakan rima bunyi kata, dan sering membalik huruf yang mirip secara visual dan auditori (misal: b dan d, p dan q).</td>
+              </tr>
+              <tr>
+                <td><strong>Memori Kerja (*Working Memory*)</strong></td>
+                <td>Keterbatasan kapasitas untuk menyimpan informasi sementara sambil memproses informasi baru secara simultan.</td>
+                <td>Saat mengerjakan soal matematika dua langkah, anak melupakan hasil penjumlahan langkah pertama saat mulai mengerjakan langkah kedua; anak lupa awal kalimat ketika selesai membaca akhir kalimat.</td>
+              </tr>
+              <tr>
+                <td><strong>Fungsi Eksekutif (*Executive Functioning*)</strong></td>
+                <td>Kelemahan dalam metakognisi: perencanaan, pengorganisasian materi tugas, pemantauan diri (*self-monitoring*), dan fleksibilitas berpikir.</td>
+                <td>Siswa tampak disorganisir, meja belajar penuh berkas berserakan, lupa mengumpulkan pekerjaan rumah yang telah selesai, dan kesulitan memilih strategi belajar yang efisien.</td>
+              </tr>
+              <tr>
+                <td><strong>Defisit Ganda (*Double-Deficit Hypothesis*)</strong></td>
+                <td>Kombinasi antara kelemahan kesadaran fonologis dengan kelambanan kecepatan penamaan cepat (*rapid automatized naming / RAN*).</td>
+                <td>Bentuk disleksia yang paling parah; siswa membaca dengan sangat terbata-bata, kaku, dan membutuhkan waktu yang jauh lebih lama untuk memproses suku kata visual menjadi kode bahasa.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.3. Pendekatan Instruksional Berbasis Bukti: Direct Instruction (DI)</h3>
+        <p>
+          Baik Hallahan &amp; Kauffman (2005) maupun Heward et al. (2017) menegaskan bahwa anak dengan kesulitan belajar spesifik <strong>tidak akan berhasil</strong> jika hanya diajar dengan metode penemuan mandiri (*discovery learning*) yang terbuka tanpa bimbingan. Mereka membutuhkan instruksi eksplisit dan terstruktur tinggi. Salah satu intervensi paling tervalidasi secara ilmiah adalah model <strong>Direct Instruction (DI)</strong> yang dirintis oleh Siegfried Engelmann:
+        </p>
+
+        <div class="quote-box">
+          “Direct Instruction is a carefully designed curriculum that focuses on critical content, breaks complex skills into small instructional steps, provides clear and unambiguous teacher modeling, offers guided practice with immediate feedback, and ensures students achieve mastery.”
+          <footer>— William L. Heward et al. (2017, hlm. 159)</footer>
+        </div>
+
+        <!-- DIAGRAM 2: ANATOMI SIKLUS DIRECT INSTRUCTION (SVG PROPORSI LENGKAP) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 220" width="100%" height="auto" style="max-height: 240px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="di1Grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2b7556"/><stop offset="100%" stop-color="#3d9b73"/></linearGradient>
+              <linearGradient id="di2Grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7661b6"/><stop offset="100%" stop-color="#937dd4"/></linearGradient>
+              <linearGradient id="di3Grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e5983b"/><stop offset="100%" stop-color="#f5b364"/></linearGradient>
+              <linearGradient id="di4Grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+            </defs>
+
+            <!-- Step 1: Modeling -->
+            <rect x="25" y="30" width="200" height="135" rx="10" fill="#ffffff" stroke="#dbe4de" stroke-width="2"/>
+            <rect x="25" y="30" width="200" height="32" rx="10" fill="url(#di1Grad)"/>
+            <text x="125" y="52" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">FASE 1: PEMODELAN GURU</text>
+            <text x="125" y="85" fill="#18221c" font-size="13" font-weight="800" text-anchor="middle">"I DO IT" (Saya Lakukan)</text>
+            <text x="125" y="112" fill="#4e5d54" font-size="10.5" text-anchor="middle">Guru mendemonstrasikan langkah</text>
+            <text x="125" y="130" fill="#4e5d54" font-size="10.5" text-anchor="middle">secara eksplisit, tanpa keraguan,</text>
+            <text x="125" y="148" fill="#4e5d54" font-size="10.5" text-anchor="middle">dengan teknik berpikir lantang (*think aloud*)</text>
+
+            <!-- Arrow 1 to 2 -->
+            <path d="M 230 97 L 246 97" stroke="#2b7556" stroke-width="3"/>
+            <polygon points="244,93 252,97 244,101" fill="#2b7556"/>
+
+            <!-- Step 2: Guided Practice -->
+            <rect x="255" y="30" width="200" height="135" rx="10" fill="#ffffff" stroke="#dbe4de" stroke-width="2"/>
+            <rect x="255" y="30" width="200" height="32" rx="10" fill="url(#di2Grad)"/>
+            <text x="355" y="52" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">FASE 2: LATIHAN TERBIMBING</text>
+            <text x="355" y="85" fill="#18221c" font-size="13" font-weight="800" text-anchor="middle">"WE DO IT" (Kita Lakukan)</text>
+            <text x="355" y="112" fill="#4e5d54" font-size="10.5" text-anchor="middle">Siswa mengerjakan bersama guru</text>
+            <text x="355" y="130" fill="#4e5d54" font-size="10.5" text-anchor="middle">Koreksi kesalahan seketika (*immediate*)</text>
+            <text x="355" y="148" fill="#4e5d54" font-size="10.5" text-anchor="middle">Pemberian bantuan (*prompting/scaffolding*)</text>
+
+            <!-- Arrow 2 to 3 -->
+            <path d="M 460 97 L 476 97" stroke="#7661b6" stroke-width="3"/>
+            <polygon points="474,93 482,97 474,101" fill="#7661b6"/>
+
+            <!-- Step 3: Independent Practice -->
+            <rect x="485" y="30" width="200" height="135" rx="10" fill="#ffffff" stroke="#dbe4de" stroke-width="2"/>
+            <rect x="485" y="30" width="200" height="32" rx="10" fill="url(#di3Grad)"/>
+            <text x="585" y="52" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">FASE 3: LATIHAN MANDIRI</text>
+            <text x="585" y="85" fill="#18221c" font-size="13" font-weight="800" text-anchor="middle">"YOU DO IT" (Kamu Lakukan)</text>
+            <text x="585" y="112" fill="#4e5d54" font-size="10.5" text-anchor="middle">Siswa mengerjakan soal mandiri</text>
+            <text x="585" y="130" fill="#4e5d54" font-size="10.5" text-anchor="middle">Target akurasi minimal 85–90%</text>
+            <text x="585" y="148" fill="#4e5d54" font-size="10.5" text-anchor="middle">Menghilangkan ketergantungan bantuan</text>
+
+            <!-- Arrow 3 to 4 -->
+            <path d="M 690 97 L 706 97" stroke="#e5983b" stroke-width="3"/>
+            <polygon points="704,93 712,97 704,101" fill="#e5983b"/>
+
+            <!-- Step 4: Maintenance -->
+            <rect x="715" y="30" width="200" height="135" rx="10" fill="#ffffff" stroke="#dbe4de" stroke-width="2"/>
+            <rect x="715" y="30" width="200" height="32" rx="10" fill="url(#di4Grad)"/>
+            <text x="815" y="52" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">FASE 4: EVALUASI BERKALA</text>
+            <text x="815" y="85" fill="#18221c" font-size="13" font-weight="800" text-anchor="middle">PEMELIHARAAN (Mastery)</text>
+            <text x="815" y="112" fill="#4e5d54" font-size="10.5" text-anchor="middle">Ulasan kumulatif mingguan</text>
+            <text x="815" y="130" fill="#4e5d54" font-size="10.5" text-anchor="middle">Latihan otomatisasi (*fluency*)</text>
+            <text x="815" y="148" fill="#4e5d54" font-size="10.5" text-anchor="middle">Grafik pemantauan kemajuan (CBM)</text>
+
+            <!-- Footer annotation -->
+            <text x="470" y="195" fill="#7c8e83" font-size="11" font-weight="600" text-anchor="middle">Kaidah Kunci Direct Instruction: Pengelompokan Fleksibel • Respons Aktif Cepat • Umpan Balik Korektif Seketika</text>
+          </svg>
+          <div class="diagram-caption">Diagram 2: Siklus Empat Fase Instruksi Eksplisit (Direct Instruction) Menurut Engelmann dalam Heward et al. (2017)</div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2.4. Akomodasi Instruksional: Pengorganisasi Grafis &amp; Catatan Terpandu</h3>
+        <p>
+          Selain *Direct Instruction*, penelitian ortopedagogik modern dalam <strong>Heward et al. (2017, hlm. 162–165)</strong> memvalidasi efektivitas modifikasi media ajar bagi siswa SLD:
+        </p>
+        <div class="grid-two-col">
+          <div class="accent-card">
+            <h4 style="color: var(--accent-matcha); margin-bottom: 0.4rem;">Pengorganisasi Grafis (Graphic Organizers)</h4>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Penyajian visual terstruktur yang menggambarkan hubungan logis antarkonsep (seperti diagram Venn, jaring laba-laba konsep, diagram sebab-akibat, atau diagram alur cerita). Alat ini mengurangi beban kerja memori kerja (*working memory load*) dan membantu siswa dengan disleksia mengekstraksi ide pokok dari teks narasi/eksposisi yang padat.
+            </p>
+          </div>
+          <div class="accent-card lavender">
+            <h4 style="color: var(--accent-lavender); margin-bottom: 0.4rem;">Catatan Terpandu (Guided Notes)</h4>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Handout materi kuliah/pelajaran yang telah disusun guru dengan sengaja mengosongkan kata-kata kunci atau konsep utama yang harus diisi siswa saat mendengarkan penjelasan. Strategi ini mempertahankan keterlibatan aktif siswa dengan disgrafia dan disleksia tanpa memaksa mereka mencatat seluruh ceramah secara manual yang melelahkan.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 3: GAMES INTERAKTIF (5 MENIT) -->
+      <article class="content-card">
+        <span class="section-label">Fase 3: Game Interaktif Berbasis Suara (5 Menit)</span>
+        <h2>Uji Kasus Pedagogis: "Audit Diagnosis &amp; Intervensi SLD"</h2>
+        <p style="margin-top: 0.5rem;">Cermati kasus diagnostik ini dan pilih keputusan profesional yang paling tepat menurut prinsip buku rujukan:</p>
+
+        <div class="game-card">
+          <div class="sound-toggle-bar">
+            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Game: Aktif</button>
+          </div>
+
+          <p style="font-weight: 600; font-size: 1.05rem; margin-bottom: 1rem;">
+            "Tito (kelas 3 SD) memiliki skor tes kecerdasan WISC sebesar 108 (kategori rata-rata), memiliki penglihatan dan pendengaran yang berfungsi sempurna, serta berasal dari keluarga berkecukupan. Namun, Tito tidak mampu memecah suku kata sederhana dan membaca teks kelas 1 dengan sangat lambat disertai pembalikan huruf 'b' dan 'd'. Guru kelasnya menyarankan agar Tito didiagnosis tunagrahita (hambatan intelektual) agar kurikulumnya diturunkan."
+          </p>
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem;"><strong>Berdasarkan tinjauan klausul eksklusi IDEA dalam Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), tindakan guru kelas tersebut salah besar karena:</strong></p>
+
+          <button class="quiz-option" onclick="evaluateGame('a')">
+            A. Tito seharusnya tidak boleh diberikan bantuan khusus karena nilai IQ-nya di atas rata-rata dan masalah membaca akan sembuh dengan sendirinya seiring bertambahnya usia.
+          </button>
+          <button class="quiz-option" onclick="evaluateGame('b')">
+            B. Hambatan Tito secara murni memenuhi kriteria Kesulitan Belajar Spesifik (Disleksia) dengan kecerdasan normal; mendiagnosis Tito sebagai hambatan intelektual melanggar kriteria ilmiah dan merampas hak intervensi berbasis fonologis yang tepat.
+          </button>
+          <button class="quiz-option" onclick="evaluateGame('c')">
+            C. Tito seharusnya langsung dirujuk ke dokter spesialis mata untuk mendapatkan kacamata minus tebal guna menyembuhkan pembalikan huruf.
+          </button>
+          <button class="quiz-option" onclick="evaluateGame('d')">
+            D. Sekolah harus memindahkan Tito ke panti asuhan karena guru kelas umum tidak berkewajiban mengajar membaca.
+          </button>
+
+          <div id="game-feedback" class="quiz-feedback"></div>
+        </div>
+      </article>
+
+      <!-- SESI 4: TANYA JAWAB & CLOSING -->
+      <article class="content-card">
+        <span class="section-label">Fase 4: Tanya Jawab &amp; Pernyataan Penutup</span>
+        <h2>Refleksi Akhir: Menembus Tirai Disabilitas Tersembunyi</h2>
+        <p style="margin-top: 0.75rem;">
+          Anak dengan kesulitan belajar spesifik bukanlah anak yang tidak mampu berpikir cerdas. Otak mereka memiliki konfigurasi neurologis unik dalam memproses simbol bahasa dan angka. Tugas mulia ortopedagogik adalah memberikan instruksi eksplisit yang terstruktur, akomodasi teknologi asistif, dan memupuk keyakinan diri mereka bahwa mereka mampu meraih puncak prestasi akademik tanpa diskriminasi.
+        </p>
+        <div class="quote-box" style="border-left-color: var(--accent-lavender);">
+          “Students with learning disabilities do not lack intelligence; they lack effective learning strategies and explicit instruction. When provided with systematic instruction and evidence-based interventions, they can and do succeed academically.”
+          <footer>— Daniel P. Hallahan &amp; James M. Kauffman (2005)</footer>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 2: WORKSHEET MAHASISWA & 20 SOAL PILIHAN GANDA (PRINTABLE TO PDF)
+         ========================================================================= -->
+    <section id="worksheet-view" class="view-section">
+      <div class="print-action-bar">
+        <div>
+          <h3 style="color: var(--accent-lavender);">Lembar Portofolio Aktivitas Mahasiswa &amp; Evaluasi (LKM 06)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan analisis skenario intervensi dan 20 soal evaluasi pilihan ganda di bawah ini, lalu simpan/cetak dalam format PDF.</p>
+        </div>
+        <button class="btn-download-pdf" onclick="window.print()">
+          <span>🖨️ Cetak / Unduh PDF</span>
+        </button>
+      </div>
+
+      <div class="worksheet-paper">
+        <header style="border-bottom: 2px solid #111; padding-bottom: 1rem; margin-bottom: 2rem;">
+          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.3rem;">Lembar Kerja Analisis Kesulitan Belajar Spesifik (SLD) &amp; Desain Intervensi</h2>
+          <p style="text-align: center; font-size: 0.9rem; color: #555;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005) &amp; Heward et al. (2017)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem;">
+            <div><strong>Nama Mahasiswa:</strong> ____________________________________</div>
+            <div><strong>NIM / Kelas:</strong> ____________________________________</div>
+            <div><strong>Tanggal Sesi:</strong> ____________________________________</div>
+            <div><strong>Skor / Verifikasi Dosen:</strong> ____________________________________</div>
+          </div>
+        </header>
+
+        <!-- TUGAS 1 -->
+        <div class="worksheet-field">
+          <label>BAGIAN A: PERANCANGAN SKENARIO PEMBELAJARAN DIRECT INSTRUCTION (DI)</label>
+          <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.75rem; line-height: 1.5;">
+            <em>Kasus Studi:</em> Rania (kelas 2 SD) mengalami kesulitan mengenali kata yang mengandung diftong 'ng' dan 'ny' (disleksia fonologis). Rancanglah satu skenario pengajaran mikro berdurasi 15 menit menggunakan formula Direct Instruction: (1) <em>Model/I Do It</em>, (2) <em>Guided Practice/We Do It</em>, dan (3) <em>Independent Practice/You Do It</em>:
+          </p>
+          <textarea rows="6" placeholder="Rincikan skrip tindakan guru pada fase Modeling, dialog pendampingan pada Latihan Terbimbing, serta bentuk lembar unjuk kerja Latihan Mandiri..."></textarea>
+        </div>
+
+        <!-- 20 SOAL PILIHAN GANDA -->
+        <div class="worksheet-field">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #dbe4de; padding-bottom: 0.5rem; margin-bottom: 1rem;">
+            <label style="font-size: 1.05rem; color: var(--accent-matcha); margin: 0;">
+              BAGIAN B: UJI KOMPETENSI KONSEPTUAL DAN STUDI KASUS (20 SOAL PILIHAN GANDA)
+            </label>
+            <button type="button" class="btn-ctrl secondary" style="font-size: 0.78rem; padding: 0.35rem 0.8rem; background: var(--bg-subtle); color: var(--text-main); border: 1px solid var(--border-color);" onclick="promptLecturerAuth()">
+              🔒 Buka Kunci Jawaban (Khusus Dosen)
+            </button>
+          </div>
+          <p style="font-size: 0.88rem; color: #666; margin-bottom: 1.5rem;">Pilihlah salah satu opsi jawaban (A, B, C, atau D) yang paling tepat berdasarkan teks asli Hallahan &amp; Kauffman (2005) dan Heward et al. (2017):</p>
+
+          <!-- SOAL 1 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>1. Berdasarkan klausul eksklusi (*exclusionary clause*) dalam definisi IDEA, seorang peserta didik tidak dapat dikategorikan mengalami Kesulitan Belajar Spesifik (SLD) apabila kesulitan belajarnya terutama disebabkan oleh:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Hambatan intelektual, gangguan penglihatan/pendengaran, atau kerugian lingkungan kultural-ekonomi<br>
+              B. Defisit dalam memproses unit bunyi bahasa (kesadaran fonologis)<br>
+              C. Kelemahan memori kerja (*working memory*) dalam menghitung<br>
+              D. Disfungsi integrasi visual-motorik saat menulis
+            </p>
+            <div id="key-1" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: A</strong> — Klausul eksklusi menegaskan bahwa masalah belajar tidak boleh merupakan akibat primer dari disabilitas sensori, hambatan intelektual, gangguan emosi, atau faktor kemiskinan lingkungan (Heward et al., 2017, hlm. 141; Hallahan &amp; Kauffman, 2005, hlm. 172).
+            </div>
+          </div>
+
+          <!-- SOAL 2 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>2. Subtipe Kesulitan Belajar Spesifik yang paling banyak ditemukan dalam populasi sekolah khusus dan inklusi (mencakup sekitar 80% dari seluruh kasus SLD) adalah:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Diskalkulia<br>
+              B. Disleksia (Kesulitan Membaca Spesifik)<br>
+              C. Disgrafia murni<br>
+              D. Apraksia okulomotorik
+            </p>
+            <div id="key-2" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Kesulitan membaca (disleksia) merupakan manifestasi paling umum yang mendominasi sekitar 80–90% populasi peserta didik dengan label SLD (Heward et al., 2017, hlm. 143).
+            </div>
+          </div>
+
+          <!-- SOAL 3 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>3. Inti defisit neuropsikologis yang mendasari sebagian besar kasus disleksia menurut penelitian mutakhir dalam Hallahan &amp; Kauffman (2005) adalah:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Kerusakan otot bola mata saat melacak baris tulisan<br>
+              B. Defisit dalam kesadaran fonologis (*phonological processing / phonemic awareness*)<br>
+              C. Tingkat intelegensi umum yang berada di bawah skor 70<br>
+              D. Trauma fisik pada sistem saraf pendengaran perifer
+            </p>
+            <div id="key-3" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Konsensus ilmiah membuktikan bahwa disleksia berakar dari kesulitan memproses aspek fonologis bahasa, bukan sekadar gangguan optik atau pembalikan visual (Hallahan &amp; Kauffman, 2005, hlm. 177).
+            </div>
+          </div>
+
+          <!-- SOAL 4 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>4. Hipotesis Defisit Ganda (*Double-Deficit Hypothesis*) dalam disleksia menjelaskan bahwa kasus kesulitan membaca yang paling parah terjadi apabila peserta didik mengalami kombinasi antara:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Kerusakan motorik kasar dan ketulian konduktif<br>
+              B. Defisit kesadaran fonologis dan kelambanan kecepatan penamaan otomatis cepat (*rapid automatized naming / RAN*)<br>
+              C. Gangguan penglihatan warna dan disleksia spasial<br>
+              D. Skor IQ rendah dan perilaku oposisi pembangkang
+            </p>
+            <div id="key-4" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — *Double-deficit hypothesis* (Wolf &amp; Bowers) menyatakan disleksia paling parah dialami siswa yang defisit fonologis sekaligus lambat dalam kecepatan retrieval simbol visual otomatis (Heward et al., 2017, hlm. 144).
+            </div>
+          </div>
+
+          <!-- SOAL 5 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>5. Kesulitan spesifik dalam memahami konsep sensibilitas bilangan (*number sense*), menghafal fakta aritmetika dasar, dan menyelesaikan komputasi matematika disebut:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Disgrafia motorik<br>
+              B. Diskalkulia<br>
+              C. Disfasia reseptif<br>
+              D. Disnomia
+            </p>
+            <div id="key-5" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Diskalkulia adalah istilah spesifik untuk kesulitan belajar dalam bidang numerasi, penghitungan kuantitatif, dan penalaran matematika (Hallahan &amp; Kauffman, 2005, hlm. 182).
+            </div>
+          </div>
+
+          <!-- SOAL 6 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>6. Gejala khas disgrafia yang sering dijumpai guru di ruang kelas sekolah dasar antara lain:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Ketidakmampuan mendengar nada suara guru saat bernyanyi<br>
+              B. Tulisan tangan yang sangat sulit dibaca (*illegible*), posisi memegang pensil yang kaku/menekan berlebih, serta kesenjangan tajam antara ide lisan dan hasil tulisan<br>
+              C. Kelambanan dalam berlari dan melompat di lapangan olahraga<br>
+              D. Kesulitan membaca peta kompas geografi
+            </p>
+            <div id="key-6" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Disgrafia bermanifestasi pada distorsi bentuk tulisan tangan, kelelahan otot motorik halus saat memegang alat tulis, dan kesulitan mengorganisasi struktur kalimat tulisan (Heward et al., 2017, hlm. 147).
+            </div>
+          </div>
+
+          <!-- SOAL 7 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>7. Mengapa model perbedaan skor IQ dan prestasi (*IQ-achievement discrepancy model*) banyak ditinggalkan dan digantikan oleh kerangka RTI dalam mengidentifikasi SLD?</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Karena tes IQ sudah dilarang oleh organisasi kesehatan dunia secara global<br>
+              B. Karena model diskrepansi bersifat "menunggu anak gagal" (*wait to fail*) dan instrumen tes sering tidak membedakan anak SLD dengan korban pengajaran yang buruk<br>
+              C. Karena seluruh siswa di kelas reguler dipastikan memiliki skor IQ yang identik<br>
+              D. Karena model RTI tidak memerlukan data pencatatan grafik kemajuan
+            </p>
+            <div id="key-7" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Model diskrepansi menunda bantuan hingga anak mengalami kegagalan akademik parah di kelas 3/4 SD dan tidak memberikan informasi instruksional yang berguna bagi guru (Heward et al., 2017, hlm. 142).
+            </div>
+          </div>
+
+          <!-- SOAL 8 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>8. Ciri khas utama dari pendekatan Direct Instruction (DI) yang dikembangkan oleh Siegfried Engelmann adalah:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Membiarkan siswa menemukan sendiri aturan ejaan kata melalui proyek bebas tanpa arahan<br>
+              B. Pembelajaran eksplisit yang terstruktur ketat, analisis tugas cermat, respons aktif siswa yang cepat, dan koreksi kesalahan seketika (*immediate corrective feedback*)<br>
+              C. Menghapuskan sama sekali pengujian berkala dan latihan mandiri<br>
+              D. Guru hanya berbicara selama 2 menit lalu meninggalkan kelas
+            </p>
+            <div id="key-8" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Direct Instruction mengandalkan kurikulum berbasis riset dengan naskah pemodelan yang jelas, kesempatan respons aktif tinggi, dan umpan balik koreksi langsung (Heward et al., 2017, hlm. 159).
+            </div>
+          </div>
+
+          <!-- SOAL 9 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>9. Dalam sintaks pembelajaran eksplisit Direct Instruction, urutan tahapan yang benar adalah:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Latihan Mandiri -> Pemodelan Guru -> Evaluasi Kumulatif -> Latihan Terbimbing<br>
+              B. Pemodelan Guru (I Do It) -> Latihan Terbimbing (We Do It) -> Latihan Mandiri (You Do It) -> Evaluasi & Pemeliharaan<br>
+              C. Ujian Tengah Semester -> Pemodelan -> Diskusi Bebas -> Remedial Mandiri<br>
+              D. Latihan Bebas Kelompok -> Pemodelan Guru -> Pemberian Nilai Akhir
+            </p>
+            <div id="key-9" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Siklus baku instruksi terancang dimulai dari pemodelan eksplisit (*I do*), latihan bersama dengan scaffolding (*we do*), unjuk kerja mandiri (*you do*), dan pemantauan otomatisasi (Heward et al., 2017, hlm. 160).
+            </div>
+          </div>
+
+          <!-- SOAL 10 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>10. Alat bantu visual berupa diagram pohon, diagram Venn, atau peta konsep yang digunakan untuk membantu siswa SLD menstrukturkan materi bacaan disebut:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Token Economy System<br>
+              B. Pengorganisasi Grafis (Graphic Organizers)<br>
+              C. Rantaian Perilaku Mundur<br>
+              D. Sosiogram Kelas
+            </p>
+            <div id="key-10" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — *Graphic organizers* adalah perancah visual (*visual scaffold*) yang secara empiris terbukti meningkatkan pemahaman membaca dan retensi isi teks siswa dengan SLD (Heward et al., 2017, hlm. 162).
+            </div>
+          </div>
+
+          <!-- SOAL 11 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>11. Format handout pelajaran yang memuat sebagian besar materi namun menyisakan ruang kosong untuk diisi kata-kata kunci oleh siswa saat guru mengajar disebut:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Catatan Terpandu (Guided Notes)<br>
+              B. Rubrik Skala Likert<br>
+              C. Lembar Analisis Tugas<br>
+              D. Portofolio Sumatif
+            </p>
+            <div id="key-11" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: A</strong> — *Guided notes* memfasilitasi keterlibatan aktif mendengarkan siswa disleksia/disgrafia tanpa membebani mereka menyalin teks papan tulis secara utuh (Heward et al., 2017, hlm. 164).
+            </div>
+          </div>
+
+          <!-- SOAL 12 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>12. Kesulitan dalam aspek metakognisi pada siswa dengan Kesulitan Belajar Spesifik ditunjukkan melalui perilaku:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Mengetahui kapan mereka tidak memahami suatu teks bacaan dan langsung memilih strategi membaca ulang secara mandiri<br>
+              B. Ketidakmampuan memantau pemahaman diri sendiri (*self-monitoring*), terus membaca meski isi teks tidak dipahami, dan kesulitan memilih strategi belajar yang cocok<br>
+              C. Selalu mendapat nilai sempurna pada ujian daya ingat spasial<br>
+              D. Sangat mahir mengatur waktu dan jadwal harian secara otomatis
+            </p>
+            <div id="key-12" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Metakognisi merujuk pada "berpikir tentang proses berpikir"; siswa dengan SLD kerap pasif (*inactive learners*) dan tidak menyadari kegagalan pemahamannya sendiri (Hallahan &amp; Kauffman, 2005, hlm. 185).
+            </div>
+          </div>
+
+          <!-- SOAL 13 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>13. Mengapa teknik mnemonik (seperti akronim atau kata kunci bergambar) sangat dianjurkan untuk siswa SLD menurut Heward et al. (2017)?</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Karena mnemonik dapat menyembuhkan kerusakan genetik pada kromosom secara permanen<br>
+              B. Membantu mengaitkan informasi asing baru dengan memori yang telah ada sehingga mempermudah proses pemanggilan kembali (*retrieval*) dari memori jangka panjang<br>
+              C. Agar guru tidak perlu lagi mengajar konsep di dalam kelas<br>
+              D. Supaya tulisan tangan anak secara otomatis berubah rapi
+            </p>
+            <div id="key-13" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Strategi mnemonik (kata kunci, asosiasi bunyi, visual pegword) memfasilitasi pengkodean dan *retrieval* fakta akademik yang sulit dihafal anak SLD (Heward et al., 2017, hlm. 163).
+            </div>
+          </div>
+
+          <!-- SOAL 14 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>14. Dalam pembelajaran membaca berbasis bukti untuk mengatasi disleksia, lima komponen kunci yang wajib diajarkan secara terpadu (*National Reading Panel*) adalah:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Menghafal puisi, drama lisan, kaligrafi, menyalin buku, dan dikte cepat<br>
+              B. Kesadaran Fonemik, Fonik Sistematik, Kelancaran Membaca (*Fluency*), Kosakata, dan Pemahaman Membaca<br>
+              C. Membaca dalam hati, membaca cepat kilat, menulis indah, tata bahasa kuno, dan etimologi kata<br>
+              D. Terapi visual mata, latihan merangkak silang, diet gula, dan meditasi hening
+            </p>
+            <div id="key-14" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Lima pilar membaca yang tervalidasi sains adalah phonemic awareness, phonics, fluency, vocabulary, dan comprehension strategies (Heward et al., 2017, hlm. 158).
+            </div>
+          </div>
+
+          <!-- SOAL 15 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>15. Manakah akomodasi asesmen yang paling tepat dan adil diberikan kepada siswa dengan disgrafia berat saat mengikuti ujian akhir mata pelajaran Ilmu Pengetahuan Alam (IPA)?</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Menurunkan standar materi ujian IPA menjadi materi tingkat TK<br>
+              B. Mengizinkan penggunaan perangkat pengetikan komputer (*word processor*), bantuan juru tulis (*scribe*), atau respons lisan terrekam tanpa mengurangi kompleksitas konten materi IPA<br>
+              C. Melarang siswa mengikuti ujian IPA sama sekali<br>
+              D. Memaksa siswa menulis dengan tangan kiri dengan tenggat waktu lebih singkat
+            </p>
+            <div id="key-15" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Akomodasi bertujuan menyingkirkan rintangan motorik (*barrier*) agar kemampuan kognitif IPA siswa dapat diukur secara murni tanpa merendahkan standar kompetensi (Heward et al., 2017, hlm. 55).
+            </div>
+          </div>
+
+          <!-- SOAL 16 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>16. Sifat "anak yang pasif dalam belajar" (*inactive learner*) pada siswa SLD sebagaimana dianalisis oleh Hallahan &amp; Kauffman (2005) umumnya bermula dari:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Mutasi virus bawaan lahir yang merusak sistem energi tubuh<br>
+              B. Riwayat kegagalan akademik yang berulang kali di sekolah umum sehingga memunculkan persepsi lokus kendali eksternal dan hilangnya inisiatif strategi belajar mandiri<br>
+              C. Terlalu banyak mengonsumsi makanan yang mengandung glukosa<br>
+              D. Tingkat ekonomi keluarga yang terlampau tinggi
+            </p>
+            <div id="key-16" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Siswa SLD sering mengembangkan atribusi kegagalan eksternal; mereka merasa usaha sekeras apa pun tidak ada gunanya karena selalu mengalami kegagalan (Hallahan &amp; Kauffman, 2005, hlm. 187).
+            </div>
+          </div>
+
+          <!-- SOAL 17 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>17. Perbedaan mendasar antara siswa dengan Hambatan Intelektual dan siswa dengan Kesulitan Belajar Spesifik terletak pada aspek:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Siswa hambatan intelektual memiliki keterbatasan menyeluruh pada fungsi kognitif umum dan perilaku adaptif, sedangkan siswa SLD memiliki fungsi kecerdasan umum normal namun mengalami defisit pada pemrosesan area akademik tertentu<br>
+              B. Siswa SLD tidak memerlukan modifikasi cara mengajar guru<br>
+              C. Siswa hambatan intelektual selalu memiliki penglihatan kabur<br>
+              D. Siswa SLD tidak dilindungi oleh undang-undang pendidikan luar biasa
+            </p>
+            <div id="key-17" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: A</strong> — SLD bersifat spesifik (hanya pada ranah membaca/berhitung/menulis tertentu), sementara hambatan intelektual bersifat umum pada seluruh domain intelektual dan adaptif (Heward et al., 2017, hlm. 140).
+            </div>
+          </div>
+
+          <!-- SOAL 18 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>18. Pengukuran Berbasis Kurikulum (*Curriculum-Based Measurement / CBM*) sangat ditekankan penggunaannya bagi siswa SLD karena:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Biayanya sangat mahal dan bergengsi tinggi<br>
+              B. Menyediakan pemantauan data kemajuan langsung, sering, dan sensitif terhadap pertumbuhan keterampilan siswa harian/mingguan sehingga guru dapat segera menyesuaikan pengajaran<br>
+              C. Mengukur kepribadian sosial siswa saat beristirahat di kantin<br>
+              D. Dapat menggantikan fungsi seluruh ijazah sekolah
+            </p>
+            <div id="key-18" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — CBM menggunakan materi kurikulum riil untuk mengukur *rate of progress* (misal: kata terbaca benar per menit) secara berkala untuk memvalidasi intervensi (Heward et al., 2017, hlm. 154).
+            </div>
+          </div>
+
+          <!-- SOAL 19 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>19. Dalam mengajarkan strategi matematika kepada siswa diskalkulia, urutan penyajian representasi materi yang paling efektif adalah:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Abstrak simbol angka murni -> Teori rumus -> Pengulangan hafalan<br>
+              B. Konkret (Benda manipulatif nyata) -> Representasional/Semikonkret (Gambar/diagram) -> Abstrak (Simbol matematika angka murni)<br>
+              C. Menghafal tabel perkalian -> Ujian tertulis -> Praktik lapangan<br>
+              D. Memberikan kalkulator tanpa pernah menerangkan konsep dasar
+            </p>
+            <div id="key-19" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Pendekatan *Concrete-Representational-Abstract (CRA)* terbukti paling solid membangun pemahaman konsep matematika mendalam bagi siswa dengan kesulitan berhitung (Heward et al., 2017, hlm. 165).
+            </div>
+          </div>
+
+          <!-- SOAL 20 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><strong>20. Keterampilan regulasi diri (*self-regulation*) yang diajarkan pada siswa SLD meliputi kemampuan untuk:</strong></p>
+            <p style="padding-left: 1rem; font-size: 0.92rem;">
+              A. Memaksa teman sebaya mengerjakan tugas sekolahnya<br>
+              B. Menetapkan tujuan belajar personal, memantau kinerja diri secara objektif (*self-monitoring*), dan memberi penguatan diri atas pencapaian target<br>
+              C. Mengeluh kepada orang tua setiap kali diberikan pekerjaan rumah<br>
+              D. Duduk diam tanpa bergerak selama berjam-jam di dalam kelas
+            </p>
+            <div id="key-20" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #eaf3ee; border-left: 3px solid var(--accent-matcha); font-size: 0.85rem; color: #166534;">
+              <strong>Kunci: B</strong> — Regulasi diri melatih siswa mengambil alih tanggung jawab proses belajarnya melalui *self-monitoring*, *self-instruction*, dan evaluasi mandiri (Hallahan &amp; Kauffman, 2005, hlm. 191).
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 3: INTERACTIVE PRESENTATION MODE (SLIDE INTERAKTIF DOSEN)
+         ========================================================================= -->
+    <section id="presentation-view" class="view-section">
+      
+      <div class="presentation-frame">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide-item active">
+          <span class="slide-indicator">Slide 1 dari 6 • Orientasi SLD</span>
+          <h2>Kesulitan Belajar Spesifik (Specific Learning Disabilities)</h2>
+          <div class="slide-body">
+            <p>Membongkar Tabir Disabilitas Tersembunyi di Sekolah Inklusi:</p>
+            <ul>
+              <li>Kategori terbesar dalam populasi pendidikan khusus (~36-40% dari seluruh ABK).</li>
+              <li>Paradoks kecerdasan normal berdampingan dengan ketertinggalan akademik tajam.</li>
+              <li>Sintesis komparatif Hallahan &amp; Kauffman (2005) dan William L. Heward (2017).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen (10 Menit Awal):</strong> Awali kelas dengan analogi: "Bayangkan Anda orang cerdas yang fasih bercerita, namun setiap kali melihat buku bacaan, huruf-huruf tampak berputar dan menari tanpa arti." Arahkan ke realitas disleksia.
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 2 dari 6 • Regulasi &amp; Batasan</span>
+          <h2>Klausul Eksklusi Mutlak Regulasi IDEA</h2>
+          <div class="slide-body">
+            <p>Kapan Hambatan Belajar TIDAK Boleh Disebut SLD?</p>
+            <ul>
+              <li>Bukan akibat utama disabilitas sensori (tunanetra/tunarungu).</li>
+              <li>Bukan akibat hambatan intelektual (retardasi mental) atau hambatan motorik fisik.</li>
+              <li>Bukan akibat gangguan emosi berat (*emotional disturbance*).</li>
+              <li>Bukan akibat murni faktor kemiskinan, deprivasi budaya, atau metode mengajar guru yang buruk.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Tekankan bahwa klausul eksklusi bertujuan mencegah malapraktik diagnostik: anak miskin yang kurang stimulasi tidak boleh serta-merta dilabeli disabilitas saraf.
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 3 dari 6 • Tiga Pilar Subtipe</span>
+          <h2>Triad Subtipe: Disleksia, Diskalkulia, &amp; Disgrafia</h2>
+          <div class="slide-body">
+            <p>Domain Akademik Spesifik yang Terpengaruh:</p>
+            <ul>
+              <li><strong>Disleksia (~80% Kasus):</strong> Hambatan fonologis, dekoding kata, kelancaran baca (*fluency*), &amp; pemahaman teks.</li>
+              <li><strong>Diskalkulia:</strong> Hambatan sensibilitas bilangan (*number sense*), fakta dasar aritmetika, &amp; komputasi.</li>
+              <li><strong>Disgrafia:</strong> Hambatan integrasi grafomotorik, bentuk tulisan tak terbaca, &amp; ekspresi teks tertulis.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Klarifikasi mitos: Disleksia bukan cacat pada bola mata, melainkan kelemahan otak dalam mengurai unit bunyi bahasa (fonem).
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 4 dari 6 • Disfungsi Proses</span>
+          <h2>Karakteristik Pemrosesan Kognitif &amp; Metakognisi</h2>
+          <div class="slide-body">
+            <p>Apa yang Terjadi di Dalam Otak Siswa SLD?</p>
+            <ul>
+              <li><strong>Kelemahan Memori Kerja:</strong> Lupa instruksi awal saat memproses instruksi akhir.</li>
+              <li><strong>Disfungsi Eksekutif:</strong> Meja berantakan, disorganisasi berkas, lupa mengumpulkan PR.</li>
+              <li><strong>Inactive Learners:</strong> Pasif dan tidak memantau pemahaman diri sendiri (*lack of self-monitoring*).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Jelaskan lingkaran setan: sering gagal -> pasif belajar -> tidak mencoba strategi baru -> dicap malas -> makin tertinggal.
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 5 dari 6 • Solusi Instruksional</span>
+          <h2>Direct Instruction (DI) &amp; Akomodasi Eksplisit</h2>
+          <div class="slide-body">
+            <p>Intervensi Pedagogis Berbasis Bukti Ilmiah Kuat:</p>
+            <ul>
+              <li><strong>Siklus Eksplisit:</strong> Pemodelan Guru (I do) -> Bimbingan Bersama (We do) -> Latihan Mandiri (You do).</li>
+              <li><strong>Respon Aktif Cepat:</strong> Siswa menjawab serentak atau bergiliran tanpa waktu tunggu pasif.</li>
+              <li><strong>Perancah Grafis:</strong> Pengorganisasi Grafis (*Graphic Organizers*) &amp; Catatan Terpandu (*Guided Notes*).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Tunjukkan bahwa anak SLD akan gagal jika diajar dengan metode "menebak sendiri" (*discovery*); mereka membutuhkan bimbingan langsung yang jelas tanpa ambiguitas.
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide-item">
+          <span class="slide-indicator">Slide 6 dari 6 • Rangkuman &amp; Aksi</span>
+          <h2>Closing Thought: Membuka Akses Menuju Kesuksesan</h2>
+          <div class="slide-body">
+            <p>Komitmen Pendidik Inklusi Sejati:</p>
+            <ul>
+              <li>Kecerdasan mereka utuh; cara belajar mereka yang menuntut adaptasi.</li>
+              <li>Gunakan asesmen berbasis kurikulum (CBM) untuk mengukur grafik kemajuan riil.</li>
+              <li>Minggu Depan: Membedah ADHD dan Hambatan Emosi/Perilaku (EBD) serta Asesmen Perilaku Fungsional (FBA).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Instruksikan mahasiswa untuk mengerjakan 20 butir soal evaluasi di LKM 06 sebagai penugasan mingguan.
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <footer class="slide-controls">
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-ctrl secondary" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+            <button class="btn-ctrl" onclick="changeSlide(1)">Selanjutnya ❯</button>
+          </div>
+          <button class="btn-ctrl secondary" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Dosen</button>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LOGIKA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Pengalihan Tab Navigasi
+    function switchView(targetViewId, buttonElement) {
+      document.querySelectorAll('.view-section').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(targetViewId).classList.add('active');
+      buttonElement.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Web Audio API Synthesizer (Efek Suara Mini Game Bawaan Browser)
+    let audioFxEnabled = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTone(type) {
+      if (!audioFxEnabled) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'success') {
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.25); // G5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } else {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+        osc.frequency.exponentialRampToValueAtTime(130.81, audioCtx.currentTime + 0.25); // C3
+        gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      }
+    }
+
+    function toggleAudioFx() {
+      audioFxEnabled = !audioFxEnabled;
+      const btn = document.getElementById('sound-btn');
+      if (audioFxEnabled) {
+        btn.classList.add('active');
+        btn.textContent = '🔊 Suara Game: Aktif';
+      } else {
+        btn.classList.remove('active');
+        btn.textContent = '🔇 Suara Game: Hening';
+      }
+    }
+
+    // 3. Evaluasi Mini Game Pertemuan 6
+    function evaluateGame(choice) {
+      const feedback = document.getElementById('game-feedback');
+      feedback.style.display = 'block';
+
+      if (choice === 'b') {
+        playTone('success');
+        feedback.style.background = '#d8f0e3';
+        feedback.style.color = '#1f6345';
+        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Menurut doktrin Heward et al. (2017) dan Hallahan &amp; Kauffman (2005), anak dengan Kesulitan Belajar Spesifik (Disleksia) memiliki skor intelegensi normal (IQ Tito 108), namun mengalami defisit pemrosesan fonologis spesifik. Melabelinya sebagai hambatan intelektual adalah pelanggaran klausul eksklusi dan malapraktik diagnostik berat.';
+      } else {
+        playTone('error');
+        feedback.style.background = '#fdebe7';
+        feedback.style.color = '#af3923';
+        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan data kasus: IQ Tito normal (108), fungsi fisik utuh, namun kesulitan membaca fonem. Ini adalah profil murni Kesulitan Belajar Spesifik (Disleksia), bukan hambatan intelektual.';
+      }
+    }
+
+    // 4. Proteksi Kunci Jawaban Soal PG (Khusus Dosen)
+    function promptLecturerAuth() {
+      const pwd = prompt("Masukkan kata sandi dosen pengampu untuk membuka kunci jawaban & pembahasan:");
+      if (pwd === "dosenorto" || pwd === "ortopedagogik") {
+        document.querySelectorAll('.lecturer-key-box').forEach(box => {
+          box.style.display = 'block';
+        });
+        alert("Autentikasi berhasil. Kunci jawaban dan anotasi rujukan buku telah terbuka.");
+      } else if (pwd !== null) {
+        alert("Kata sandi salah. Akses kunci jawaban hanya diperuntukkan bagi dosen pengampu.");
+      }
+    }
+
+    // 5. Pengendali Slide Presentasi Dosen
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+
+    function updateSlideDisplay() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+      updateSlideDisplay();
+    }
+
+    function toggleSpeakerNotes() {
+      const activeSlide = slides[currentSlide];
+      const notes = activeSlide.querySelector('.speaker-notes-box');
+      if (notes) {
+        notes.style.display = (notes.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // Navigasi Keyboard
+    document.addEventListener('keydown', (e) => {
+      const presView = document.getElementById('presentation-view');
+      if (presView.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
