@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 10: Gangguan Komunikasi, Bicara, Bahasa, &amp; Sistem AAC</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    / Variabel Aksen Khusus Pertemuan 10: Ungu, Oranye, dan Biru /
+    :root {
+      --gz-purple: #7c3aed;
+      --gz-purple-light: #ede9fe;
+      --gz-orange: #ea580c;
+      --gz-orange-light: #ffedd5;
+      --gz-blue: #0284c7;
+      --gz-blue-light: #e0f2fe;
+      --gz-dark: #0f172a;
+    }
+    .badge-purple {
+      background: var(--gz-purple-light);
+      color: var(--gz-purple);
+      font-weight: 800;
+    }
+    .badge-orange {
+      background: var(--gz-orange-light);
+      color: var(--gz-orange);
+      font-weight: 800;
+    }
+    .badge-blue {
+      background: var(--gz-blue-light);
+      color: var(--gz-blue);
+      font-weight: 800;
+    }
+    .card-purple {
+      border-left: 4px solid var(--gz-purple);
+      background: #faf5ff;
+    }
+    .card-orange {
+      border-left: 4px solid var(--gz-orange);
+      background: #fff7ed;
+    }
+    .card-blue {
+      border-left: 4px solid var(--gz-blue);
+      background: #f0f9ff;
+    }
+    .case-scenario-box {
+      border: 2px dashed #93c5fd;
+      border-radius: 12px;
+      padding: 1.5rem;
+      background: #f8fafc;
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span style="color: var(--gz-purple);">ORTOPEDAGOGIK</span>
+        <span class="pill badge-purple">Pertemuan 10</span>
+      </div>
+      <nav class="view-tabs" role="tablist">
+        <button class="tab-btn active" onclick="switchView('reading-view', this)">Modul Bacaan Lengkap</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja &amp; Analisis Kasus</button>
+        <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Dosen</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- =========================================================================
+         BAGIAN 1: WEB PAGE PRESENTATION (BACAAN MANDIRI DOSEN & MAHASISWA)
+         ========================================================================= -->
+    <section id="reading-view" class="view-section active">
+      
+      <!-- HERO BANNER -->
+      <header class="hero-box" style="background: linear-gradient(135deg, #ede9fe 0%, #ffedd5 50%, #e0f2fe 100%);">
+        <span class="section-label badge-purple">Modul Perkuliahan Ortopedagogik</span>
+        <h1 style="color: var(--gz-dark);">Anak Berkebutuhan Khusus dengan Gangguan Komunikasi, Bicara (Speech), dan Bahasa (Language)</h1>
+        <p>Eksplorasi ilmiah menyeluruh: distingsi fundamental komunikasi-bicara-bahasa, empat mekanisme biologis produksi wicara, taksonomi gangguan artikulasi (S-O-D-A), kelancaran (gagap), suara, pembedahan 5 dimensi linguistik bahasa, serta penerapan Komunikasi Augmentatif dan Alternatif (AAC) di kelas inklusi.</p>
+        <div class="hero-meta">
+          <span>⏱ Durasi: 2 SKS (100 Menit)</span>
+          <span>📚 Rujukan: Hallahan &amp; Kauffman (2005, Bab 10) &amp; Heward et al. (2017, Bab 8)</span>
+          <span>🎯 Capaian: Analisis Profil Gangguan Wicara-Bahasa &amp; Perancangan Strategi AAC</span>
+        </div>
+      </header>
+
+      <!-- SESI 1: PENDAHULUAN (10 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-orange">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
+        <h2>1. Bahasa Sebagai Jembatan Kemanusiaan: Melampaui Bunyi Suara</h2>
+        <p style="margin-top: 0.75rem;">
+          Komunikasi adalah salah satu kebutuhan paling asasi dalam eksistensi manusia. Melalui bahasa, seseorang mengekspresikan cinta, menyampaikan ide, menuntut hak, dan menjalin hubungan sosial. Ketika seorang anak mengalami hambatan dalam memproduksi bunyi wicara atau kesulitan mengurai kode bahasa, seluruh aspek kehidupannya—mulai dari capaian prestasi akademik hingga pembentukan konsep diri (self-concept)—akan terancam mengalami hambatan sekunder.
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--gz-purple); background: #faf5ff;">
+          “Communication is the interactive exchange of information, ideas, feelings, needs, and desires. When a child’s ability to communicate is significantly impaired, the child is isolated not only from academic learning, but from the human social community itself.”
+          <footer>— William L. Heward, Sheila R. Alber-Morgan, &amp; Moira Konrad (2017, hlm. 262)</footer>
+        </div>
+
+        <div class="grid-two-col">
+          <div class="accent-card card-purple">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--gz-purple);">Distingsi Esensial Tripartit</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Banyak pendidik pemula menyamakan antara "bicara" dan "bahasa". Hallahan &amp; Kauffman (2005) menegaskan perbedaannya: seseorang dapat memiliki kemampuan bicara mekanis yang sempurna namun mengalami gangguan bahasa berat (misal: membeo kata tanpa makna), atau sebaliknya memiliki bahasa batin yang kaya namun tidak mampu berbicara lisan secara motorik (misal: anak dengan kelumpuhan pita suara atau cerebral palsy).
+            </p>
+          </div>
+          <div class="accent-card card-orange">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--gz-orange);">Prevalensi Tertinggi Sebagai Kondisi Penyerta</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Gangguan komunikasi merupakan kategori layanan primer terbesar kedua di bawah payung IDEA (~18–20% dari populasi anak berkebutuhan khusus). Namun, jika dihitung sebagai kondisi penyerta (secondary disability), gangguan bahasa hadir pada hampir seluruh kategori disabilitas lain: autisme, hambatan intelektual, kesulitan belajar, hingga cerebral palsy.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 2: MATERI INTI (45 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-blue">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
+        <h2>2. Anatomi Komunikasi: Triad Konsep Komunikasi, Bicara, dan Bahasa</h2>
+        <p style="margin-top: 0.75rem;">
+          Mengacu langsung pada <strong>Heward et al. (2017, hlm. 262–265)</strong> dan <strong>Hallahan &amp; Kauffman (2005, hlm. 312–316)</strong>, pemahaman ortopedagogik wajib berpijak pada tiga definisi teknis yang saling bertingkat:
+        </p>
+
+        <!-- DIAGRAM 1: TRIAD KOMUNIKASI & 4 MEKANISME WICARA (SVG) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 380" width="100%" height="auto" style="max-height: 400px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="commGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0284c7" />
+                <stop offset="100%" stop-color="#38bdf8" />
+              </linearGradient>
+              <linearGradient id="langGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7c3aed" />
+                <stop offset="100%" stop-color="#a855f7" />
+              </linearGradient>
+              <linearGradient id="spchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ea580c" />
+                <stop offset="100%" stop-color="#fb923c" />
+              </linearGradient>
+              <filter id="boxDrop10" x="-5%" y="-10%" width="110%" height="125%">
+                <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+              </filter>
+            </defs>
+
+            <!-- Tingkat 1: Komunikasi (Paling Luas) -->
+            <g filter="url(#boxDrop10)">
+              <rect x="30" y="25" width="880" height="75" rx="12" fill="url(#commGrad)"/>
+              <text x="470" y="55" fill="#ffffff" font-size="14" font-weight="800" text-anchor="middle">KOMUNIKASI (Payung Paling Luas)</text>
+              <text x="470" y="78" fill="#e0f2fe" font-size="11" text-anchor="middle">Pertukaran informasi, gagasan, atau emosi timbal balik antara dua individu atau lebih (Mencakup gestur, ekspresi, isyarat, &amp; tulisan).</text>
+            </g>
+
+            <!-- Panah ke Bawah -->
+            <path d="M 470 100 L 470 120" stroke="#0284c7" stroke-width="3"/>
+            <polygon points="466,118 470,126 474,118" fill="#0284c7"/>
+
+            <!-- Tingkat 2: Bahasa (Sistem Kode Kognitif) -->
+            <g filter="url(#boxDrop10)">
+              <rect x="80" y="125" width="780" height="90" rx="12" fill="url(#langGrad)"/>
+              <text x="470" y="153" fill="#ffffff" font-size="13.5" font-weight="800" text-anchor="middle">BAHASA (Sistem Simbol Arbitrer &amp; Berbasis Aturan Kultural)</text>
+              <text x="470" y="176" fill="#ede9fe" font-size="11" text-anchor="middle">Aturan Mental Kognitif yang mengatur makna kata dan kalimat (5 Dimensi: Fonologi, Morfologi, Sintaksis, Semantik, Pragmatik).</text>
+              <text x="470" y="196" fill="#ffffff" font-size="10.5" font-weight="600" text-anchor="middle">Dapat berupa: Bahasa Lisan, Bahasa Isyarat Visual, maupun Kode Tulis.</text>
+            </g>
+
+            <!-- Panah ke Bawah -->
+            <path d="M 470 215 L 470 235" stroke="#7c3aed" stroke-width="3"/>
+            <polygon points="466,233 470,241 474,233" fill="#7c3aed"/>
+
+            <!-- Tingkat 3: Bicara (Motorik Mekanis Produksi Bunyi) -->
+            <g filter="url(#boxDrop10)">
+              <rect x="130" y="240" width="680" height="110" rx="12" fill="url(#spchGrad)"/>
+              <text x="470" y="268" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">BICARA / SPEECH (Output Motorik Neuromuskular Bunyi)</text>
+              <text x="470" y="292" fill="#ffedd5" font-size="11" text-anchor="middle">Tindakan fisik mekanis memproduksi bunyi bahasa oral melalui 4 sistem neuromuskular terpadu:</text>
+              <text x="470" y="322" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">1. Respirasi (Napas) • 2. Fonasi (Pita Suara) • 3. Resonansi (Rongga Hidung/Mulut) • 4. Artikulasi (Bibir/Lidah)</text>
+            </g>
+          </svg>
+          <div class="diagram-caption">Diagram 1: Hubungan Hierarkis Triad Komunikasi, Bahasa, dan Bicara (Heward et al., 2017 &amp; Hallahan &amp; Kauffman, 2005)</div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2.1. Pembedahan Gangguan Bicara (Speech Disorders)</h3>
+        <p>
+          Menurut <strong>Hallahan &amp; Kauffman (2005, hlm. 317–324)</strong>, seorang anak dikatakan mengalami gangguan bicara jika produksi bunyi lisannya menyimpang sedemikian rupa dari norma populasi sebayanya sehingga menarik perhatian negatif lingkungan, mengganggu transmisi pesan, atau menimbulkan kecemasan emosional bagi anak. Gangguan bicara diklasifikasikan ke dalam tiga cabang:
+        </p>
+
+        <!-- SUB-CABANG GANGGUAN BICARA -->
+        <div class="grid-three-col">
+          <div class="accent-card card-purple">
+            <h4 style="color: var(--gz-purple); margin-bottom: 0.35rem;">1. Gangguan Artikulasi (S-O-D-A)</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Ketidakmampuan motorik fisik memproduksi fonem secara presisi:
+              <br>• <strong>Substitusi:</strong> Menukar bunyi (misal: <em>"topi"</em> dilafalkan <em>"kopi"</em>).
+              <br>• <strong>Omisi:</strong> Menghilangkan fonem (misal: <em>"makan"</em> jadi <em>"akan"</em>).
+              <br>• <strong>Distorsi:</strong> Bunyi mendekati fonem asli namun melenceng mendesis/kabur.
+              <br>• <strong>Adisi:</strong> Menyisipkan bunyi ekstra (misal: <em>"buku"</em> jadi <em>"bukku"</em>).
+            </p>
+          </div>
+          <div class="accent-card card-orange">
+            <h4 style="color: var(--gz-orange); margin-bottom: 0.35rem;">2. Gangguan Kelancaran (Fluency)</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Penyimpangan pada irama, ritme, dan kelancaran aliran wicara:
+              <br>• <strong>Gagap (Stuttering):</strong> Pengulangan bunyi/suku kata (<em>"b-b-bola"</em>), perpanjangan nada (<em>"ssssapi"</em>), atau hambatan hening kaku (silent blocks), kerap disertai gerakan motorik sekunder (kedipan mata, geleng kepala).
+              <br>• <strong>Cluttering:</strong> Kecepatan bicara terlampau cepat dan ritme kacau tanpa disadari anak.
+            </p>
+          </div>
+          <div class="accent-card card-blue">
+            <h4 style="color: var(--gz-blue); margin-bottom: 0.35rem;">3. Gangguan Suara (Voice)</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Penyimpangan abnormal pada nada (pitch), volume (loudness), atau kualitas fonasi:
+              <br>• <strong>Gangguan Fonasi:</strong> Suara serak kronis (hoarseness), terengah, atau kehilangan suara total (aphonia) akibat nodul pita suara.
+              <br>• <strong>Gangguan Resonansi:</strong> Hipernasalitas (udara bocor berlebih lewat hidung akibat celah langit-langit/cleft palate) atau hiponasalitas (bindeng).
+            </p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.2. Pembedahan Gangguan Bahasa (Language Disorders): Lima Dimensi Linguistik</h3>
+        <p>
+          Berdasarkan kajian mendalam <strong>Heward et al. (2017, hlm. 264–270)</strong>, gangguan bahasa terjadi apabila anak mengalami hambatan dalam memahami (reseptif) atau mengekspresikan (ekspresif) ide pada salah satu atau lebih dari lima pilar aturan sistem bahasa:
+        </p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Dimensi Linguistik</th>
+                <th>Definisi Aturan Sistem Bahasa</th>
+                <th>Bentuk Manifestasi Defisit Nyata pada Anak</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Fonologi (Phonology)</strong></td>
+                <td>Aturan linguistik yang mengatur bagaimana bunyi-bunyi bahasa (fonem) dirangkai dan dikombinasikan menjadi suku kata.</td>
+                <td>Anak tidak memiliki kesadaran fonemis; tidak mampu membedakan rima kata, sukar membedakan bunyi konsonan yang mirip, dan berdampak langsung pada disleksia membaca.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Morfologi (Morphology)</strong></td>
+                <td>Aturan internal mengenai struktur kata dan pembentukan morfem (satuan makna terkecil: kata dasar, awalan, akhiran, dan bentuk jamak).</td>
+                <td>Anak salah atau menghapus imbuhan kata (misal: tidak mampu membedakan kata "melihat", "terlihat", dan "penglihatan"); kesulitan menggunakan bentuk jamak secara tepat.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Sintaksis (Syntax)</strong></td>
+                <td>Aturan tata bahasa (grammar) yang mengatur bagaimana kata-kata dirangkai menjadi frasa dan kalimat bermakna (struktur SPOK).</td>
+                <td>Anak berbicara dengan kalimat terbalik-balik atau telegramatik primitif (misal: "Ibu pergi pasar kemarin beli" menjadi "Pasar beli ibu"); gagal memahami kalimat pasif.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Semantik (Semantics)</strong></td>
+                <td>Sistem makna bahasa, kosakata (vocabulary), hubungan antarkata, serta pemahaman kategori konsep abstrak.</td>
+                <td>Perbendaharaan kosakata sangat miskin (vocabulary delay); kesulitan memahami kata bermakna ganda (polisemi), metafora, idiom, atau hubungan kategori konseptual (hewan vs tumbuhan).</td>
+              </tr>
+              <tr>
+                <td><strong>5. Pragmatik (Pragmatics)</strong></td>
+                <td>Aturan penggunaan bahasa dalam konteks sosial fungsional (etika percakapan, giliran bicara, dan kesesuaian tutur dengan lawan bicara).</td>
+                <td>Anak menyela pembicaraan tanpa permisi, tidak menjaga jarak fisik saat bicara, gagal membaca bahasa tubuh lawan bicara yang bosan, atau terus berbicara pada konteks yang tidak pantas (sangat khas pada ASD).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="quote-box" style="border-left-color: var(--gz-orange); background: #fff7ed; margin-top: 1.5rem;">
+          “A receptive language disorder interferes with the child’s ability to understand language; an expressive language disorder interferes with the production of language. Many children exhibit a combined receptive-expressive language impairment, which severely limits both academic comprehension and social interaction.”
+          <footer>— Daniel P. Hallahan &amp; James M. Kauffman (2005, hlm. 326)</footer>
+        </div>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.3. Sistem Komunikasi Augmentatif dan Alternatif (AAC)</h3>
+        <p>
+          Bagi peserta didik berkebutuhan khusus non-verbal atau dengan kejelasan wicara yang sangat rendah (misalnya akibat cerebral palsy atetoid, apraksia wicara berat, hambatan intelektual berat, atau spektrum autisme), ortopedagogik menyediakan teknologi Komunikasi Augmentatif dan Alternatif (Augmentative and Alternative Communication / AAC):
+        </p>
+
+        <!-- DIAGRAM 2: TAKSONOMI LENGKAP SISTEM AAC (SVG) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 280" width="100%" height="auto" style="max-height: 300px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="aacLeft" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient>
+              <linearGradient id="aacLow" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ea580c"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+              <linearGradient id="aacHigh" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#9333ea"/></linearGradient>
+            </defs>
+
+            <!-- Box 1: Unaided AAC -->
+            <rect x="25" y="25" width="275" height="225" rx="10" fill="#ffffff" stroke="#bae6fd" stroke-width="2"/>
+            <rect x="25" y="25" width="275" height="40" rx="10" fill="url(#aacLeft)"/>
+            <text x="162" y="50" fill="#ffffff" font-size="11.5" font-weight="800" text-anchor="middle">1. AAC TANPA ALAT (UNAIDED)</text>
+            <text x="162" y="90" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Mengandalkan Tubuh Murni</text>
+            <text x="162" y="118" fill="#475569" font-size="10.5" text-anchor="middle">• Bahasa Isyarat Manual (Sign Language)</text>
+            <text x="162" y="138" fill="#475569" font-size="10.5" text-anchor="middle">• Gestur tubuh &amp; penunjukan jari</text>
+            <text x="162" y="158" fill="#475569" font-size="10.5" text-anchor="middle">• Gerakan kepala (mengangguk/geleng)</text>
+            <text x="162" y="178" fill="#475569" font-size="10.5" text-anchor="middle">• Gerakan arah tatapan mata (eye gaze)</text>
+            <text x="162" y="215" fill="#0369a1" font-size="10" font-weight="700" text-anchor="middle">"Tidak Memerlukan Peralatan Eksternal"</text>
+
+            <!-- Box 2: Low-Tech Aided AAC -->
+            <rect x="330" y="25" width="280" height="225" rx="10" fill="#ffffff" stroke="#fed7aa" stroke-width="2"/>
+            <rect x="330" y="25" width="280" height="40" rx="10" fill="url(#aacLow)"/>
+            <text x="470" y="50" fill="#ffffff" font-size="11.5" font-weight="800" text-anchor="middle">2. AAC BERBANTUAN RENDAH (LOW-TECH)</text>
+            <text x="470" y="90" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Alat Statis Non-Elektronik</text>
+            <text x="470" y="118" fill="#475569" font-size="10.5" text-anchor="middle">• Papan Komunikasi Simbol Gambar (Symbol Board)</text>
+            <text x="470" y="138" fill="#475569" font-size="10.5" text-anchor="middle">• Buku Komunikasi PECS (Frost &amp; Bondy)</text>
+            <text x="470" y="158" fill="#475569" font-size="10.5" text-anchor="middle">• Papan alfabet eja huruf (Spelling Board)</text>
+            <text x="470" y="178" fill="#475569" font-size="10.5" text-anchor="middle">• Benda konkret riil / miniatur objek</text>
+            <text x="470" y="215" fill="#c2410c" font-size="10" font-weight="700" text-anchor="middle">"Sederhana, Portabel, Bebas Baterai"</text>
+
+            <!-- Box 3: High-Tech Aided AAC -->
+            <rect x="640" y="25" width="275" height="225" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+            <rect x="640" y="25" width="275" height="40" rx="10" fill="url(#aacHigh)"/>
+            <text x="777" y="50" fill="#ffffff" font-size="11.5" font-weight="800" text-anchor="middle">3. AAC CANGGIH TINGGI (HIGH-TECH)</text>
+            <text x="777" y="90" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Piranti Berbasis Komputer</text>
+            <text x="777" y="118" fill="#475569" font-size="10.5" text-anchor="middle">• Speech-Generating Devices (SGDs)</text>
+            <text x="777" y="138" fill="#475569" font-size="10.5" text-anchor="middle">• Aplikasi tablet berbasis suara sintetis</text>
+            <text x="777" y="158" fill="#475569" font-size="10.5" text-anchor="middle">• Sensor pelacak kedipan mata (Eye-Tracking)</text>
+            <text x="777" y="178" fill="#475569" font-size="10.5" text-anchor="middle">• Sakelar adaptif (adaptive switches)</text>
+            <text x="777" y="215" fill="#6d28d9" font-size="10" font-weight="700" text-anchor="middle">"Kapasitas Kosakata Dinamis Tanpa Batas"</text>
+          </svg>
+          <div class="diagram-caption">Diagram 2: Taksonomi Tiga Kategori Sistem Komunikasi Augmentatif dan Alternatif (Heward et al., 2017)</div>
+        </div>
+
+        <p style="margin-top: 1rem;">
+          Heward et al. (2017) membantah mitos bahwa penggunaan sistem AAC akan membuat anak malas belajar bicara secara oral. Bukti empiris membuktikan hal sebaliknya: <strong>penggunaan AAC justru merangsang dan mempercepat munculnya produksi bicara verbal</strong> karena anak terbebas dari frustrasi mental akibat ketidakmampuan mengekspresikan keinginannya.
+        </p>
+      </article>
+
+      <!-- SESI 3: GAMES INTERAKTIF (5 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-purple">Fase 3: Game Interaktif Berbasis Suara (5 Menit)</span>
+        <h2>Uji Kasus Pedagogis: "Detektif Diagnosis S-O-D-A &amp; Bahasa"</h2>
+        <p style="margin-top: 0.5rem;">Cermati sampel wicara anak di bawah ini, aktifkan suara panduan, dan tentukan klasifikasi diagnostik yang tepat:</p>
+
+        <div class="game-card" style="border: 2px dashed #c4b5fd; background: #faf5ff;">
+          <div class="sound-toggle-bar">
+            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Pengarah: Aktif</button>
+          </div>
+
+          <div style="background: #ffffff; border: 1.5px solid #ddd6fe; border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;">
+            <p style="font-weight: 700; color: var(--gz-purple); margin-bottom: 0.4rem;">SAMPEL OBSERVASI WICARA SISWA:</p>
+            <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
+              "Dika (6 tahun) saat diminta menyebutkan benda di kelas mengucapkan: <br>
+              • <em>'Ini <strong>kopi</strong> ayah'</em> (maksudnya: <em>topi</em>)<br>
+              • <em>'Dika mau <strong>misa</strong>'</em> (maksudnya: <em>minta</em>)<br>
+              • <em>'Lihat <strong>kutcing</strong> itu'</em> (maksudnya: <em>kucing</em>)<br>
+              Dika memahami instruksi guru dengan sangat baik, kosakata reseptifnya luas, dan mampu merangkai kalimat dengan struktur SPOK yang benar."
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-weight: 700; color: #4c1d95;">Berdasarkan taksonomi Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), kondisi yang dialami Dika diklasifikasikan sebagai:</p>
+
+          <button class="quiz-option" onclick="evaluateSpeechGame('a')">
+            A. Gangguan Bahasa Reseptif-Ekspresif Berat (Global Language Delay).
+          </button>
+          <button class="quiz-option" onclick="evaluateSpeechGame('b')">
+            B. Gangguan Wicara Ranah Artikulasi (Articulatory Disorders) yang melibatkan kesalahan Substitusi (t jadi k), Omisi (menghilangkan n), dan Adisi (menambahkan konsonan t).
+          </button>
+          <button class="quiz-option" onclick="evaluateSpeechGame('c')">
+            C. Gangguan Resonansi Suara akibat Celah Langit-Langit (Cleft Palate).
+          </button>
+          <button class="quiz-option" onclick="evaluateSpeechGame('d')">
+            D. Gangguan Kelancaran Wicara (Stuttering / Gagap Kronis).
+          </button>
+
+          <div id="game-feedback" class="quiz-feedback"></div>
+        </div>
+      </article>
+
+      <!-- SESI 4: TANYA JAWAB & CLOSING -->
+      <article class="content-card">
+        <span class="section-label badge-orange">Fase 4: Tanya Jawab &amp; Pernyataan Penutup</span>
+        <h2>Refleksi Akhir: Memberi Suara Bagi yang Tak Mampu Bersuara</h2>
+        <p style="margin-top: 0.75rem;">
+          Pendidikan khusus hadir untuk memastikan bahwa tidak ada seorang anak pun yang terasingkan dari percakapan kemanusiaan hanya karena pita suara atau koordinasi motorik lidahnya mengalami disfungsi. Melalui pemahaman distingsi wicara-bahasa dan advokasi teknologi AAC, kita memberikan "suara" yang bermartabat bagi setiap peserta didik.
+        </p>
+        <div class="quote-box" style="border-left-color: var(--gz-orange); background: #fff7ed;">
+          “Not being able to speak is not the same as not having anything to say. Augmentative communication unlocks the prison of silence and validates the human mind within.”
+          <footer>— Rosemary Crossley (Pionir Advokasi Hak Komunikasi Inklusif)</footer>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 2: WORKSHEET MAHASISWA (TUGAS ANALISIS KASUS - PRINTABLE PDF)
+         ========================================================================= -->
+    <section id="worksheet-view" class="view-section">
+      <div class="print-action-bar">
+        <div>
+          <h3 style="color: var(--gz-purple);">Lembar Aktivitas Mahasiswa: Tugas Analisis Kasus Klinis (LKM 10)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan analisis dua studi kasus komprehensif di bawah ini, lalu simpan/cetak dalam format PDF.</p>
+        </div>
+        <button class="btn-download-pdf" style="background: var(--gz-purple);" onclick="window.print()">
+          <span>🖨️ Cetak / Unduh Dokumen (PDF)</span>
+        </button>
+      </div>
+
+      <div class="worksheet-paper">
+        <header style="border-bottom: 2.5px solid #0f172a; padding-bottom: 1.25rem; margin-bottom: 2rem;">
+          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.3rem; color: #0f172a;">LEMBAR KERJA ANALISIS KASUS GANGGUAN WICARA, BAHASA, &amp; DESAIN SISTEM AAC (LKM 10)</h2>
+          <p style="text-align: center; font-size: 0.9rem; color: #475569;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005, Bab 10) &amp; Heward et al. (2017, Bab 8)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <div><strong>Nama Mahasiswa:</strong> ____________________________________</div>
+            <div><strong>NIM / Kelas:</strong> ____________________________________</div>
+            <div><strong>Tanggal Pertemuan:</strong> ____________________________________</div>
+            <div><strong>Nilai / Verifikasi:</strong> ____________________________________</div>
+          </div>
+        </header>
+
+        <!-- KASUS ANALISIS 1: DISTINGSI WICARA VS BAHASA -->
+        <div class="case-scenario-box">
+          <label style="color: var(--gz-purple); font-size: 1.05rem; display: block; margin-bottom: 0.5rem; font-weight: 800;">
+            KASUS ANALISIS 1: AUDIT DIFERENSIAL GANGGUAN BICARA VS GANGGUAN BAHASA (BOBOT 50%)
+          </label>
+          <p style="font-size: 0.9rem; color: #1e293b; line-height: 1.6; margin-bottom: 1rem;">
+            <strong>Profil Kasus Siswa A (Rian, 7 tahun):</strong> Rian mampu melafalkan seluruh konsonan abjad dengan artikulasi yang sangat jelas dan fasih. Namun, ketika diajak berbicara, Rian hanya mengulang kata-kata akhir lawan bicara (ekolalia). Ketika ditanya <em>"Rian mau minum apa?"</em>, ia menjawab <em>"Minum apa"</em>. Rian tidak dapat membentuk kalimat permintaan sendiri dan tampak bingung ketika diberi instruksi dua tahap seperti <em>"Ambil bukumu lalu taruh di meja"</em>.<br><br>
+            <strong>Profil Kasus Siswa B (Ilham, 7 tahun):</strong> Ilham memahami seluruh penjelasan guru di kelas, mampu mengikuti instruksi tiga tahap secara tepat, dan menunjukkan ekspresi emosional yang sangat sesuai. Namun, saat berbicara, suaranya sangat sengau (hipernasal), beberapa bunyi konsonan tertukar (S-O-D-A), dan kata-katanya sangat sulit dipahami oleh teman-temannya kecuali oleh ibunya sendiri.
+          </p>
+
+          <p style="font-size: 0.92rem; line-height: 1.6; color: #0f172a; font-weight: 700;">
+            Instruksi Analisis Mahasiswa:
+          </p>
+          <p style="font-size: 0.9rem; color: #334155; line-height: 1.6;">
+            1. Bedah dan tentukan secara tepat: Kasus manakah yang murni mengalami <strong>Gangguan Bahasa (Language Disorder)</strong> dan kasus manakah yang murni mengalami <strong>Gangguan Bicara (Speech Disorder)</strong>? Sertakan bukti data perilakunya!<br>
+            2. Berdasarkan 5 dimensi bahasa (fonologi, morfologi, sintaksis, semantik, pragmatik), dimensi manakah yang mengalami kerusakan paling parah pada Siswa A?<br>
+            3. Rancanglah masing-masing <strong>1 strategi intervensi pedagogis utama</strong> yang relevan untuk Siswa A di kelas inklusi dan untuk Siswa B di ruang terapi wicara!
+          </p>
+          <textarea rows="6" placeholder="Tuliskan hasil analisis komparatif Siswa A vs Siswa B, identifikasi dimensi bahasa, serta rencana intervensi spesifik di sini..."></textarea>
+        </div>
+
+        <!-- KASUS ANALISIS 2: REKOMENDASI SISTEM AAC PADA CEREBRAL PALSY -->
+        <div class="case-scenario-box" style="margin-top: 2rem;">
+          <label style="color: var(--gz-orange); font-size: 1.05rem; display: block; margin-bottom: 0.5rem; font-weight: 800;">
+            KASUS ANALISIS 2: PERANCANGAN SOLUSI SISTEM AAC PADA CEREBRAL PALSY ATETOID (BOBOT 50%)
+          </label>
+          <p style="font-size: 0.9rem; color: #1e293b; line-height: 1.6; margin-bottom: 1rem;">
+            <strong>Kasus Klinis:</strong> Sarah (10 tahun) mengalami <em>Cerebral Palsy</em> tipe Atetoid berat. Kerusakan motorik menyebabkan gerakan meliuk involunter pada kedua lengan dan kedua kakinya, serta kelumpuhan parah pada otot-otot laring dan lidah sehingga Sarah sama sekali tidak dapat memproduksi suara bicara yang dapat dipahami (non-verbal). Namun, hasil asesmen psikologis adaptif membuktikan bahwa Sarah memiliki <strong>tingkat kecerdasan kognitif di atas rata-rata (skor IQ 118)</strong>, kemampuan bahasa reseptif yang sangat matang, serta kontrol gerakan bola mata (eye movement) yang sangat stabil dan terarah.
+          </p>
+
+          <p style="font-size: 0.92rem; line-height: 1.6; color: #0f172a; font-weight: 700;">
+            Instruksi Analisis Mahasiswa:
+          </p>
+          <p style="font-size: 0.9rem; color: #334155; line-height: 1.6;">
+            1. Mengapa pemberian papan komunikasi bergambar biasa (low-tech aided) yang mengharuskan Sarah menunjuk kartu dengan jari tangannya dinilai TIDAK LAYAK untuk kondisinya?<br>
+            2. Rekomendasikan secara spesifik teknologi <strong>AAC Tingkat Tinggi (High-Tech Aided AAC)</strong> apa yang paling ideal dan manusiawi untuk Sarah dengan memanfaatkan kontrol gerakan matanya!<br>
+            3. Bagaimana peran guru kelas inklusi dalam mengadaptasi sistem asesmen ujian sekolah agar potensi kecerdasan Sarah yang tinggi dapat dinilai secara objektif tanpa terhambat ketiadaan fungsi bicaranya?
+          </p>
+          <textarea rows="6" placeholder="Tuliskan analisis kontraindikasi motorik, rekomendasi teknologi eye-gaze tracking SGD, dan akomodasi asesmen kelas di sini..."></textarea>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 3: INTERACTIVE PRESENTATION MODE (SLIDE INTERAKTIF DOSEN)
+         ========================================================================= -->
+    <section id="presentation-view" class="view-section">
+      
+      <div class="presentation-frame" style="background: #0f172a;">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide-item active">
+          <span class="slide-indicator" style="color: #a78bfa;">Slide 1 dari 6 • Orientasi Komunikasi</span>
+          <h2>Gangguan Komunikasi, Bicara, &amp; Bahasa</h2>
+          <div class="slide-body">
+            <p>Membongkar Kompleksitas Linguistik dan Mekanisme Neuromuskular:</p>
+            <ul>
+              <li>Komunikasi sebagai payung terbesar; Bahasa sebagai sistem kode; Bicara sebagai output motorik.</li>
+              <li>Prevalensi tinggi: Disabilitas primer terbesar kedua di bawah regulasi IDEA.</li>
+              <li>Sintesis rujukan otoritatif Hallahan &amp; Kauffman (2005) dan William L. Heward (2017).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen (10 Menit Awal):</strong> Awali dengan provokasi konseptual: "Jika seseorang tidak bisa berbicara secara lisan, apakah otomatis dia tidak memiliki bahasa di dalam otaknya?" Arahkan diskusi ke pembedaan fundamental antara speech dan language.
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #fb923c;">Slide 2 dari 6 • Gangguan Bicara</span>
+          <h2>Taksonomi Gangguan Bicara (Speech Disorders)</h2>
+          <div class="slide-body">
+            <p>Penyimpangan pada Mekanisme Produksi Bunyi Lisan:</p>
+            <ul>
+              <li><strong>1. Artikulasi (S-O-D-A):</strong> Substitusi (menukar), Omisi (menghilangkan), Distorsi (melenceng), dan Adisi (menyisipkan fonem).</li>
+              <li><strong>2. Kelancaran (Fluency):</strong> Gagap (Stuttering - repetisi, prolongasi, hambatan hening) &amp; Cluttering (irama kacau terlampau cepat).</li>
+              <li><strong>3. Suara (Voice):</strong> Gangguan fonasi (serak parau) &amp; resonansi (hipernasal celah bibir).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Jelaskan bahwa gagap bukan sekadar masalah lidah, melainkan fenomena interaksi kompleks antara faktor neuromuskular, regulasi emosi, dan kecemasan situasi sosial.
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 3 dari 6 • Dimensi Bahasa</span>
+          <h2>Lima Dimensi Linguistik Bahasa (Language Disorders)</h2>
+          <div class="slide-body">
+            <p>Kerusakan pada Aturan Kode Mental Kognitif (Heward et al., 2017):</p>
+            <ul>
+              <li><strong>Fonologi:</strong> Aturan penggabungan unit bunyi terkecil (fonem).</li>
+              <li><strong>Morfologi:</strong> Struktur kata, imbuhan, dan makna gramatikal dasar.</li>
+              <li><strong>Sintaksis:</strong> Tata bahasa urutan perakitan kalimat (SPOK).</li>
+              <li><strong>Semantik:</strong> Makna kosakata, hubungan konsep abstrak, dan idiom.</li>
+              <li><strong>Pragmatik:</strong> Etika penggunaan bahasa dalam konteks sosial interaktif.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Berikan contoh defisit pragmatik: Siswa yang berbicara dengan volume keras di dalam perpustakaan atau menyela guru saat mengajar tanpa memahami kode sosial sopan santun.
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #a78bfa;">Slide 4 dari 6 • Reseptif vs Ekspresif</span>
+          <h2>Bahasa Reseptif vs Bahasa Ekspresif</h2>
+          <div class="slide-body">
+            <p>Dua Arah Pemrosesan Informasi Linguistik (Hallahan &amp; Kauffman, 2005):</p>
+            <ul>
+              <li><strong>Hambatan Bahasa Reseptif:</strong> Sukar mengurai, memahami, dan memproses instruksi atau makna perkataan orang lain.</li>
+              <li><strong>Hambatan Bahasa Ekspresif:</strong> Mampu memahami gagasan orang lain, namun tidak mampu merangkai kata untuk menyampaikan pikiran sendiri.</li>
+              <li>Kombinasi keduanya (mixed receptive-expressive) memicu kegagalan akademik parah di kelas reguler.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Ingatkan mahasiswa: Jangan langsung mencap anak "membangkang aturan" jika mereka tidak melakukan instruksi guru; periksa apakah mereka mengalami gangguan bahasa reseptif!
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #fb923c;">Slide 5 dari 6 • Sistem AAC</span>
+          <h2>Komunikasi Augmentatif &amp; Alternatif (AAC)</h2>
+          <div class="slide-body">
+            <p>Solusi Pembebasan Komunikasi Non-Verbal (Heward et al., 2017):</p>
+            <ul>
+              <li><strong>Unaided AAC (Tanpa Alat):</strong> Bahasa isyarat manual, gestur, ekspresi, dan gerak arah tatapan mata.</li>
+              <li><strong>Low-Tech Aided (Alat Rendah):</strong> Papan simbol visual, buku komunikasi pertukaran gambar (PECS).</li>
+              <li><strong>High-Tech Aided (Alat Canggih):</strong> Speech-Generating Devices (SGDs) dan tablet komunikasi bersuara sintetis (eye-tracking).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Tegaskan kembali: Bukti ilmiah membuktikan bahwa penggunaan sistem AAC TIDAK menghambat bicara oral, melainkan justru mempercepat munculnya kata-kata vokal karena mereduksi stres kognitif anak.
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 6 dari 6 • Rangkuman &amp; Aksi</span>
+          <h2>Closing Thought: Peran Guru Kelas Inklusif</h2>
+          <div class="slide-body">
+            <p>Strategi Fasilitasi Bahasa di Ruang Kelas:</p>
+            <ul>
+              <li>Terapkan teknik perluasan (expansion) dan pembentangan bahasa (expatiation).</li>
+              <li>Sediakan waktu tunggu respons (wait time) yang cukup bagi anak yang gagap/disartria.</li>
+              <li>Minggu Depan (Pertemuan 11): Disabilitas Sensori Penglihatan (Netra) &amp; Pendengaran (Rungu).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Arahkan mahasiswa menyelesaikan tugas analisis kasus LKM 10 sebelum menutup perkuliahan.
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <footer class="slide-controls" style="border-top: 1px solid rgba(255, 255, 255, 0.15);">
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-ctrl secondary" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+            <button class="btn-ctrl" style="background: var(--gz-purple);" onclick="changeSlide(1)">Selanjutnya ❯</button>
+          </div>
+          <button class="btn-ctrl secondary" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Dosen</button>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LOGIKA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Pengalihan Tab Navigasi
+    function switchView(targetViewId, buttonElement) {
+      document.querySelectorAll('.view-section').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(targetViewId).classList.add('active');
+      buttonElement.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Web Audio API Synthesizer (Efek Suara Mini Game Bawaan Browser)
+    let audioFxEnabled = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTone(type) {
+      if (!audioFxEnabled) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'success') {
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.25); // G5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } else {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+        osc.frequency.exponentialRampToValueAtTime(130.81, audioCtx.currentTime + 0.25); // C3
+        gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      }
+    }
+
+    function toggleAudioFx() {
+      audioFxEnabled = !audioFxEnabled;
+      const btn = document.getElementById('sound-btn');
+      if (audioFxEnabled) {
+        btn.classList.add('active');
+        btn.textContent = '🔊 Suara Pengarah: Aktif';
+      } else {
+        btn.classList.remove('active');
+        btn.textContent = '🔇 Suara Pengarah: Hening';
+      }
+    }
+
+    // 3. Evaluasi Mini Game Pertemuan 10
+    function evaluateSpeechGame(choice) {
+      const feedback = document.getElementById('game-feedback');
+      feedback.style.display = 'block';
+
+      if (choice === 'b') {
+        playTone('success');
+        feedback.style.background = '#ede9fe';
+        feedback.style.color = '#5b21b6';
+        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Menurut doktrin Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), bahasa Dika utuh (memahami instruksi, kosakata kaya, tata bahasa benar), namun output motorik fisiknya mengalami kesalahan artikulasi fonem berupa Substitusi (kopi/topi), Omisi (misa/minta), dan Adisi (kutcing/kucing).';
+      } else {
+        playTone('error');
+        feedback.style.background = '#ffedd5';
+        feedback.style.color = '#9a3412';
+        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan data kasus: bahasa reseptif dan tata kalimat Dika normal. Masalahnya murni terletak pada kejelasan produksi bunyi fonem motorik, yang merupakan ciri khas gangguan artikulasi (S-O-D-A).';
+      }
+    }
+
+    // 4. Pengendali Slide Presentasi Dosen
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+
+    function updateSlideDisplay() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+      updateSlideDisplay();
+    }
+
+    function toggleSpeakerNotes() {
+      const activeSlide = slides[currentSlide];
+      const notes = activeSlide.querySelector('.speaker-notes-box');
+      if (notes) {
+        notes.style.display = (notes.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // Navigasi Keyboard untuk Slide
+    document.addEventListener('keydown', (e) => {
+      const presView = document.getElementById('presentation-view');
+      if (presView.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
