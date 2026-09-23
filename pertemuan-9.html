@@ -6,38 +6,50 @@
   <title>Pertemuan 9: Spektrum Autisme (ASD) &amp; Intervensi Berbasis Bukti</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Aksen visual khusus Pertemuan 9: Hijau Tua (Deep Forest Green) & Merah (Crimson/Coral Red) */
+    / Variabel Aksen Khusus Pertemuan 9: Tren Gen Z Ungu, Oranye, dan Biru /
     :root {
-      --deep-forest: #14532d;
-      --deep-forest-light: #dcfce7;
-      --crimson-red: #be123c;
-      --crimson-red-light: #ffe4e6;
-      --amber-gold: #b45309;
+      --gz-purple: #7c3aed;
+      --gz-purple-light: #ede9fe;
+      --gz-orange: #ea580c;
+      --gz-orange-light: #ffedd5;
+      --gz-blue: #0284c7;
+      --gz-blue-light: #e0f2fe;
+      --gz-dark: #0f172a;
     }
-    .badge-forest {
-      background: var(--deep-forest-light);
-      color: var(--deep-forest);
+    .badge-purple {
+      background: var(--gz-purple-light);
+      color: var(--gz-purple);
       font-weight: 800;
     }
-    .badge-crimson {
-      background: var(--crimson-red-light);
-      color: var(--crimson-red);
+    .badge-orange {
+      background: var(--gz-orange-light);
+      color: var(--gz-orange);
       font-weight: 800;
     }
-    .card-forest {
-      border-left: 4px solid var(--deep-forest);
-      background: #f0fdf4;
+    .badge-blue {
+      background: var(--gz-blue-light);
+      color: var(--gz-blue);
+      font-weight: 800;
     }
-    .card-crimson {
-      border-left: 4px solid var(--crimson-red);
-      background: #fff1f2;
+    .card-purple {
+      border-left: 4px solid var(--gz-purple);
+      background: #faf5ff;
     }
-    .social-story-box {
-      border: 2px dashed var(--crimson-red);
-      background: #fff5f5;
-      border-radius: var(--radius-md);
+    .card-orange {
+      border-left: 4px solid var(--gz-orange);
+      background: #fff7ed;
+    }
+    .card-blue {
+      border-left: 4px solid var(--gz-blue);
+      background: #f0f9ff;
+    }
+    .task-img-container {
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
       padding: 1.5rem;
-      margin: 1.25rem 0;
+      background: #ffffff;
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow-sm);
     }
   </style>
 </head>
@@ -47,12 +59,12 @@
   <header class="site-header">
     <div class="nav-container">
       <div class="brand-badge">
-        <span style="color: var(--deep-forest);">ORTOPEDAGOGIK</span>
-        <span class="pill badge-forest">Pertemuan 9</span>
+        <span style="color: var(--gz-purple);">ORTOPEDAGOGIK</span>
+        <span class="pill badge-purple">Pertemuan 9</span>
       </div>
       <nav class="view-tabs" role="tablist">
         <button class="tab-btn active" onclick="switchView('reading-view', this)">Modul Bacaan Lengkap</button>
-        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja Siswa (Singkat)</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja &amp; Analisis Gambar</button>
         <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Dosen</button>
       </nav>
     </div>
@@ -66,41 +78,41 @@
     <section id="reading-view" class="view-section active">
       
       <!-- HERO BANNER -->
-      <header class="hero-box" style="background: linear-gradient(135deg, #dcfce7 0%, #ffffff 50%, #ffe4e6 100%);">
-        <span class="section-label badge-crimson">Modul Perkuliahan Pasca-UTS</span>
-        <h1 style="color: #0f172a;">Anak Berkebutuhan Khusus dengan Spektrum Autisme (Autism Spectrum Disorder / ASD)</h1>
-        <p>Kajian ortopedagogik komprehensif: pembedahan kriteria diagnostik DSM-5/IDEA, disfungsi Theory of Mind, kepekaan modulasi sensori, stimulasi repetitif, serta pendekatan intervensi teruji ilmiah (Applied Behavior Analysis, PECS, TEACCH, dan Social Stories).</p>
+      <header class="hero-box" style="background: linear-gradient(135deg, #ede9fe 0%, #ffedd5 50%, #e0f2fe 100%);">
+        <span class="section-label badge-purple">Modul Perkuliahan Pasca-UTS</span>
+        <h1 style="color: var(--gz-dark);">Anak Berkebutuhan Khusus dengan Spektrum Autisme (Autism Spectrum Disorder / ASD)</h1>
+        <p>Eksplorasi ilmiah komprehensif: evolusi historis Leo Kanner &amp; Hans Asperger, pembedahan kriteria diagnostik DSM-5 (Dyad of Impairments), defisit kognitif Theory of Mind, anomali pemrosesan modulasi sensori, hingga intervensi berbasis bukti (ABA/DTT, PRT, PECS, TEACCH, dan Social Stories).</p>
         <div class="hero-meta">
           <span>⏱ Durasi: 2 SKS (100 Menit)</span>
           <span>📚 Rujukan: Hallahan &amp; Kauffman (2005, Bab 9) &amp; Heward et al. (2017, Bab 7)</span>
-          <span>🎯 Capaian: Analisis Kebutuhan Sensori-Komunikasi &amp; Desain Cerita Sosial (Social Story)</span>
+          <span>🎯 Capaian: Analisis Kognitif-Sensori ASD &amp; Perancangan Akomodasi Instruksional</span>
         </div>
       </header>
 
       <!-- SESI 1: PENDAHULUAN (10 MENIT) -->
       <article class="content-card">
-        <span class="section-label badge-forest">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
-        <h2>1. Menyingkap Kabut Mitos: Dunia yang Sangat Intens dan Berbeda</h2>
+        <span class="section-label badge-orange">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
+        <h2>1. Membongkar Mitos: Spektrum yang Luas dan Kompleks</h2>
         <p style="margin-top: 0.75rem;">
-          Autisme kerap kali digambarkan secara keliru di ruang publik: sebagian orang menganggap anak autisme hidup di "dunia mereka sendiri" yang dingin tanpa emosi, sementara sebagian lainnya menganggap seluruh individu autisme memiliki kemampuan jenius luar biasa (*savant syndrome*). Buku teks rujukan menegaskan bahwa kedua anggapan tersebut adalah generalisasi yang menyesatkan.
+          Spektrum autisme sering kali diselimuti miskonsepsi ekstrem di kalangan masyarakat awam. Sebagian orang menganggap seluruh anak autisme tidak memiliki perasaan emosional dan hidup di "dunia mereka sendiri yang terisolasi". Sementara itu, media populer kerap menggambarkan anak autisme sebagai sosok jenius ajaib (savant) yang mampu menghafal isi ensiklopedia seketika. Buku teks rujukan menegaskan bahwa autisme adalah kondisi perkembangan neurobiologis yang sangat heterogen dan kompleks.
         </p>
 
-        <div class="quote-box" style="border-left-color: var(--crimson-red); background: #fff5f5;">
-          “Autism is not a tragedy. Ignorance is the tragedy. Children with autism are not living in their own world; they are living in our world, processing sensory and social information in a profoundly different way.”
-          <footer>— William L. Heward, Sheila R. Alber-Morgan, &amp; Moira Konrad (2017, hlm. 224)</footer>
+        <div class="quote-box" style="border-left-color: var(--gz-purple); background: #faf5ff;">
+          “Autism is a developmental disability affecting verbal and nonverbal communication and social interaction, generally evident before age 3, that adversely affects a child’s educational performance. The term spectrum underscores that autism is not a single condition, but rather a continuum of unique behavioral and cognitive profiles.”
+          <footer>— William L. Heward, Sheila R. Alber-Morgan, &amp; Moira Konrad (2017, hlm. 226)</footer>
         </div>
 
         <div class="grid-two-col">
-          <div class="accent-card card-crimson">
-            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--crimson-red);">Mengapa Disebut "Spektrum"?</h3>
+          <div class="accent-card card-purple">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--gz-purple);">Tonggak Sejarah: Leo Kanner &amp; Hans Asperger</h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-              Hallahan &amp; Kauffman (2005) menjelaskan bahwa istilah <strong>Spektrum (*Spectrum*)</strong> digunakan karena manifestasi kondisi ini sangat luas: mulai dari anak yang non-verbal dengan kebutuhan dukungan pervasif dan hambatan intelektual berat, hingga individu yang sangat fasih berbicara dengan kapasitas kognitif unggul (dahulu dikategorikan sebagai *Asperger syndrome*).
+              Tahun 1943, psikiater <strong>Leo Kanner</strong> di Johns Hopkins University mendeskripsikan 11 anak dengan kondisi yang ia sebut <em>early infantile autism</em>, ditandai oleh ketidakmampuan membina hubungan sosial sejak lahir, keterlambatan bicara, dan kebutuhan kuat akan keteraturan (insistence on sameness). Setahun berselang (1944) di Wina, <strong>Hans Asperger</strong> meneliti sekelompok anak dengan profil serupa namun memiliki kosakata bahasa lisan yang sangat tinggi dan kecerdasan normal.
             </p>
           </div>
-          <div class="accent-card card-forest">
-            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--deep-forest);">Tonggak Historis: Kanner &amp; Asperger</h3>
+          <div class="accent-card card-orange">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--gz-orange);">Dekonstruksi Teori "Refrigerator Mother"</h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-              Tahun 1943, Leo Kanner di Amerika Serikat mendeskripsikan 11 anak dengan *early infantile autism* yang menunjukkan penarikan diri sosial ekstrem dan resistensi terhadap perubahan. Hampir bersamaan pada 1944 di Austria, Hans Asperger meneliti anak-anak dengan pola serupa namun memiliki kemampuan bahasa lisan yang sangat tinggi.
+              Hallahan &amp; Kauffman (2005) mencatat babak kelam ketika Bruno Bettelheim menyebarkan mitos psikoanalisis bahwa autisme disebabkan oleh ibu yang bersikap dingin dan kaku (refrigerator mother). Sains ortopedagogik modern telah membantah mitos ini secara tuntas: autisme adalah <strong>kelainan perkembangan neurobiologis berbasis genetik</strong>, bukan akibat kesalahan pola asuh orang tua.
             </p>
           </div>
         </div>
@@ -108,209 +120,230 @@
 
       <!-- SESI 2: MATERI INTI (45 MENIT) -->
       <article class="content-card">
-        <span class="section-label badge-crimson">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
-        <h2>2. Definisi Resmi DSM-5 &amp; IDEA: Dua Ranah Inti Gangguan (Dyad of Impairments)</h2>
+        <span class="section-label badge-blue">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
+        <h2>2. Kriteria Diagnostik DSM-5: Dua Ranah Defisit Inti (Dyad of Impairments)</h2>
         <p style="margin-top: 0.75rem;">
-          Sebelumnya autisme diklasifikasikan ke dalam "Triad Gangguan" (interaksi sosial, komunikasi, dan perilaku repetitif). Namun, mengacu langsung pada tinjauan mutakhir dalam <strong>Heward et al. (2017, hlm. 226)</strong> dan kriteria klinis DSM-5, autisme dikonsolidasikan menjadi <strong>Dua Ranah Defisit Inti</strong>:
+          Sebelumnya pada DSM-IV, autisme dikelompokkan ke dalam kategori terpisah seperti Gangguan Autistik, Sindrom Asperger, dan PDD-NOS. Namun, sebagaimana dipaparkan dalam <strong>Heward et al. (2017, hlm. 227)</strong>, panduan diagnostik DSM-5 melebur subkategori tersebut menjadi satu payung tunggal: <strong>Autism Spectrum Disorder (ASD)</strong> dengan dua ranah defisit inti:
         </p>
 
-        <!-- DIAGRAM 1: DYAD OF IMPAIRMENTS & DERAJAT DUKUNGAN (SVG LENGKAP) -->
+        <!-- DIAGRAM 1: DYAD OF IMPAIRMENTS & TIGA TINGKAT DUKUNGAN (SVG RESPONSIVE) -->
         <div class="diagram-container">
-          <svg viewBox="0 0 940 380" width="100%" height="auto" style="max-height: 400px; font-family: 'Plus Jakarta Sans', sans-serif;">
+          <svg viewBox="0 0 940 400" width="100%" height="auto" style="max-height: 420px; font-family: 'Plus Jakarta Sans', sans-serif;">
             <defs>
-              <linearGradient id="asdRed" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#be123c"/>
-                <stop offset="100%" stop-color="#e11d48"/>
+              <linearGradient id="asdPurp" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7c3aed" />
+                <stop offset="100%" stop-color="#a855f7" />
               </linearGradient>
-              <linearGradient id="asdGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#14532d"/>
-                <stop offset="100%" stop-color="#15803d"/>
+              <linearGradient id="asdOran" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ea580c" />
+                <stop offset="100%" stop-color="#fb923c" />
               </linearGradient>
-              <linearGradient id="asdBase" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#0f172a"/>
-                <stop offset="100%" stop-color="#334155"/>
+              <linearGradient id="asdBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0284c7" />
+                <stop offset="100%" stop-color="#38bdf8" />
               </linearGradient>
-              <filter id="boxDrop9" x="-5%" y="-10%" width="110%" height="125%">
+              <filter id="dropGZ" x="-5%" y="-10%" width="110%" height="125%">
                 <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
               </filter>
             </defs>
 
-            <!-- Base: Tingkat Kebutuhan Dukungan (Levels of Support) -->
-            <g filter="url(#boxDrop9)">
-              <rect x="40" y="275" width="860" height="75" rx="12" fill="url(#asdBase)"/>
-              <text x="470" y="306" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">SPEKTRUM DERAJAT DUKUNGAN DSM-5 (LEVELS OF SUPPORT NEEDED)</text>
-              <text x="470" y="328" fill="#a7f3d0" font-size="11.5" text-anchor="middle">Level 1: Memerlukan Dukungan • Level 2: Memerlukan Dukungan Substansial • Level 3: Memerlukan Dukungan Sangat Substansial</text>
+            <!-- Base: Spektrum Taraf Kebutuhan Dukungan -->
+            <g filter="url(#dropGZ)">
+              <rect x="40" y="285" width="860" height="85" rx="12" fill="url(#asdBlue)"/>
+              <text x="470" y="318" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">SPEKTRUM DERAJAT KEBUTUHAN DUKUNGAN INDIVIDUAL (DSM-5 / HEWARD ET AL., 2017)</text>
+              <text x="470" y="342" fill="#e0f2fe" font-size="11.5" text-anchor="middle">Level 1: Memerlukan Dukungan • Level 2: Memerlukan Dukungan Substansial • Level 3: Memerlukan Dukungan Sangat Substansial</text>
+              <text x="470" y="358" fill="#ffffff" font-size="10" text-anchor="middle">"Derajat keparahan ditentukan oleh intensitas hambatan komunikasi sosial dan kekakuan perilaku repetitif."</text>
             </g>
 
-            <!-- Kotak 1: Defisit Komunikasi & Interaksi Sosial (Merah) -->
-            <g filter="url(#boxDrop9)">
-              <rect x="45" y="35" width="410" height="215" rx="12" fill="#ffffff" stroke="#fecdd3" stroke-width="2"/>
-              <rect x="45" y="35" width="410" height="40" rx="12" fill="url(#asdRed)"/>
-              <text x="250" y="60" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">RANAH 1: DEFISIT KOMUNIKASI &amp; INTERAKSI SOSIAL</text>
-              <text x="70" y="105" fill="#0f172a" font-size="11.5" font-weight="700">• Hambatan Timbal Balik Sosial-Emosional:</text>
-              <text x="85" y="125" fill="#475569" font-size="10.5">Kesulitan memulai percakapan dua arah, berbagi minat, atau ekspresi emosi.</text>
-              <text x="70" y="152" fill="#0f172a" font-size="11.5" font-weight="700">• Hambatan Komunikasi Nonverbal:</text>
-              <text x="85" y="172" fill="#475569" font-size="10.5">Kontak mata minim/anomali, gestur tubuh kaku, kesulitan membaca ekspresi wajah.</text>
-              <text x="70" y="198" fill="#0f172a" font-size="11.5" font-weight="700">• Hambatan Mengembangkan Hubungan:</text>
-              <text x="85" y="218" fill="#475569" font-size="10.5">Kesulitan menyesuaikan perilaku dengan konteks sosial dan menjalin pertemanan sebaya.</text>
+            <!-- Kotak 1: Ranah Komunikasi & Interaksi Sosial (Ungu) -->
+            <g filter="url(#dropGZ)">
+              <rect x="45" y="35" width="410" height="225" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+              <rect x="45" y="35" width="410" height="42" rx="12" fill="url(#asdPurp)"/>
+              <text x="250" y="62" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">RANAH 1: KOMUNIKASI &amp; INTERAKSI SOSIAL</text>
+              <text x="65" y="105" fill="#0f172a" font-size="11.5" font-weight="700">• Defisit Resiprositas Sosial-Emosional:</text>
+              <text x="80" y="125" fill="#475569" font-size="10.5">Kesulitan percakapan timbal balik, ketiadaan berbagi minat atau emosi.</text>
+              <text x="65" y="152" fill="#0f172a" font-size="11.5" font-weight="700">• Defisit Komunikasi Nonverbal:</text>
+              <text x="80" y="172" fill="#475569" font-size="10.5">Kontak mata anomali/terhindar, gestur kaku, ekspresi wajah minim.</text>
+              <text x="65" y="198" fill="#0f172a" font-size="11.5" font-weight="700">• Defisit Membina Hubungan Sebaya:</text>
+              <text x="80" y="218" fill="#475569" font-size="10.5">Kesulitan menyesuaikan perilaku dalam situasi sosial dan ketiadaan minat bermain.</text>
             </g>
 
-            <!-- Kotak 2: Pola Perilaku, Minat, & Aktivitas Terbatas/Repetitif (Hijau Tua) -->
-            <g filter="url(#boxDrop9)">
-              <rect x="485" y="35" width="415" height="215" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="2"/>
-              <rect x="485" y="35" width="415" height="40" rx="12" fill="url(#asdGreen)"/>
-              <text x="692" y="60" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">RANAH 2: POLA PERILAKU TERBATAS &amp; REPETITIF (RRBs)</text>
-              <text x="505" y="105" fill="#0f172a" font-size="11.5" font-weight="700">• Gerakan Motorik Repetitif / Stereotipik:</text>
-              <text x="520" y="125" fill="#475569" font-size="10.5">Mengepakkan tangan (*hand-flapping*), memutar benda, ekolalia (membeo kata).</text>
-              <text x="505" y="152" fill="#0f172a" font-size="11.5" font-weight="700">• Kebutuhan Kekakuan Rutinitas (*Sameness*):</text>
-              <text x="520" y="172" fill="#475569" font-size="10.5">Kepanikan/tantrum saat ada perubahan rute jalan atau perubahan jadwal kelas mendadak.</text>
+            <!-- Kotak 2: Pola Perilaku Terbatas & Repetitif (Oranye) -->
+            <g filter="url(#dropGZ)">
+              <rect x="485" y="35" width="415" height="225" rx="12" fill="#ffffff" stroke="#fed7aa" stroke-width="2"/>
+              <rect x="485" y="35" width="415" height="42" rx="12" fill="url(#asdOran)"/>
+              <text x="692" y="62" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">RANAH 2: PERILAKU TERBATAS &amp; REPETITIF (RRBs)</text>
+              <text x="505" y="105" fill="#0f172a" font-size="11.5" font-weight="700">• Gerakan Stereotipik &amp; Repetitif (Stimming):</text>
+              <text x="520" y="125" fill="#475569" font-size="10.5">Mengepakkan tangan (hand-flapping), memilin jari, memutar benda, ekolalia.</text>
+              <text x="505" y="152" fill="#0f172a" font-size="11.5" font-weight="700">• Kebutuhan Kaku pada Rutinitas (Sameness):</text>
+              <text x="520" y="172" fill="#475569" font-size="10.5">Kepanikan/tantrum ekstrem saat terjadi perubahan rute jalan atau susunan meja.</text>
               <text x="505" y="198" fill="#0f172a" font-size="11.5" font-weight="700">• Anomali Pemrosesan Stimulus Sensori:</text>
-              <text x="520" y="218" fill="#475569" font-size="10.5">Hipersensitif (menutup telinga pada suara blender) atau hiposensitif pada rasa sakit/suhu.</text>
+              <text x="520" y="218" fill="#475569" font-size="10.5">Hipersensitif (kelebihan beban stimulus suara) atau hiposensitif pada rasa sakit/dingin.</text>
             </g>
           </svg>
-          <div class="diagram-caption">Diagram 1: Klasifikasi Dua Ranah Defisit Inti ASD Berdasarkan DSM-5 &amp; Heward et al. (2017)</div>
+          <div class="diagram-caption">Diagram 1: Dua Ranah Defisit Utama (Dyad of Impairments) &amp; Spektrum Tingkat Dukungan DSM-5 (Heward et al., 2017)</div>
         </div>
 
-        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2.1. Teori Kognitif-Sosial: Defisit "Theory of Mind" (ToM)</h3>
+        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2.1. Teori Kognitif-Sosial: Theory of Mind, Central Coherence, &amp; Fungsi Eksekutif</h3>
         <p>
-          Salah satu kontribusi ilmiah terbesar dalam memahami dunia batin anak dengan autisme sebagaimana dipaparkan oleh <strong>Hallahan &amp; Kauffman (2005, hlm. 288)</strong> adalah konsep **Theory of Mind (ToM)** atau kemampuan membaca pikiran sosial:
+          Buku rujukan <strong>Hallahan &amp; Kauffman (2005, hlm. 288–292)</strong> menguraikan tiga teori pemrosesan mental yang mendasari pola pikir anak autisme:
         </p>
 
-        <div class="quote-box" style="border-left-color: var(--deep-forest); background: #f0fdf4;">
-          “Theory of mind refers to the ability to take the perspective of other people, to understand that others have thoughts, beliefs, feelings, and intentions that are different from one’s own. Children with autism have severe deficits in theory of mind, leading to what some researchers call ‘mindblindness’.”
-          <footer>— Daniel P. Hallahan &amp; James M. Kauffman (2005, hlm. 288)</footer>
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Kerangka Teori Kognitif</th>
+                <th>Mekanisme Defisit yang Terjadi</th>
+                <th>Dampak Nyata di Ruang Kelas Inklusif</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Theory of Mind (ToM) / Mindblindness</strong></td>
+                <td>Ketidakmampuan mengatribusikan kondisi mental (kepercayaan, keinginan, emosi) kepada diri sendiri dan orang lain; tidak menyadari bahwa orang lain memiliki perspektif berbeda.</td>
+                <td>Siswa berbicara tanpa henti mengenai topik minatnya tanpa peduli lawan bicaranya bosan; kesulitan memahami lelucon, sindiran (sarcasm), atau metafora; memahami ujaran secara harfiah (literal interpretation).</td>
+              </tr>
+              <tr>
+                <td><strong>2. Weak Central Coherence (Koherensi Sentral Lemah)</strong></td>
+                <td>Kecenderungan memproses informasi bagian demi bagian (detail-focused processing) secara lokal daripada memadukannya ke dalam gambaran besar (gestalt/big picture).</td>
+                <td>Siswa sangat mahir melihat kesalahan ketik kecil atau detail baut mainan, tetapi gagal menangkap makna inti atau tema cerita dari sebuah bacaan narasi panjang.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Executive Dysfunction (Disfungsi Eksekutif)</strong></td>
+                <td>Hambatan pada lobus frontal otak dalam perencanaan (planning), fleksibilitas mental kognitif, dan kemampuan menghambat respons (inhibitory control).</td>
+                <td>Siswa mengalami kesulitan besar saat harus berganti dari pelajaran menggambar ke pelajaran matematika (transition difficulty), mudah panik, dan menunjukkan pola perilaku kaku (perseveration).</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.2. Pemrosesan Sensori: Hipersensitif, Hiposensitif, dan Pemicu "Meltdown"</h3>
         <p>
-          Akibat defisit ToM (*mindblindness*), anak dengan autisme tidak menyadari bahwa orang lain tidak mengetahui apa yang ada di dalam kepalanya. Mereka kesulitan membedakan antara candaan, sarkasme, atau kebohongan, serta kesulitan memprediksi perasaan orang lain, sehingga kerap disalahartikan sebagai anak yang tidak berperasaan atau kasar.
+          Heward et al. (2017, hlm. 232) memberikan penekanan penting pada modulasi sensori. Otak anak dengan autisme kerap gagal menyaring stimulus lingkungan yang masuk:
+        </p>
+        <ul style="padding-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); line-height: 1.8;">
+          <li><strong>Hipersensitivitas (Kelebihan Beban Stimulus):</strong> Anak merasa sangat tersiksa oleh stimulus yang bagi orang umum dianggap biasa, misalnya dengungan lampu neon, suara gesekan kursi, bau detergen menyengat, atau label baju yang kasar pada kulit. Reaksi anak berupa menutup telinga, menjerit, atau melarikan diri (escape).</li>
+          <li><strong>Hiposensitivitas (Kekurangan Stimulus):</strong> Anak memiliki ambang batas kepekaan yang sangat tinggi; mereka mungkin tidak merasakan sakit saat terjatuh berdarah, mencari stimulasi tekanan mendalam (deep pressure seeking), atau menatap lampu terang secara terus-menerus.</li>
+          <li><strong>Distingsi Kritis: Tantrum vs Meltdown:</strong>
+            <br><em>Tantrum</em> adalah perilaku bertujuan yang dikendalikan oleh keinginan meraih sesuatu (berhenti saat anak mendapatkan apa yang diinginkan). Sedangkan <em>Meltdown</em> adalah ledakan neurologis akibat kelebihan beban sensori (sensory overload) di mana anak kehilangan kendali diri total dan membutuhkan ruang tenang untuk pemulihan sistem saraf.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.3. Pendekatan Intervensi Berbasis Bukti Ilmiah (Evidence-Based Practices)</h3>
+        <p>
+          Berdasarkan kajian <strong>Heward et al. (2017, hlm. 242–252)</strong> dan <strong>Hallahan &amp; Kauffman (2005)</strong>, berikut adalah model intervensi dengan dukungan riset empiris paling solid:
         </p>
 
-        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2.2. Pendekatan Intervensi Berbasis Bukti (Evidence-Based Practices)</h3>
-        <p>
-          Heward et al. (2017) memberikan peringatan keras bahwa bidang autisme rentan disusupi metode terapi palsu tak terbukti (*fad interventions*). Hanya pendekatan yang tervalidasi sains empiris yang direkomendasikan secara ortopedagogik:
-        </p>
-
-        <div class="grid-two-col">
-          <div class="accent-card card-forest">
-            <h4 style="color: var(--deep-forest); margin-bottom: 0.4rem;">1. Applied Behavior Analysis (ABA)</h4>
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-              Pendekatan sistematis berbasis teori belajar operan (*operant conditioning*). Keterampilan dipecah menjadi unit-unit mikro melalui format <strong>Discrete Trial Training (DTT)</strong> yang memuat: Stimulus Diskriminatif (SD) -> Perilaku/Respons Anak -> Konsekuensi/Penguatan (*Reinforcement*) seketika. Terbukti efektif meningkatkan keterampilan komunikasi dan bina diri secara signifikan.
-            </p>
-          </div>
-          <div class="accent-card card-crimson">
-            <h4 style="color: var(--crimson-red); margin-bottom: 0.4rem;">2. Picture Exchange Communication System (PECS)</h4>
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-              Dikembangkan oleh Frost dan Bondy untuk anak autisme non-verbal. Mengajarkan inisiatif komunikasi fungsional: anak belajar mengambil kartu bergambar dari bukunya, berjalan mendekati guru/mitra bicara, dan menyerahkan kartu tersebut untuk ditukar dengan benda yang diinginkannya.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid-two-col" style="margin-top: 1rem;">
-          <div class="accent-card" style="border-left: 4px solid var(--amber-gold); background: #fffbeb;">
-            <h4 style="color: var(--amber-gold); margin-bottom: 0.4rem;">3. Model TEACCH (Structured Teaching)</h4>
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-              Dikembangkan oleh Eric Schopler di University of North Carolina. Menekankan pengorganisasian lingkungan fisik kelas secara visual: batas area belajar yang jelas, jadwal harian visual bergambar, dan sistem kerja dari kiri ke kanan yang terstruktur untuk mereduksi kecemasan anak.
-            </p>
-          </div>
-          <div class="accent-card" style="border-left: 4px solid #4f46e5; background: #f5f3ff;">
-            <h4 style="color: #4f46e5; margin-bottom: 0.4rem;">4. Cerita Sosial (Social Stories)</h4>
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-              Dirintis oleh Carol Gray. Narasi pendek terstruktur yang ditulis dari sudut pandang anak untuk menjelaskan isyarat sosial, perasaan orang lain, dan perilaku yang diharapkan dalam situasi baru (misal: "Saat Antre Makan Siang").
-            </p>
-          </div>
-        </div>
-
-        <!-- DIAGRAM 2: ANATOMI STRUKTUR FORMULA CERITA SOSIAL CAROL GRAY (SVG) -->
-        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.3. Kaidah Baku Penulisan Cerita Sosial (Carol Gray Formula)</h3>
-        <p>
-          Heward et al. (2017, hlm. 250) menggarisbawahi aturan penulisan *Social Story*: narasi tidak boleh berupa daftar perintah atau ancaman, melainkan didominasi kalimat deskriptif dan perspektif dengan perbandingan rumus matematis yang ketat:
-        </p>
-
+        <!-- DIAGRAM 2: EMPAT MODEL INTERVENSI UTAMA ASD (SVG KOMPREHENSIF) -->
         <div class="diagram-container">
-          <svg viewBox="0 0 940 220" width="100%" height="auto" style="max-height: 240px; font-family: 'Plus Jakarta Sans', sans-serif;">
+          <svg viewBox="0 0 940 300" width="100%" height="auto" style="max-height: 320px; font-family: 'Plus Jakarta Sans', sans-serif;">
             <defs>
-              <linearGradient id="ssDesc" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#14532d"/><stop offset="100%" stop-color="#15803d"/></linearGradient>
-              <linearGradient id="ssPers" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
-              <linearGradient id="ssDir" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#be123c"/><stop offset="100%" stop-color="#e11d48"/></linearGradient>
+              <linearGradient id="mod1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#9333ea"/></linearGradient>
+              <linearGradient id="mod2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ea580c"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+              <linearGradient id="mod3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient>
+              <linearGradient id="mod4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
             </defs>
 
-            <!-- Kalimat Deskriptif -->
-            <rect x="25" y="30" width="275" height="135" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
-            <rect x="25" y="30" width="275" height="32" rx="10" fill="url(#ssDesc)"/>
-            <text x="162" y="52" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">1. KALIMAT DESKRIPTIF (Descriptive)</text>
-            <text x="162" y="85" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">Fakta Objektif Situasi</text>
-            <text x="162" y="112" fill="#475569" font-size="10.5" text-anchor="middle">Menjelaskan di mana, siapa, &amp; apa</text>
-            <text x="162" y="132" fill="#475569" font-size="10.5" text-anchor="middle">Contoh: "Terkadang bel sekolah berbunyi keras."</text>
+            <!-- Box 1: ABA / DTT -->
+            <rect x="20" y="25" width="210" height="235" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+            <rect x="20" y="25" width="210" height="38" rx="10" fill="url(#mod1)"/>
+            <text x="125" y="49" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">1. APPLIED BEHAVIOR ANALYSIS</text>
+            <text x="125" y="85" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Format DTT &amp; PRT</text>
+            <text x="125" y="112" fill="#475569" font-size="10.5" text-anchor="middle">Siklus Tiga Kontingensi:</text>
+            <text x="125" y="132" fill="#7c3aed" font-size="11" font-weight="700" text-anchor="middle">SD ➔ R ➔ SR</text>
+            <text x="125" y="155" fill="#475569" font-size="10" text-anchor="middle">• Analisis tugas perilaku verbal</text>
+            <text x="125" y="175" fill="#475569" font-size="10" text-anchor="middle">• Prompting &amp; prompt fading</text>
+            <text x="125" y="195" fill="#475569" font-size="10" text-anchor="middle">• Pembentukan respons pivotal</text>
+            <text x="125" y="230" fill="#6d28d9" font-size="10" font-weight="700" text-anchor="middle">"Instruksi Terstruktur Mikro"</text>
 
-            <!-- Kalimat Perspektif -->
-            <rect x="330" y="30" width="275" height="135" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
-            <rect x="330" y="30" width="275" height="32" rx="10" fill="url(#ssPers)"/>
-            <text x="467" y="52" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">2. KALIMAT PERSPEKTIF (Perspective)</text>
-            <text x="467" y="85" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">Perasaan &amp; Batin Orang Lain</text>
-            <text x="467" y="112" fill="#475569" font-size="10.5" text-anchor="middle">Menjelaskan reaksi emosi orang lain</text>
-            <text x="467" y="132" fill="#475569" font-size="10.5" text-anchor="middle">Contoh: "Guru senang bila murid antre tenang."</text>
+            <!-- Box 2: PECS -->
+            <rect x="245" y="25" width="215" height="235" rx="10" fill="#ffffff" stroke="#fed7aa" stroke-width="2"/>
+            <rect x="245" y="25" width="215" height="38" rx="10" fill="url(#mod2)"/>
+            <text x="352" y="49" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">2. PECS (KOMUNIKASI GAMBAR)</text>
+            <text x="352" y="85" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">6 Fase Pelatihan Frost &amp; Bondy</text>
+            <text x="352" y="112" fill="#475569" font-size="10.5" text-anchor="middle">Membangun Inisiatif Mandiri:</text>
+            <text x="352" y="132" fill="#ea580c" font-size="11" font-weight="700" text-anchor="middle">Ambil ➔ Dekati ➔ Tukar</text>
+            <text x="352" y="155" fill="#475569" font-size="10" text-anchor="middle">• Menukar simbol dengan benda</text>
+            <text x="352" y="175" fill="#475569" font-size="10" text-anchor="middle">• Merangkai kalimat: "Saya mau..."</text>
+            <text x="352" y="195" fill="#475569" font-size="10" text-anchor="middle">• Menjawab pertanyaan spontan</text>
+            <text x="352" y="230" fill="#c2410c" font-size="10" font-weight="700" text-anchor="middle">"Komunikasi Fungsional Spontan"</text>
 
-            <!-- Kalimat Arahan -->
-            <rect x="635" y="30" width="275" height="135" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
-            <rect x="635" y="30" width="275" height="32" rx="10" fill="url(#ssDir)"/>
-            <text x="772" y="52" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">3. KALIMAT DIREKTIF (Directive)</text>
-            <text x="772" y="85" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">Panduan Tindakan Halus</text>
-            <text x="772" y="112" fill="#475569" font-size="10.5" text-anchor="middle">Respons yang dianjurkan (kata 'Saya coba')</text>
-            <text x="772" y="132" fill="#475569" font-size="10.5" text-anchor="middle">Contoh: "Saya akan mencoba menutup telinga."</text>
+            <!-- Box 3: TEACCH -->
+            <rect x="475" y="25" width="220" height="235" rx="10" fill="#ffffff" stroke="#bae6fd" stroke-width="2"/>
+            <rect x="475" y="25" width="220" height="38" rx="10" fill="url(#mod3)"/>
+            <text x="585" y="49" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">3. MODEL TEACCH (STRUKTUR)</text>
+            <text x="585" y="85" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Structured Teaching (Schopler)</text>
+            <text x="585" y="112" fill="#475569" font-size="10.5" text-anchor="middle">Pengorganisasian Visual:</text>
+            <text x="585" y="132" fill="#0284c7" font-size="11" font-weight="700" text-anchor="middle">Visual Schedule &amp; Boundaries</text>
+            <text x="585" y="155" fill="#475569" font-size="10" text-anchor="middle">• Batas fisik area belajar tegas</text>
+            <text x="585" y="175" fill="#475569" font-size="10" text-anchor="middle">• Alur kerja dari kiri ke kanan</text>
+            <text x="585" y="195" fill="#475569" font-size="10" text-anchor="middle">• Kejelasan: apa tugas &amp; kapan selesai</text>
+            <text x="585" y="230" fill="#0369a1" font-size="10" font-weight="700" text-anchor="middle">"Prediktabilitas Lingkungan"</text>
 
-            <text x="470" y="195" fill="#be123c" font-size="11.5" font-weight="800" text-anchor="middle">RUMUS RATIO CAROL GRAY: (Deskriptif + Perspektif) / Direktif &gt;= 2:1</text>
+            <!-- Box 4: SOCIAL STORIES -->
+            <rect x="710" y="25" width="210" height="235" rx="10" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+            <rect x="710" y="25" width="210" height="38" rx="10" fill="url(#mod4)"/>
+            <text x="815" y="49" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">4. CERITA SOSIAL (GRAY)</text>
+            <text x="815" y="85" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Panduan Isyarat Konteks</text>
+            <text x="815" y="112" fill="#475569" font-size="10.5" text-anchor="middle">Rasio Formula Baku Gray:</text>
+            <text x="815" y="132" fill="#059669" font-size="11" font-weight="700" text-anchor="middle">(Deskriptif + Perspektif)/Direktif &ge; 2:1</text>
+            <text x="815" y="155" fill="#475569" font-size="10" text-anchor="middle">• Menjelaskan situasi sosial baru</text>
+            <text x="815" y="175" fill="#475569" font-size="10" text-anchor="middle">• Menjelaskan perasaan orang lain</text>
+            <text x="815" y="195" fill="#475569" font-size="10" text-anchor="middle">• Komik percakapan visual</text>
+            <text x="815" y="230" fill="#047857" font-size="10" font-weight="700" text-anchor="middle">"Pemahaman Isyarat Sosial"</text>
           </svg>
-          <div class="diagram-caption">Diagram 2: Komposisi Tiga Pilar Kalimat Cerita Sosial Berdasarkan Formula Baku Carol Gray (Heward et al., 2017)</div>
+          <div class="diagram-caption">Diagram 2: Empat Pilar Intervensi Instruksional Berbasis Bukti Ilmiah (Heward et al., 2017 &amp; Hallahan &amp; Kauffman, 2005)</div>
         </div>
       </article>
 
       <!-- SESI 3: GAMES INTERAKTIF (5 MENIT) -->
       <article class="content-card">
-        <span class="section-label badge-forest">Fase 3: Game Interaktif Berbasis Suara (5 Menit)</span>
-        <h2>Uji Keputusan Kasus: "Audit Formula Cerita Sosial"</h2>
-        <p style="margin-top: 0.5rem;">Cermati draf narasi di bawah ini dan uji pemahaman Anda terhadap formula Carol Gray:</p>
+        <span class="section-label badge-purple">Fase 3: Game Interaktif Berbasis Suara (5 Menit)</span>
+        <h2>Uji Kasus Pedagogis: "Audit Skenario &amp; Keputusan Intervensi ASD"</h2>
+        <p style="margin-top: 0.5rem;">Cermati skenario diagnostik di bawah ini, aktifkan suara panduan, dan tentukan pilihan keputusan yang paling tepat:</p>
 
-        <div class="game-card" style="border: 2px dashed #bbf7d0; background: #f0fdf4;">
+        <div class="game-card" style="border: 2px dashed #c4b5fd; background: #faf5ff;">
           <div class="sound-toggle-bar">
-            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Game: Aktif</button>
+            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Pengarah: Aktif</button>
           </div>
 
-          <div class="social-story-box">
-            <p style="font-weight: 700; color: var(--crimson-red); margin-bottom: 0.5rem;">DRAF CERITA SOSIAL DARI GURU PEMULA:</p>
-            <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6; font-style: italic;">
-              "Kamu harus duduk diam saat lonceng berbunyi! Jangan pernah berteriak! Berteriak itu sangat buruk dan kamu akan dihukum jika tidak bisa tenang di dalam kelas!"
+          <div style="background: #ffffff; border: 1.5px solid #ddd6fe; border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;">
+            <p style="font-weight: 700; color: var(--gz-purple); margin-bottom: 0.4rem;">STUDI KASUS OBSERVASI KELAS:</p>
+            <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
+              "Farrel (8 tahun, ASD) memiliki kosakata bahasa lisan yang sangat kaya tentang jenis-jenis dinosaurus. Namun, saat lonceng pergantian pelajaran berbunyi mendadak atau saat meja belajarnya dipindahkan oleh petugas kebersihan, Farrel langsung menjerit histeris, membenturkan kepalanya ke dinding, dan menangis tak terkendali (meltdown). Guru kelas menyimpulkan bahwa Farrel sengaja bersikap nakal untuk mencari perhatian dan menyarankan agar ia dihukum membersihkan halaman."
             </p>
           </div>
 
-          <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-weight: 600;">Mengapa draf cerita di atas melanggar kaidah ortopedagogik Carol Gray dalam Heward et al. (2017)?</p>
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-weight: 700; color: #4c1d95;">Berdasarkan tinjauan Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), mengapa kesimpulan guru tersebut salah besar?</p>
 
           <button class="quiz-option" onclick="evaluateAsdGame('a')">
-            A. Draf sudah tepat karena anak autisme harus ditekan dengan aturan tegas dan ancaman hukuman.
+            A. Guru benar karena anak yang memiliki kecerdasan bahasa tinggi seharusnya tidak boleh berteriak di kelas.
           </button>
           <button class="quiz-option" onclick="evaluateAsdGame('b')">
-            B. Draf salah total karena seluruh kalimatnya berisi instruksi paksaan/ancaman (direktif negatif) tanpa memuat kalimat deskriptif (penjelasan situasi) dan kalimat perspektif (memahami perasaan orang lain).
+            B. Guru salah total; perilaku Farrel adalah <em>Meltdown</em> neurologis akibat kelebihan beban sensori (auditory sensory overload) dan kebutuhan kaku terhadap rutinitas (insistence on sameness), bukan tantrum mencari perhatian. Solusinya adalah jadwal visual TEACCH dan peringatan transisi.
           </button>
           <button class="quiz-option" onclick="evaluateAsdGame('c')">
-            C. Draf salah hanya karena tidak ditulis dalam bahasa Inggris kuno.
+            C. Farrel sebaiknya dikeluarkan dari sekolah reguler dan dipindahkan ke rumah sakit jiwa tanpa intervensi pendidikan.
           </button>
           <button class="quiz-option" onclick="evaluateAsdGame('d')">
-            D. Draf seharusnya ditempel di pintu pagar luar sekolah, bukan dibacakan kepada anak.
+            D. Farrel hanya perlu dipaksa mendengarkan musik keras setiap hari agar telinganya terbiasa dengan suara bising.
           </button>
 
-          <div id="asd-feedback" class="quiz-feedback"></div>
+          <div id="game-feedback" class="quiz-feedback"></div>
         </div>
       </article>
 
       <!-- SESI 4: TANYA JAWAB & CLOSING -->
       <article class="content-card">
-        <span class="section-label badge-crimson">Fase 4: Tanya Jawab &amp; Pernyataan Penutup</span>
-        <h2>Refleksi Akhir: Menjembatani Dua Dunia</h2>
+        <span class="section-label badge-orange">Fase 4: Tanya Jawab &amp; Pernyataan Penutup</span>
+        <h2>Refleksi Akhir: Menjembatani Pikiran Visual</h2>
         <p style="margin-top: 0.75rem;">
-          Tujuan intervensi bagi anak dengan spektrum autisme bukanlah untuk menghapus keunikan identitas neurologis mereka agar menjadi tiruan anak neurotipikal, melainkan membekali mereka dengan jembatan komunikasi fungsional, memprediksi lingkungan sosial, dan merancang ruang belajar yang ramah modulasi sensori.
+          Pendidikan bagi anak dengan spektrum autisme menuntut transformasi cara mengajar kita. Mereka adalah pembelajar visual ulung yang memproses dunia secara literal dan mendalam. Tugas pendidik ortopedagogik bukanlah memaksa mereka meniru pola neurotipikal secara artifisial, melainkan menciptakan prediktabilitas lingkungan belajar, mengajarkan komunikasi fungsional, dan meruntuhkan rintangan sensori yang menyiksa sistem saraf mereka.
         </p>
-        <div class="quote-box" style="border-left-color: var(--deep-forest); background: #f0fdf4;">
-          “If they can’t learn the way we teach, we must teach the way they learn.”
-          <footer>— Ivar Lovaas (Pionir Intervensi Perilaku Dini ASD)</footer>
+        <div class="quote-box" style="border-left-color: var(--gz-orange); background: #fff7ed;">
+          “I think in pictures. Words are like a second language to me. When somebody speaks to me, his words are instantly translated into pictures. If teachers understand how to structure the environment visually, children with autism can learn and thrive.”
+          <footer>— Dr. Temple Grandin (Profesor Ilmu Hewan &amp; Penulis Autistik Terkemuka, dikutip dalam Heward et al., 2017)</footer>
         </div>
       </article>
 
@@ -318,53 +351,138 @@
 
 
     <!-- =========================================================================
-         BAGIAN 2: LEMBAR KERJA MAHASISWA (TUGAS HARIAN SINGKAT - PRINTABLE PDF)
+         BAGIAN 2: WORKSHEET MAHASISWA (TUGAS ANALISIS GAMBAR - PRINTABLE PDF)
          ========================================================================= -->
     <section id="worksheet-view" class="view-section">
       <div class="print-action-bar">
         <div>
-          <h3 style="color: var(--deep-forest);">Lembar Portofolio Aktivitas Harian Singkat (LKM 09)</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan 2 tugas aplikatif singkat di bawah ini, lalu simpan/cetak dalam format PDF.</p>
+          <h3 style="color: var(--gz-purple);">Lembar Aktivitas Mahasiswa: Tugas Analisis Gambar (LKM 09)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan analisis kritis terhadap diagram intervensi dan profil sensori di bawah ini, lalu unduh/cetak dalam format PDF.</p>
         </div>
-        <button class="btn-download-pdf" style="background: var(--deep-forest);" onclick="window.print()">
-          <span>🖨️ Cetak / Unduh PDF</span>
+        <button class="btn-download-pdf" style="background: var(--gz-purple);" onclick="window.print()">
+          <span>🖨️ Cetak / Unduh Dokumen (PDF)</span>
         </button>
       </div>
 
       <div class="worksheet-paper">
-        <header style="border-bottom: 2px solid #0f172a; padding-bottom: 1rem; margin-bottom: 1.75rem;">
-          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.25rem; color: var(--deep-forest);">Lembar Kerja Singkat: Analisis Sensori &amp; Desain Cerita Sosial ASD</h2>
-          <p style="text-align: center; font-size: 0.88rem; color: #555;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005) &amp; Heward et al. (2017)</p>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; font-size: 0.9rem;">
-            <div><strong>Nama Calon Pendidik:</strong> ____________________________________</div>
+        <header style="border-bottom: 2.5px solid #0f172a; padding-bottom: 1.25rem; margin-bottom: 2rem;">
+          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.3rem; color: #0f172a;">LEMBAR KERJA ANALISIS GAMBAR DIAGNOSTIK &amp; INTERVENSI SPEKTRUM AUTISME (LKM 09)</h2>
+          <p style="text-align: center; font-size: 0.9rem; color: #475569;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005, Bab 9) &amp; Heward et al. (2017, Bab 7)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <div><strong>Nama Mahasiswa:</strong> ____________________________________</div>
             <div><strong>NIM / Kelas:</strong> ____________________________________</div>
-            <div><strong>Tanggal Sesi:</strong> ____________________________________</div>
-            <div><strong>Paraf / Nilai:</strong> ____________________________________</div>
+            <div><strong>Tanggal Pertemuan:</strong> ____________________________________</div>
+            <div><strong>Nilai / Verifikasi:</strong> ____________________________________</div>
           </div>
         </header>
 
-        <!-- TUGAS 1 SINGKAT: ANALISIS AKOMODASI SENSORI -->
-        <div class="worksheet-field">
-          <label style="color: var(--crimson-red);">TUGAS 1: ANALISIS AKOMODASI HIPERSENSITIF SENSORI KELAS (SINGKAT)</label>
-          <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem; line-height: 1.5;">
-            <em>Kasus:</em> Aldo (7 tahun, ASD) mengalami hipersensitivitas pendengaran (*auditory defensiveness*). Setiap kali bel pergantian jam berbunyi keras atau teman sekelas bersorak, Aldo langsung menutup kedua telinganya rapat-rapat, menjerit ketakutan, dan bersembunyi di kolong meja.<br>
-            <strong>Instruksi Singkat:</strong> Tuliskan <strong>2 modifikasi lingkungan/alat bantu konkret</strong> yang wajib disiapkan guru kelas untuk mengantisipasi kepanikan sensori Aldo!
+        <!-- TUGAS ANALISIS GAMBAR 1: DIAGRAM DTT vs PECS -->
+        <div class="task-img-container">
+          <label style="color: var(--gz-purple); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">
+            TUGAS ANALISIS GAMBAR 1: KOMPARASI MEKANISME DTT (ABA) DAN PECS (BOBOT 50%)
+          </label>
+          <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1rem;">Cermati bagan alur proses pembelajaran di bawah ini:</p>
+
+          <div style="text-align: center; margin: 1.25rem 0;">
+            <svg viewBox="0 0 880 200" width="100%" height="auto" style="max-height: 220px; font-family: sans-serif;">
+              <!-- Bagan Kiri: DTT -->
+              <rect x="20" y="20" width="400" height="160" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+              <text x="220" y="45" fill="#7c3aed" font-size="12" font-weight="800" text-anchor="middle">BAGAN A: SIKLUS DISCRETE TRIAL TRAINING (DTT)</text>
+              <rect x="40" y="70" width="90" height="50" rx="6" fill="#ede9fe" stroke="#a855f7"/>
+              <text x="85" y="100" fill="#4c1d95" font-size="10" font-weight="700" text-anchor="middle">Instruksi Guru (SD)</text>
+              
+              <path d="M 135 95 L 165 95" stroke="#7c3aed" stroke-width="2"/>
+              <polygon points="163,91 171,95 163,99" fill="#7c3aed"/>
+
+              <rect x="175" y="70" width="90" height="50" rx="6" fill="#ede9fe" stroke="#a855f7"/>
+              <text x="220" y="100" fill="#4c1d95" font-size="10" font-weight="700" text-anchor="middle">Respons Anak (R)</text>
+
+              <path d="M 270 95 L 300 95" stroke="#7c3aed" stroke-width="2"/>
+              <polygon points="298,91 306,95 298,99" fill="#7c3aed"/>
+
+              <rect x="310" y="70" width="90" height="50" rx="6" fill="#ede9fe" stroke="#a855f7"/>
+              <text x="355" y="95" fill="#4c1d95" font-size="9.5" font-weight="700" text-anchor="middle">Penguatan (SR) /</text>
+              <text x="355" y="110" fill="#4c1d95" font-size="9" text-anchor="middle">Koreksi Seketika</text>
+              <text x="220" y="155" fill="#6b21a8" font-size="10" font-style="italic" text-anchor="middle">Inisiatif awal berada pada GURU (Teacher-Directed)</text>
+
+              <!-- Bagan Kanan: PECS -->
+              <rect x="460" y="20" width="400" height="160" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+              <text x="660" y="45" fill="#ea580c" font-size="12" font-weight="800" text-anchor="middle">BAGAN B: ALUR INTI PECS (FROST &amp; BONDY)</text>
+              <rect x="480" y="70" width="95" height="50" rx="6" fill="#ffedd5" stroke="#fb923c"/>
+              <text x="527" y="93" fill="#9a3412" font-size="9.5" font-weight="700" text-anchor="middle">Anak Melihat Benda</text>
+              <text x="527" y="108" fill="#9a3412" font-size="9" text-anchor="middle">&amp; Mengambil Kartu</text>
+
+              <path d="M 580 95 L 610 95" stroke="#ea580c" stroke-width="2"/>
+              <polygon points="608,91 616,95 608,99" fill="#ea580c"/>
+
+              <rect x="615" y="70" width="95" height="50" rx="6" fill="#ffedd5" stroke="#fb923c"/>
+              <text x="662" y="93" fill="#9a3412" font-size="9.5" font-weight="700" text-anchor="middle">Anak Mendekati</text>
+              <text x="662" y="108" fill="#9a3412" font-size="9" text-anchor="middle">Mitra Bicara</text>
+
+              <path d="M 715 95 L 745 95" stroke="#ea580c" stroke-width="2"/>
+              <polygon points="743,91 751,95 743,99" fill="#ea580c"/>
+
+              <rect x="750" y="70" width="95" height="50" rx="6" fill="#ffedd5" stroke="#fb923c"/>
+              <text x="797" y="93" fill="#9a3412" font-size="9.5" font-weight="700" text-anchor="middle">Tukar Kartu dengan</text>
+              <text x="797" y="108" fill="#9a3412" font-size="9" text-anchor="middle">Benda Asli Riil</text>
+              <text x="660" y="155" fill="#9a3412" font-size="10" font-style="italic" text-anchor="middle">Inisiatif awal berada pada ANAK (Child-Initiated)</text>
+            </svg>
+          </div>
+
+          <p style="font-size: 0.92rem; line-height: 1.6; color: #1e293b;">
+            <strong>Instruksi Analisis:</strong><br>
+            Berdasarkan komparasi visual kedua bagan di atas menurut kajian <strong>Heward et al. (2017)</strong>:
+            <br>1. Jelaskan perbedaan mendasar mengenai <em>siapa yang memulai inisiatif komunikasi</em> pada model DTT dibandingkan model PECS!
+            <br>2. Mengapa seorang anak autisme non-verbal yang pasif (prompt-dependent) sangat disarankan dilatih menggunakan PECS terlebih dahulu sebelum dilatih bicara vokal verbal?
           </p>
-          <textarea rows="3" placeholder="1. Bentuk alat bantu sensori (contoh: noise-cancelling headphones)...&#10;2. Penyesuaian prosedur kelas (contoh: peringatan visual sebelum bel)..."></textarea>
+          <textarea rows="5" placeholder="Tuliskan telaah komparasi inisiatif DTT vs PECS dan keunggulan fungsional pertukaran gambar di sini..."></textarea>
         </div>
 
-        <!-- TUGAS 2 SINGKAT: MEMBUAT CERITA SOSIAL FORMULA CAROL GRAY -->
-        <div class="worksheet-field" style="margin-top: 1.5rem;">
-          <label style="color: var(--deep-forest);">TUGAS 2: MENULIS CERITA SOSIAL SINGKAT (FORMULA CAROL GRAY)</label>
-          <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem; line-height: 1.5;">
-            <em>Instruksi:</em> Susunlah sebuah Cerita Sosial mini (terdiri dari 4 kalimat saja) bertema <strong>"Mengantre Saat Membeli Makanan di Kantin Sekolah"</strong> yang mematuhi rumus Carol Gray:
+        <!-- TUGAS ANALISIS GAMBAR 2: DESAIN TATA RUANG TEACCH -->
+        <div class="task-img-container" style="margin-top: 2rem;">
+          <label style="color: var(--gz-blue); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">
+            TUGAS ANALISIS GAMBAR 2: AUDIT STRUKTUR KELAS MODEL TEACCH (BOBOT 50%)
+          </label>
+          <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1rem;">Perhatikan diagram denah penataan ruang kelas ramah autisme berbasis prinsip TEACCH berikut:</p>
+
+          <div style="text-align: center; margin: 1.25rem 0;">
+            <svg viewBox="0 0 880 220" width="100%" height="auto" style="max-height: 240px; font-family: sans-serif;">
+              <rect x="20" y="20" width="840" height="180" rx="10" fill="#f8fafc" stroke="#0284c7" stroke-width="2"/>
+              <text x="440" y="45" fill="#0369a1" font-size="12" font-weight="800" text-anchor="middle">DENAH TATA RUANG KELAS INKLUSI TERSTRUKTUR (MODEL TEACCH - ERIC SCHOPLER)</text>
+
+              <!-- Area 1: Jadwal Visual -->
+              <rect x="40" y="65" width="160" height="115" rx="6" fill="#e0f2fe" stroke="#38bdf8"/>
+              <text x="120" y="95" fill="#0284c7" font-size="11" font-weight="700" text-anchor="middle">Area Papan Jadwal</text>
+              <text x="120" y="115" fill="#475569" font-size="9.5" text-anchor="middle">Jadwal visual vertikal</text>
+              <text x="120" y="132" fill="#475569" font-size="9.5" text-anchor="middle">gambar kegiatan harian</text>
+
+              <!-- Area 2: Meja Mandiri Kiri ke Kanan -->
+              <rect x="220" y="65" width="260" height="115" rx="6" fill="#ede9fe" stroke="#a855f7"/>
+              <text x="350" y="90" fill="#7c3aed" font-size="11" font-weight="700" text-anchor="middle">Stasiun Kerja Mandiri</text>
+              <text x="350" y="110" fill="#475569" font-size="9" text-anchor="middle">Baki Kiri (Tugas Baru) ➔ Tengah (Mengerjakan)</text>
+              <text x="350" y="128" fill="#475569" font-size="9" text-anchor="middle">➔ Baki Kanan (Tugas Selesai)</text>
+              <text x="350" y="152" fill="#6d28d9" font-size="9.5" font-weight="600" text-anchor="middle">Penyekat Visual Bebas Distraksi</text>
+
+              <!-- Area 3: Ruang Tenang (Sensory Corner) -->
+              <rect x="500" y="65" width="170" height="115" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+              <text x="585" y="95" fill="#b45309" font-size="11" font-weight="700" text-anchor="middle">Pojok Tenang (Calm Zone)</text>
+              <text x="585" y="115" fill="#475569" font-size="9.5" text-anchor="middle">Bantal beban, headphone</text>
+              <text x="585" y="132" fill="#475569" font-size="9.5" text-anchor="middle">peredam bising, tenda gelap</text>
+
+              <!-- Area 4: Area Kelompok -->
+              <rect x="690" y="65" width="150" height="115" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+              <text x="765" y="95" fill="#15803d" font-size="11" font-weight="700" text-anchor="middle">Area Transisi &amp; Grup</text>
+              <text x="765" y="115" fill="#475569" font-size="9.5" text-anchor="middle">Garis batas lakban lantai</text>
+              <text x="765" y="132" fill="#475569" font-size="9.5" text-anchor="middle">warna hijau tegas</text>
+            </svg>
+          </div>
+
+          <p style="font-size: 0.92rem; line-height: 1.6; color: #1e293b;">
+            <strong>Instruksi Analisis:</strong><br>
+            1. Jelaskan bagaimana konsep alur kerja <em>"dari kiri ke kanan"</em> pada stasiun kerja mandiri di atas membantu mengurangi disfungsi eksekutif dan kecemasan siswa ASD menurut <strong>Hallahan &amp; Kauffman (2005)</strong>!<br>
+            2. Mengapa keberadaan <em>Pojok Tenang (Calm Zone / Sensory Corner)</em> sangat vital untuk mencegah eskalasi dari kelebihan beban sensori (sensory overload) menuju amukan neurologis (meltdown)?
           </p>
-          <ul style="font-size: 0.88rem; color: #555; margin-bottom: 0.75rem; padding-left: 1.2rem;">
-            <li>2 Kalimat Deskriptif (fakta situasi nyata di kantin)</li>
-            <li>1 Kalimat Perspektif (perasaan/pikiran teman lain saat mengantre)</li>
-            <li>1 Kalimat Direktif/Panduan (tindakan yang akan dicoba dilakukan oleh anak)</li>
-          </ul>
-          <textarea rows="5" placeholder="Tuliskan 4 kalimat cerita sosial di sini secara berurutan..."></textarea>
+          <textarea rows="5" placeholder="Tuliskan analisis fungsi alur kerja kiri-ke-kanan dan peranan pojok modulasi sensori di sini..."></textarea>
         </div>
       </div>
     </section>
@@ -379,103 +497,107 @@
         
         <!-- SLIDE 1 -->
         <div class="slide-item active">
-          <span class="slide-indicator" style="color: #4ade80;">Slide 1 dari 6 • Orientasi Autisme</span>
+          <span class="slide-indicator" style="color: #a78bfa;">Slide 1 dari 6 • Orientasi Autisme</span>
           <h2>Spektrum Autisme (Autism Spectrum Disorder)</h2>
           <div class="slide-body">
             <p>Membongkar Mitos Menuju Intervensi Instruksional Tervalidasi Ilmiah:</p>
             <ul>
-              <li>Konsep spektrum: dari kebutuhan dukungan substansial hingga mandiri.</li>
-              <li>Dua pilar kriteria DSM-5: Komunikasi Sosial &amp; Perilaku Repetitif Terbatas.</li>
+              <li>Kondisi spektrum: dari kebutuhan dukungan intensif hingga mandiri.</li>
+              <li>Dua pilar kriteria diagnostik DSM-5 / IDEA (Dyad of Impairments).</li>
               <li>Sintesis komparatif Hallahan &amp; Kauffman (2005) dan William L. Heward (2017).</li>
             </ul>
           </div>
           <div class="speaker-notes-box">
-            <strong>Catatan Dosen (10 Menit Awal):</strong> Awali kelas dengan membedah stereotip: Tanyakan "Apakah anak autisme bisa berempati?" Jelaskan bahwa kesulitan mereka adalah mengekspresikan empati dengan cara konvensional, bukan ketiadaan emosi.
+            <strong>Catatan Dosen (10 Menit Awal):</strong> Buka perkuliahan dengan membedah stereotip: Tanyakan "Apakah anak autisme tidak bisa bersosialisasi?" Jelaskan bahwa kesulitan mereka adalah memproses isyarat sosial secara konvensional, bukan ketiadaan keinginan sosial.
           </div>
         </div>
 
         <!-- SLIDE 2 -->
         <div class="slide-item">
-          <span class="slide-indicator" style="color: #fb7185;">Slide 2 dari 6 • Dua Ranah Inti</span>
-          <h2>Dyad of Impairments (DSM-5 / IDEA)</h2>
+          <span class="slide-indicator" style="color: #fb923c;">Slide 2 dari 6 • Kriteria DSM-5</span>
+          <h2>Dua Ranah Defisit Inti (Dyad of Impairments)</h2>
           <div class="slide-body">
-            <p>Dua Ranah Defisit yang Wajib Muncul:</p>
+            <p>Dua Ranah yang Wajib Muncul Secara Bersamaan:</p>
             <ul>
-              <li><strong>1. Komunikasi &amp; Interaksi Sosial:</strong> Defisit timbal balik emosi, komunikasi non-verbal (kontak mata), dan hubungan pertemanan.</li>
-              <li><strong>2. Pola Perilaku Terbatas &amp; Repetitif (RRBs):</strong> Gerakan stereotipik (*flapping*), ekolalia, resistensi pada perubahan rutinitas (*sameness*).</li>
-              <li>Anomali sensori: Hipersensitif (kelebihan beban stimulus) atau Hiposensitif.</li>
+              <li><strong>1. Komunikasi &amp; Interaksi Sosial:</strong> Defisit resiprositas emosi, komunikasi nonverbal (kontak mata minim), dan kesulitan membina pertemanan.</li>
+              <li><strong>2. Pola Perilaku Terbatas &amp; Repetitif (RRBs):</strong> Gerakan stereotipik (flapping, rocking), ekolalia, resistensi pada perubahan (sameness).</li>
+              <li>Tiga Tingkat Derajat Kebutuhan Dukungan: Level 1, Level 2, dan Level 3.</li>
             </ul>
           </div>
           <div class="speaker-notes-box">
-            <strong>Catatan Dosen:</strong> Tekankan bahwa perilaku *flapping* atau memutar benda sering kali merupakan mekanisme regulasi diri (*stimming*) untuk menenangkan sistem saraf mereka yang terstimulasi berlebih.
+            <strong>Catatan Dosen:</strong> Jelaskan bahwa perilaku flapping atau memutar benda sering kali merupakan mekanisme regulasi diri (stimming) untuk menstabilkan sistem saraf mereka yang terstimulasi berlebih.
           </div>
         </div>
 
         <!-- SLIDE 3 -->
         <div class="slide-item">
-          <span class="slide-indicator" style="color: #4ade80;">Slide 3 dari 6 • Kognitif Sosial</span>
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 3 dari 6 • Kognitif Sosial</span>
           <h2>Theory of Mind (ToM) &amp; "Mindblindness"</h2>
           <div class="slide-body">
             <p>Dunia Batin Anak Autisme (Hallahan &amp; Kauffman, 2005):</p>
             <ul>
-              <li><strong>Ketidakmampuan Mengambil Perspektif:</strong> Sulit menyadari bahwa orang lain memiliki pikiran, keyakinan, dan perasaan berbeda.</li>
+              <li><strong>Ketidakmampuan Mengambil Perspektif:</strong> Sulit menyadari bahwa orang lain memiliki pikiran, keyakinan, dan perasaan yang berbeda dari dirinya.</li>
               <li><strong>Literal dalam Bahasa:</strong> Memahami kalimat secara harfiah; kesulitan mengurai metafora, candaan, atau sindiran sarkastik.</li>
-              <li>Kunci Guru: Berikan instruksi langsung, konkret, dan bebas makna ganda.</li>
+              <li><strong>Weak Central Coherence:</strong> Fokus tajam pada detail mikro, gagal menangkap konteks utuh.</li>
             </ul>
           </div>
           <div class="speaker-notes-box">
-            <strong>Catatan Dosen:</strong> Berikan contoh: Jika guru berkata "Bisa duduk di kursimu?", anak autisme mungkin hanya menjawab "Bisa" tanpa bergerak, karena menafsirkannya sebagai pertanyaan kemampuan fisik.
+            <strong>Catatan Dosen:</strong> Berikan contoh ujaran literal: Jika guru berkata "Kalian bisa pasang telinga baik-baik?", anak autisme mungkin bingung karena mengira telinganya harus dicopot dan dipasang kembali secara fisik.
           </div>
         </div>
 
         <!-- SLIDE 4 -->
         <div class="slide-item">
-          <span class="slide-indicator" style="color: #fb7185;">Slide 4 dari 6 • Sains Intervensi</span>
-          <h2>Applied Behavior Analysis (ABA) &amp; DTT</h2>
+          <span class="slide-indicator" style="color: #a78bfa;">Slide 4 dari 6 • Sensori &amp; Meltdown</span>
+          <h2>Anomali Sensori: Pemicu "Meltdown"</h2>
           <div class="slide-body">
-            <p>Intervensi Teruji Berbasis Analisis Perilaku Terapan:</p>
+            <p>Memahami Regulasi Sistem Saraf Anak:</p>
             <ul>
-              <li><strong>Discrete Trial Training (DTT):</strong> Stimulus Diskriminatif (SD) -> Respons Anak -> Penguatan (*Reinforcement*) Segera.</li>
-              <li>Memecah keterampilan kompleks menjadi unit-unit mikro yang terkelola.</li>
-              <li>Penghapusan bantuan bertahap (*prompt fading*) menuju kemandirian penuh.</li>
+              <li><strong>Hipersensitivitas:</strong> Kelebihan beban sensori akibat suara bising, lampu silau, atau sentuhan tekstur pakaian tertentu.</li>
+              <li><strong>Distingsi Kritis: Tantrum vs Meltdown:</strong>
+                <br>• Tantrum: Bersifat manipulatif untuk meraih tujuan; berhenti jika dipenuhi.
+                <br>• Meltdown: Ledakan neurologis tak terkendali akibat sistem saraf kewalahan.
+              </li>
+              <li>Solusi: Sediakan Calm Zone dan alat bantu sensori (earmuffs).</li>
             </ul>
           </div>
           <div class="speaker-notes-box">
-            <strong>Catatan Dosen:</strong> Tegaskan bahwa penguatan (*reinforcer*) harus bermakna bagi anak (misal: gelembung sabun, tepukan tangan, atau stiker), bukan apa yang disukai guru.
+            <strong>Catatan Dosen:</strong> Tekankan bahwa saat anak mengalami meltdown, guru dilarang mendebat, menceramahi, atau memarahi. Jauhkan benda berbahaya dan beri ruang tenang hingga sistem sarafnya rileks kembali.
           </div>
         </div>
 
         <!-- SLIDE 5 -->
         <div class="slide-item">
-          <span class="slide-indicator" style="color: #4ade80;">Slide 5 dari 6 • Komunikasi &amp; Visual</span>
-          <h2>Dukungan Visual: PECS, TEACCH, &amp; Cerita Sosial</h2>
+          <span class="slide-indicator" style="color: #fb923c;">Slide 5 dari 6 • Intervensi Teruji</span>
+          <h2>Empat Intervensi Berbasis Bukti Ilmiah</h2>
           <div class="slide-body">
-            <p>Memaksimalkan Jalur Pemrosesan Visual (Heward et al., 2017):</p>
+            <p>Metodologi yang Tervalidasi Riset (Heward et al., 2017):</p>
             <ul>
-              <li><strong>PECS:</strong> Menukar gambar konkret untuk membangun inisiatif komunikasi non-verbal.</li>
-              <li><strong>TEACCH:</strong> Penataan ruang fisik yang terstruktur dan jadwal gambar harian.</li>
-              <li><strong>Social Stories:</strong> Narasi terstruktur untuk memandu perilaku sosial (Formula Carol Gray: Rasio Deskriptif/Direktif &gt;= 2:1).</li>
+              <li><strong>Applied Behavior Analysis (ABA / DTT):</strong> Instruksi mikro terstruktur (SD -> R -> SR) dengan penguatan positif terukur.</li>
+              <li><strong>PECS:</strong> Komunikasi fungsional spontan melalui pertukaran gambar konkret.</li>
+              <li><strong>TEACCH:</strong> Denah visual berstruktur dan alur kerja mandiri dari kiri ke kanan.</li>
+              <li><strong>Social Stories:</strong> Formula Carol Gray (Rasio Deskriptif/Direktif &ge; 2:1).</li>
             </ul>
           </div>
           <div class="speaker-notes-box">
-            <strong>Catatan Dosen:</strong> Tunjukkan bahwa anak autisme adalah pembelajar visual ulung ("thinking in pictures"); instruksi lisan panjang akan hilang tak berjejak tanpa bantuan visual.
+            <strong>Catatan Dosen:</strong> Tunjukkan bahwa anak autisme adalah pembelajar visual ulung ("thinking in pictures"); kurangi ceramah lisan panjang dan ganti dengan jadwal visual konkret.
           </div>
         </div>
 
         <!-- SLIDE 6 -->
         <div class="slide-item">
-          <span class="slide-indicator" style="color: #fb7185;">Slide 6 dari 6 • Rangkuman &amp; Aksi</span>
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 6 dari 6 • Rangkuman &amp; Aksi</span>
           <h2>Closing Thought: Membangun Ruang Inklusif</h2>
           <div class="slide-body">
-            <p>Kaidah Pendidik Ortopedagogik:</p>
+            <p>Komitmen Pendidik Ortopedagogik:</p>
             <ul>
-              <li>Reduksi pemicu kelebihan beban sensori (*sensory overload*) di kelas.</li>
-              <li>Gunakan media visual terstruktur untuk meredakan kecemasan anak.</li>
-              <li>Minggu Depan: Gangguan Komunikasi, Bicara, Bahasa, &amp; Sistem AAC.</li>
+              <li>Ubah lingkungan kelas agar prediktabel dan ramah modulasi sensori.</li>
+              <li>Gunakan media visual terstruktur untuk meredakan kecemasan transisi.</li>
+              <li>Minggu Depan (Pertemuan 10): Gangguan Komunikasi, Bicara, Bahasa, &amp; Sistem AAC.</li>
             </ul>
           </div>
           <div class="speaker-notes-box">
-            <strong>Catatan Dosen:</strong> Arahkan mahasiswa menyelesaikan tugas harian singkat LKM 09 sebelum mengakhiri kelas.
+            <strong>Catatan Dosen:</strong> Arahkan mahasiswa untuk menyelesaikan lembar analisis gambar LKM 09 sebelum sesi perkuliahan berakhir.
           </div>
         </div>
 
@@ -483,7 +605,7 @@
         <footer class="slide-controls" style="border-top: 1px solid rgba(255, 255, 255, 0.15);">
           <div style="display: flex; gap: 0.5rem;">
             <button class="btn-ctrl secondary" onclick="changeSlide(-1)">❮ Sebelumnya</button>
-            <button class="btn-ctrl" style="background: var(--deep-forest);" onclick="changeSlide(1)">Selanjutnya ❯</button>
+            <button class="btn-ctrl" style="background: var(--gz-purple);" onclick="changeSlide(1)">Selanjutnya ❯</button>
           </div>
           <button class="btn-ctrl secondary" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Dosen</button>
         </footer>
@@ -547,28 +669,28 @@
       const btn = document.getElementById('sound-btn');
       if (audioFxEnabled) {
         btn.classList.add('active');
-        btn.textContent = '🔊 Suara Game: Aktif';
+        btn.textContent = '🔊 Suara Pengarah: Aktif';
       } else {
         btn.classList.remove('active');
-        btn.textContent = '🔇 Suara Game: Hening';
+        btn.textContent = '🔇 Suara Pengarah: Hening';
       }
     }
 
     // 3. Evaluasi Mini Game Pertemuan 9
     function evaluateAsdGame(choice) {
-      const feedback = document.getElementById('asd-feedback');
+      const feedback = document.getElementById('game-feedback');
       feedback.style.display = 'block';
 
       if (choice === 'b') {
         playTone('success');
-        feedback.style.background = '#dcfce7';
-        feedback.style.color = '#14532d';
-        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Menurut kaidah formula Carol Gray (Heward et al., 2017), Cerita Sosial bukan alat untuk memerintah atau mengancam anak, melainkan media untuk menjelaskan situasi secara objektif (kalimat deskriptif) dan membantu anak memahami perasaan orang lain (kalimat perspektif) dengan rasio minimal 2:1.';
+        feedback.style.background = '#ede9fe';
+        feedback.style.color = '#5b21b6';
+        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Menurut doktrin Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), reaksi Farrel adalah <em>Meltdown</em> neurologis akibat hipersensitivitas pendengaran dan gangguan rutinitas mendadak (insistence on sameness). Menghukumnya adalah kekeliruan fatal; ia membutuhkan lingkungan kelas terstruktur (jadwal visual TEACCH) dan perlindungan sensori.';
       } else {
         playTone('error');
-        feedback.style.background = '#ffe4e6';
-        feedback.style.color = '#9f1239';
-        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan prinsip dasar Cerita Sosial: naskah dilarang berisi ancaman atau instruksi memaksa murni. Cerita sosial bertujuan mereduksi kecemasan sosial melalui pemahaman konteks.';
+        feedback.style.background = '#ffedd5';
+        feedback.style.color = '#9a3412';
+        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan pemicunya: suara lonceng mendadak dan pemindahan meja. Ini adalah indikator klasik kelebihan beban stimulus sensori dan kecemasan perubahan rutinitas, bukan tantrum kenakalan yang disengaja.';
       }
     }
 
