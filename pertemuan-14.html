@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 14: Keberbakatan Istimewa &amp; Siswa Twice-Exceptional (2e)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    / Variasi Palet Gen Z Cerah Dinamis: Pink, Hijau Muda, Merah, Ungu, dan Oranye /
+    :root {
+      --gz-pink: #ec4899;
+      --gz-pink-light: #fdf2f8;
+      --gz-lime: #10b981;
+      --gz-lime-light: #ecfdf5;
+      --gz-red: #e11d48;
+      --gz-red-light: #fff1f2;
+      --gz-purple: #7c3aed;
+      --gz-purple-light: #ede9fe;
+      --gz-orange: #ea580c;
+      --gz-orange-light: #ffedd5;
+      --gz-dark: #0f172a;
+      --gz-bg-bright: #fafcfb;
+    }
+    body {
+      background-color: var(--gz-bg-bright);
+    }
+    .badge-pink {
+      background: var(--gz-pink-light);
+      color: #be185d;
+      font-weight: 800;
+    }
+    .badge-lime {
+      background: var(--gz-lime-light);
+      color: #047857;
+      font-weight: 800;
+    }
+    .badge-purple {
+      background: var(--gz-purple-light);
+      color: var(--gz-purple);
+      font-weight: 800;
+    }
+    .card-pink-bright {
+      border-left: 4px solid var(--gz-pink);
+      background: #fdf2f8;
+    }
+    .card-lime-bright {
+      border-left: 4px solid var(--gz-lime);
+      background: #f0fdf4;
+    }
+    .card-purple-bright {
+      border-left: 4px solid var(--gz-purple);
+      background: #faf5ff;
+    }
+
+    / Tampilan Presentasi Dosen Dinamis, Berwarna & Mudah Diakses /
+    .presentation-frame-colorful {
+      background: #ffffff;
+      color: #1e293b;
+      border: 3px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 2.75rem 2.5rem;
+      min-height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 16px 36px rgba(124, 58, 237, 0.08);
+      position: relative;
+    }
+    .slide-badge-pill {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .presentation-frame-colorful h2 {
+      font-size: clamp(1.85rem, 3.6vw, 2.45rem);
+      margin-bottom: 1.25rem;
+      line-height: 1.25;
+    }
+    .presentation-frame-colorful .slide-body {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #334155;
+    }
+    .presentation-frame-colorful .slide-body li {
+      margin-bottom: 0.9rem;
+      position: relative;
+      padding-left: 1.85rem;
+    }
+    .presentation-frame-colorful .slide-body li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      font-weight: 800;
+    }
+
+    / Slide Quick-Jump Dock Navigasi Cepat /
+    .slide-nav-dock {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .dock-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #cbd5e1;
+      background: #ffffff;
+      color: #475569;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+    .dock-btn:hover {
+      border-color: var(--gz-purple);
+      color: var(--gz-purple);
+      transform: translateY(-2px);
+    }
+    .dock-btn.active {
+      background: var(--gz-purple);
+      border-color: var(--gz-purple);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+    }
+
+    .speaker-notes-colorful {
+      margin-top: 1.5rem;
+      background: #fdf2f8;
+      border-left: 4px solid var(--gz-pink);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: #831843;
+      display: none;
+    }
+    .lecturer-key-box {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.75rem 1rem;
+      background: #ecfdf5;
+      border-left: 4px solid var(--gz-lime);
+      border-radius: 6px;
+      font-size: 0.88rem;
+      color: #065f46;
+      line-height: 1.6;
+    }
+    .q-number {
+      font-weight: 800;
+      color: var(--gz-pink);
+      margin-right: 0.35rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span style="color: var(--gz-pink);">ORTOPEDAGOGIK</span>
+        <span class="pill badge-pink">Pertemuan 14</span>
+      </div>
+      <nav class="view-tabs" role="tablist">
+        <button class="tab-btn active" onclick="switchView('reading-view', this)">Modul Bacaan Lengkap</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja &amp; 10 Soal PG</button>
+        <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Dosen (Berwarna)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- =========================================================================
+         BAGIAN 1: WEB PAGE PRESENTATION (BACAAN MANDIRI DOSEN & MAHASISWA)
+         ========================================================================= -->
+    <section id="reading-view" class="view-section active">
+      
+      <!-- HERO BANNER (LATAR CERAH PINK, HIJAU MUDA, UNGU) -->
+      <header class="hero-box" style="background: linear-gradient(135deg, #fdf2f8 0%, #ecfdf5 50%, #ede9fe 100%);">
+        <span class="section-label badge-purple">Modul Keilmuan Ortopedagogik</span>
+        <h1 style="color: var(--gz-dark);">Anak Berbakat Istimewa (Gifted &amp; Talented) dan Paradoks Siswa Dua-Khusus (Twice-Exceptional / 2e)</h1>
+        <p>Kajian ortopedagogik komprehensif: evolusi konsep keberbakatan dari skor IQ tunggal menuju multidimensi, Model Tiga Cincin Joseph Renzulli (Three-Ring Conception), fenomena perkembangan asinkron (asynchronous development), paradoks anak twice-exceptional (berbakat dengan disleksia/ADHD/ASD), serta strategi diferensiasi kurikulum (akselerasi, curriculum compacting, model pengayaan triadik, dan penugasan bertingkat).</p>
+        <div class="hero-meta">
+          <span>⏱ Durasi: 2 SKS (100 Menit)</span>
+          <span>📚 Rujukan: Hallahan &amp; Kauffman (2005, Bab 15) &amp; Heward et al. (2017, Bab 13)</span>
+          <span>🎯 Capaian: Analisis Profil Siswa 2e &amp; Perancangan Rencana Pembelajaran Berdiferensiasi</span>
+        </div>
+      </header>
+
+      <!-- SESI 1: PENDAHULUAN (10 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-lime">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
+        <h2>1. Mengapa Anak Berbakat Termasuk Anak Berkebutuhan Khusus?</h2>
+        <p style="margin-top: 0.75rem;">
+          Di banyak sekolah di Indonesia, masih terdapat miskonsepsi besar bahwa layanan pendidikan khusus hanya diperuntukkan bagi anak-anak yang memiliki kelainan fisik, sensori, atau ketertinggalan kognitif di bawah rata-rata. Namun, merujuk pada konsep kurva normal populasi (the normal curve of human distribution) yang diulas sejak Pertemuan 1, anak-anak yang menyimpang secara signifikan <strong>di atas rata-rata populasi</strong> (anak berbakat istimewa) secara ontologis dan yuridis juga dikategorikan sebagai Anak Berkebutuhan Khusus.
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--gz-purple); background: #faf5ff;">
+          “Children with special gifts and talents are those who give evidence of high achievement capability in areas such as intellectual, creative, artistic, or leadership capacity, and who need services and activities not ordinarily provided by the school in order to fully develop those capabilities.”
+          <footer>— U.S. Federal Definition of Gifted and Talented (Dikutip dalam Heward et al., 2017, hlm. 444)</footer>
+        </div>
+
+        <div class="grid-two-col">
+          <div class="accent-card card-pink-bright">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: #be185d;">Mitos "Mereka Pasti Sukses Sendiri"</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Hallahan &amp; Kauffman (2005) membantah keras asumsi bahwa anak cerdas tidak membutuhkan bantuan guru karena akan sukses dengan sendirinya. Tanpa kurikulum berdiferensiasi dan tantangan intelektual yang memadai, anak berbakat kerap mengalami kebosanan kronis di kelas, menjadi pasif (underachieving), atau memunculkan perilaku mengganggu akibat energi mental yang tidak tersalurkan.
+            </p>
+          </div>
+          <div class="accent-card card-lime-bright">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: #047857;">Perkembangan Asinkron (Asynchronous Development)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Buku teks Heward et al. (2017) menggarisbawahi bahwa kematangan anak berbakat tidak berkembang merata. Seorang anak usia 7 tahun bisa memiliki kapasitas penalaran matematika setara anak usia 14 tahun, namun kematangan emosional dan keterampilan motorik halusnya tetap berada pada taraf anak usia 7 tahun. Kesenjangan internal ini memicu kerentanan stres dan frustrasi emosional.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 2: MATERI INTI (45 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-purple">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
+        <h2>2. Bagian I: Model Tiga Cincin Keberbakatan Joseph Renzulli</h2>
+        <p style="margin-top: 0.75rem;">
+          Tinjauan historis dalam <strong>Hallahan &amp; Kauffman (2005, hlm. 498–504)</strong> mencatat dekonstruksi pandangan lama Lewis Terman yang hanya mengukur keberbakatan berdasarkan skor IQ semata ($\text{IQ} \ge 130$ atau 140). Pakar pendidikan terkemuka Joseph Renzulli merumuskan konsep keberbakatan sebagai interaksi harmonis antara tiga kluster kepribadian manusia:
+        </p>
+
+        <!-- DIAGRAM 1: THREE-RING CONCEPTION OF GIFTEDNESS (SVG BERWARNA CERAH) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 360" width="100%" height="auto" style="max-height: 380px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="ringPink" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f472b6"/></linearGradient>
+              <linearGradient id="ringLime" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+              <linearGradient id="ringPurp" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+              <filter id="shadowThreeRing" x="-5%" y="-10%" width="110%" height="125%">
+                <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.1"/>
+              </filter>
+            </defs>
+
+            <!-- Cincin 1: Kemampuan di Atas Rata-rata (Pink) -->
+            <g filter="url(#shadowThreeRing)">
+              <circle cx="340" cy="170" r="130" fill="url(#ringPink)" fill-opacity="0.35" stroke="#ec4899" stroke-width="3"/>
+              <text x="260" y="140" fill="#be185d" font-size="13" font-weight="800" text-anchor="middle">KEMAMPUAN DI ATAS</text>
+              <text x="260" y="160" fill="#be185d" font-size="13" font-weight="800" text-anchor="middle">RATA-RATA POPULASI</text>
+              <text x="260" y="185" fill="#475569" font-size="10.5" text-anchor="middle">(Above Average Ability)</text>
+              <text x="260" y="205" fill="#475569" font-size="9.5" text-anchor="middle">Penalaran logis, memori cepat,</text>
+              <text x="260" y="220" fill="#475569" font-size="9.5" text-anchor="middle">daya abstraksi tinggi (Top 15–20%)</text>
+            </g>
+
+            <!-- Cincin 2: Komitmen Tugas (Hijau Muda) -->
+            <g filter="url(#shadowThreeRing)">
+              <circle cx="600" cy="170" r="130" fill="url(#ringLime)" fill-opacity="0.35" stroke="#10b981" stroke-width="3"/>
+              <text x="680" y="140" fill="#047857" font-size="13" font-weight="800" text-anchor="middle">KOMITMEN TERHADAP</text>
+              <text x="680" y="160" fill="#047857" font-size="13" font-weight="800" text-anchor="middle">TUGAS BELAJAR</text>
+              <text x="680" y="185" fill="#475569" font-size="10.5" text-anchor="middle">(Task Commitment)</text>
+              <text x="680" y="205" fill="#475569" font-size="9.5" text-anchor="middle">Motivasi intrinsik mendalam,</text>
+              <text x="680" y="220" fill="#475569" font-size="9.5" text-anchor="middle">ketekunan (grit), energi terfokus</text>
+            </g>
+
+            <!-- Cincin 3: Kreativitas (Ungu) -->
+            <g filter="url(#shadowThreeRing)">
+              <circle cx="470" cy="230" r="120" fill="url(#ringPurp)" fill-opacity="0.3" stroke="#7c3aed" stroke-width="3"/>
+              <text x="470" y="275" fill="#5b21b6" font-size="13" font-weight="800" text-anchor="middle">KREATIVITAS TINGGI</text>
+              <text x="470" y="295" fill="#5b21b6" font-size="12" font-weight="700" text-anchor="middle">(High Creativity)</text>
+              <text x="470" y="315" fill="#475569" font-size="10" text-anchor="middle">Berpikir divergen, orisinalitas gagasan, kelenturan</text>
+            </g>
+
+            <!-- Titik Interseksi Pusat: Perilaku Keberbakatan Sejati -->
+            <circle cx="470" cy="180" r="35" fill="#e11d48" stroke="#ffffff" stroke-width="2"/>
+            <text x="470" y="177" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">GIFTED</text>
+            <text x="470" y="191" fill="#ffffff" font-size="9" font-weight="800" text-anchor="middle">BEHAVIOR</text>
+
+            <!-- Keterangan Header Diagram -->
+            <text x="470" y="25" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">MODEL TIGA CINCIN RENZULLI (JOSEPH RENZULLI, DIKUTIP DALAM HEWARD ET AL., 2017)</text>
+          </svg>
+          <div class="diagram-caption">Diagram 1: Interseksi Tiga Cincin Kluster Karakteristik Keberbakatan Menurut Joseph Renzulli (Heward et al., 2017)</div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.5rem; color: var(--gz-pink);">2.1. Paradoks Siswa Dua-Khusus (Twice-Exceptional / 2e)</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          Salah satu bahasan paling kritis dan mutakhir dalam ortopedagogik sebagaimana diuraikan oleh <strong>Heward et al. (2017, hlm. 448)</strong> dan <strong>Hallahan &amp; Kauffman (2005, hlm. 508)</strong> adalah fenomena siswa <strong>Twice-Exceptional (2e)</strong>:
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--gz-pink); background: #fdf2f8;">
+          “Twice-exceptional students are gifted children who also have a disability, such as a learning disability, ADHD, autism spectrum disorder, or physical impairment. These students often present a perplexing paradox: high cognitive ability coexisting with significant academic or social deficits.”
+          <footer>— William L. Heward, Sheila R. Alber-Morgan, &amp; Moira Konrad (2017, hlm. 448)</footer>
+        </div>
+
+        <p style="margin-top: 0.5rem;">
+          Literatur mengidentifikasi fenomena bahaya <em>"The Masking Effect"</em> (Efek Saling Menyamarkan) pada siswa 2e:
+        </p>
+        <ul style="padding-left: 1.5rem; margin-top: 0.3rem; color: var(--text-muted); line-height: 1.8;">
+          <li><strong>Keberbakatan Menyamarkan Disabilitas:</strong> Kecerdasan anak yang tinggi digunakan untuk mengompensasi hambatannya (misal: anak disleksia menggunakan daya nalar logisnya untuk menebak isi teks bacaan sehingga disleksianya tidak terdeteksi guru).</li>
+          <li><strong>Disabilitas Menenggelamkan Keberbakatan:</strong> Hambatan belajar atau gangguan perilakunya (seperti hiperaktivitas ADHD atau tulisan disgrafia yang buruk) membuat guru hanya berfokus pada masalah kekurangannya, sehingga kejeniusan intelektualnya terabaikan.</li>
+          <li><strong>Saling Meniadakan (Masking Each Other):</strong> Skor asesmen anak tampak pas-pasan di rata-rata (average); mereka tidak memenuhi syarat untuk program anak berbakat, namun juga dianggap tidak cukup parah untuk menerima layanan pendidikan khusus.</li>
+        </ul>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">3. Bagian II: Model Penataan Kurikulum dan Diferensiasi Pembelajaran</h3>
+        <p style="margin-top: 0.75rem;">
+          Pendidikan khusus bagi anak berbakat berfokus pada adaptasi kurikulum untuk mencegah kemunduran potensi (underachievement). Heward et al. (2017) membagi pendekatan ini ke dalam dua strategi besar:
+        </p>
+
+        <!-- DIAGRAM 2: AKSELERASI VS PENGAYAAN & TIERED ASSIGNMENTS (SVG CERAH) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 310" width="100%" height="auto" style="max-height: 330px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="accelGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ea580c"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+              <linearGradient id="enrichGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#9333ea"/></linearGradient>
+            </defs>
+
+            <!-- Box Kiri: Akselerasi -->
+            <rect x="25" y="25" width="430" height="260" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+            <rect x="25" y="25" width="430" height="42" rx="10" fill="url(#accelGrad)"/>
+            <text x="240" y="52" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">1. MODEL AKSELERASI (KECEPATAN BELAJAR)</text>
+            
+            <text x="45" y="95" fill="#0f172a" font-size="11.5" font-weight="700">• Prinsip Inti:</text>
+            <text x="60" y="115" fill="#475569" font-size="10.5">Memungkinkan siswa menempuh materi kurikulum lebih cepat atau pada usia lebih muda.</text>
+
+            <text x="45" y="145" fill="#0f172a" font-size="11.5" font-weight="700">• Bentuk Implementasi Lapangan:</text>
+            <text x="60" y="165" fill="#475569" font-size="10.5">- Masuk sekolah dasar lebih awal (early admission).</text>
+            <text x="60" y="185" fill="#475569" font-size="10.5">- Lompat kelas (grade skipping).</text>
+            <text x="60" y="205" fill="#475569" font-size="10.5">- Pemadatan Kurikulum (Curriculum Compacting): Menguji materi pra-belajar;</text>
+            <text x="75" y="225" fill="#475569" font-size="10.5">jika siswa sudah menguasai, materi dipangkas untuk proyek mandiri.</text>
+
+            <text x="240" y="265" fill="#c2410c" font-size="10" font-weight="700" text-anchor="middle">"Fokus: Menghindari Pengulangan Materi yang Membosankan"</text>
+
+            <!-- Box Kanan: Pengayaan -->
+            <rect x="485" y="25" width="430" height="260" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="2"/>
+            <rect x="485" y="25" width="430" height="42" rx="10" fill="url(#enrichGrad)"/>
+            <text x="700" y="52" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">2. MODEL PENGAYAAN &amp; DIFERENSIASI KELAS</text>
+
+            <text x="505" y="95" fill="#0f172a" font-size="11.5" font-weight="700">• Prinsip Inti:</text>
+            <text x="520" y="115" fill="#475569" font-size="10.5">Memperdalam konten, kompleksitas berpikir, dan investigasi tanpa melompat kelas.</text>
+
+            <text x="505" y="145" fill="#0f172a" font-size="11.5" font-weight="700">• Model Triadik Renzulli (Enrichment Triad):</text>
+            <text x="520" y="165" fill="#475569" font-size="10.5">Tipe I (Eksplorasi umum) -> Tipe II (Latihan metodologi riset) -> Tipe III (Investigasi masalah riil).</text>
+
+            <text x="505" y="195" fill="#0f172a" font-size="11.5" font-weight="700">• Penugasan Bertingkat (Tiered Assignments):</text>
+            <text x="520" y="215" fill="#475569" font-size="10.5">Topik materi sama, namun tingkat kedalaman berpikir disesuaikan (Taksonomi Bloom Analisis-Evaluasi-Kreasi).</text>
+
+            <text x="700" y="265" fill="#6d28d9" font-size="10" font-weight="700" text-anchor="middle">"Fokus: Menantang Kedalaman &amp; Orisinalitas Pikiran"</text>
+          </svg>
+          <div class="diagram-caption">Diagram 2: Dua Poros Pendekatan Modifikasi Kurikulum: Akselerasi vs Pengayaan (Heward et al., 2017)</div>
+        </div>
+      </article>
+
+      <!-- SESI 3: GAMES INTERAKTIF (5 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-pink">Fase 3: Game Interaktif Berbasis Suara (5 Menit)</span>
+        <h2>Uji Kasus Pedagogis: "Detektif Analisis Siswa Twice-Exceptional"</h2>
+        <p style="margin-top: 0.5rem;">Cermati dilema profil siswa di bawah ini, aktifkan suara pemandu, dan tentukan keputusan ortopedagogik yang tepat:</p>
+
+        <div class="game-card" style="border: 2px dashed #fbcfe8; background: #fdf2f8;">
+          <div class="sound-toggle-bar">
+            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Pengarah: Aktif</button>
+          </div>
+
+          <div style="background: #ffffff; border: 1.5px solid #fbcfe8; border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;">
+            <p style="font-weight: 700; color: #be185d; margin-bottom: 0.4rem;">STUDI KASUS OBSERVASI SISWA 2E:</p>
+            <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
+              "Leon (9 tahun, kelas 4 SD) mampu menjelaskan teori lubang hitam astronomi dan hukum relativitas dengan sangat fasih saat diskusi lisan di kelas. Namun, saat ujian tertulis esai, hasil tulisannya hampir tidak terbaca, bentuk huruf berantakan (disgrafia), ejaannya sangat kacau (disleksia), dan ia hanya mampu menyelesaikan 2 kalimat dalam waktu 45 menit. Nilai rapor tertulisnya selalu merah sehingga kepala sekolah menolak usulan guru pembimbing untuk mengikutsertakan Leon dalam lomba karya ilmiah sains anak."
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-weight: 700; color: #be185d;">Berdasarkan kajian Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), keputusan kepala sekolah tersebut mencerminkan kekeliruan fatal karena:</p>
+
+          <button class="quiz-option" onclick="evaluateGiftedGame('a')">
+            A. Kepala sekolah sudah benar karena siswa yang tidak bisa menulis rapi pasti tidak memahami konsep sains astronomi yang sebenarnya.
+          </button>
+          <button class="quiz-option" onclick="evaluateGiftedGame('b')">
+            B. Kepala sekolah terjebak dalam efek saling menyamarkan (Masking Effect); Leon adalah siswa Twice-Exceptional (2e) yang memiliki keberbakatan intelektual sains tinggi sekaligus disabilitas spesifik (disgrafia/disleksia). Leon berhak atas akomodasi pengetikan suara (speech-to-text) sekaligus program pengayaan sains tingkat tinggi.
+          </button>
+          <button class="quiz-option" onclick="evaluateGiftedGame('c')">
+            C. Leon sebaiknya langsung diturunkan kelasnya ke kelas 1 SD agar belajar menulis huruf indah terlebih dahulu selama dua tahun.
+          </button>
+          <button class="quiz-option" onclick="evaluateGiftedGame('d')">
+            D. Leon dilarang membaca buku astronomi lagi agar fokus memperbaiki tulisan tangannya.
+          </button>
+
+          <div id="game-feedback" class="quiz-feedback"></div>
+        </div>
+      </article>
+
+      <!-- SESI 4: TANYA JAWAB & CLOSING -->
+      <article class="content-card">
+        <span class="section-label badge-lime">Fase 4: Tanya Jawab &amp; Pernyataan Penutup</span>
+        <h2>Refleksi Akhir: Menyalakan Lentera Keberbakatan Tanpa Menghakimi Kelemahan</h2>
+        <p style="margin-top: 0.75rem;">
+          Setiap peserta didik memiliki konfigurasi otak yang unik. Tugas ortopedagogik modern bukanlah meratakan kemampuan semua anak menjadi seragam seperti pabrik, melainkan memupuk kejeniusan berpikir anak berbakat istimewa sambil meruntuhkan rintangan belajar yang menyertai siswa twice-exceptional. Ketika sekolah memberikan akomodasi yang adil dan tantangan yang bermartabat, anak-anak ini akan tumbuh menjadi inovator dan pembawa perubahan peradaban dunia.
+        </p>
+        <div class="quote-box" style="border-left-color: var(--gz-lime); background: #ecfdf5;">
+          “If a child is both gifted and disabled, we must not let the disability overshadow the gift, nor let the gift prevent us from supporting the disability. Equal educational opportunity means developing the highest potential of every child.”
+          <footer>— Daniel P. Hallahan &amp; James M. Kauffman (2005)</footer>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 2: WORKSHEET MAHASISWA & 10 SOAL EVALUASI PILIHAN GANDA (LKM 14)
+         ========================================================================= -->
+    <section id="worksheet-view" class="view-section">
+      <div class="print-action-bar">
+        <div>
+          <h3 style="color: #be185d;">Lembar Portofolio Aktivitas Mahasiswa: 10 Soal Pilihan Ganda Kasus (LKM 14)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan 10 butir soal pilihan ganda berbasis analisis kasus di bawah ini, lalu simpan atau cetak dalam format PDF.</p>
+        </div>
+        <button class="btn-download-pdf" style="background: var(--gz-pink);" onclick="window.print()">
+          <span>🖨️ Cetak / Unduh Dokumen (PDF)</span>
+        </button>
+      </div>
+
+      <div class="worksheet-paper">
+        <header style="border-bottom: 2.5px solid #0f172a; padding-bottom: 1.25rem; margin-bottom: 2rem;">
+          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.3rem; color: #0f172a;">LEMBAR KERJA EVALUASI KEBERBAKATAN ISTIMEWA &amp; SISWA TWICE-EXCEPTIONAL (LKM 14)</h2>
+          <p style="text-align: center; font-size: 0.9rem; color: #475569;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005, Bab 15) &amp; Heward et al. (2017, Bab 13)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <div><strong>Nama Calon Pendidik:</strong> ____________________________________</div>
+            <div><strong>NIM / Kelas:</strong> ____________________________________</div>
+            <div><strong>Tanggal Pertemuan:</strong> ____________________________________</div>
+            <div><strong>Skor Evaluasi (100):</strong> ____________________________________</div>
+          </div>
+        </header>
+
+        <!-- 10 SOAL PILIHAN GANDA ANALISIS KASUS -->
+        <div class="worksheet-field">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.6rem; margin-bottom: 1.5rem;">
+            <h3 style="font-size: 1.15rem; color: #0f172a; margin: 0;">
+              UJI KOMPETENSI KASUS: 10 SOAL PILIHAN GANDA
+            </h3>
+            <button type="button" class="btn-ctrl secondary" style="font-size: 0.78rem; padding: 0.35rem 0.8rem; background: #fdf2f8; color: #be185d; border: 1px solid #fbcfe8;" onclick="promptLecturerAuth()">
+              🔒 Buka Kunci Jawaban Dosen
+            </button>
+          </div>
+          <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1.5rem;">Pilihlah salah satu opsi jawaban (A, B, C, atau D) yang paling tepat berdasarkan teks asli Hallahan &amp; Kauffman (2005) dan Heward et al. (2017):</p>
+
+          <!-- SOAL 1 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">1.</span> Menurut Model Tiga Cincin (Three-Ring Conception) yang dikembangkan oleh Joseph Renzulli, perilaku keberbakatan sejati (gifted behavior) bermanifestasi dari interaksi harmonis antara tiga kluster karakteristik manusia, yaitu:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Skor tes IQ di atas 140, kepatuhan moral mutlak, dan kekayaan ekonomi keluarga<br>
+              B. Kemampuan di atas rata-rata (Above Average Ability), Komitmen terhadap tugas (Task Commitment), dan Kreativitas tinggi (High Creativity)<br>
+              C. Kecepatan membaca kilat, kebugaran fisik atletik, dan keterampilan musik vokal<br>
+              D. Disleksia, diskalkulia, dan gangguan hiperaktivitas inatensi
+            </p>
+            <div id="key-p14-1" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Model Tiga Cincin Renzulli menegaskan bahwa keberbakatan bukan sekadar IQ tinggi, melainkan irisan antara kemampuan intelektual di atas rata-rata, komitmen tugas (grit), dan kreativitas divergen (Heward et al., 2017, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 2 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">2.</span> Fenomena di mana usia kronologis anak, kematangan intelektual kognitif, dan perkembangan fisik-emosionalnya berkembang pada kecepatan yang sangat timpang dan tidak serempak disebut:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Synchronous Homeostasis<br>
+              B. Asynchronous Development (Perkembangan Asinkron)<br>
+              C. Cognitive Dissociation Syndrome<br>
+              D. Lateral Hypoplasia
+            </p>
+            <div id="key-p14-2" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Asynchronous development adalah ciri khas anak berbakat di mana kapasitas berpikir abstraknya jauh melesat mendahului kematangan motorik halus dan regulasi emosinya (Hallahan &amp; Kauffman, 2005, Bab 15).
+            </div>
+          </div>
+
+          <!-- SOAL 3 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">3.</span> Apakah yang dimaksud dengan istilah siswa <em>Twice-Exceptional (2e)</em> dalam ortopedagogik kontemporer?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Siswa yang tinggal kelas sebanyak dua kali berturut-turut pada jenjang sekolah dasar<br>
+              B. Siswa yang memiliki potensi bakat istimewa intelektual/kreatif tinggi sekaligus menyandang disabilitas penyerta (seperti SLD, ADHD, atau spektrum autisme)<br>
+              C. Siswa kembar identik yang bersekolah di kelas inklusi yang sama<br>
+              D. Siswa yang fasih berbicara dua bahasa asing secara bersamaan
+            </p>
+            <div id="key-p14-3" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Siswa 2e menyandang paradoks ganda: potensi kemampuan istimewa (giftedness) yang hidup berdampingan dengan disabilitas spesifik (Heward et al., 2017, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 4 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">4.</span> Guru kelas menguji siswa pada hari pertama materi bab baru. Siswa yang telah membuktikan penguasaan materi 85% diizinkan melewatkan penjelasan rutin guru dan menggantinya dengan proyek riset mendalam. Strategi diferensiasi akselerasi ini disebut:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Task Analysis Chaining<br>
+              B. Curriculum Compacting (Pemadatan Kurikulum)<br>
+              C. Discrete Trial Training<br>
+              D. Token Economy System
+            </p>
+            <div id="key-p14-4" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Curriculum compacting memangkas pengulangan materi yang telah dikuasai anak berbakat agar waktu belajarnya dapat dialihkan ke materi pengayaan yang lebih bermakna (Heward et al., 2017, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 5 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">5.</span> Manakah yang merupakan contoh implementasi penugasan bertingkat (Tiered Assignments) berbasis Taksonomi Bloom di kelas sains inklusi pada topik materi "Fotosintesis Tumbuhan"?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Semua siswa wajib mengerjakan soal pilihan ganda menghafal definisi fotosintesis yang sama persis tanpa pengecualian<br>
+              B. Kelompok dasar menyebutkan bahan fotosintesis, kelompok menengah menjelaskan alur siklus reaksi terang-gelap, dan kelompok anak berbakat merancang eksperimen ilmiah menganalisis dampak polusi cahaya artifisial terhadap laju fotosintesis<br>
+              C. Siswa berbakat disuruh menjadi guru pembantu untuk memeriksa lembar jawaban teman sekelas yang lambat belajar<br>
+              D. Siswa berbakat dikeluarkan dari laboratorium dan disuruh membaca buku di koridor
+            </p>
+            <div id="key-p14-5" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Tiered assignments mengajarkan konsep inti yang sama namun dengan tingkatan kompleksitas berpikir kognitif yang bertingkat sesuai kapasitas kesiapan belajar murid (Heward et al., 2017, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 6 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">6.</span> Dalam Model Pengayaan Triadik (Enrichment Triad Model) Joseph Renzulli, aktivitas Pengayaan Tipe III (Type III Enrichment) berfokus pada:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Kunjungan wisata umum ke museum sejarah<br>
+              B. Investigasi masalah riil secara independen atau kelompok kecil di mana siswa bertindak layaknya ilmuwan profesional memproduksi produk orisinal bagi audiens nyata<br>
+              C. Menghafal rumus-rumus aljabar tingkat olimpiade secara mekanis<br>
+              D. Tes latihan kecepatan mengetik di komputer
+            </p>
+            <div id="key-p14-6" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Pengayaan Tipe III adalah puncak model Renzulli di mana anak berbakat bertindak sebagai investigator masalah autentik dunia nyata (Hallahan &amp; Kauffman, 2005, Bab 15).
+            </div>
+          </div>
+
+          <!-- SOAL 7 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">7.</span> Mengapa siswa Twice-Exceptional (2e) sering kali gagal mendapatkan layanan identifikasi baik dalam program anak berbakat maupun program pendidikan khusus (fenomena masking effect)?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Karena anak 2e selalu membolos sekolah saat diadakan tes asesmen<br>
+              B. Karena keunggulan kecerdasan intelektualnya menutupi disabilitasnya, dan sebaliknya hambatannya menenggelamkan bakat istimewanya, sehingga skor capaian tampak berada di rata-rata (average)<br>
+              C. Karena alat tes psikologis terstandar dilarang digunakan di sekolah inklusi<br>
+              D. Karena orang tua siswa 2e tidak pernah mengizinkan anaknya diasesmen
+            </p>
+            <div id="key-p14-7" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Efek saling menyamarkan (masking effect) membuat skor performa anak tampak biasa saja di permukaan, sehingga kebutuhan khususnya luput dari perhatian guru (Heward et al., 2017, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 8 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">8.</span> Salah satu kerentanan sosio-emosional yang sangat menonjol pada anak berbakat istimewa yang dipicu oleh standar internal yang terlampau tinggi adalah:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Ekolalia tertunda<br>
+              B. Perfeksionisme ekstrem (Unhealthy Perfectionism) yang dapat memicu kecemasan akut dan kelumpuhan bertindak karena takut salah<br>
+              C. Kelumpuhan pita suara laring<br>
+              D. Defisit sensibilitas angka diskalkulia
+            </p>
+            <div id="key-p14-8" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Perfeksionisme destruktif adalah dilema emosional anak berbakat di mana mereka menetapkan target kesempurnaan tak realistis yang berujung pada rasa bersalah dan depresi (Hallahan &amp; Kauffman, 2005, Bab 15).
+            </div>
+          </div>
+
+          <!-- SOAL 9 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">9.</span> Bagaimanakah akomodasi yang adil dan manusiawi bagi siswa twice-exceptional yang memiliki kecerdasan matematika olimpiade namun mengalami disgrafia motorik halus parah saat ujian akhir sekolah?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Siswa dilarang mengikuti ujian matematika dan nilainya otomatis diturunkan<br>
+              B. Siswa tetap diuji dengan tingkat soal penalaran matematika yang menantang namun diberikan akomodasi juru tulis (scribe), komputer, atau rekaman lisan untuk meniadakan rintangan fisiknya<br>
+              C. Siswa dipaksa menulis tangan sampai selesai meski tangannya mengalami kram dan cedera<br>
+              D. Siswa diberikan lembar soal matematika tingkat TK yang hanya berisi gambar buah
+            </p>
+            <div id="key-p14-9" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Esensi akomodasi bagi siswa 2e adalah memfasilitasi kelemahannya dengan teknologi bantu/juru tulis sambil tetap menantang potensi intelektual tingginya tanpa kompromi konten (Heward et al., 2017, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 10 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">10.</span> Mengapa menjadikan siswa berbakat istimewa sebagai "tutor sebaya abadi" (permanent peer tutors) untuk mengajari teman sekelasnya yang lambat belajar dinilai keliru secara etika ortopedagogik?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Karena anak berbakat akan meminta upah uang kepada teman sekelasnya<br>
+              B. Karena merampas hak anak berbakat untuk memperoleh kemajuan belajar baru sesuai potensinya dan mengeksploitasi mereka sebagai guru pengganti tanpa stimulasi intelektual yang layak<br>
+              C. Karena anak berbakat dilarang berbicara dengan teman sebaya di kelas<br>
+              D. Karena kurikulum inklusi melarang adanya kerja sama antarsiswa
+            </p>
+            <div id="key-p14-10" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Walaupun tutor sebaya sesekali bermanfaat, menjadikannya tugas rutin merampas hak belajar anak berbakat untuk menghadapi tantangan intelektual baru (right to learn something new every day) (Hallahan &amp; Kauffman, 2005, Bab 15).
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 3: INTERACTIVE PRESENTATION MODE (SLIDE BERWARNA & DOCK NAVIGASI)
+         ========================================================================= -->
+    <section id="presentation-view" class="view-section">
+      
+      <div class="presentation-frame-colorful">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide-item active">
+          <span class="slide-badge-pill" style="background: #fdf2f8; color: #be185d; border: 1.5px solid #fbcfe8;">
+            Slide 1 dari 6 • Orientasi Keberbakatan
+          </span>
+          <h2 style="color: #be185d;">Anak Berbakat Istimewa &amp; Siswa Twice-Exceptional (2e)</h2>
+          <div class="slide-body">
+            <p>Membongkar Mitos Kesuksesan Otomatis Menuju Diferensiasi Kurikuler Sejati:</p>
+            <ul>
+              <li>Deviasi positif kurva normal populasi yang menuntut kurikulum terancang khusus.</li>
+              <li>Pergeseran dari skor tes IQ tunggal menuju pendekatan multidimensionalitas bakat.</li>
+              <li>Sintesis rujukan otoritatif Hallahan &amp; Kauffman (2005) dan William L. Heward (2017).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri (10 Menit Awal):</strong> Buka kelas dengan analogi provokatif: "Jika pelari maraton profesional dipaksa berjalan santai bersama anak balita selama bertahun-tahun, apa yang terjadi pada otot kakinya? Ototnya akan atrofi. Begitu pula otak anak berbakat jika tidak diberi tantangan di kelas reguler."
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ecfdf5; color: #047857; border: 1.5px solid #a7f3d0;">
+            Slide 2 dari 6 • Teori Renzulli
+          </span>
+          <h2 style="color: #047857;">Model Tiga Cincin Joseph Renzulli</h2>
+          <div class="slide-body">
+            <p>Interseksi Perilaku Keberbakatan Sejati (Three-Ring Conception):</p>
+            <ul>
+              <li><strong>1. Kemampuan di Atas Rata-rata:</strong> Penalaran abstrak tinggi, daya tangkap kilat (Top 15–20%).</li>
+              <li><strong>2. Komitmen Terhadap Tugas (Task Commitment):</strong> Daya juang mendalam (grit), ketekunan, dan energi terfokus.</li>
+              <li><strong>3. Kreativitas Tinggi:</strong> Berpikir divergen, orisinalitas gagasan, kelenturan memecahkan masalah.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Tekankan bahwa seorang anak dengan IQ 145 tidak akan membuahkan karya agung jika tidak memiliki komitmen tugas (grit) dan kreativitas orisinal. Keberbakatan adalah sinergi ketiga cincin tersebut.
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ede9fe; color: #6d28d9; border: 1.5px solid #ddd6fe;">
+            Slide 3 dari 6 • Paradoks 2e
+          </span>
+          <h2 style="color: #6d28d9;">Siswa Dua-Khusus (Twice-Exceptional / 2e)</h2>
+          <div class="slide-body">
+            <p>Koeksistensi Bakat Unggul Berdampingan dengan Disabilitas:</p>
+            <ul>
+              <li>Anak berbakat yang sekaligus menyandang disleksia, ADHD, ASD, atau hambatan motorik.</li>
+              <li><strong>The Masking Effect (Saling Menyamarkan):</strong> Keberbakatan menutupi disabilitas, atau sebaliknya kekurangan menenggelamkan kejeniusannya.</li>
+              <li>Sering luput teridentifikasi karena skor ujian tampak berada di taraf rata-rata pas-pasan.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Diskusikan bahaya bias guru: Sering kali guru hanya melihat PR anak yang tidak rapi (disgrafia/ADHD) dan langsung mencap anak bodoh, tanpa menyadari kapasitas verbal nalarnya setara mahasiswa.
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ffedd5; color: #c2410c; border: 1.5px solid #fed7aa;">
+            Slide 4 dari 6 • Strategi Kurikulum
+          </span>
+          <h2 style="color: #c2410c;">Akselerasi vs Pengayaan (Enrichment)</h2>
+          <div class="slide-body">
+            <p>Dua Poros Utama Modifikasi Kurikulum (Heward et al., 2017):</p>
+            <ul>
+              <li><strong>Akselerasi (Kecepatan):</strong> Lompat kelas (grade skipping) dan Pemadatan Kurikulum (Curriculum Compacting - memangkas materi yang telah dikuasai).</li>
+              <li><strong>Pengayaan (Kedalaman):</strong> Model Triadik Renzulli (Eksplorasi -> Pelatihan Metodologi Riset -> Investigasi Masalah Nyata).</li>
+              <li>Mencegah fenomena kebosanan kronis dan kemunduran potensi (underachievement).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Klarifikasi mitos akselerasi: Penelitian membuktikan bahwa lompat kelas yang dirancang cermat secara psikologis TIDAK merusak penyesuaian sosial anak berbakat; justru menyatukan mereka dengan rekan sebaya intelektualnya.
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #fdf2f8; color: #be185d; border: 1.5px solid #fbcfe8;">
+            Slide 5 dari 6 • Desain Kelas
+          </span>
+          <h2 style="color: #be185d;">Penugasan Bertingkat (Tiered Assignments)</h2>
+          <div class="slide-body">
+            <p>Diferensiasi Pembelajaran di Ruang Kelas Inklusif:</p>
+            <ul>
+              <li>Materi pokok sama, namun tingkat kompleksitas kognitif berjenjang (Taksonomi Bloom).</li>
+              <li>Tingkat 1 (Pemahaman Dasar) -> Tingkat 2 (Analisis Hubungan) -> Tingkat 3 (Kreasi &amp; Evaluasi Independen).</li>
+              <li>Larangan Eksploitasi: Anak berbakat BUKAN guru pengganti / tutor sebaya abadi di kelas.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Berikan contoh praktis: Dalam pelajaran matematika, saat anak lain berlatih rumus luas balok, anak berbakat diminta merancang denah miniatur rumah ramah gempa dengan efisiensi bahan material.
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ecfdf5; color: #047857; border: 1.5px solid #a7f3d0;">
+            Slide 6 dari 6 • Rangkuman &amp; Aksi
+          </span>
+          <h2 style="color: #047857;">Closing Thought: Memanusiakan Seluruh Potensi</h2>
+          <div class="slide-body">
+            <p>Komitmen Pendidik Ortopedagogik:</p>
+            <ul>
+              <li>Kenali dan dukung kedua sisi siswa 2e: fasilitasi kelemahannya, kobarkan kejeniusannya.</li>
+              <li>Sediakan ruang bagi pemikiran orisinal divergen yang di luar kebiasaan baku.</li>
+              <li>Minggu Depan (Pertemuan 15): Kemitraan Keluarga, Resiprositas Budaya, &amp; Transisi Dewasa (ITP).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Instruksikan mahasiswa untuk mengerjakan 10 soal evaluasi pilihan ganda pada LKM 14 sebelum sesi kuliah ditutup.
+          </div>
+        </div>
+
+        <!-- DOCK NAVIGASI CEPAT SLIDE (SLIDE QUICK-JUMP DOCK) -->
+        <div>
+          <div class="slide-nav-dock">
+            <button class="dock-btn active" onclick="jumpToSlide(0)">1</button>
+            <button class="dock-btn" onclick="jumpToSlide(1)">2</button>
+            <button class="dock-btn" onclick="jumpToSlide(2)">3</button>
+            <button class="dock-btn" onclick="jumpToSlide(3)">4</button>
+            <button class="dock-btn" onclick="jumpToSlide(4)">5</button>
+            <button class="dock-btn" onclick="jumpToSlide(5)">6</button>
+          </div>
+
+          <footer class="slide-controls" style="border-top: 1px solid #e2e8f0; margin-top: 1.25rem;">
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+              <button class="btn-ctrl" style="background: var(--gz-pink);" onclick="changeSlide(1)">Selanjutnya ❯</button>
+            </div>
+            <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Dosen</button>
+          </footer>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LOGIKA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Pengalihan Tab Navigasi Utama
+    function switchView(targetViewId, buttonElement) {
+      document.querySelectorAll('.view-section').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(targetViewId).classList.add('active');
+      buttonElement.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Web Audio API Synthesizer (Efek Suara Mini Game Bawaan Browser)
+    let audioFxEnabled = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTone(type) {
+      if (!audioFxEnabled) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'success') {
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.25); // G5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } else {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+        osc.frequency.exponentialRampToValueAtTime(130.81, audioCtx.currentTime + 0.25); // C3
+        gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      }
+    }
+
+    function toggleAudioFx() {
+      audioFxEnabled = !audioFxEnabled;
+      const btn = document.getElementById('sound-btn');
+      if (audioFxEnabled) {
+        btn.classList.add('active');
+        btn.textContent = '🔊 Suara Pengarah: Aktif';
+      } else {
+        btn.classList.remove('active');
+        btn.textContent = '🔇 Suara Pengarah: Hening';
+      }
+    }
+
+    // 3. Evaluasi Mini Game Pertemuan 14
+    function evaluateGiftedGame(choice) {
+      const feedback = document.getElementById('game-feedback');
+      feedback.style.display = 'block';
+
+      if (choice === 'b') {
+        playTone('success');
+        feedback.style.background = '#ecfdf5';
+        feedback.style.color = '#065f46';
+        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Menurut doktrin Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), Leon adalah profil klasik siswa Twice-Exceptional (2e). Hambatan disgrafianya menutupi kejeniusan sainsnya (masking effect). Menolak potensi sainsnya karena tulisan tangannya jelek adalah ketidakadilan pedagogis; Leon berhak atas akomodasi piranti pengetikan suara sekaligus pengayaan sains olimpiade.';
+      } else {
+        playTone('error');
+        feedback.style.background = '#fff1f2';
+        feedback.style.color = '#9f1239';
+        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan prinsip siswa twice-exceptional: disfungsi motorik tulisan tangan tidak mencerminkan batas pemikiran kognitifnya. Memaksakan penurunan kelas atau melarang bacaan sains justru mematikan motivasi intrinsik anak berbakat.';
+      }
+    }
+
+    // 4. Proteksi Kunci Jawaban Soal PG (Khusus Dosen)
+    function promptLecturerAuth() {
+      const pwd = prompt("Masukkan kata sandi dosen pengampu untuk membuka kunci jawaban & pembahasan:");
+      if (pwd === "dosenorto" || pwd === "ortopedagogik") {
+        document.querySelectorAll('.lecturer-key-box').forEach(box => {
+          box.style.display = 'block';
+        });
+        alert("Autentikasi berhasil. Kunci jawaban dan pembahasan kasus telah terbuka.");
+      } else if (pwd !== null) {
+        alert("Kata sandi salah. Akses kunci jawaban hanya diperuntukkan bagi dosen pengampu.");
+      }
+    }
+
+    // 5. Pengendali Slide Presentasi Dosen & Quick-Jump Dock
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+    const dockBtns = document.querySelectorAll('.dock-btn');
+
+    function updateSlideDisplay() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+      dockBtns.forEach((btn, idx) => {
+        btn.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+      updateSlideDisplay();
+    }
+
+    function jumpToSlide(index) {
+      currentSlide = index;
+      updateSlideDisplay();
+    }
+
+    function toggleSpeakerNotes() {
+      const activeSlide = slides[currentSlide];
+      const notes = activeSlide.querySelector('.speaker-notes-colorful');
+      if (notes) {
+        notes.style.display = (notes.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // Navigasi Keyboard untuk Slide
+    document.addEventListener('keydown', (e) => {
+      const presView = document.getElementById('presentation-view');
+      if (presView.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
