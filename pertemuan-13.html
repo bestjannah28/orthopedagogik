@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 13: Disabilitas Majemuk, Hambatan Berat, &amp; Deaf-Blindness</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    / Variasi Palet Gen Z Cerah: Pink, Hijau Muda, dan Merah /
+    :root {
+      --gz-pink: #ec4899;
+      --gz-pink-light: #fdf2f8;
+      --gz-lime: #10b981;
+      --gz-lime-light: #ecfdf5;
+      --gz-red: #e11d48;
+      --gz-red-light: #fff1f2;
+      --gz-dark: #0f172a;
+      --gz-bg-bright: #fafcfb;
+    }
+    body {
+      background-color: var(--gz-bg-bright);
+    }
+    .badge-pink {
+      background: var(--gz-pink-light);
+      color: #be185d;
+      font-weight: 800;
+    }
+    .badge-lime {
+      background: var(--gz-lime-light);
+      color: #047857;
+      font-weight: 800;
+    }
+    .badge-red {
+      background: var(--gz-red-light);
+      color: var(--gz-red);
+      font-weight: 800;
+    }
+    .card-pink-bright {
+      border-left: 4px solid var(--gz-pink);
+      background: #fdf2f8;
+    }
+    .card-lime-bright {
+      border-left: 4px solid var(--gz-lime);
+      background: #f0fdf4;
+    }
+    .card-red-bright {
+      border-left: 4px solid var(--gz-red);
+      background: #fff1f2;
+    }
+    .presentation-frame-bright {
+      background: #ffffff;
+      color: #1e293b;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      min-height: 540px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-lg);
+    }
+    .presentation-frame-bright h2 {
+      color: #0f172a;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      margin-bottom: 1.25rem;
+    }
+    .presentation-frame-bright .slide-body {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #334155;
+    }
+    .presentation-frame-bright .slide-body li {
+      margin-bottom: 0.85rem;
+      position: relative;
+      padding-left: 1.8rem;
+    }
+    .presentation-frame-bright .slide-body li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--gz-pink);
+      font-weight: 800;
+    }
+    .speaker-notes-bright {
+      margin-top: 1.5rem;
+      background: #f8fafc;
+      border-left: 3px solid var(--gz-lime);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: #475569;
+      display: none;
+    }
+    .lecturer-key-box {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.75rem 1rem;
+      background: #ecfdf5;
+      border-left: 4px solid var(--gz-lime);
+      border-radius: 6px;
+      font-size: 0.88rem;
+      color: #065f46;
+      line-height: 1.6;
+    }
+    .q-number {
+      font-weight: 800;
+      color: var(--gz-pink);
+      margin-right: 0.35rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span style="color: var(--gz-pink);">ORTOPEDAGOGIK</span>
+        <span class="pill badge-pink">Pertemuan 13</span>
+      </div>
+      <nav class="view-tabs" role="tablist">
+        <button class="tab-btn active" onclick="switchView('reading-view', this)">Modul Bacaan Lengkap</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja &amp; 10 Soal PG</button>
+        <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Dosen</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- =========================================================================
+         BAGIAN 1: WEB PAGE PRESENTATION (BACAAN MANDIRI DOSEN & MAHASISWA)
+         ========================================================================= -->
+    <section id="reading-view" class="view-section active">
+      
+      <!-- HERO BANNER (LATAR CERAH PINK, HIJAU MUDA, MERAH) -->
+      <header class="hero-box" style="background: linear-gradient(135deg, #fdf2f8 0%, #ecfdf5 50%, #fff1f2 100%);">
+        <span class="section-label badge-pink">Modul Keilmuan Ortopedagogik</span>
+        <h1 style="color: var(--gz-dark);">Disabilitas Majemuk (Multiple Disabilities), Hambatan Berat, dan Kehilangan Sensori Ganda (Deaf-Blindness)</h1>
+        <p>Kajian ortopedagogik komprehensif: hakikat koeksistensi disabilitas ganda di bawah regulasi IDEA, isolasi ekstrem akibat hilangnya dua indra jarak jauh (distance senses), sistem kalender objek konkret (object schedules), modalitas komunikasi taktil (Tadoma &amp; isyarat raba), etika martabat berisiko (the dignity of risk), serta asesmen alternatif berbasis portofolio unjuk kerja.</p>
+        <div class="hero-meta">
+          <span>⏱ Durasi: 2 SKS (100 Menit)</span>
+          <span>📚 Rujukan: Hallahan &amp; Kauffman (2005, Bab 13) &amp; Heward et al. (2017, Bab 12)</span>
+          <span>🎯 Capaian: Perancangan Komunikasi Taktil &amp; Penentuan Prioritas Kurikulum Esensial</span>
+        </div>
+      </header>
+
+      <!-- SESI 1: PENDAHULUAN (10 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-lime">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
+        <h2>1. Menjangkau yang Paling Terisolasi: Melampaui Definisi Disabilitas Tunggal</h2>
+        <p style="margin-top: 0.75rem;">
+          Dalam klasifikasi pendidikan khusus, terdapat sekelompok peserta didik yang tidak dapat dilayani secara memadai jika hanya menggunakan pendekatan disabilitas tunggal. Anak yang mengalami hambatan intelektual berat sekaligus menderita kelumpuhan cerebral palsy dan epilepsi, atau anak yang secara simultan mengalami kebutaan sekaligus ketulian, berada pada kelompok <strong>hambatan prevalensi rendah (low-incidence disabilities)</strong> yang membutuhkan intensitas dukungan paling ekstensif dan pervasif.
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--gz-pink); background: #fdf2f8;">
+          “Children with severe and multiple disabilities represent a very small percentage of the population, but their educational needs are profound. Educating these children requires a fundamental commitment to the principle that every human being, regardless of the severity of impairment, has the capacity to learn, communicate, and live a life of dignity.”
+          <footer>— William L. Heward, Sheila R. Alber-Morgan, &amp; Moira Konrad (2017, hlm. 408)</footer>
+        </div>
+
+        <div class="grid-two-col">
+          <div class="accent-card card-pink-bright">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: #be185d;">Bukan Sekadar Penggabungan Matematika</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Hallahan &amp; Kauffman (2005) menekankan bahwa disabilitas majemuk bukanlah sekadar penjumlahan $1 + 1 = 2$. Hambatan kombinasi menciptakan dampak multiplikatif yang unik: seorang anak buta-tuli (deaf-blind) tidak bisa disamakan dengan anak tunanetra yang ditambah ketulian, karena ia kehilangan <strong>seluruh akses indra jarak jauh (distance senses)</strong> yang mengumpulkan informasi dari dunia luar.
+            </p>
+          </div>
+          <div class="accent-card card-lime-bright">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: #047857;">Prinsip Parsimoni Pedagogis: Kurikulum Esensial</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Bagi anak dengan disabilitas majemuk berat, waktu belajar sangat berharga. Guru tidak boleh menyia-nyiakan waktu anak untuk materi akademik abstrak yang tidak fungsional. Pertanyaan panduan kurikulumnya adalah: <em>"Keterampilan apa yang jika anak tidak bisa melakukannya sendiri, orang lain harus melakukannya untuk anak seumur hidupnya?"</em>
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 2: MATERI INTI (45 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-red">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
+        <h2>2. Bagian I: Disabilitas Majemuk (Multiple Disabilities) di Bawah Regulasi IDEA</h2>
+        <p style="margin-top: 0.75rem;">
+          Menurut definisi resmi perundangan federal IDEA sebagaimana dipaparkan oleh <strong>Heward et al. (2017, hlm. 410)</strong>:
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--gz-red); background: #fff1f2;">
+          “Multiple disabilities means concomitant impairments (such as intellectual disability-blindness or intellectual disability-orthopedic impairment), the combination of which causes such severe educational needs that they cannot be accommodated in special education programs solely for one of the impairments. Multiple disabilities does not include deaf-blindness.”
+          <footer>— Individuals with Disabilities Education Act (IDEA, dikutip dalam Heward et al., 2017, hlm. 410)</footer>
+        </div>
+
+        <p style="margin-top: 1rem;">
+          Karakteristik peserta didik dengan disabilitas majemuk berat menurut <strong>Hallahan &amp; Kauffman (2005, hlm. 462–466)</strong> meliputi:
+        </p>
+        <ul style="padding-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); line-height: 1.8;">
+          <li><strong>Kelambanan Ekstrem dalam Penguasaan Keterampilan Baru:</strong> Membutuhkan ratusan uji coba pengulangan (trials to criterion) untuk menguasai satu perilaku adaptif sederhana (seperti meraih cangkir atau menoleh ke arah sumber rangsangan).</li>
+          <li><strong>Hambatan Generalisasi dan Pemeliharaan (Maintenance):</strong> Keterampilan yang telah dikuasai di sekolah mudah hilang jika tidak dilatih setiap hari di lingkungan rumah.</li>
+          <li><strong>Defisit Komunikasi Berat:</strong> Sebagian besar tidak memiliki kemampuan bahasa lisan vokal dan membutuhkan sistem komunikasi augmentatif fungsional.</li>
+          <li><strong>Keterbatasan Keterampilan Bantu Diri Intim:</strong> Memerlukan bantuan orang lain untuk makan, mandi, berpakaian, dan kebersihan buang air (toilet training).</li>
+        </ul>
+
+        <!-- DIAGRAM 1: MODALITAS KOMUNIKASI TAKTIL DEAF-BLINDNESS (SVG CERAH) -->
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">3. Bagian II: Kehilangan Penglihatan dan Pendengaran Ganda (Deaf-Blindness)</h3>
+        <p style="margin-top: 0.75rem;">
+          Meskipun diistilahkan sebagai deaf-blindness, <strong>Heward et al. (2017, hlm. 412–415)</strong> menegaskan bahwa sebagian besar anak dalam kategori ini masih memiliki sisa penglihatan atau sisa pendengaran yang dapat dioptimalkan. Kondisi ini dipisahkan secara hukum dari kategori disabilitas majemuk karena menuntut metodologi komunikasi yang sangat spesifik:
+        </p>
+
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 320" width="100%" height="auto" style="max-height: 340px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="dbPink" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f472b6"/></linearGradient>
+              <linearGradient id="dbLime" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+              <linearGradient id="dbRed" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e11d48"/><stop offset="100%" stop-color="#fb7185"/></linearGradient>
+            </defs>
+
+            <!-- Box 1: Tactile Sign Language -->
+            <rect x="25" y="25" width="280" height="240" rx="10" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="2"/>
+            <rect x="25" y="25" width="280" height="42" rx="10" fill="url(#dbPink)"/>
+            <text x="165" y="52" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">1. BAHASA ISYARAT TAKTIL</text>
+            <text x="165" y="95" fill="#be185d" font-size="12" font-weight="700" text-anchor="middle">Isyarat Tangan-ke-Tangan</text>
+            <text x="45" y="125" fill="#475569" font-size="10.5">• Anak meletakkan tangannya di atas</text>
+            <text x="55" y="145" fill="#475569" font-size="10.5">tangan lawan bicara yang sedang berisyarat.</text>
+            <text x="45" y="170" fill="#475569" font-size="10.5">• Membaca bentuk, gerak, dan posisi</text>
+            <text x="55" y="190" fill="#475569" font-size="10.5">tangan secara rabaan langsung.</text>
+            <text x="165" y="235" fill="#be185d" font-size="10" font-weight="700" text-anchor="middle">"Jalur Bahasa Visual yang Diraba"</text>
+
+            <!-- Box 2: Object Schedules -->
+            <rect x="330" y="25" width="280" height="240" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="2"/>
+            <rect x="330" y="25" width="280" height="42" rx="10" fill="url(#dbLime)"/>
+            <text x="470" y="52" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">2. JADWAL KALENDER OBJEK</text>
+            <text x="470" y="95" fill="#047857" font-size="12" font-weight="700" text-anchor="middle">Object Schedules (Konkret)</text>
+            <text x="350" y="125" fill="#475569" font-size="10.5">• Benda nyata merepresentasikan aktivitas:</text>
+            <text x="360" y="145" fill="#475569" font-size="10.5">Sendok = Waktunya makan siang.</text>
+            <text x="360" y="165" fill="#475569" font-size="10.5">Potongan handuk = Waktunya cuci tangan.</text>
+            <text x="350" y="190" fill="#475569" font-size="10.5">• Membangun prediktabilitas waktu.</text>
+            <text x="470" y="235" fill="#047857" font-size="10" font-weight="700" text-anchor="middle">"Jembatan Simbolik Pra-Bahasa"</text>
+
+            <!-- Box 3: Metode Tadoma & Fingertip -->
+            <rect x="635" y="25" width="280" height="240" rx="10" fill="#fff1f2" stroke="#fecdd3" stroke-width="2"/>
+            <rect x="635" y="25" width="280" height="42" rx="10" fill="url(#dbRed)"/>
+            <text x="775" y="52" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">3. METODE TADOMA &amp; EJAAN JARI</text>
+            <text x="775" y="95" fill="#b91c1c" font-size="12" font-weight="700" text-anchor="middle">Membaca Getaran Wicara</text>
+            <text x="655" y="125" fill="#475569" font-size="10.5">• Anak meletakkan ibu jari pada bibir</text>
+            <text x="665" y="145" fill="#475569" font-size="10.5">dan jari lainnya pada pipi/rahang guru.</text>
+            <text x="655" y="170" fill="#475569" font-size="10.5">• Meraba getaran laring dan hembusan udara.</text>
+            <text x="655" y="195" fill="#475569" font-size="10.5">• Alfabet jari di telapak tangan (manual).</text>
+            <text x="775" y="235" fill="#b91c1c" font-size="10" font-weight="700" text-anchor="middle">"Merasakan Bunyi Lewat Sentuhan"</text>
+          </svg>
+          <div class="diagram-caption">Diagram 1: Tiga Modalitas Komunikasi dan Prediktabilitas Lingkungan Bagi Anak Deaf-Blindness (Heward et al., 2017)</div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.5rem; color: var(--gz-pink);">3.1. Etiologi Khusus Deaf-Blindness: Sindrom Usher dan Sindrom CHARGE</h3>
+        <ul style="padding-left: 1.5rem; margin-top: 0.3rem; color: var(--text-muted); line-height: 1.8;">
+          <li><strong>Sindrom Usher (Usher Syndrome):</strong> Kelainan genetik resesif autosomal yang menjadi penyebab utama tuli-buta bawaan. Ditandai oleh kehilangan pendengaran sensorineural sejak lahir (kongenital), diikuti oleh munculnya Retinitis Pigmentosa (penyempitan lapang pandang malam hari bertahap hingga menjadi penglihatan terowongan dan kebutaan total pada masa remaja/dewasa muda).</li>
+          <li><strong>Sindrom CHARGE:</strong> Sindrom genetik langka yang melibatkan anomali fisik ganda: Coloboma mata, Kelainan Jantung (Heart defects), Atresia koana hidung, Hambatan pertumbuhan (Retarded growth), Anomali Genital, dan Anomali Telinga (Ear abnormalities) yang memicu ketulian dan gangguan keseimbangan vestibular.</li>
+        </ul>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">4. Bagian III: Landasan Filosofis Kurikulum dan Martabat Berisiko</h3>
+        <p>
+          Buku teks <strong>Heward et al. (2017, hlm. 426–430)</strong> dan <strong>Hallahan &amp; Kauffman (2005)</strong> merumuskan dua pilar etika tertinggi dalam ortopedagogik disabilitas berat:
+        </p>
+
+        <div class="grid-two-col">
+          <div class="accent-card card-lime-bright">
+            <h4 style="color: #047857; margin-bottom: 0.4rem;">Prinsip Keterampilan Fungsional Esensial</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Pengajaran diarahkan pada kecakapan hidup nyata di lingkungan komunitas. Jika murid diajarkan berbelanja, latihan tidak dilakukan dengan uang mainan di kelas, melainkan langsung diajak bertransaksi di minimarket terdekat (community-based instruction) menggunakan bantuan visual atau kartu komunikasi.
+            </p>
+          </div>
+          <div class="accent-card card-red-bright">
+            <h4 style="color: var(--gz-red); margin-bottom: 0.4rem;">Hak Menghadapi Risiko yang Bermartabat (Dignity of Risk)</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Kecenderungan masyarakat dan orang tua adalah terlalu melindungi (overprotective) anak dengan disabilitas berat sehingga mereka diisolasi di tempat tidur. Prinsip <em>Dignity of Risk</em> menegaskan bahwa setiap manusia berhak merasakan tantangan hidup yang wajar (seperti belajar memasak air hangat atau naik bus umum dengan pendampingan), karena tanpa mengambil risiko terukur, manusia tidak akan pernah belajar mandiri dan merasakan harga diri sejati.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 3: GAMES INTERAKTIF (5 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-pink">Fase 3: Game Interaktif Berbasis Suara (5 Menit)</span>
+        <h2>Uji Kasus Pedagogis: "Audit Komunikasi dan Martabat Disabilitas Berat"</h2>
+        <p style="margin-top: 0.5rem;">Cermati dilema instruksional di bawah ini, aktifkan suara pemandu, dan tentukan prinsip ortopedagogik yang tepat:</p>
+
+        <div class="game-card" style="border: 2px dashed #fbcfe8; background: #fdf2f8;">
+          <div class="sound-toggle-bar">
+            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Pengarah: Aktif</button>
+          </div>
+
+          <div style="background: #ffffff; border: 1.5px solid #fbcfe8; border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;">
+            <p style="font-weight: 700; color: #be185d; margin-bottom: 0.4rem;">DILEMA PEMBELAJARAN SISWA DEAF-BLIND:</p>
+            <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
+              "Dina (8 tahun) mengalami kebutaan dan ketulian ganda kongenital parah (deaf-blind). Guru baru di sekolah mencoba mengajar Dina dengan berbicara sangat keras di dekat telinganya dan melambaikan kartu huruf alfabet cetak besar di depan wajahnya. Ketika Dina panik dan mulai menggigit tangannya sendiri karena tidak memahami situasi sekitarnya, guru mengikat kedua tangan Dina ke kursi agar aman."
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-weight: 700; color: #be185d;">Berdasarkan kajian Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), koreksi mendasar terhadap tindakan guru tersebut adalah:</p>
+
+          <button class="quiz-option" onclick="evaluateMultipleGame('a')">
+            A. Tindakan guru sudah benar karena suara keras dan ikatan tangan demi keselamatan anak.
+          </button>
+          <button class="quiz-option" onclick="evaluateMultipleGame('b')">
+            B. Guru salah total; Dina kehilangan kedua indra jarak jauh (distance senses) sehingga suara keras dan kartu visual tidak berguna. Dina membutuhkan modalitas taktil rabaan (bahasa isyarat sentuh tangan, jadwal objek konkret nyata), dan mengikat tangannya melanggar hak asasi serta merampas satu-satunya 'mata dan telinga' taktil yang dimiliki anak.
+          </button>
+          <button class="quiz-option" onclick="evaluateMultipleGame('c')">
+            C. Dina seharusnya langsung dikeluarkan dari sekolah dan diserahkan ke rumah sakit jiwa.
+          </button>
+          <button class="quiz-option" onclick="evaluateMultipleGame('d')">
+            D. Guru hanya perlu menyalakan lampu senter terang ke mata Dina.
+          </button>
+
+          <div id="game-feedback" class="quiz-feedback"></div>
+        </div>
+      </article>
+
+      <!-- SESI 4: TANYA JAWAB & CLOSING -->
+      <article class="content-card">
+        <span class="section-label badge-lime">Fase 4: Tanya Jawab &amp; Pernyataan Penutup</span>
+        <h2>Refleksi Akhir: Nilai Kemanusiaan yang Tak Tergoyahkan</h2>
+        <p style="margin-top: 0.75rem;">
+          Tingkat peradaban suatu bangsa tidak diukur dari bagaimana masyarakatnya memperlakukan orang-orang yang kaya, pintar, dan berkuasa, melainkan dari bagaimana masyarakat tersebut memanusiakan dan merawat warga negaranya yang paling rentan dan memiliki disabilitas paling berat. Di tangan pendidik ortopedagogik yang penuh kasih dan berlandaskan ilmu pengetahuan empiris, keterbatasan fisik dan sensori ganda bukanlah akhir dari kehidupan, melainkan awal dari perjalanan penemuan makna kemanusiaan yang mendalam.
+        </p>
+        <div class="quote-box" style="border-left-color: var(--gz-lime); background: #ecfdf5;">
+          “The ultimate test of a society’s humanity is how it treats its members who need the most support. In special education, there are no throwaway children. Every child possesses intrinsic human dignity and an absolute right to an effective education.”
+          <footer>— William L. Heward et al. (2017)</footer>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 2: WORKSHEET MAHASISWA & 10 SOAL EVALUASI PILIHAN GANDA
+         ========================================================================= -->
+    <section id="worksheet-view" class="view-section">
+      <div class="print-action-bar">
+        <div>
+          <h3 style="color: #be185d;">Lembar Aktivitas Mahasiswa: 10 Soal Pilihan Ganda Kasus (LKM 13)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan 10 butir soal pilihan ganda berbasis analisis kasus di bawah ini, lalu simpan atau cetak dalam format PDF.</p>
+        </div>
+        <button class="btn-download-pdf" style="background: var(--gz-pink);" onclick="window.print()">
+          <span>🖨️ Cetak / Unduh Dokumen (PDF)</span>
+        </button>
+      </div>
+
+      <div class="worksheet-paper">
+        <header style="border-bottom: 2.5px solid #0f172a; padding-bottom: 1.25rem; margin-bottom: 2rem;">
+          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.3rem; color: #0f172a;">LEMBAR KERJA EVALUASI DISABILITAS MAJEMUK, HAMBATAN BERAT, &amp; DEAF-BLINDNESS (LKM 13)</h2>
+          <p style="text-align: center; font-size: 0.9rem; color: #475569;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005, Bab 13) &amp; Heward et al. (2017, Bab 12)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <div><strong>Nama Calon Pendidik:</strong> ____________________________________</div>
+            <div><strong>NIM / Kelas:</strong> ____________________________________</div>
+            <div><strong>Tanggal Pertemuan:</strong> ____________________________________</div>
+            <div><strong>Skor Evaluasi (100):</strong> ____________________________________</div>
+          </div>
+        </header>
+
+        <!-- 10 SOAL PILIHAN GANDA TINGKAT ANALISIS KASUS -->
+        <div class="worksheet-field">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.6rem; margin-bottom: 1.5rem;">
+            <h3 style="font-size: 1.15rem; color: #0f172a; margin: 0;">
+              UJI KOMPETENSI KASUS: 10 SOAL PILIHAN GANDA
+            </h3>
+            <button type="button" class="btn-ctrl secondary" style="font-size: 0.78rem; padding: 0.35rem 0.8rem; background: #fdf2f8; color: #be185d; border: 1px solid #fbcfe8;" onclick="promptLecturerAuth()">
+              🔒 Buka Kunci Jawaban Dosen
+            </button>
+          </div>
+          <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1.5rem;">Pilihlah salah satu opsi jawaban (A, B, C, atau D) yang paling tepat berdasarkan teks asli Hallahan &amp; Kauffman (2005) dan Heward et al. (2017):</p>
+
+          <!-- SOAL 1 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">1.</span> Menurut klausul definisi federal IDEA, kategori <em>Multiple Disabilities</em> (Disabilitas Majemuk) secara eksplisit TIDAK MENCAKUP salah satu kondisi berikut karena kondisi tersebut memiliki kategori layanan tersendiri, yaitu:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Kombinasi hambatan intelektual dan kelumpuhan ortopedik fisik<br>
+              B. Deaf-Blindness (Kehilangan pendengaran dan penglihatan ganda)<br>
+              C. Kombinasi hambatan intelektual dan kebutaan<br>
+              D. Kombinasi epilepsi berat dan hambatan perilaku
+            </p>
+            <div id="key-p13-1" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Definisi regulasi IDEA menyatakan secara tegas: <em>"Multiple disabilities does not include deaf-blindness"</em> karena deaf-blindness memiliki kategori legal dan metodologi tersendiri (Heward et al., 2017, Bab 12).
+            </div>
+          </div>
+
+          <!-- SOAL 2 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">2.</span> Mengapa kehilangan penglihatan dan pendengaran secara simultan (deaf-blindness) memiliki dampak isolasi perkembangan yang jauh lebih dahsyat dibandingkan disabilitas lainnya?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Karena anak deaf-blind dipastikan mengalami kerusakan genetik pada seluruh organ tubuh bagian dalam<br>
+              B. Karena anak kehilangan kedua indra jarak jauh utama (distance senses) yang berfungsi mengumpulkan informasi lingkungan secara spontan dan menyeluruh<br>
+              C. Karena anak deaf-blind menolak makan sendiri sejak lahir<br>
+              D. Karena tidak ada teknologi yang diciptakan untuk membantu tunanetra
+            </p>
+            <div id="key-p13-2" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Penglihatan dan pendengaran adalah distance senses. Hilangnya kedua indra ini memutuskan arus transmisi informasi spontan dari lingkungan sekitar (Hallahan &amp; Kauffman, 2005, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 3 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">3.</span> Kelainan genetik herediter resesif autosomal yang ditandai oleh ketulian kongenital sejak lahir, diikuti oleh kebutaan bertahap akibat <em>Retinitis Pigmentosa</em> pada masa remaja adalah:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Sindrom Down<br>
+              B. Sindrom Usher (Usher Syndrome)<br>
+              C. Sindrom Fragile X<br>
+              D. Sindrom Prader-Willi
+            </p>
+            <div id="key-p13-3" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Sindrom Usher adalah penyebab genetik paling umum dari kondisi tuli-buta (deaf-blindness) di seluruh dunia (Hallahan &amp; Kauffman, 2005, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 4 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">4.</span> Guru meletakkan miniatur cangkir plastik kecil ke tangan seorang siswa deaf-blind untuk memberi tanda bahwa 5 menit lagi adalah waktu makan siang. Teknik penggunaan representasi benda nyata untuk mengajarkan urutan waktu harian ini disebut:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Token Economy System<br>
+              B. Kalender Objek Konkret (Object Schedules)<br>
+              C. Metode Ekolalia Terbimbing<br>
+              D. Rantaian Perilaku Mundur (Backward Chaining)
+            </p>
+            <div id="key-p13-4" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Object schedules (kalender objek) menggunakan benda rabaan konkret untuk memberi anak tunarungu-netra pemahaman prediktabilitas waktu dan rutinitas harian (Heward et al., 2017, Bab 12).
+            </div>
+          </div>
+
+          <!-- SOAL 5 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">5.</span> Metode komunikasi rabaan manual di mana anak tunarungu-netra meletakkan ibu jarinya pada bibir lawan bicara dan jari-jari lainnya pada rahang/pipi untuk merasakan getaran laring dan hembusan udara saat berbicara disebut:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Bahasa Isyarat Amerika (ASL)<br>
+              B. Metode Tadoma<br>
+              C. Picture Exchange Communication System (PECS)<br>
+              D. Cued Speech
+            </p>
+            <div id="key-p13-5" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Metode Tadoma adalah teknik membaca getaran wicara secara taktil rabaan pada wajah pembicara (Hallahan &amp; Kauffman, 2005, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 6 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">6.</span> Dalam menyusun kurikulum bagi siswa dengan disabilitas majemuk berat, kaidah utama yang membedakan materi fungsional esensial dengan materi yang tidak berguna adalah:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Apakah materi tersebut dapat diujikan dalam tes tertulis pilihan ganda nasional<br>
+              B. Apakah keterampilan tersebut jika tidak mampu dilakukan oleh anak secara mandiri, orang lain harus melakukannya untuk anak seumur hidupnya<br>
+              C. Apakah keterampilan tersebut membutuhkan biaya media ajar yang mahal<br>
+              D. Apakah anak menyukai warna media gambar yang disajikan
+            </p>
+            <div id="key-p13-6" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Kaidah parsimoni kurikulum fungsional (Lou Brown) menyatakan bahwa prioritas tertinggi adalah keterampilan yang jika anak tidak bisa melakukannya, orang lain harus melakukannya untuk anak (Heward et al., 2017, Bab 12).
+            </div>
+          </div>
+
+          <!-- SOAL 7 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">7.</span> Sikap orang tua atau pendidik yang mengurung anak disabilitas berat di dalam kamar tidur sepanjang hari karena khawatir anak terjatuh, terluka, atau ditertawakan orang lain melanggar prinsip filosofis:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Zero Reject<br>
+              B. The Dignity of Risk (Hak Menghadapi Risiko yang Bermartabat)<br>
+              C. Central Coherence Theory<br>
+              D. Due Process Safeguards
+            </p>
+            <div id="key-p13-7" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — The Dignity of Risk menegaskan bahwa perlindungan berlebihan (overprotection) merampas kesempatan anak untuk belajar mandiri dan merendahkan harga diri kemanusiaan mereka (Heward et al., 2017, Bab 12).
+            </div>
+          </div>
+
+          <!-- SOAL 8 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">8.</span> Pembelajaran instruksional di mana siswa dengan disabilitas majemuk diajak langsung berlatih membeli sabun di toko swalayan nyata alih-alih berlatih dengan uang kertas mainan di dalam kelas disebut:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Discrete Trial Training (DTT)<br>
+              B. Community-Based Instruction (CBI / Pembelajaran Berbasis Komunitas)<br>
+              C. Direct Instruction murni<br>
+              D. Universal Screening
+            </p>
+            <div id="key-p13-8" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Community-Based Instruction (CBI) melatih keterampilan fungsional langsung di seting lingkungan alami untuk mengatasi defisit transfer generalisasi pada siswa disabilitas berat (Heward et al., 2017, Bab 12).
+            </div>
+          </div>
+
+          <!-- SOAL 9 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">9.</span> Bagaimanakah siswa dengan disabilitas intelektual berat dan fisik majemuk dievaluasi capaian belajarnya dalam standar asesmen akreditasi sekolah menurut regulasi pendidikan khusus modern?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Siswa dipaksa mengisi lembar jawaban komputer standar ujian nasional dengan pensil 2B<br>
+              B. Menggunakan Asesmen Alternatif (Alternate Assessment) berbasis portofolio unjuk kerja video, rubrik pengamatan langsung, dan pencatatan grafik kemajuan harian<br>
+              C. Siswa tidak perlu dinilai dan nilainya otomatis diberi angka nol<br>
+              D. Nilai anak disamakan dengan nilai rata-rata teman sebangku
+            </p>
+            <div id="key-p13-9" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Regulasi IDEA dan kebijakan inklusi mewajibkan penyediaan alternate assessment berbasis portofolio unjuk kerja bagi siswa dengan disabilitas kognitif paling berat (Heward et al., 2017, Bab 2 &amp; 12).
+            </div>
+          </div>
+
+          <!-- SOAL 10 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">10.</span> Mengapa tangan seorang anak tunarungu-netra (deaf-blind) dianggap sebagai organ yang paling sakral secara pedagogis sehingga guru dilarang keras menarik atau mengikatnya secara kasar?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Karena tangan anak tunarungu-netra sangat rapuh dan mudah patah tulang<br>
+              B. Karena bagi individu deaf-blind, tangan berfungsi sekaligus sebagai 'mata', 'telinga', dan 'alat bicara' untuk mengeksplorasi dan berkomunikasi dengan dunia luar<br>
+              C. Karena anak deaf-blind hanya boleh menyentuh benda berbahan logam<br>
+              D. Karena mengikat tangan dapat membatalkan bantuan dana operasional sekolah
+            </p>
+            <div id="key-p13-10" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Bagi anak deaf-blind, tangan adalah organ persepsi dan ekspresi utama; membatasi atau memperlakukan tangan secara kasar berarti mematikan akses mereka terhadap eksistensi dunia (Hallahan &amp; Kauffman, 2005, Bab 13).
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 3: INTERACTIVE PRESENTATION MODE (SLIDE INTERAKTIF DOSEN)
+         ========================================================================= -->
+    <section id="presentation-view" class="view-section">
+      
+      <div class="presentation-frame-bright">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide-item active">
+          <span class="slide-indicator" style="color: var(--gz-pink);">Slide 1 dari 6 • Orientasi Disabilitas Berat</span>
+          <h2>Disabilitas Majemuk, Hambatan Berat, &amp; Deaf-Blindness</h2>
+          <div class="slide-body">
+            <p>Membuka Akses Kemanusiaan Bagi yang Paling Terisolasi:</p>
+            <ul>
+              <li>Kategori prevalensi rendah (low-incidence) dengan kebutuhan dukungan pervasif.</li>
+              <li>Koeksistensi hambatan ganda: Multiplikasi rintangan, bukan sekadar penjumlahan.</li>
+              <li>Sintesis rujukan otoritatif Hallahan &amp; Kauffman (2005) dan William L. Heward (2017).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen (10 Menit Awal):</strong> Awali kelas dengan mengingatkan mahasiswa: "Tolak ukur peradaban bangsa dinilai dari bagaimana kita memanusiakan warga yang memiliki disabilitas paling berat. Di ortopedagogik, tidak ada anak yang mustahil dididik."
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-lime);">Slide 2 dari 6 • Karakteristik Belajar</span>
+          <h2>Karakteristik Siswa Disabilitas Majemuk</h2>
+          <div class="slide-body">
+            <p>Tantangan Instruksional yang Dihadapi (Heward et al., 2017):</p>
+            <ul>
+              <li><strong>Kecepatan Belajar Lambat:</strong> Ratusan uji coba (trials to criterion) untuk satu tugas dasar.</li>
+              <li><strong>Hambatan Generalisasi:</strong> Kesulitan mentransfer keterampilan kelas ke lingkungan nyata.</li>
+              <li><strong>Defisit Komunikasi Berat:</strong> Ketiadaan bicara vokal; kebutuhan mutlak sistem komunikasi augmentatif fungsional.</li>
+              <li>Ketergantungan tinggi pada pemenuhan keterampilan bina diri (ADL).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Jelaskan pentingnya teknik pengulangan dan konsistensi: apa yang diajarkan guru di sekolah harus dipraktikkan orang tua dengan cara yang persis sama di rumah agar tidak hilang.
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-red);">Slide 3 dari 6 • Dunia Tuli-Buta</span>
+          <h2>Hakikat Deaf-Blindness: Kehilangan Indra Jarak Jauh</h2>
+          <div class="slide-body">
+            <p>Dampak Putusnya Saluran Transmisi Informasi (Hallahan &amp; Kauffman, 2005):</p>
+            <ul>
+              <li>Bukan sekadar buta ditambah tuli; hilangnya seluruh akses informasi visual dan auditori simultan.</li>
+              <li><strong>Etiologi Genetik:</strong> Sindrom Usher (tuli kongenital + Retinitis Pigmentosa) &amp; Sindrom CHARGE.</li>
+              <li>Dunia mengecil hanya sebatas apa yang dapat dijangkau oleh ujung jari tangan.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Berikan pemahaman: Jika Anda buta, Anda bisa mendengar suara teman; jika Anda tuli, Anda bisa melihat senyum teman. Namun bagi deaf-blind, teman tidak ada sebelum menyentuh tangannya secara fisik.
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-pink);">Slide 4 dari 6 • Modalitas Taktil</span>
+          <h2>Jembatan Komunikasi: Sentuhan Taktil &amp; Jadwal Objek</h2>
+          <div class="slide-body">
+            <p>Metodologi yang Tervalidasi Ilmiah:</p>
+            <ul>
+              <li><strong>Bahasa Isyarat Taktil:</strong> Membaca isyarat lewat rabaan tangan-ke-tangan.</li>
+              <li><strong>Kalender Objek (Object Schedules):</strong> Menggunakan benda nyata (sendok, potongan handuk) untuk menandai urutan waktu harian.</li>
+              <li><strong>Metode Tadoma:</strong> Meraba getaran wicara pada bibir dan rahang pembicara.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Tekankan aturan emas: Jangan pernah menyentuh atau mengangkat anak deaf-blind secara tiba-tiba dari belakang; beri isyarat sentuhan pengenalan (cue) di tangan terlebih dahulu agar anak tidak terkejut panik.
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-lime);">Slide 5 dari 6 • Kurikulum Fungsional</span>
+          <h2>Kurikulum Berbasis Komunitas (CBI)</h2>
+          <div class="slide-body">
+            <p>Memprioritaskan Keterampilan Hidup Nyata (Heward et al., 2017):</p>
+            <ul>
+              <li><strong>Pembelajaran Berbasis Komunitas:</strong> Berlatih belanja di pasar nyata, makan di kantin nyata.</li>
+              <li>Fokus pada keterampilan yang jika anak tidak bisa melakukannya, orang lain harus melakukannya seumur hidup.</li>
+              <li>Asesmen Alternatif (Alternate Assessment) berbasis portofolio bukti kemajuan harian.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Tunjukkan bahwa mengajak anak disabilitas berat belanja ke toko nyata jauh lebih bernilai edukatif daripada menyuruh mereka mewarnai lembar gambar buah di dalam kelas tertutup.
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-red);">Slide 6 dari 6 • Etika &amp; Martabat</span>
+          <h2>Closing Thought: The Dignity of Risk</h2>
+          <div class="slide-body">
+            <p>Membebaskan dari Jebakan Perlindungan Berlebih (Overprotection):</p>
+            <ul>
+              <li>Setiap manusia berhak merasakan tantangan hidup yang wajar dan terukur.</li>
+              <li>Tangan anak adalah jendela dunianya; hormati kemandirian eksplorasinya.</li>
+              <li>Minggu Depan (Pertemuan 14): Keberbakatan Istimewa (Gifted &amp; Talented) &amp; Paradoks Twice-Exceptional (2e).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Arahkan mahasiswa untuk menyelesaikan 10 butir soal evaluasi kasus pada LKM 13 sebelum mengakhiri sesi perkuliahan.
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <footer class="slide-controls" style="border-top: 1px solid #e2e8f0;">
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+            <button class="btn-ctrl" style="background: var(--gz-pink);" onclick="changeSlide(1)">Selanjutnya ❯</button>
+          </div>
+          <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Dosen</button>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LOGIKA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Pengalihan Tab Navigasi
+    function switchView(targetViewId, buttonElement) {
+      document.querySelectorAll('.view-section').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(targetViewId).classList.add('active');
+      buttonElement.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Web Audio API Synthesizer (Efek Suara Mini Game Bawaan Browser)
+    let audioFxEnabled = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTone(type) {
+      if (!audioFxEnabled) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'success') {
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.25); // G5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } else {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+        osc.frequency.exponentialRampToValueAtTime(130.81, audioCtx.currentTime + 0.25); // C3
+        gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      }
+    }
+
+    function toggleAudioFx() {
+      audioFxEnabled = !audioFxEnabled;
+      const btn = document.getElementById('sound-btn');
+      if (audioFxEnabled) {
+        btn.classList.add('active');
+        btn.textContent = '🔊 Suara Pengarah: Aktif';
+      } else {
+        btn.classList.remove('active');
+        btn.textContent = '🔇 Suara Pengarah: Hening';
+      }
+    }
+
+    // 3. Evaluasi Mini Game Pertemuan 13
+    function evaluateMultipleGame(choice) {
+      const feedback = document.getElementById('game-feedback');
+      feedback.style.display = 'block';
+
+      if (choice === 'b') {
+        playTone('success');
+        feedback.style.background = '#ecfdf5';
+        feedback.style.color = '#065f46';
+        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Menurut doktrin Heward et al. (2017) dan Hallahan &amp; Kauffman (2005), anak deaf-blind kehilangan kedua indra jarak jauh sehingga suara keras dan kartu visual tidak berguna. Dina membutuhkan modalitas taktil (bahasa isyarat sentuh tangan, jadwal objek konkret). Mengikat tangannya melanggar hak asasi dan mematikan satu-satunya alat persepsi dunianya.';
+      } else {
+        playTone('error');
+        feedback.style.background = '#fff1f2';
+        feedback.style.color = '#9f1239';
+        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan prinsip dasar deaf-blindness: anak tidak dapat melihat atau mendengar rangsangan dari kejauhan. Mengikat tangan merampas organ eksplorasi utama anak dan memperparah kepanikan psikologisnya.';
+      }
+    }
+
+    // 4. Proteksi Kunci Jawaban Soal PG (Khusus Dosen)
+    function promptLecturerAuth() {
+      const pwd = prompt("Masukkan kata sandi dosen pengampu untuk membuka kunci jawaban & pembahasan:");
+      if (pwd === "dosenorto" || pwd === "ortopedagogik") {
+        document.querySelectorAll('.lecturer-key-box').forEach(box => {
+          box.style.display = 'block';
+        });
+        alert("Autentikasi berhasil. Kunci jawaban dan pembahasan kasus telah terbuka.");
+      } else if (pwd !== null) {
+        alert("Kata sandi salah. Akses kunci jawaban hanya diperuntukkan bagi dosen pengampu.");
+      }
+    }
+
+    // 5. Pengendali Slide Presentasi Dosen
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+
+    function updateSlideDisplay() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+      updateSlideDisplay();
+    }
+
+    function toggleSpeakerNotes() {
+      const activeSlide = slides[currentSlide];
+      const notes = activeSlide.querySelector('.speaker-notes-bright');
+      if (notes) {
+        notes.style.display = (notes.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // Navigasi Keyboard untuk Slide
+    document.addEventListener('keydown', (e) => {
+      const presView = document.getElementById('presentation-view');
+      if (presView.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
