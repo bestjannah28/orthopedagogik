@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 16: Evaluasi Akhir Semester (UAS) - Portofolio PPI/IEP</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --gz-pink: #ec4899;
+      --gz-pink-light: #fdf2f8;
+      --gz-lime: #10b981;
+      --gz-lime-light: #ecfdf5;
+      --gz-red: #e11d48;
+      --gz-red-light: #fff1f2;
+      --gz-purple: #7c3aed;
+      --gz-purple-light: #ede9fe;
+      --gz-orange: #ea580c;
+      --gz-orange-light: #ffedd5;
+      --gz-dark: #0f172a;
+      --gz-bg-bright: #fafcfb;
+    }
+    body {
+      background-color: var(--gz-bg-bright);
+    }
+    .badge-uas {
+      background: #ffe4e6;
+      color: #be123c;
+      font-weight: 800;
+    }
+    .badge-lime {
+      background: var(--gz-lime-light);
+      color: #047857;
+      font-weight: 800;
+    }
+    .badge-purple {
+      background: var(--gz-purple-light);
+      color: var(--gz-purple);
+      font-weight: 800;
+    }
+    .card-uas-banner {
+      background: linear-gradient(135deg, #fdf2f8 0%, #ecfdf5 50%, #ede9fe 100%);
+      border: 2px solid #fbcfe8;
+      border-radius: var(--radius-lg);
+      padding: 2.75rem 2rem;
+      margin-bottom: 2rem;
+    }
+    .uas-meta-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+    .uas-meta-chips span {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 0.4rem 0.9rem;
+      border-radius: var(--radius-full);
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #1e293b;
+      box-shadow: var(--shadow-sm);
+    }
+
+    / Presentasi Dosen Berwarna, Ekspresif & Navigasi Cepat /
+    .presentation-frame-uas {
+      background: #ffffff;
+      color: #1e293b;
+      border: 3px solid #fbcfe8;
+      border-radius: var(--radius-lg);
+      padding: 2.75rem 2.5rem;
+      min-height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 16px 36px rgba(236, 72, 153, 0.1);
+      position: relative;
+    }
+    .slide-badge-pill {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .presentation-frame-uas h2 {
+      font-size: clamp(1.85rem, 3.6vw, 2.45rem);
+      margin-bottom: 1.25rem;
+      line-height: 1.25;
+    }
+    .presentation-frame-uas .slide-body {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #334155;
+    }
+    .presentation-frame-uas .slide-body li {
+      margin-bottom: 0.9rem;
+      position: relative;
+      padding-left: 1.85rem;
+    }
+    .presentation-frame-uas .slide-body li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      font-weight: 800;
+    }
+    .slide-nav-dock {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .dock-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #cbd5e1;
+      background: #ffffff;
+      color: #475569;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+    .dock-btn:hover {
+      border-color: var(--gz-pink);
+      color: var(--gz-pink);
+      transform: translateY(-2px);
+    }
+    .dock-btn.active {
+      background: var(--gz-pink);
+      border-color: var(--gz-pink);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(236, 72, 153, 0.35);
+    }
+    .speaker-notes-uas {
+      margin-top: 1.5rem;
+      background: #fdf2f8;
+      border-left: 4px solid var(--gz-pink);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: #831843;
+      display: none;
+    }
+    .lecturer-key-box {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.75rem 1rem;
+      background: #ecfdf5;
+      border-left: 4px solid var(--gz-lime);
+      border-radius: 6px;
+      font-size: 0.88rem;
+      color: #065f46;
+      line-height: 1.6;
+    }
+    .q-number {
+      font-weight: 800;
+      color: var(--gz-pink);
+      margin-right: 0.35rem;
+    }
+    .rubric-table th, .rubric-table td {
+      padding: 0.85rem 1rem;
+      border: 1px solid #cbd5e1;
+      font-size: 0.9rem;
+    }
+    .rubric-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    .portfolio-box {
+      border: 2px dashed #fbcfe8;
+      border-radius: 12px;
+      padding: 1.5rem;
+      background: #ffffff;
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .large-answer-area {
+      width: 100%;
+      min-height: 220px;
+      padding: 1.25rem;
+      font-family: inherit;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      border: 2px solid #cbd5e1;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+      resize: vertical;
+      margin-top: 0.85rem;
+      margin-bottom: 1.5rem;
+      box-sizing: border-box;
+    }
+    .large-answer-area:focus {
+      border-color: var(--gz-pink);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+    }
+    @media print {
+      .site-header, .view-tabs, .print-action-bar, #presentation-view, #reading-view {
+        display: none !important;
+      }
+      #worksheet-view {
+        display: block !important;
+      }
+      .worksheet-paper {
+        border: none !important;
+        padding: 0 !important;
+      }
+      .lecturer-key-box {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span style="color: var(--gz-pink);">ORTOPEDAGOGIK</span>
+        <span class="pill badge-uas">Pertemuan 16 • UAS</span>
+      </div>
+      <nav class="view-tabs" role="tablist">
+        <button class="tab-btn active" onclick="switchView('reading-view', this)">Panduan &amp; Rubrik Portofolio</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Naskah Ujian &amp; 10 Soal PG</button>
+        <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Sidang Dosen</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- =========================================================================
+         BAGIAN 1: PANDUAN LENGKAP & RUBRIK PORTOFOLIO INTEGRATIF UAS
+         ========================================================================= -->
+    <section id="reading-view" class="view-section active">
+      
+      <!-- HERO BANNER UAS -->
+      <header class="card-uas-banner">
+        <span class="section-label badge-uas">Evaluasi Akhir Semester (Bobot 35%)</span>
+        <h1 style="color: var(--gz-dark);">Evaluasi Akhir Semester (UAS): Presentasi Portofolio Dokumen Program Pembelajaran Individual (PPI / IEP)</h1>
+        <p>Kulminasi kompetensi ortopedagogik holistik: menyatukan landasan ontologis, regulasi hukum IDEA, kerangka asesmen fungsional, dan intervensi berbasis bukti (EBP) ke dalam satu rancangan dokumen intervensi individual terpadu dan siap uji sidang.</p>
+        
+        <div class="uas-meta-chips">
+          <span>⏱ Durasi Evaluasi: 100–150 Menit (2–3 SKS)</span>
+          <span>📁 Tagihan: Berkas Portofolio Dokumen IEP Lengkap (25%) + Presentasi Panel (10%)</span>
+          <span>📚 Rujukan Baku: Hallahan &amp; Kauffman (2005) &amp; Heward et al. (2017)</span>
+          <span>🎯 Standar Kualifikasi: Outcome-Based Education (OBE) &amp; Person-First Ethics</span>
+        </div>
+      </header>
+
+      <!-- PANDUAN STRUKTUR PORTOFOLIO -->
+      <article class="content-card">
+        <span class="section-label badge-purple">Struktur Dokumen Portofolio</span>
+        <h2>1. Lima Komponen Wajib Dokumen Portofolio PPI/IEP Mahasiswa</h2>
+        <p style="margin-top: 0.75rem;">
+          Sebagaimana ditegaskan oleh <strong>Heward et al. (2017, hlm. 46–58)</strong> dan <strong>Hallahan &amp; Kauffman (2005, hlm. 25–29)</strong>, Program Pembelajaran Individual bukan sekadar instrumen pengajaran umum yang disederhanakan, melainkan kontrak instruksional legal yang harus memiliki kaitan logis antara data asesmen, target capaian, strategi intervensi, dan persiapan masa depan. Berkas portofolio wajib memuat:
+        </p>
+
+        <!-- DIAGRAM 1: LIMA PILAR PORTOFOLIO UAS (SVG CERAH) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 280" width="100%" height="auto" style="max-height: 300px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="uasG1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f472b6"/></linearGradient>
+              <linearGradient id="uasG2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+              <linearGradient id="uasG3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+              <linearGradient id="uasG4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ea580c"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+              <linearGradient id="uasG5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+            </defs>
+
+            <!-- Box 1: PLAAFP -->
+            <rect x="15" y="25" width="170" height="225" rx="10" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="2"/>
+            <rect x="15" y="25" width="170" height="38" rx="10" fill="url(#uasG1)"/>
+            <text x="100" y="49" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">BAGIAN 1: PLAAFP</text>
+            <text x="100" y="85" fill="#be185d" font-size="11.5" font-weight="700" text-anchor="middle">Baseline Kinerja</text>
+            <text x="100" y="112" fill="#475569" font-size="10" text-anchor="middle">• Skor asesmen formal</text>
+            <text x="100" y="132" fill="#475569" font-size="10" text-anchor="middle">• Asesmen informal riil</text>
+            <text x="100" y="152" fill="#475569" font-size="10" text-anchor="middle">• Hambatan fungsional</text>
+            <text x="100" y="172" fill="#475569" font-size="10" text-anchor="middle">• Dampak kurikulum umum</text>
+            <text x="100" y="215" fill="#be185d" font-size="9.5" font-weight="700" text-anchor="middle">"Pijakan Fakta Empiris"</text>
+
+            <!-- Box 2: SMART Goals -->
+            <rect x="200" y="25" width="170" height="225" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="2"/>
+            <rect x="200" y="25" width="170" height="38" rx="10" fill="url(#uasG2)"/>
+            <text x="285" y="49" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">BAGIAN 2: GOALS</text>
+            <text x="285" y="85" fill="#047857" font-size="11.5" font-weight="700" text-anchor="middle">Target SMART 12 Bln</text>
+            <text x="285" y="112" fill="#475569" font-size="10" text-anchor="middle">• Condition (Stimulus)</text>
+            <text x="285" y="132" fill="#475569" font-size="10" text-anchor="middle">• Learner (Nama siswa)</text>
+            <text x="285" y="152" fill="#475569" font-size="10" text-anchor="middle">• Target Behavior (Teramati)</text>
+            <text x="285" y="172" fill="#475569" font-size="10" text-anchor="middle">• Criterion (Kriteria %)</text>
+            <text x="285" y="215" fill="#047857" font-size="9.5" font-weight="700" text-anchor="middle">"Kompas Arah Terukur"</text>
+
+            <!-- Box 3: Strategi Intervensi EBP -->
+            <rect x="385" y="25" width="170" height="225" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="2"/>
+            <rect x="385" y="25" width="170" height="38" rx="10" fill="url(#uasG3)"/>
+            <text x="470" y="49" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">BAGIAN 3: EBP</text>
+            <text x="470" y="85" fill="#6d28d9" font-size="11.5" font-weight="700" text-anchor="middle">Adaptasi Instruksi</text>
+            <text x="470" y="112" fill="#475569" font-size="10" text-anchor="middle">• Task Analysis (ADL)</text>
+            <text x="470" y="132" fill="#475569" font-size="10" text-anchor="middle">• Direct Instruction (DI)</text>
+            <text x="470" y="152" fill="#475569" font-size="10" text-anchor="middle">• Visual TEACCH / PECS</text>
+            <text x="470" y="172" fill="#475569" font-size="10" text-anchor="middle">• Social Story (Gray)</text>
+            <text x="470" y="215" fill="#6d28d9" font-size="9.5" font-weight="700" text-anchor="middle">"Metode Berbasis Riset"</text>
+
+            <!-- Box 4: Penempatan LRE -->
+            <rect x="570" y="25" width="170" height="225" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+            <rect x="570" y="25" width="170" height="38" rx="10" fill="url(#uasG4)"/>
+            <text x="655" y="49" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">BAGIAN 4: LRE</text>
+            <text x="655" y="85" fill="#c2410c" font-size="11.5" font-weight="700" text-anchor="middle">Akomodasi Lingkungan</text>
+            <text x="655" y="112" fill="#475569" font-size="10" text-anchor="middle">• Justifikasi penarikan</text>
+            <text x="655" y="132" fill="#475569" font-size="10" text-anchor="middle">• Piramida Kontinum LRE</text>
+            <text x="655" y="152" fill="#475569" font-size="10" text-anchor="middle">• Teknologi Asistif (AAC)</text>
+            <text x="655" y="172" fill="#475569" font-size="10" text-anchor="middle">• Akomodasi tes wilayah</text>
+            <text x="655" y="215" fill="#c2410c" font-size="9.5" font-weight="700" text-anchor="middle">"Hak Inklusi Bermartabat"</text>
+
+            <!-- Box 5: ITP Transisi -->
+            <rect x="755" y="25" width="170" height="225" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2"/>
+            <rect x="755" y="25" width="170" height="38" rx="10" fill="url(#uasG5)"/>
+            <text x="840" y="49" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">BAGIAN 5: ITP</text>
+            <text x="840" y="85" fill="#0284c7" font-size="11.5" font-weight="700" text-anchor="middle">Rencana Transisi</text>
+            <text x="840" y="112" fill="#475569" font-size="10" text-anchor="middle">• Pascasekolah (Usia 16+)</text>
+            <text x="840" y="132" fill="#475569" font-size="10" text-anchor="middle">• Pelatihan vokasional</text>
+            <text x="840" y="152" fill="#475569" font-size="10" text-anchor="middle">• Kerja didukung (Supported)</text>
+            <text x="840" y="172" fill="#475569" font-size="10" text-anchor="middle">• Kemandirian komunitas</text>
+            <text x="840" y="215" fill="#0284c7" font-size="9.5" font-weight="700" text-anchor="middle">"Jaminan Masa Depan"</text>
+          </svg>
+          <div class="diagram-caption">Diagram 1: Anatomi Lima Komponen Terpadu Portofolio PPI/IEP Berdasarkan Regulasi IDEA &amp; Heward et al. (2017)</div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2. Rubrik Penilaian Sidang Panel Portofolio (Bobot Total 35%)</h3>
+        <div class="table-responsive">
+          <table class="styled-table rubric-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Kriteria Penilaian</th>
+                <th style="width: 26%;">Perlu Pembinaan (&lt; 65)</th>
+                <th style="width: 26%;">Kompeten (65–79)</th>
+                <th style="width: 26%;">Unggul / Sangat Terpuji (80–100)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Ketajaman Analisis Baseline (PLAAFP)</strong></td>
+                <td>Uraian bersifat asumtif, peyoratif, atau tidak memuat data terukur empiris.</td>
+                <td>Menyajikan data kemampuan anak namun kurang menganalisis dampaknya terhadap kurikulum umum.</td>
+                <td>Menyajikan data kekuatan dan defisit secara objektif, bebas stigma, dan mengurai dampak nyata disabilitas pada kurikulum.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Presisi Formula Tujuan SMART</strong></td>
+                <td>Rumusan tujuan kabur, subjektif (misal: "anak lebih rajin"), dan ketiadaan kriteria capaian.</td>
+                <td>Memuat target operasional namun kondisi (condition) atau jadwal evaluasi tidak dicantumkan.</td>
+                <td>Memenuhi secara utuh empat elemen baku Heward: Condition, Learner, Target Behavior, dan Criterion akurasi terukur.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Kelayakan Intervensi Berbasis Bukti (EBP)</strong></td>
+                <td>Metode mengajar konvensional seragam tanpa adaptasi individual atau berbasis metode semu (fad).</td>
+                <td>Menjelaskan metode intervensi namun langkah analisis tugas atau sintaksnya kurang terperinci.</td>
+                <td>Merancang adaptasi instruksional berbasis riset (Task Analysis, Direct Instruction, TEACCH/PECS) secara aplikatif dan terstruktur.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Justifikasi LRE &amp; Rencana Transisi (ITP)</strong></td>
+                <td>Mengusulkan pemisahan kelas tanpa alasan yuridis; ketiadaan rencana transisi masa dewasa.</td>
+                <td>Menentukan tingkat kontinum LRE namun akomodasi teknologi asistif kurang memadai.</td>
+                <td>Mempertahankan hak inklusi di kelas umum, menyertakan akomodasi teknologi asistif, dan menyusun target ITP vokasional yang realistis.</td>
+              </tr>
+              <tr>
+                <td><strong>5. Penguasaan Argumentasi Ilmiah Panel</strong></td>
+                <td>Gugup, tidak mampu mempertahankan pilihan metode, dan melanggar prinsip Person-First Language.</td>
+                <td>Mampu menjawab pertanyaan penguji namun rujukan buku teks kurang eksplisit.</td>
+                <td>Menjawab dengan tenang, artikulatif, mempertahankan argumentasi berbasis teks rujukan, dan konsisten menggunakan bahasa etis.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- SIMULASI PEMANASAN INTERAKTIF PRA-SIDANG -->
+      <article class="content-card">
+        <span class="section-label badge-lime">Simulasi Pemanasan Pra-Sidang UAS (5 Menit)</span>
+        <h2>Uji Kepekaan Keputusan Sidang Tim IEP</h2>
+        <p style="margin-top: 0.5rem;">Cermati dilema sidang kasus di bawah ini, aktifkan audio pemandu, dan tentukan keputusan ortopedagogik yang tepat:</p>
+
+        <div class="game-card" style="border: 2px dashed #a7f3d0; background: #ecfdf5;">
+          <div class="sound-toggle-bar">
+            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Pengarah: Aktif</button>
+          </div>
+
+          <div style="background: #ffffff; border: 1.5px solid #a7f3d0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;">
+            <p style="font-weight: 700; color: #047857; margin-bottom: 0.4rem;">SITUASI SIDANG TIM IEP:</p>
+            <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
+              "Dalam rapat tahunan pembahasan IEP seorang siswa kelas 5 SD dengan autisme dan disleksia, kepala sekolah mengusulkan agar tujuan jangka panjang transisi kemandirian (ITP) dihapus dari draf dokumen karena dianggap membuang-buang waktu administrasi sekolah dan murid masih duduk di jenjang sekolah dasar."
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-weight: 700; color: #047857;">Bagaimanakah tanggapan Anda sebagai calon guru pembimbing khusus bersertifikat berdasarkan regulasi IDEA dan Heward et al. (2017)?</p>
+
+          <button class="quiz-option" onclick="evaluateUasSim('a')">
+            A. Menyetujui usulan kepala sekolah karena dokumen transisi hanya boleh dibuat saat siswa sudah berumur 25 tahun ke atas.
+          </button>
+          <button class="quiz-option" onclick="evaluateUasSim('b')">
+            B. Menolak usulan kepala sekolah secara beretika; meskipun mandat formal IDEA mewajibkan ITP paling lambat usia 16 tahun, penyusunan fondasi transisi vokasional dan kecakapan bina diri sejak usia lebih dini sangat dianjurkan dan tidak boleh dipangkas sepihak tanpa persetujuan tim multidisipliner dan orang tua.
+          </button>
+          <button class="quiz-option" onclick="evaluateUasSim('c')">
+            C. Menyerahkan keputusan sepenuhnya kepada petugas kebersihan sekolah.
+          </button>
+          <button class="quiz-option" onclick="evaluateUasSim('d')">
+            D. Langsung membatalkan status siswa sebagai anak berkebutuhan khusus agar sekolah terbebas dari tuntutan akreditasi.
+          </button>
+
+          <div id="uassim-feedback" class="quiz-feedback"></div>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 2: NASKAH UJIAN MAHASISWA & 10 SOAL PG (PRINTABLE PDF)
+         ========================================================================= -->
+    <section id="worksheet-view" class="view-section">
+      <div class="print-action-bar">
+        <div>
+          <h3 style="color: #be185d;">Berkas Evaluasi Akhir Semester (UAS) Ortopedagogik (LKM 16)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan 10 butir soal pilihan ganda integratif dan susun draf portofolio sidang kasus pada kolom yang disediakan, lalu cetak/unduh PDF.</p>
+        </div>
+        <button class="btn-download-pdf" style="background: var(--gz-pink);" onclick="window.print()">
+          <span>🖨️ Cetak Naskah Portofolio &amp; Ujian (PDF)</span>
+        </button>
+      </div>
+
+      <div class="worksheet-paper">
+        <!-- HEADER NASKAH UJIAN UAS -->
+        <header style="border-bottom: 2.5px solid #0f172a; padding-bottom: 1.25rem; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <h2 style="font-size: 1.35rem; text-transform: uppercase; margin: 0; color: #0f172a;">EVALUASI AKHIR SEMESTER (UAS) TEORI &amp; PORTOFOLIO PPI</h2>
+              <p style="font-size: 0.95rem; margin: 0.2rem 0; font-weight: 700; color: #be185d;">MATA KULIAH: ORTOPEDAGOGIK (PENDIDIKAN KHUSUS) • BOBOT 35%</p>
+              <p style="font-size: 0.85rem; margin: 0; color: #64748b;">Rujukan Otoritatif: Hallahan &amp; Kauffman (2005) &amp; William L. Heward et al. (2017)</p>
+            </div>
+            <div style="text-align: right; border: 2px solid #0f172a; padding: 0.5rem 1rem; border-radius: 6px;">
+              <span style="font-size: 0.75rem; font-weight: 800; display: block;">NILAI AKHIR UAS</span>
+              <span style="font-size: 1.6rem; font-weight: 800; color: var(--gz-pink);">/ 100</span>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <div><strong>Nama Mahasiswa:</strong> ___________________________</div>
+            <div><strong>NIM / Rombel:</strong> ___________________________</div>
+            <div><strong>Dosen Penguji:</strong> ___________________________</div>
+            <div><strong>Tanda Tangan Sidang:</strong> ___________________________</div>
+          </div>
+        </header>
+
+        <!-- BAGIAN I: 10 SOAL PG INTEGRATIF PERTEMUAN 1-15 -->
+        <div class="worksheet-field">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.6rem; margin-bottom: 1.5rem;">
+            <h3 style="font-size: 1.15rem; color: #0f172a; margin: 0;">
+              BAGIAN I: UJI KOMPETENSI INTEGRATIF (10 SOAL PILIHAN GANDA HOTS)
+            </h3>
+            <button type="button" class="btn-ctrl secondary" style="font-size: 0.78rem; padding: 0.35rem 0.8rem; background: #fdf2f8; color: #be185d; border: 1px solid #fbcfe8;" onclick="promptLecturerAuth()">
+              🔒 Buka Kunci Jawaban Dosen
+            </button>
+          </div>
+          <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1.5rem;">Pilihlah salah satu opsi jawaban (A, B, C, atau D) yang paling tepat berdasarkan teks asli Hallahan &amp; Kauffman (2005) dan Heward et al. (2017):</p>
+
+          <!-- SOAL 1 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">1.</span> Ketika seorang pengguna kursi roda tidak dapat memasuki aula kuliah karena gedung hanya memiliki akses tangga tanpa ram, situasi ketidakmampuan berpartisipasi tersebut secara tepat diistilahkan sebagai:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Impairment biomedis murni<br>
+              B. Handicap lingkungan arsitektural sosial<br>
+              C. Disabilitas intelektual sekunder<br>
+              D. Exceptionality komprehensif
+            </p>
+            <div id="key-uas-1" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — <em>Handicap</em> adalah kerugian sosial atau rintangan yang dialami individu saat berhadapan dengan lingkungan fisik/sosial yang tidak akomodatif (Heward et al., 2017, Bab 1).
+            </div>
+          </div>
+
+          <!-- SOAL 2 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">2.</span> Prinsip hukum IDEA yang menjamin bahwa evaluasi kelayakan layanan pendidikan khusus tidak boleh menggunakan instrumen tes tunggal yang bias budaya dan harus dilakukan tim multidisipliner adalah:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Zero Reject<br>
+              B. Nondiscriminatory Evaluation<br>
+              C. Free Appropriate Public Education<br>
+              D. Procedural Safeguards
+            </p>
+            <div id="key-uas-2" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Nondiscriminatory Evaluation melindungi peserta didik dari salah label (mislabeling) akibat bias instrumen tes atau diskriminasi bahasa/budaya (Hallahan &amp; Kauffman, 2005, Bab 1).
+            </div>
+          </div>
+
+          <!-- SOAL 3 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">3.</span> Apa perbedaan mendasar antara model intervensi berjenjang RTI (Response to Intervention) dengan model diskrepansi IQ-prestasi konvensional?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. RTI hanya melayani anak yang terbukti buta total<br>
+              B. RTI memberikan bantuan instruksional segera di kelas reguler tanpa menunggu anak mengalami kegagalan akademik parah (wait-to-fail)<br>
+              C. Model diskrepansi IQ tidak memerlukan tes psikologis sama sekali<br>
+              D. RTI menghapuskan peran guru reguler di sekolah umum
+            </p>
+            <div id="key-uas-3" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — RTI adalah sistem pendekatan pencegahan multitaraf berbasis instruksi teruji ilmiah dengan pemantauan kemajuan grafik mingguan (Heward et al., 2017, Bab 2).
+            </div>
+          </div>
+
+          <!-- SOAL 4 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">4.</span> Rumusan tujuan tahunan dalam dokumen IEP wajib memuat empat elemen struktural terukur menurut Heward et al. (2017), yaitu:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Tanggal lahir, nama orang tua, ijazah sekolah, dan tanda tangan kepala dinas<br>
+              B. Kondisi stimulus (Condition), Subjek siswa (Learner), Perilaku teramati (Target Behavior), dan Kriteria keberhasilan terukur (Criterion)<br>
+              C. Biaya terapi, jenis obat-obatan, nama rumah sakit, dan hasil rontgen<br>
+              D. Nilai ujian nasional, ranking kelas, sanksi pelanggaran, dan catatan guru BK
+            </p>
+            <div id="key-uas-4" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Formula SMART goals Heward menjamin akuntabilitas instruksional sehingga target belajar dapat diuji kemajuannya secara empiris (Heward et al., 2017, Bab 2).
+            </div>
+          </div>
+
+          <!-- SOAL 5 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">5.</span> Kriteria diagnostik mutlak hambatan intelektual menurut konsensus resmi AAIDD dan DSM-5 mensyaratkan adanya:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Skor IQ di bawah 100 dan kelumpuhan kedua kaki<br>
+              B. Keterbatasan signifikan pada fungsi intelektual (skor $\le 70–75$) dan keterbatasan bersamaan pada perilaku adaptif yang bermanifestasi sebelum usia 18 tahun<br>
+              C. Kebutaan sensori sejak lahir dan ketidakmampuan mendengar nada tinggi<br>
+              D. Perilaku hiperaktif inatensi semata di lingkungan sekolah
+            </p>
+            <div id="key-uas-5" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Definisi tripartit AAIDD mewajibkan pemenuhan ketiga aspek: skor IQ rendah, defisit adaptif nyata, dan onset pada masa tumbuh kembang anak (Hallahan &amp; Kauffman, 2005, Bab 5).
+            </div>
+          </div>
+
+          <!-- SOAL 6 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">6.</span> Dalam klausul eksklusi (exclusionary clause) regulasi federal IDEA, seorang anak TIDAK BOLEH dikategorikan sebagai penyandang Kesulitan Belajar Spesifik (SLD) apabila ketertinggalan belajarnya disebabkan oleh:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Kelemahan fungsi eksekutif metakognitif<br>
+              B. Hambatan intelektual, disabilitas sensori penglihatan/pendengaran, atau faktor kemiskinan kultural/ekonomi<br>
+              C. Defisit dalam memproses unit bunyi bahasa fonemik<br>
+              D. Disfungsi pengenalan simbol visual grafem
+            </p>
+            <div id="key-uas-6" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Klausul eksklusi IDEA memastikan bahwa label SLD hanya diberikan jika anak memiliki fungsi kecerdasan normal namun mengalami defisit pemrosesan psikologis spesifik (Heward et al., 2017, Bab 5).
+            </div>
+          </div>
+
+          <!-- SOAL 7 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">7.</span> Manakah yang merupakan dua ranah defisit inti (Dyad of Impairments) spektrum autisme berdasarkan kriteria diagnostik DSM-5 dan Heward et al. (2017)?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Disleksia membaca dan diskalkulia berhitung matematika<br>
+              B. Defisit komunikasi &amp; interaksi sosial timbal balik, serta Pola perilaku, minat, dan aktivitas yang terbatas dan berulang (RRBs)<br>
+              C. Gangguan artikulasi fonem dan gagap kronis<br>
+              D. Kelumpuhan spastik otot rangka dan disfungsi kandung kemih
+            </p>
+            <div id="key-uas-7" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — DSM-5 mengonsolidasikan triad lama menjadi dua ranah utama: hambatan komunikasi-sosial dan pola perilaku repetitif terbatas (Heward et al., 2017, Bab 7).
+            </div>
+          </div>
+
+          <!-- SOAL 8 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">8.</span> Dalam Asesmen Perilaku Fungsional (FBA), jika seorang siswa membanting bukunya (B) setiap kali disodorkan lembar tugas matematika sulit (A) dan berakibat guru menyuruhnya keluar kelas (C) sehingga anak lolos dari tugas, fungsi perilakunya adalah:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Mencari perhatian guru (Attention Seeking)<br>
+              B. Melarikan Diri / Menghindar dari Tugas Sulit (Escape / Avoidance Function)<br>
+              C. Memperoleh akses makanan manis (Tangible Access)<br>
+              D. Stimulasi sensori otomatis (Automatic Reinforcement)
+            </p>
+            <div id="key-uas-8" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Konsekuensi keluar kelas memberikan pelepasan beban (negative reinforcement) sehingga perilaku membanting buku berfungsi untuk escape (Heward et al., 2017, Bab 6).
+            </div>
+          </div>
+
+          <!-- SOAL 9 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">9.</span> Fenomena <em>"The Masking Effect"</em> pada siswa Twice-Exceptional (2e) merujuk pada kondisi di mana:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Siswa memakai masker penutup wajah saat berada di ruang kelas inklusi<br>
+              B. Keunggulan kecerdasan anak menyamarkan disabilitasnya, atau sebaliknya disabilitasnya menenggelamkan keberbakatannya sehingga anak tampak biasa saja dan luput dari layanan khusus<br>
+              C. Skor inteligensi anak berubah drastis setiap dua hari sekali<br>
+              D. Siswa menolak mengikuti seluruh ujian sekolah
+            </p>
+            <div id="key-uas-9" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Masking effect adalah jebakan diagnostik pada siswa 2e yang membuat potensi unggul dan hambatan belajarnya saling meniadakan di permukaan (Heward et al., 2017, Bab 13).
+            </div>
+          </div>
+
+          <!-- SOAL 10 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">10.</span> Berdasarkan piramida kontinum penempatan LRE (Least Restrictive Environment), pemisahan siswa dari kelas reguler ke ruang sumber atau sekolah khusus hanya dibenarkan secara hukum apabila:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Kepala sekolah merasa lelah membina guru pendamping khusus<br>
+              B. Sifat dan keparahan disabilitas sedemikian rupa sehingga pendidikan di kelas umum dengan bantuan alat bantu tambahan (supplementary aids and services) tidak dapat dicapai secara memuaskan<br>
+              C. Siswa tidak memiliki biaya seragam sekolah<br>
+              D. Teman sekelas meminta agar siswa tersebut dipindahkan
+            </p>
+            <div id="key-uas-10" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Mandat LRE IDEA menetapkan bahwa kelas reguler adalah titik berangkat (default); pemisahan membutuhkan justifikasi objektif kegagalan akomodasi pendukung (Heward et al., 2017, Bab 2).
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BAGIAN II: FORMAT PORTOFOLIO DRAF SIDANG PPI/IEP -->
+        <div class="worksheet-field" style="margin-top: 2.5rem;">
+          <h3 style="font-size: 1.15rem; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.6rem; margin-bottom: 1.5rem;">
+            BAGIAN II: DRAF PORTOFOLIO RANCANGAN PROGRAM PEMBELAJARAN INDIVIDUAL (PPI)
+          </h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1rem;">
+            <em>Instruksi Sidang Panel:</em> Gunakan kolom lembar jawaban luas di bawah ini untuk merumuskan draf ringkas berkas portofolio PPI/IEP berdasarkan studi kasus yang Anda pilih (misal: Siswa ASD, Siswa SLD Disleksia, atau Siswa 2e):
+          </p>
+
+          <div class="portfolio-box">
+            <label style="color: var(--gz-pink); font-size: 1.05rem; display: block; margin-bottom: 0.5rem; font-weight: 800;">
+              LEMBAR PORTOFOLIO: RUMUSAN PLAAFP, TARGET SMART, &amp; JUSTIFIKASI LRE
+            </label>
+            <textarea class="large-answer-area" placeholder="Tuliskan:&#10;1. Deskripsi baseline kinerja saat ini (PLAAFP) yang objektif dan bebas prasangka subjektif...&#10;2. Satu rumusan tujuan tahunan terukur dengan formula SMART lengkap (Condition, Learner, Target Behavior, Criterion)...&#10;3. Strategi intervensi berbasis bukti (EBP) yang dipilih (misal: Task Analysis, Direct Instruction, TEACCH, dsb.)...&#10;4. Justifikasi penempatan kontinum LRE serta bentuk akomodasi asesmen ujian yang adil..."></textarea>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 3: INTERACTIVE PRESENTATION MODE (SLIDE BERWARNA & DOCK NAVIGASI)
+         ========================================================================= -->
+    <section id="presentation-view" class="view-section">
+      
+      <div class="presentation-frame-uas">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide-item active">
+          <span class="slide-badge-pill" style="background: #ffe4e6; color: #be123c; border: 1.5px solid #fecdd3;">
+            Slide 1 dari 6 • Orientasi Sidang UAS
+          </span>
+          <h2 style="color: #be123c;">Evaluasi Akhir Semester (UAS): Sidang Portofolio PPI/IEP</h2>
+          <div class="slide-body">
+            <p>Kulminasi Penguasaan Keilmuan Ortopedagogik Teoretis dan Praktis:</p>
+            <ul>
+              <li>Penyelarasan mandat filosofis, yuridis IDEA, asesmen, dan bukti ilmiah.</li>
+              <li>Presentasi panel berkas portofolio intervensi individual terpadu.</li>
+              <li>Sintesis komparatif Hallahan &amp; Kauffman (2005) dan William L. Heward (2017).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-uas">
+            <strong>Catatan Pemateri / Penguji:</strong> Buka sidang dengan mengingatkan mahasiswa: Dokumen IEP bukan sekadar tugas kuliah, melainkan instrumen pembelaan hak hidup dan masa depan seorang anak berkebutuhan khusus.
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #fdf2f8; color: #be185d; border: 1.5px solid #fbcfe8;">
+            Slide 2 dari 6 • Anatomi IEP
+          </span>
+          <h2 style="color: #be185d;">Keterkaitan Logis Lima Komponen Dokumen</h2>
+          <div class="slide-body">
+            <p>Pilar Validitas Dokumen Intervensi Individual:</p>
+            <ul>
+              <li><strong>PLAAFP:</strong> Titik tolak fakta objektif empiris tanpa prasangka peyoratif.</li>
+              <li><strong>SMART Goals:</strong> Formula empat pilar (Condition, Learner, Behavior, Criterion).</li>
+              <li><strong>Intervensi EBP:</strong> Pemilihan strategi instruksional tervalidasi riset sains.</li>
+              <li><strong>LRE &amp; Transisi:</strong> Perlindungan hak inklusi dan persiapan mandiri pascasekolah.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-uas">
+            <strong>Catatan Pemateri / Penguji:</strong> Periksa benang merah mahasiswa: Apakah target tahunan yang dirumuskan benar-benar menjawab kelemahan yang dicantumkan pada bagian PLAAFP?
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ecfdf5; color: #047857; border: 1.5px solid #a7f3d0;">
+            Slide 3 dari 6 • Standar Sains EBP
+          </span>
+          <h2 style="color: #047857;">Memilih Intervensi Berbasis Bukti Ilmiah</h2>
+          <div class="slide-body">
+            <p>Menghindari Praktik Semu (Fad Interventions):</p>
+            <ul>
+              <li><strong>Hambatan Intelektual:</strong> Analisis Tugas (Task Analysis) &amp; Kurikulum Fungsional.</li>
+              <li><strong>Kesulitan Belajar Spesifik:</strong> Direct Instruction (DI) &amp; Pengorganisasi Grafis.</li>
+              <li><strong>Spektrum Autisme:</strong> Terapan Perilaku (ABA/DTT), TEACCH, PECS, &amp; Social Stories.</li>
+              <li><strong>ADHD &amp; EBD:</strong> Asesmen FBA A-B-C &amp; Perilaku Pengganti Fungsional.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-uas">
+            <strong>Catatan Pemateri / Penguji:</strong> Uji nalar mahasiswa: Mengapa metode penemuan mandiri (discovery learning) tidak cocok untuk anak disleksia dan harus diganti dengan pembelajaran eksplisit Direct Instruction?
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ede9fe; color: #6d28d9; border: 1.5px solid #ddd6fe;">
+            Slide 4 dari 6 • Etika &amp; Hukum
+          </span>
+          <h2 style="color: #6d28d9;">Integritas Yuridis Kontinum Penempatan LRE</h2>
+          <div class="slide-body">
+            <p>Prinsip Penegakan Hak Sipil Anak Berkebutuhan Khusus:</p>
+            <ul>
+              <li>Kelas reguler adalah titik berangkat hakiki (the default placement).</li>
+              <li>Pemisahan ke ruang khusus membutuhkan pembuktian tertulis kegagalan akomodasi.</li>
+              <li>Akomodasi Asesmen: Mengukur kompetensi tanpa terhalang rintangan motorik/sensori.</li>
+              <li>Dignity of Risk: Memberi ruang anak menghadapi tantangan hidup mandiri.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-uas">
+            <strong>Catatan Pemateri / Penguji:</strong> Tekankan bahwa seorang guru tidak berhak mengeluarkan siswa ke SLB hanya karena nilai ujian sekolahnya rendah. Hak inklusi dilindungi undang-undang.
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="background: #ffedd5; color: #c2410c; border: 1.5px solid #fed7aa;">
+            Slide 5 dari 6 • Kemitraan Keluarga
+          </span>
+          <h2 style="color: #c2410c;">Kolaborasi Tim &amp; Resiprositas Budaya</h2>
+          <div class="slide-body">
+            <p>Membangun Sinergi Sekolah dan Rumah (Heward et al., 2017):</p>
+            <ul>
+              <li>Orang tua sebagai mitra sejajar dengan hak persetujuan legal (informed consent).</li>
+              <li>Cultural Reciprocity: Menghargai keragaman latar belakang nilai keluarga.</li>
+              <li>Kemitraan mengajar (Co-Teaching) guru reguler dan guru pembimbing khusus (GPK).</li>
+              <li>Rencana Transisi Individual (ITP): Membina kemandirian kerja di masyarakat.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-uas">
+            <strong>Catatan Pemateri / Penguji:</strong> Ingatkan mahasiswa: Jangan pernah memposisikan diri lebih tinggi daripada orang tua saat sidang IEP. Orang tua adalah pakar utama kehidupan anak di rumah.
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ffe4e6; color: #be185d; border: 1.5px solid #fecdd3;">
+            Slide 6 dari 6 • Penutup Sidang
+          </span>
+          <h2 style="color: #be185d;">Closing Statement: Mandat Pendidik Sejati</h2>
+          <div class="slide-body">
+            <p>Amanat Keilmuan Ortopedagogik:</p>
+            <ul>
+              <li>"Setiap anak dapat belajar, hanya saja tidak pada hari yang sama atau dengan cara yang sama."</li>
+              <li>Gunakan ilmu pengetahuan dan kasih sayang untuk meruntuhkan rintangan sosial.</li>
+              <li>Selamat menyelesaikan Evaluasi Akhir Semester dan mengabdi bagi kemanusiaan!</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-uas">
+            <strong>Catatan Pemateri / Penguji:</strong> Berikan apresiasi kepada seluruh mahasiswa atas komitmen mereka selama 16 pertemuan mendalami keilmuan ortopedagogik.
+          </div>
+        </div>
+
+        <!-- DOCK NAVIGASI CEPAT SLIDE (SLIDE QUICK-JUMP DOCK) -->
+        <div>
+          <div class="slide-nav-dock">
+            <button class="dock-btn active" onclick="jumpToSlide(0)">1</button>
+            <button class="dock-btn" onclick="jumpToSlide(1)">2</button>
+            <button class="dock-btn" onclick="jumpToSlide(2)">3</button>
+            <button class="dock-btn" onclick="jumpToSlide(3)">4</button>
+            <button class="dock-btn" onclick="jumpToSlide(4)">5</button>
+            <button class="dock-btn" onclick="jumpToSlide(5)">6</button>
+          </div>
+
+          <footer class="slide-controls" style="border-top: 1px solid #e2e8f0; margin-top: 1.25rem;">
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+              <button class="btn-ctrl" style="background: var(--gz-pink);" onclick="changeSlide(1)">Selanjutnya ❯</button>
+            </div>
+            <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Penguji</button>
+          </footer>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LOGIKA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Pengalihan Tab Navigasi Utama
+    function switchView(targetViewId, buttonElement) {
+      document.querySelectorAll('.view-section').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(targetViewId).classList.add('active');
+      buttonElement.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Web Audio API Synthesizer (Efek Suara Mini Game Bawaan Browser)
+    let audioFxEnabled = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTone(type) {
+      if (!audioFxEnabled) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'success') {
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.25); // G5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } else {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+        osc.frequency.exponentialRampToValueAtTime(130.81, audioCtx.currentTime + 0.25); // C3
+        gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      }
+    }
+
+    function toggleAudioFx() {
+      audioFxEnabled = !audioFxEnabled;
+      const btn = document.getElementById('sound-btn');
+      if (audioFxEnabled) {
+        btn.classList.add('active');
+        btn.textContent = '🔊 Suara Pengarah: Aktif';
+      } else {
+        btn.classList.remove('active');
+        btn.textContent = '🔇 Suara Pengarah: Hening';
+      }
+    }
+
+    // 3. Evaluasi Mini Simulasi UAS
+    function evaluateUasSim(choice) {
+      const feedback = document.getElementById('uassim-feedback');
+      feedback.style.display = 'block';
+
+      if (choice === 'b') {
+        playTone('success');
+        feedback.style.background = '#ecfdf5';
+        feedback.style.color = '#065f46';
+        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Menurut doktrin Heward et al. (2017) dan regulasi IDEA, ITP adalah instrumen krusial penjamin kemandirian masa depan. Meskipun mandat formal berlaku usia 16 tahun, penyusunan fondasi transisi vokasional dan bina diri dapat dimulai lebih awal dan tidak boleh dihapus secara sepihak oleh kepala sekolah tanpa musyawarah tim IEP.';
+      } else {
+        playTone('error');
+        feedback.style.background = '#fff1f2';
+        feedback.style.color = '#9f1239';
+        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan prinsip kemitraan sidang IEP: kepala sekolah tidak memiliki hak veto untuk menghapus komponen perencanaan masa depan siswa berkebutuhan khusus secara sepihak.';
+      }
+    }
+
+    // 4. Proteksi Kunci Jawaban Soal PG (Khusus Dosen Penguji)
+    function promptLecturerAuth() {
+      const pwd = prompt("Masukkan kata sandi dosen penguji untuk membuka kunci jawaban & pembahasan:");
+      if (pwd === "dosenorto" || pwd === "ortopedagogik") {
+        document.querySelectorAll('.lecturer-key-box').forEach(box => {
+          box.style.display = 'block';
+        });
+        alert("Autentikasi berhasil. Kunci jawaban dan anotasi rujukan buku teks telah terbuka.");
+      } else if (pwd !== null) {
+        alert("Kata sandi salah. Akses kunci jawaban hanya diperuntukkan bagi dosen pengampu.");
+      }
+    }
+
+    // 5. Pengendali Slide Presentasi Dosen & Quick-Jump Dock
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+    const dockBtns = document.querySelectorAll('.dock-btn');
+
+    function updateSlideDisplay() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+      dockBtns.forEach((btn, idx) => {
+        btn.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+      updateSlideDisplay();
+    }
+
+    function jumpToSlide(index) {
+      currentSlide = index;
+      updateSlideDisplay();
+    }
+
+    function toggleSpeakerNotes() {
+      const activeSlide = slides[currentSlide];
+      const notes = activeSlide.querySelector('.speaker-notes-uas');
+      if (notes) {
+        notes.style.display = (notes.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // Navigasi Keyboard untuk Slide
+    document.addEventListener('keydown', (e) => {
+      const presView = document.getElementById('presentation-view');
+      if (presView.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
