@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 7: ADHD, Hambatan Emosi/Perilaku (EBD), &amp; Asesmen Perilaku Fungsional</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Penyesuaian tema warna Gen Z khusus Pertemuan 7: Soft Blue & Mint Green */
+    :root {
+      --accent-soft-blue: #3b82f6;
+      --accent-soft-blue-light: #e0f2fe;
+      --accent-mint: #10b981;
+      --accent-mint-light: #d1fae5;
+      --accent-indigo: #6366f1;
+    }
+    .badge-soft-blue {
+      background: var(--accent-soft-blue-light);
+      color: #0369a1;
+    }
+    .badge-mint {
+      background: var(--accent-mint-light);
+      color: #047857;
+    }
+    .card-soft-blue {
+      border-left: 4px solid var(--accent-soft-blue);
+      background: #f8fafc;
+    }
+    .card-mint {
+      border-left: 4px solid var(--accent-mint);
+      background: #f0fdf4;
+    }
+    .game-scenario-box {
+      border: 2px dashed #93c5fd;
+      background: #f0f9ff;
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 1.25rem 0;
+    }
+    .token-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .token-item {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span style="color: #0284c7;">ORTOPEDAGOGIK</span>
+        <span class="pill" style="background: #e0f2fe; color: #0369a1;">Pertemuan 7</span>
+      </div>
+      <nav class="view-tabs" role="tablist">
+        <button class="tab-btn active" onclick="switchView('reading-view', this)">Modul Bacaan Lengkap</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja &amp; Tugas Bergambar</button>
+        <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Dosen</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- =========================================================================
+         BAGIAN 1: WEB PAGE PRESENTATION (BACAAN MANDIRI DOSEN & MAHASISWA)
+         ========================================================================= -->
+    <section id="reading-view" class="view-section active">
+      
+      <!-- HERO BANNER -->
+      <header class="hero-box" style="background: linear-gradient(135deg, #e0f2fe 0%, #d1fae5 100%);">
+        <span class="section-label" style="background: #bae6fd; color: #0369a1;">Modul Perkuliahan Komprehensif</span>
+        <h1 style="color: #0f172a;">Attention-Deficit/Hyperactivity Disorder (ADHD), Gangguan Emosi atau Perilaku (EBD), dan Asesmen Perilaku Fungsional (FBA)</h1>
+        <p>Analisis mendalam mengenai dasar neurobiologis inhibisi perilaku, pembedahan perilaku eksternalisasi versus internalisasi, metodologi Functional Behavioral Assessment (A-B-C), serta penerapan School-Wide Positive Behavioral Interventions &amp; Supports (SWPBIS) bagi Anak Berkebutuhan Khusus.</p>
+        <div class="hero-meta">
+          <span>⏱ Durasi: 2 SKS (100 Menit)</span>
+          <span>📚 Rujukan: Hallahan &amp; Kauffman (2005, Bab 7 &amp; 8) &amp; Heward et al. (2017, Bab 6 &amp; 11)</span>
+          <span>🎯 Capaian: Perancangan Analisis A-B-C, Rencana Dukungan Perilaku (BIP), &amp; Pengaturan Kelas SWPBIS</span>
+        </div>
+      </header>
+
+      <!-- SESI 1: PENDAHULUAN (10 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-soft-blue">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
+        <h2>1. Di Balik Perilaku yang Dianggap "Mengganggu": Memahami Akar Masalah</h2>
+        <p style="margin-top: 0.75rem;">
+          Di banyak sekolah umum di Indonesia, anak-anak yang tidak bisa duduk tenang, sering menyela pembicaraan, mudah tersulut kemarahan, atau sebaliknya mengurung diri dan menolak berbicara, kerap dicap sebagai "anak nakal", "anak bermasalah", atau "anak yang kurang ajar". Cap semacam ini menunjukkan kekeliruan pemahaman pendidik terhadap hakikat kesulitan neurobiologis dan psikososial peserta didik.
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--accent-soft-blue); background: #f0f9ff;">
+          “Children with emotional or behavioral disorders are often blamed for their problems, and their parents are blamed for their children’s problems. Yet these children’s behaviors are often the result of complex interactions among biological, familial, and environmental factors.”
+          <footer>— Daniel P. Hallahan &amp; James M. Kauffman (2005, hlm. 250)</footer>
+        </div>
+
+        <div class="grid-two-col">
+          <div class="accent-card card-soft-blue">
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #0284c7;">ADHD: Kegagalan Menahan Diri, Bukan Kurang Niat</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Hallahan &amp; Kauffman (2005) menegaskan bahwa anak dengan ADHD bukan tidak tahu aturan kelas, melainkan mengalami defisit pada sistem <strong>penghambatan perilaku (*behavioral inhibition*)</strong> di otak depan (*prefrontal cortex*). Mereka kesulitan menunda respons spontan dan kesulitan mengelola fungsi eksekutif.
+            </p>
+          </div>
+          <div class="accent-card card-mint">
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #059669;">EBD: Perilaku Selalu Memiliki Fungsi</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Heward et al. (2017) menggarisbawahi prinsip analisis perilaku: tidak ada perilaku menantang yang terjadi tanpa sebab. Setiap perilaku agresi, penolakan tugas, atau ledakan emosi selalu memiliki <strong>fungsi komunikasi</strong> (menghindari tugas sulit, mencari perhatian teman/guru, atau memperoleh kendali lingkungan).
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 2: MATERI INTI (45 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-mint">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
+        <h2>2. Attention-Deficit/Hyperactivity Disorder (ADHD): Hakikat dan Subtipe</h2>
+        <p style="margin-top: 0.75rem;">
+          Berdasarkan regulasi federal IDEA yang dipaparkan dalam <strong>Heward et al. (2017, hlm. 378)</strong>, ADHD tidak berdiri sendiri sebagai kategori disabilitas khusus terpisah, melainkan dimasukkan ke dalam kategori <strong>Other Health Impairments (OHI)</strong> jika kondisi tersebut berdampak merugikan secara signifikan terhadap kinerja akademik peserta didik.
+        </p>
+
+        <p style="margin-top: 0.5rem;">
+          Sesuai panduan diagnostik DSM-5 sebagaimana diuraikan secara komparatif oleh <strong>Hallahan &amp; Kauffman (2005, hlm. 214)</strong> dan Heward et al. (2017), ADHD dibagi menjadi tiga subtipe klinis:
+        </p>
+
+        <div class="grid-three-col" style="margin-top: 1rem;">
+          <div class="accent-card card-soft-blue">
+            <h4 style="color: #0284c7; margin-bottom: 0.35rem;">1. Inatensi Dominan (Predominantly Inattentive)</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Mudah teralihkan perhatian oleh stimulus luar, tampak melamun atau tidak menyimak saat diajak bicara langsung, kesulitan menyelesaikan tugas berlapis, sering kehilangan perlengkapan sekolah, dan pelupa dalam rutinitas harian. Sering luput teridentifikasi karena tidak menimbulkan keributan fisik.
+            </p>
+          </div>
+          <div class="accent-card card-mint">
+            <h4 style="color: #059669; margin-bottom: 0.35rem;">2. Hiperaktif-Impulsif Dominan</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Gelisah terus-menerus (*fidgeting*), menggerakkan tangan/kaki, meninggalkan tempat duduk saat jam pelajaran berlangsung, berlari-lari di waktu yang tidak pantas, berbicara berlebihan, menyela jawaban sebelum pertanyaan selesai dibacakan, dan kesulitan menunggu antrean giliran.
+            </p>
+          </div>
+          <div class="accent-card" style="border-left: 4px solid var(--accent-indigo); background: #fdf4ff;">
+            <h4 style="color: #9333ea; margin-bottom: 0.35rem;">3. Tipe Kombinasi (Combined Type)</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Menunjukkan gejala inatensi yang signifikan sekaligus perilaku hiperaktif-impulsif secara bersamaan selama minimal enam bulan berturut-turut pada dua seting lingkungan atau lebih (misal di sekolah dan di rumah). Ini merupakan subtipe yang paling lazim dirujuk ke layanan pendidikan khusus.
+            </p>
+          </div>
+        </div>
+
+        <div class="quote-box" style="border-left-color: var(--accent-mint); background: #f0fdf4; margin-top: 1.5rem;">
+          “Barkley’s model suggests that the central deficit in ADHD is not inattention per se, but behavioral inhibition. Behavioral inhibition is the ability to delay a response, interrupt an ongoing response, and protect the response delay from interference.”
+          <footer>— Daniel P. Hallahan &amp; James M. Kauffman (2005, hlm. 220)</footer>
+        </div>
+
+        <!-- DIAGRAM 1: MODEL RUSSELL BARKLEY - INHIBISI PERILAKU & FUNGSI EKSEKUTIF (SVG) -->
+        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2.1. Model Neurobiologis Russell Barkley: Penghambatan Perilaku dan 4 Fungsi Eksekutif</h3>
+        <p>
+          Hallahan &amp; Kauffman (2005) menguraikan model teoritis Russell Barkley yang menjadi acuan dunia dalam memahami disfungsi kognitif pada anak dengan ADHD:
+        </p>
+
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 380" width="100%" height="auto" style="max-height: 400px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="coreInhibit" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0284c7" />
+                <stop offset="100%" stop-color="#38bdf8" />
+              </linearGradient>
+              <linearGradient id="execGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#059669" />
+                <stop offset="100%" stop-color="#34d399" />
+              </linearGradient>
+              <linearGradient id="execGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6366f1" />
+                <stop offset="100%" stop-color="#a5b4fc" />
+              </linearGradient>
+              <filter id="shadowD7" x="-5%" y="-10%" width="110%" height="125%">
+                <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+              </filter>
+            </defs>
+
+            <!-- Kotak Inti Kiri: Inhibisi Perilaku -->
+            <g filter="url(#shadowD7)">
+              <rect x="30" y="70" width="260" height="240" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+              <rect x="30" y="70" width="260" height="42" rx="14" fill="url(#coreInhibit)"/>
+              <text x="160" y="96" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">DEFISIT INTI (CORE DEFICIT)</text>
+              <text x="160" y="140" fill="#0f172a" font-size="13" font-weight="800" text-anchor="middle">Inhibisi Perilaku Melemah</text>
+              <text x="160" y="170" fill="#475569" font-size="11" text-anchor="middle">1. Gagal menahan respons impulsif</text>
+              <text x="160" y="195" fill="#475569" font-size="11" text-anchor="middle">2. Sukar menghentikan tindakan salah</text>
+              <text x="160" y="220" fill="#475569" font-size="11" text-anchor="middle">3. Rentan gangguan distraksi luar</text>
+              <text x="160" y="255" fill="#0369a1" font-size="10.5" font-weight="700" text-anchor="middle">"Pintu Masuk Regulasi Diri"</text>
+            </g>
+
+            <!-- Panah Penghubung ke 4 Fungsi Eksekutif -->
+            <path d="M 290 190 L 350 110" stroke="#0284c7" stroke-width="3" stroke-dasharray="4"/>
+            <path d="M 290 190 L 350 160" stroke="#0284c7" stroke-width="3"/>
+            <path d="M 290 190 L 350 220" stroke="#0284c7" stroke-width="3"/>
+            <path d="M 290 190 L 350 270" stroke="#0284c7" stroke-width="3" stroke-dasharray="4"/>
+
+            <!-- 4 Kotak Cabang Fungsi Eksekutif -->
+            <!-- Cabang 1: Working Memory -->
+            <g filter="url(#shadowD7)">
+              <rect x="360" y="40" width="260" height="65" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="375" y="65" fill="#059669" font-size="11.5" font-weight="800">1. Memori Kerja Nonverbal</text>
+              <text x="375" y="85" fill="#64748b" font-size="10">Menyimpan gambaran mental masa lalu untuk mengarahkan tindakan</text>
+            </g>
+
+            <!-- Cabang 2: Internalization of Speech -->
+            <g filter="url(#shadowD7)">
+              <rect x="360" y="115" width="260" height="65" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="375" y="140" fill="#6366f1" font-size="11.5" font-weight="800">2. Internalisasi Bahasa Batin</text>
+              <text x="375" y="160" fill="#64748b" font-size="10">Self-talk pribadi untuk mengarahkan aturan moral dan logika pemikiran</text>
+            </g>
+
+            <!-- Cabang 3: Self-Regulation of Affect -->
+            <g filter="url(#shadowD7)">
+              <rect x="360" y="190" width="260" height="65" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="375" y="215" fill="#059669" font-size="11.5" font-weight="800">3. Regulasi Emosi &amp; Motivasi</text>
+              <text x="375" y="235" fill="#64748b" font-size="10">Menahan amarah spontan dan memotivasi diri mengejar target tertunda</text>
+            </g>
+
+            <!-- Cabang 4: Reconstitution -->
+            <g filter="url(#shadowD7)">
+              <rect x="360" y="265" width="260" height="65" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="375" y="290" fill="#6366f1" font-size="11.5" font-weight="800">4. Rekonstitusi / Fleksibilitas</text>
+              <text x="375" y="310" fill="#64748b" font-size="10">Menganalisis situasi baru dan merumuskan solusi kreatif alternatif</text>
+            </g>
+
+            <!-- Panah ke Luar Menuju Perilaku Motorik -->
+            <path d="M 620 190 L 680 190" stroke="#475569" stroke-width="3"/>
+            <polygon points="678,185 688,190 678,195" fill="#475569"/>
+
+            <!-- Kotak Dampak Motorik Kanan -->
+            <g filter="url(#shadowD7)">
+              <rect x="690" y="70" width="220" height="240" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+              <rect x="690" y="70" width="220" height="42" rx="14" fill="#334155"/>
+              <text x="800" y="96" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">OUTPUT MOTORIK</text>
+              <text x="800" y="140" fill="#0f172a" font-size="12" font-weight="800" text-anchor="middle">Kontrol Kendali Lemah</text>
+              <text x="800" y="170" fill="#64748b" font-size="10.5" text-anchor="middle">• Gerakan motorik tak terarah</text>
+              <text x="800" y="195" fill="#64748b" font-size="10.5" text-anchor="middle">• Sulit menyesuaikan ritme</text>
+              <text x="800" y="220" fill="#64748b" font-size="10.5" text-anchor="middle">• Variabilitas performa tinggi</text>
+              <text x="800" y="250" fill="#ef4444" font-size="10.5" font-weight="700" text-anchor="middle">"Performa Akademik Menurun"</text>
+            </g>
+          </svg>
+          <div class="diagram-caption">Diagram 1: Model Teori Inhibisi Perilaku dan Empat Fungsi Eksekutif Russell Barkley (Diadaptasi dari Hallahan &amp; Kauffman, 2005)</div>
+        </div>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.2. Gangguan Emosi atau Perilaku (Emotional and Behavioral Disorders / EBD)</h3>
+        <p>
+          Menurut <strong>Heward et al. (2017, hlm. 176)</strong> dan regulasi federal IDEA, gangguan emosi didefinisikan sebagai kondisi yang menunjukkan satu atau lebih karakteristik berikut dalam jangka waktu panjang (*over a long period of time*) dan pada derajat keparahan yang nyata (*to a marked degree*), sehingga berdampak buruk terhadap prestasi pendidikan anak:
+        </p>
+
+        <ul style="padding-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); line-height: 1.7;">
+          <li>Ketidakmampuan belajar yang tidak dapat dijelaskan oleh faktor intelektual, sensori, atau kesehatan fisik.</li>
+          <li>Ketidakmampuan membangun atau mempertahankan hubungan interpersonal yang memuaskan dengan teman sebaya dan guru.</li>
+          <li>Bentuk perilaku atau perasaan yang tidak pantas di bawah kondisi normal.</li>
+          <li>Suasana hati (*mood*) ketidakbahagiaan yang meluas atau depresi kronis.</li>
+          <li>Kecenderungan mengembangkan gejala-gejala fisik atau ketakutan yang berhubungan dengan masalah pribadi atau sekolah.</li>
+        </ul>
+
+        <h4 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Dikotomi Utama: Eksternalisasi vs Internalisasi</h4>
+        <p>
+          Hallahan &amp; Kauffman (2005, hlm. 256) membagi manifestasi pola perilaku EBD ke dalam dua kutub besar:
+        </p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Dimensi Perilaku</th>
+                <th>Karakteristik &amp; Pola Tindakan</th>
+                <th>Dampak Sekolah &amp; Risiko Sosial</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Perilaku Eksternalisasi (*Externalizing Behaviors*)</strong></td>
+                <td>Agresi fisik/verbal, perusakan benda, membangkang aturan (*noncompliance*), berbohong, mencuri, melempar barang, dan perilaku tantrum di kelas.</td>
+                <td>Paling sering dirujuk dan dikeluarkan dari sekolah karena mengganggu ketertiban umum. Berisiko putus sekolah, konflik hukum, dan kenakalan remaja jika tidak diintervensi dini.</td>
+              </tr>
+              <tr>
+                <td><strong>Perilaku Internalisasi (*Internalizing Behaviors*)</strong></td>
+                <td>Menarik diri dari pergaulan sosial (*social withdrawal*), kecemasan berlebih, fobia sosial, depresi, melukai diri sendiri (*self-harm*), dan somatisasi (keluhan sakit perut/kepala tanpa dasar medis saat jam sekolah).</td>
+                <td>Sangat jarang dirujuk guru karena tidak berisik di kelas. Memiliki risiko isolasi sosial kronis, kegagalan belajar tersembunyi, dan bahaya bunuh diri pada masa remaja.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.3. Asesmen Perilaku Fungsional (Functional Behavioral Assessment / FBA)</h3>
+        <p>
+          Inti metodologis dalam menangani perilaku menantang menurut <strong>Heward et al. (2017, hlm. 195)</strong> adalah **Asesmen Perilaku Fungsional (FBA)**. FBA adalah serangkaian metode sistematis untuk mengidentifikasi variabel lingkungan yang memicu dan mempertahankan perilaku bermasalah.
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--accent-soft-blue); background: #f0f9ff;">
+          “A functional behavioral assessment is a systematic process for gathering information to understand why a student engages in challenging behavior. All behavior has a function; the goal of FBA is to determine the purpose the behavior serves for the child.”
+          <footer>— William L. Heward, Sheila R. Alber-Morgan, &amp; Moira Konrad (2017, hlm. 195)</footer>
+        </div>
+
+        <!-- DIAGRAM 2: MODEL SEKUEN TIGA KONTINGENSI A-B-C (SVG) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 260" width="100%" height="auto" style="max-height: 280px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="aGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+              <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ef4444"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+              <linearGradient id="cGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+            </defs>
+
+            <!-- Box A: Antecedent -->
+            <rect x="25" y="30" width="260" height="175" rx="12" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+            <rect x="25" y="30" width="260" height="38" rx="12" fill="url(#aGrad)"/>
+            <text x="155" y="55" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">A: ANTECEDENT (ANTESEDEN)</text>
+            <text x="155" y="95" fill="#0f172a" font-size="13" font-weight="700" text-anchor="middle">Pemicu Lingkungan</text>
+            <text x="155" y="125" fill="#475569" font-size="11" text-anchor="middle">Peristiwa/kondisi tepat SEBELUM</text>
+            <text x="155" y="145" fill="#475569" font-size="11" text-anchor="middle">perilaku target muncul.</text>
+            <text x="155" y="175" fill="#0369a1" font-size="10.5" font-weight="600" text-anchor="middle">Contoh: Lembar tugas sulit disodorkan</text>
+
+            <!-- Arrow A to B -->
+            <path d="M 285 117 L 335 117" stroke="#0284c7" stroke-width="3"/>
+            <polygon points="333,112 343,117 333,122" fill="#0284c7"/>
+
+            <!-- Box B: Behavior -->
+            <rect x="345" y="30" width="260" height="175" rx="12" fill="#ffffff" stroke="#fca5a5" stroke-width="2"/>
+            <rect x="345" y="30" width="260" height="38" rx="12" fill="url(#bGrad)"/>
+            <text x="475" y="55" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">B: BEHAVIOR (PERILAKU)</text>
+            <text x="475" y="95" fill="#0f172a" font-size="13" font-weight="700" text-anchor="middle">Tindakan Operasional</text>
+            <text x="475" y="125" fill="#475569" font-size="11" text-anchor="middle">Perilaku teramati dan terukur</text>
+            <text x="475" y="145" fill="#475569" font-size="11" text-anchor="middle">yang dilakukan oleh anak.</text>
+            <text x="475" y="175" fill="#b91c1c" font-size="10.5" font-weight="600" text-anchor="middle">Contoh: Merobek buku &amp; berteriak</text>
+
+            <!-- Arrow B to C -->
+            <path d="M 605 117 L 655 117" stroke="#ef4444" stroke-width="3"/>
+            <polygon points="653,112 663,117 653,122" fill="#ef4444"/>
+
+            <!-- Box C: Consequence -->
+            <rect x="665" y="30" width="250" height="175" rx="12" fill="#ffffff" stroke="#6ee7b7" stroke-width="2"/>
+            <rect x="665" y="30" width="250" height="38" rx="12" fill="url(#cGrad)"/>
+            <text x="790" y="55" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">C: CONSEQUENCE (KONSEKUENSI)</text>
+            <text x="790" y="95" fill="#0f172a" font-size="13" font-weight="700" text-anchor="middle">Reaksi Lingkungan / Hasil</text>
+            <text x="790" y="125" fill="#475569" font-size="11" text-anchor="middle">Peristiwa tepat SETELAH perilaku</text>
+            <text x="790" y="145" fill="#475569" font-size="11" text-anchor="middle">yang memperkuat pengulangan tindakan.</text>
+            <text x="790" y="175" fill="#047857" font-size="10.5" font-weight="600" text-anchor="middle">Contoh: Disuruh keluar kelas (Lolos tugas)</text>
+
+            <!-- Bottom Note -->
+            <text x="470" y="235" fill="#64748b" font-size="11" font-weight="600" text-anchor="middle">Kesimpulan FBA: Fungsi Perilaku = Menghindar dari Tugas Sulit (Escape / Avoidance Function)</text>
+          </svg>
+          <div class="diagram-caption">Diagram 2: Model Analisis Kontingensi Tiga Istilah A-B-C dalam Functional Behavioral Assessment (Heward et al., 2017)</div>
+        </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Empat Fungsi Universal Perilaku Menurut Analisis FBA</h4>
+        <ul style="padding-left: 1.5rem; margin-top: 0.3rem; color: var(--text-muted); line-height: 1.7;">
+          <li><strong>1. Menghindar atau Melarikan Diri (*Escape / Avoidance*):</strong> Perilaku bertujuan membatalkan tugas sulit, melepaskan diri dari tuntutan sosial, atau menghindari stimulus yang tidak disukai.</li>
+          <li><strong>2. Mencari Perhatian (*Attention Seeking*):</strong> Perilaku bertujuan memperoleh reaksi emosional dari guru, ejekan teman, atau teguran lisan orang dewasa (bahkan perhatian negatif tetap dianggap bernilai bagi anak).</li>
+          <li><strong>3. Akses ke Benda atau Aktivitas (*Tangible / Activity Access*):</strong> Bertujuan mendapatkan mainan, gawai, makanan, atau hak istimewa tertentu.</li>
+          <li><strong>4. Penguatan Sensorik Otomatis (*Automatic / Sensory Reinforcement*):</strong> Perilaku yang menyenangkan diri sendiri secara fisiologis (misal: menggoyangkan tubuh, memilin rambut, stimulasi kinestetik).</li>
+        </ul>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">2.4. School-Wide Positive Behavioral Interventions &amp; Supports (SWPBIS)</h3>
+        <p>
+          Pendekatan lama mengandalkan hukuman reaktif (seperti skorsing, bentakan, atau pengasingan). Pendekatan modern berbasis bukti dalam <strong>Heward et al. (2017, hlm. 191)</strong> menerapkan kerangka **SWPBIS** berbasis tiga tingkat pencegahan:
+        </p>
+        <ul style="padding-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); line-height: 1.8;">
+          <li><strong>Tier 1: Dukungan Perilaku Universal (Untuk Seluruh Siswa ~80-85%):</strong> Sekolah mendefinisikan secara eksplisit 3–5 aturan perilaku positif (misal: *Aman, Hormat, Bertanggung Jawab*), mengajarkan aturan tersebut seperti mengajarkan materi akademik, dan memberikan apresiasi sosial secara konsisten.</li>
+          <li><strong>Tier 2: Dukungan Kelompok Terarah (Untuk Siswa Berisiko ~10-15%):</strong> Intervensi seperti program *Check-In/Check-Out (CICO)* di mana siswa bertemu mentor guru setiap pagi untuk menetapkan target dan menerima umpan balik skor perilaku di akhir hari.</li>
+          <li><strong>Tier 3: Rencana Intervensi Perilaku Intensif (BIP Individual ~1-5%):</strong> Berdasarkan hasil uji FBA lengkap, tim merancang **Behavior Intervention Plan (BIP)** yang mengajarkan perilaku pengganti yang fungsional (*functional replacement behavior*) yang lebih positif secara sosial.</li>
+        </ul>
+      </article>
+
+      <!-- SESI 3: GAMES INTERAKTIF (5 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-soft-blue">Fase 3: Game Interaktif Berbasis Suara (5 Menit)</span>
+        <h2>Uji Kasus Interaktif: "Detektif Analisis A-B-C &amp; Fungsi Perilaku"</h2>
+        <p style="margin-top: 0.5rem;">Cermati kasus di bawah ini, aktifkan efek suara jika diinginkan, dan tentukan hipotesis fungsi perilaku yang tepat:</p>
+
+        <div class="game-card">
+          <div class="sound-toggle-bar">
+            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Game: Aktif</button>
+          </div>
+
+          <div class="game-scenario-box">
+            <p style="font-weight: 700; color: #0369a1; margin-bottom: 0.5rem;">STUDI KASUS OBSERVASI KELAS:</p>
+            <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
+              "Setiap kali guru meminta siswa membuka buku latihan matematika untuk mengerjakan soal pecahan aljabar mandiri (<strong>Anteseden</strong>), Danar (11 tahun) langsung membanting kursinya ke lantai, berteriak kotor, dan meremas lembar bukunya (<strong>Perilaku</strong>). Guru kelas segera membentaknya lalu mengirim Danar ke ruang Bimbingan Konseling selama sisa jam pelajaran matematika (<strong>Konsekuensi</strong>). Pola ini berulang setiap hari Selasa dan Kamis."
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-weight: 600;">Berdasarkan kerangka kerja FBA dalam Heward et al. (2017), apa fungsi utama yang mempertahankan perilaku menantang Danar?</p>
+
+          <button class="quiz-option" onclick="evaluateFbaGame('a')">
+            A. Danar mencari perhatian guru dan ingin dihukum di depan teman-temannya.
+          </button>
+          <button class="quiz-option" onclick="evaluateFbaGame('b')">
+            B. Fungsi Melarikan Diri / Menghindar (*Escape / Avoidance*): Tindakan membanting kursi dan dikirim ke ruang BK berhasil membuat Danar lolos dari tugas matematika yang dianggapnya terlalu sulit.
+          </button>
+          <button class="quiz-option" onclick="evaluateFbaGame('c')">
+            C. Danar mengalami kerusakan otot motorik kasar pada kedua tangannya sehingga tidak sengaja menjatuhkan kursi.
+          </button>
+          <button class="quiz-option" onclick="evaluateFbaGame('d')">
+            D. Fungsi mendapatkan akses barang konkret (*Tangible*): Danar ingin mengoleksi kursi sekolah.
+          </button>
+
+          <div id="game-feedback" class="quiz-feedback"></div>
+        </div>
+      </article>
+
+      <!-- SESI 4: TANYA JAWAB & CLOSING -->
+      <article class="content-card">
+        <span class="section-label badge-mint">Fase 4: Tanya Jawab &amp; Pernyataan Penutup</span>
+        <h2>Refleksi Akhir: Mengubah Hukuman Menjadi Pengajaran Perilaku</h2>
+        <p style="margin-top: 0.75rem;">
+          Pendidik ortopedagogik sejati tidak merespons perilaku bermasalah dengan amarah atau hukuman balas dendam. Perilaku adalah bentuk komunikasi anak saat kata-kata mereka buntu. Melalui analisis fungsional yang objektif dan empati pedagogis, kita tidak hanya menghentikan perilaku yang mengganggu, melainkan membimbing Anak Berkebutuhan Khusus menguasai keterampilan hidup pengganti yang bermartabat.
+        </p>
+        <div class="quote-box" style="border-left-color: var(--accent-mint); background: #f0fdf4;">
+          “If a child doesn't know how to read, we teach. If a child doesn't know how to swim, we teach. If a child doesn't know how to behave, do we teach or do we punish? We must teach behavior just as we teach any academic subject.”
+          <footer>— Tom Herner (Dikutip dalam literatur implementasi PBIS modern)</footer>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 2: WORKSHEET MAHASISWA & SOAL BERGAMBAR (PRINTABLE TO PDF)
+         ========================================================================= -->
+    <section id="worksheet-view" class="view-section">
+      <div class="print-action-bar">
+        <div>
+          <h3 style="color: #0369a1;">Lembar Aktivitas Mahasiswa &amp; Portofolio FBA (LKM 07)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan analisis diagram matriks perilaku dan 5 butir soal pemecahan masalah kasus bergambar di bawah ini, lalu simpan/cetak dalam format PDF.</p>
+        </div>
+        <button class="btn-download-pdf" style="background: #0284c7;" onclick="window.print()">
+          <span>🖨️ Cetak / Unduh PDF</span>
+        </button>
+      </div>
+
+      <div class="worksheet-paper">
+        <header style="border-bottom: 2px solid #111; padding-bottom: 1rem; margin-bottom: 2rem;">
+          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.3rem;">Lembar Kerja Asesmen Perilaku Fungsional (FBA) &amp; Uji Kasus Bergambar</h2>
+          <p style="text-align: center; font-size: 0.9rem; color: #555;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005) &amp; Heward et al. (2017)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem;">
+            <div><strong>Nama Calon Guru:</strong> ____________________________________</div>
+            <div><strong>NIM / Kelas:</strong> ____________________________________</div>
+            <div><strong>Tanggal Pertemuan:</strong> ____________________________________</div>
+            <div><strong>Nilai Verifikasi Dosen:</strong> ____________________________________</div>
+          </div>
+        </header>
+
+        <!-- TUGAS 1: TABEL LOG OBSERVASI A-B-C -->
+        <div class="worksheet-field">
+          <label>BAGIAN A: PERANCANGAN FORMULIR CATATAN LOG PENGAMATAN A-B-C (FBA OBSERVATION)</label>
+          <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.75rem; line-height: 1.5;">
+            <em>Instruksi:</em> Pilih salah satu kasus perilaku di sekolah inklusi (contoh: siswa ADHD yang terus meninggalkan tempat duduk saat diskusi atau siswa EBD yang memukul meja saat tidak diajak bermain). Formulasikan tabel observasi A-B-C secara operasional:
+          </p>
+
+          <table style="width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 0.88rem;">
+            <thead>
+              <tr style="background: #f1f5f9;">
+                <th style="border: 1px solid #cbd5e1; padding: 0.6rem;">Anteseden (A) Pemicu</th>
+                <th style="border: 1px solid #cbd5e1; padding: 0.6rem;">Perilaku Target (B) Teramati</th>
+                <th style="border: 1px solid #cbd5e1; padding: 0.6rem;">Konsekuensi (C) Respons Sekitar</th>
+                <th style="border: 1px solid #cbd5e1; padding: 0.6rem;">Hipotesis Fungsi Perilaku</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #cbd5e1; padding: 0.8rem; height: 70px;"></td>
+                <td style="border: 1px solid #cbd5e1; padding: 0.8rem;"></td>
+                <td style="border: 1px solid #cbd5e1; padding: 0.8rem;"></td>
+                <td style="border: 1px solid #cbd5e1; padding: 0.8rem;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- TUGAS 2: SOAL ANALISIS BERGAMBAR -->
+        <div class="worksheet-field" style="margin-top: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">
+            <label style="font-size: 1.05rem; color: #0284c7; margin: 0;">
+              BAGIAN B: SOAL APLIKASI KASUS BERGAMBAR &amp; ANALISIS PEMECAHAN MASALAH
+            </label>
+            <button type="button" class="btn-ctrl secondary" style="font-size: 0.78rem; padding: 0.35rem 0.8rem; background: var(--bg-subtle); color: var(--text-main); border: 1px solid var(--border-color);" onclick="promptLecturerAuth()">
+              🔒 Buka Kunci Jawaban (Khusus Dosen)
+            </button>
+          </div>
+
+          <!-- KASUS BERGAMBAR 1: Piramida SWPBIS -->
+          <div style="margin-bottom: 2rem; border: 1px solid #e2e8e4; padding: 1.25rem; border-radius: 8px;">
+            <p><strong>Soal Bergambar 1: Mengidentifikasi Tingkat Dukungan PBIS</strong></p>
+            <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 0.8rem;">Perhatikan diagram piramida multitaraf intervensi perilaku di bawah ini:</p>
+            
+            <!-- Visual SVG Mini Piramida PBIS -->
+            <div style="text-align: center; margin: 1rem 0;">
+              <svg viewBox="0 0 500 200" width="100%" height="auto" style="max-width: 420px; font-family: sans-serif;">
+                <polygon points="250,20 310,80 190,80" fill="#ef4444"/>
+                <text x="250" y="60" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">Tier 3 (~1-5%)</text>
+                
+                <polygon points="185,85 315,85 365,140 135,140" fill="#f59e0b"/>
+                <text x="250" y="118" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">Tier 2 (~10-15%)</text>
+                
+                <polygon points="130,145 370,145 420,195 80,195" fill="#10b981"/>
+                <text x="250" y="175" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">Tier 1 (Universal: ~80-85% Seluruh Siswa)</text>
+              </svg>
+            </div>
+
+            <p style="font-size: 0.92rem; line-height: 1.6;">
+              <strong>Pertanyaan:</strong> Seorang siswa dengan gangguan perilaku agresif berat telah menerima pengajaran aturan perilaku positif di Tier 1 dan bimbingan mentor harian CICO di Tier 2, namun tetap menunjukkan perilaku destruktif. Tindakan spesifik apa yang wajib diambil oleh tim sekolah pada <strong>Tier 3</strong> menurut rujukan Heward et al. (2017)?
+            </p>
+            <textarea rows="3" placeholder="Tuliskan analisis tindakan FBA komprehensif dan penyusunan BIP individual..."></textarea>
+            <div id="key-img-1" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #e0f2fe; border-left: 3px solid #0284c7; font-size: 0.85rem; color: #0369a1;">
+              <strong>Kunci Dosen:</strong> Melakukan Asesmen Perilaku Fungsional (FBA) individual secara formal, merumuskan hipotesis fungsi perilaku, dan merancang Rencana Intervensi Perilaku (Behavior Intervention Plan / BIP) yang mengajarkan perilaku pengganti fungsional yang setara (*functionally equivalent replacement behavior*).
+            </div>
+          </div>
+
+          <!-- KASUS BERGAMBAR 2: Sistem Ekonomi Token -->
+          <div style="margin-bottom: 2rem; border: 1px solid #e2e8e4; padding: 1.25rem; border-radius: 8px;">
+            <p><strong>Soal Bergambar 2: Analisis Rancangan Kartu Token Ekonomi</strong></p>
+            <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 0.8rem;">Perhatikan matriks kartu penguatan perilaku (*Token Board*) berikut:</p>
+            
+            <div class="token-grid">
+              <div class="token-item">⭐ Bintang 1: Masuk Tepat Waktu</div>
+              <div class="token-item">⭐ Bintang 2: Mendengarkan Guru</div>
+              <div class="token-item">⭐ Bintang 3: Selesai 5 Soal</div>
+              <div class="token-item" style="border: 2px dashed #059669; background: #f0fdf4;">🎯 Hadiah: 10 Menit Bermain Puzzle</div>
+            </div>
+
+            <p style="font-size: 0.92rem; line-height: 1.6; margin-top: 1rem;">
+              <strong>Pertanyaan:</strong> Jelaskan mengapa teknik modifikasi perilaku berbasis <em>Token Economy</em> seperti diagram di atas sangat efektif bagi anak dengan ADHD ditinjau dari teori Russell Barkley mengenai kelemahan regulasi motivasi internal!
+            </p>
+            <textarea rows="3" placeholder="Tuliskan penjelasan mengenai kebutuhan penguatan eksternal yang segera dan konkret..."></textarea>
+            <div id="key-img-2" class="lecturer-key-box" style="display: none; margin-top: 0.5rem; padding: 0.5rem 0.8rem; background: #e0f2fe; border-left: 3px solid #0284c7; font-size: 0.85rem; color: #0369a1;">
+              <strong>Kunci Dosen:</strong> Anak dengan ADHD mengalami defisit motivasi intrinsik dan kepekaan rendah terhadap penghargaan yang ditunda. Sistem token menghadirkan penguatan eksternal yang nyata, berjarak waktu singkat, visual, dan langsung (*immediate reinforcement*) untuk menjembatani keterbatasan motivasi internal otak depan.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 3: INTERACTIVE PRESENTATION MODE (SLIDE INTERAKTIF DOSEN)
+         ========================================================================= -->
+    <section id="presentation-view" class="view-section">
+      
+      <div class="presentation-frame" style="background: #0f172a;">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide-item active">
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 1 dari 6 • Orientasi ADHD &amp; EBD</span>
+          <h2>ADHD, Gangguan Emosi/Perilaku, &amp; FBA</h2>
+          <div class="slide-body">
+            <p>Membongkar Mitos "Anak Nakal" Menuju Intervensi Ilmiah Berbasis Bukti:</p>
+            <ul>
+              <li>ADHD sebagai gangguan inhibisi perilaku neurobiologis, bukan cacat karakter.</li>
+              <li>Spektrum EBD: Perilaku eksternalisasi (agresi) vs internalisasi (kecemasan).</li>
+              <li>Sintesis komparatif Hallahan &amp; Kauffman (2005) dan William L. Heward (2017).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen (10 Menit Awal):</strong> Buka perkuliahan dengan meminta mahasiswa menuliskan 1 kata saat mendengar anak yang berteriak-teriak di kelas. Diskusikan pergeseran dari "menghukum kesalahan" menuju "mengajarkan perilaku pengganti".
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 2 dari 6 • Model Neurobiologis</span>
+          <h2>Hakikat ADHD: Disfungsi Inhibisi Perilaku</h2>
+          <div class="slide-body">
+            <p>Model Russell Barkley dalam Hallahan &amp; Kauffman (2005):</p>
+            <ul>
+              <li><strong>Bukan Defisit Perhatian Semata:</strong> Kegagalan menunda respons impulsif awal.</li>
+              <li><strong>Empat Fungsi Eksekutif Terganggu:</strong> Memori kerja nonverbal, internalisasi bahasa batin (*self-talk*), regulasi emosi/motivasi, dan rekonstitusi solusi.</li>
+              <li>Penempatan regulasi hukum: Diakomodasi di bawah payung *Other Health Impairments (OHI)*.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Jelaskan bahwa anak ADHD tahu apa yang harus dilakukan, tetapi otak mereka gagal mengeksekusi pengetahuan tersebut pada saat yang tepat (*performance problem, not a knowledge problem*).
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 3 dari 6 • Klasifikasi EBD</span>
+          <h2>Spektrum EBD: Eksternalisasi vs Internalisasi</h2>
+          <div class="slide-body">
+            <p>Dua Wajah Manifestasi Gangguan Emosi atau Perilaku:</p>
+            <ul>
+              <li><strong>Eksternalisasi:</strong> Agresi fisik, pembangkangan aturan (*noncompliance*), merusak barang (mudah dirujuk karena berisik di kelas).</li>
+              <li><strong>Internalisasi:</strong> Menarik diri dari pertemanan, depresi, fobia sosial, melukai diri (berbahaya karena kerap luput dari perhatian guru).</li>
+              <li>Kriteria IDEA: Berlangsung dalam jangka panjang dan derajat keparahan yang nyata.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Ingatkan mahasiswa sebagai calon pendidik untuk lebih peka terhadap anak yang selalu menyendiri di pojok kelas (internalisasi), bukan hanya anak yang sering membuat keributan.
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 4 dari 6 • Metodologi FBA</span>
+          <h2>Functional Behavioral Assessment (FBA)</h2>
+          <div class="slide-body">
+            <p>Menyelidiki "MENGAPA" Perilaku Muncul (Heward et al., 2017):</p>
+            <ul>
+              <li><strong>Kontingensi Tiga Istilah A-B-C:</strong> Anteseden (pemicu), Perilaku operasional, dan Konsekuensi (hasil).</li>
+              <li><strong>Empat Fungsi Universal:</strong> Menghindar (*escape*), mencari perhatian (*attention*), mendapatkan barang (*tangible*), atau stimulasi sensori (*automatic*).</li>
+              <li>Kunci Intervensi: Mengubah anteseden dan mengganti konsekuensi pemicu.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Tunjukkan bahwa hukuman mengeluarkan siswa dari kelas kerap justru memperkuat perilaku buruk jika tujuan awal siswa memang ingin menghindari tugas yang sulit!
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 5 dari 6 • Kerangka SWPBIS</span>
+          <h2>Dukungan Perilaku Positif Skala Sekolah (SWPBIS)</h2>
+          <div class="slide-body">
+            <p>Piramida Multitaraf Intervensi Perilaku:</p>
+            <ul>
+              <li><strong>Tier 1 (Universal ~80-85%):</strong> Definisi aturan positif eksplisit dan penghargaan sosial bagi seluruh siswa sekolah.</li>
+              <li><strong>Tier 2 (Terarah ~10-15%):</strong> Program mentor harian *Check-In/Check-Out (CICO)* untuk siswa berisiko.</li>
+              <li><strong>Tier 3 (Intensif ~1-5%):</strong> Rencana Intervensi Perilaku (BIP) individual berdasarkan data asesmen FBA resmi.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Tekankan prinsip SWPBIS: Mengajarkan perilaku yang benar jauh lebih efektif daripada menunggu siswa bersalah lalu menghukumnya.
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: #38bdf8;">Slide 6 dari 6 • Rangkuman &amp; Aksi</span>
+          <h2>Closing Thought: Pendidikan Perilaku Humanis</h2>
+          <div class="slide-body">
+            <p>Kaidah Emas Pendidik Ortopedagogik:</p>
+            <ul>
+              <li>Ubah lingkungan belajar sebelum menuntut perubahan perilaku anak.</li>
+              <li>Ajarkan perilaku pengganti yang fungsional secara eksplisit dan konsisten.</li>
+              <li>Minggu Depan: Ujian Tengah Semester (UTS) — Evaluasi Komprehensif Pertemuan 1 s.d. 7.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-box">
+            <strong>Catatan Dosen:</strong> Berikan pengarahan persiapan teknis Ujian Tengah Semester (UTS) pekan depan yang berbasis analisis studi kasus terpadu.
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <footer class="slide-controls" style="border-top: 1px solid rgba(255, 255, 255, 0.15);">
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-ctrl secondary" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+            <button class="btn-ctrl" style="background: #0284c7;" onclick="changeSlide(1)">Selanjutnya ❯</button>
+          </div>
+          <button class="btn-ctrl secondary" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Dosen</button>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LOGIKA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Pengalihan Tab Navigasi
+    function switchView(targetViewId, buttonElement) {
+      document.querySelectorAll('.view-section').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(targetViewId).classList.add('active');
+      buttonElement.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Web Audio API Synthesizer (Efek Suara Mini Game Bawaan Browser)
+    let audioFxEnabled = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTone(type) {
+      if (!audioFxEnabled) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'success') {
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.25); // G5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } else {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+        osc.frequency.exponentialRampToValueAtTime(130.81, audioCtx.currentTime + 0.25); // C3
+        gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      }
+    }
+
+    function toggleAudioFx() {
+      audioFxEnabled = !audioFxEnabled;
+      const btn = document.getElementById('sound-btn');
+      if (audioFxEnabled) {
+        btn.classList.add('active');
+        btn.textContent = '🔊 Suara Game: Aktif';
+      } else {
+        btn.classList.remove('active');
+        btn.textContent = '🔇 Suara Game: Hening';
+      }
+    }
+
+    // 3. Evaluasi Mini Game Pertemuan 7
+    function evaluateFbaGame(choice) {
+      const feedback = document.getElementById('game-feedback');
+      feedback.style.display = 'block';
+
+      if (choice === 'b') {
+        playTone('success');
+        feedback.style.background = '#d1fae5';
+        feedback.style.color = '#065f46';
+        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Berdasarkan analisis A-B-C Heward et al. (2017), perilaku Danar berfungsi untuk <em>Escape / Avoidance</em> (menghindari tugas pecahan matematika). Hukuman dikeluarkan ke ruang BK tanpa sadar memperkuat perilaku tersebut karena anak berhasil melarikan diri dari tuntutan akademik yang sulit.';
+      } else {
+        playTone('error');
+        feedback.style.background = '#fee2e2';
+        feedback.style.color = '#991b1b';
+        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan konsekuensi akhirnya: Danar tidak lagi harus mengerjakan tugas matematika di kelas. Ini adalah indikator klasik fungsi melarikan diri dari tugas (*escape function*).';
+      }
+    }
+
+    // 4. Proteksi Kunci Jawaban Soal Bergambar (Khusus Dosen)
+    function promptLecturerAuth() {
+      const pwd = prompt("Masukkan kata sandi dosen pengampu untuk membuka kunci pembahasan kasus:");
+      if (pwd === "dosenorto" || pwd === "ortopedagogik") {
+        document.querySelectorAll('.lecturer-key-box').forEach(box => {
+          box.style.display = 'block';
+        });
+        alert("Autentikasi berhasil. Kunci jawaban dan anotasi rujukan buku telah terbuka.");
+      } else if (pwd !== null) {
+        alert("Kata sandi salah. Akses kunci jawaban hanya diperuntukkan bagi dosen pengampu.");
+      }
+    }
+
+    // 5. Pengendali Slide Presentasi Dosen
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+
+    function updateSlideDisplay() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+      updateSlideDisplay();
+    }
+
+    function toggleSpeakerNotes() {
+      const activeSlide = slides[currentSlide];
+      const notes = activeSlide.querySelector('.speaker-notes-box');
+      if (notes) {
+        notes.style.display = (notes.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // Navigasi Keyboard untuk Slide
+    document.addEventListener('keydown', (e) => {
+      const presView = document.getElementById('presentation-view');
+      if (presView.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
