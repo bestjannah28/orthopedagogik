@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 11: Disabilitas Sensori (Netra &amp; Rungu) - Ortopedagogik</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    / Variasi Tema Cerah Gen Z (Bright Palette) dengan Aksen Ungu, Oranye, dan Biru /
+    :root {
+      --gz-purple: #7c3aed;
+      --gz-purple-light: #f3e8ff;
+      --gz-orange: #f97316;
+      --gz-orange-light: #ffedd5;
+      --gz-blue: #0284c7;
+      --gz-blue-light: #e0f2fe;
+      --gz-card-bright: #ffffff;
+      --gz-bg-bright: #fafcfb;
+      --gz-text-dark: #0f172a;
+    }
+    body {
+      background-color: var(--gz-bg-bright);
+    }
+    .badge-purple {
+      background: var(--gz-purple-light);
+      color: var(--gz-purple);
+      font-weight: 800;
+    }
+    .badge-orange {
+      background: var(--gz-orange-light);
+      color: #c2410c;
+      font-weight: 800;
+    }
+    .badge-blue {
+      background: var(--gz-blue-light);
+      color: var(--gz-blue);
+      font-weight: 800;
+    }
+    .card-purple-bright {
+      border-left: 4px solid var(--gz-purple);
+      background: #faf5ff;
+    }
+    .card-orange-bright {
+      border-left: 4px solid var(--gz-orange);
+      background: #fff7ed;
+    }
+    .card-blue-bright {
+      border-left: 4px solid var(--gz-blue);
+      background: #f0f9ff;
+    }
+    .presentation-frame-bright {
+      background: #ffffff;
+      color: #1e293b;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      min-height: 540px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-lg);
+    }
+    .presentation-frame-bright h2 {
+      color: #0f172a;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      margin-bottom: 1.25rem;
+    }
+    .presentation-frame-bright .slide-body {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #334155;
+    }
+    .presentation-frame-bright .slide-body li {
+      margin-bottom: 0.85rem;
+      position: relative;
+      padding-left: 1.8rem;
+    }
+    .presentation-frame-bright .slide-body li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--gz-purple);
+      font-weight: 800;
+    }
+    .speaker-notes-bright {
+      margin-top: 1.5rem;
+      background: #f8fafc;
+      border-left: 3px solid var(--gz-orange);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: #475569;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span style="color: var(--gz-purple);">ORTOPEDAGOGIK</span>
+        <span class="pill badge-purple">Pertemuan 11</span>
+      </div>
+      <nav class="view-tabs" role="tablist">
+        <button class="tab-btn active" onclick="switchView('reading-view', this)">Modul Bacaan Lengkap</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja &amp; Kasus</button>
+        <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Dosen</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- =========================================================================
+         BAGIAN 1: WEB PAGE PRESENTATION (BACAAN MANDIRI DOSEN & MAHASISWA)
+         ========================================================================= -->
+    <section id="reading-view" class="view-section active">
+      
+      <!-- HERO BANNER (LATAR CERAH) -->
+      <header class="hero-box" style="background: linear-gradient(135deg, #f3e8ff 0%, #ffedd5 50%, #e0f2fe 100%);">
+        <span class="section-label badge-purple">Modul Keilmuan Ortopedagogik</span>
+        <h1 style="color: var(--gz-text-dark);">Disabilitas Sensori: Hambatan Penglihatan (Tunanetra) dan Hambatan Pendengaran (Tunarungu)</h1>
+        <p>Telaah ortopedagogik komprehensif: distingsi definisi legal-medis versus kebutuhan instruksional, literasi Braille, Expanded Core Curriculum (ECC), Orientasi dan Mobilitas (O&amp;M), patofisiologi kehilangan auditori, modalitas komunikasi lisan-manual, identitas Budaya Tuli, serta desain aksesibilitas lingkungan kelas inklusi.</p>
+        <div class="hero-meta">
+          <span>⏱ Durasi: 2 SKS (100 Menit)</span>
+          <span>📚 Rujukan: Hallahan &amp; Kauffman (2005, Bab 11 &amp; 12) &amp; Heward et al. (2017, Bab 9 &amp; 10)</span>
+          <span>🎯 Capaian: Analisis Kebutuhan Kompensatoris Sensori &amp; Penataan Aksesibilitas Kelas</span>
+        </div>
+      </header>
+
+      <!-- SESI 1: PENDAHULUAN (10 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-orange">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
+        <h2>1. Indra Jarak Jauh (Distance Senses) dan Jendela Menuju Dunia</h2>
+        <p style="margin-top: 0.75rem;">
+          Penglihatan dan pendengaran adalah dua indra jarak jauh (distance senses) yang memungkinkan manusia menyerap informasi lingkungan secara simultan, terpadu, dan tanpa perlu bersentuhan fisik secara langsung. Ketika salah satu dari saluran sensoris utama ini mengalami kerusakan atau disfungsi struktural, individu tidak kehilangan kecerdasan kognitifnya, melainkan kehilangan <strong>jalur primer transmisi informasi sensori</strong>.
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--gz-blue); background: #f0f9ff;">
+          “Blindness does not restrict a person’s ability to think, reason, or imagine; it restricts access to the visual environment. Similarly, deafness is not an inability to learn language, but a profound barrier to accessing spoken language. The educational task is to provide alternative pathways for information and communication.”
+          <footer>— Daniel P. Hallahan &amp; James M. Kauffman (2005, hlm. 352)</footer>
+        </div>
+
+        <div class="grid-two-col">
+          <div class="accent-card card-purple-bright">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--gz-purple);">Mitos "Kompensasi Indra Super Otomatis"</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Buku teks Hallahan &amp; Kauffman (2005) membantah mitos lama bahwa orang buta secara otomatis terlahir dengan indra pendengaran atau peraba yang lebih tajam layaknya manusia super. Ketajaman taktil dan auditori pada tunanetra adalah <strong>hasil dari latihan intensif, adaptasi kompensatoris, dan pengalaman belajar yang disengaja</strong>, bukan mukjizat biologis bawaan.
+            </p>
+          </div>
+          <div class="accent-card card-orange-bright">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--gz-orange);">Budaya Tuli (Deaf Culture) vs Patologi Medis</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Heward et al. (2017) menggarisbawahi paradoks sosiologis: komunitas Tuli memandang diri mereka bukan sebagai kelompok penderita kecacatan (disability), melainkan sebagai <strong>minoritas linguistik dan kultural (Deaf Culture dengan huruf 'D' kapital)</strong> yang memiliki bahasa visual utuh, norma sosial, dan warisan nilai tersendiri.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 2: MATERI INTI (45 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-blue">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
+        <h2>2. Bagian I: Anak Berkebutuhan Khusus dengan Hambatan Penglihatan (Tunanetra)</h2>
+        <p style="margin-top: 0.75rem;">
+          Mengacu langsung pada <strong>Heward et al. (2017, hlm. 332–336)</strong> dan <strong>Hallahan &amp; Kauffman (2005, hlm. 386–390)</strong>, pemahaman ortopedagogik membedakan klasifikasi penglihatan ke dalam dua lensa:
+        </p>
+
+        <div class="grid-two-col" style="margin-top: 1rem;">
+          <div class="accent-card card-blue-bright">
+            <h4 style="color: var(--gz-blue); margin-bottom: 0.35rem;">1. Definisi Legal-Medis (Clinical Definition)</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Berpijak pada tolok ukur uji ketajaman visus Snellen dan luas lapang pandang:
+              <br>• <strong>Kebutaan Legal (Legal Blindness):</strong> Ketajaman visual $20/200$ atau kurang pada mata terbaik setelah koreksi kacamata optimal, atau lapang pandang menyempit ekstrem tidak melebihi busur sudut $20^\circ$ (tunnel vision).
+              <br>• <strong>Kurang Lihat (Partially Sighted / Low Vision):</strong> Ketajaman visual berada di antara rentang $20/70$ dan $20/200$ pada mata terbaik dengan lensa koreksi.
+            </p>
+          </div>
+          <div class="accent-card card-purple-bright">
+            <h4 style="color: var(--gz-purple); margin-bottom: 0.35rem;">2. Definisi Pedagogis-Edukatif (Educational Definition)</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Berpijak pada modalitas sensoris utama yang digunakan untuk belajar membaca:
+              <br>• <strong>Siswa Buta Total (Totally Blind / Braille Reader):</strong> Mengalami keterbatasan visual sedemikian rupa sehingga belajar membaca murni mengandalkan indra peraba taktil (huruf Braille) dan indra pendengaran auditori.
+              <br>• <strong>Siswa Kurang Lihat (Low Vision Reader):</strong> Masih mampu membaca teks cetak standar dengan bantuan alat optik pembesar (magnifier), huruf cetak besar (large print), atau modifikasi pencahayaan.
+            </p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">2.1. Kurikulum Inti yang Diperluas (Expanded Core Curriculum / ECC)</h3>
+        <p>
+          Heward et al. (2017) menekankan bahwa peserta didik tunanetra tidak cukup hanya diajarkan kurikulum akademik umum. Mereka membutuhkan Expanded Core Curriculum (ECC) yang mencakup 9 ranah kompensatoris:
+        </p>
+
+        <!-- DIAGRAM 1: 9 RANAH EXPANDED CORE CURRICULUM (SVG CERAH) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 320" width="100%" height="auto" style="max-height: 340px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="eccGrad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+              <linearGradient id="eccGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f97316"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+              <linearGradient id="eccGrad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+            </defs>
+
+            <!-- Baris 1 -->
+            <rect x="25" y="25" width="280" height="75" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="2"/>
+            <text x="165" y="55" fill="#7c3aed" font-size="12" font-weight="800" text-anchor="middle">1. KETERAMPILAN KOMPENSATORIS</text>
+            <text x="165" y="78" fill="#475569" font-size="10.5" text-anchor="middle">Literasi Braille &amp; Kode Nemeth Matematika</text>
+
+            <rect x="330" y="25" width="280" height="75" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+            <text x="470" y="55" fill="#ea580c" font-size="12" font-weight="800" text-anchor="middle">2. ORIENTASI &amp; MOBILITAS (O&amp;M)</text>
+            <text x="470" y="78" fill="#475569" font-size="10.5" text-anchor="middle">Navigasi Tongkat Putih &amp; Pemetaan Mental</text>
+
+            <rect x="635" y="25" width="280" height="75" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2"/>
+            <text x="775" y="55" fill="#0284c7" font-size="12" font-weight="800" text-anchor="middle">3. INTERAKSI SOSIAL</text>
+            <text x="775" y="78" fill="#475569" font-size="10.5" text-anchor="middle">Membaca Isyarat Suara &amp; Menjaga Arah Wajah</text>
+
+            <!-- Baris 2 -->
+            <rect x="25" y="115" width="280" height="75" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2"/>
+            <text x="165" y="145" fill="#0284c7" font-size="12" font-weight="800" text-anchor="middle">4. HIDUP MANDIRI (ADL)</text>
+            <text x="165" y="168" fill="#475569" font-size="10.5" text-anchor="middle">Mengenali Nilai Uang, Masak, &amp; Menata Baju</text>
+
+            <rect x="330" y="115" width="280" height="75" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="2"/>
+            <text x="470" y="145" fill="#7c3aed" font-size="12" font-weight="800" text-anchor="middle">5. REKREASI &amp; WAKTU LUANG</text>
+            <text x="470" y="168" fill="#475569" font-size="10.5" text-anchor="middle">Olahraga Goalball &amp; Catur Adaptif Taktil</text>
+
+            <rect x="635" y="115" width="280" height="75" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+            <text x="775" y="145" fill="#ea580c" font-size="12" font-weight="800" text-anchor="middle">6. TEKNOLOGI ASISTIF</text>
+            <text x="775" y="168" fill="#475569" font-size="10.5" text-anchor="middle">Screen Reader (NVDA/JAWS) &amp; Display Braille</text>
+
+            <!-- Baris 3 -->
+            <rect x="25" y="205" width="280" height="75" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+            <text x="165" y="235" fill="#ea580c" font-size="12" font-weight="800" text-anchor="middle">7. PENDIDIKAN KARIER</text>
+            <text x="165" y="258" fill="#475569" font-size="10.5" text-anchor="middle">Eksplorasi Vokasional &amp; Transisi Kerja</text>
+
+            <rect x="330" y="205" width="280" height="75" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2"/>
+            <text x="470" y="235" fill="#0284c7" font-size="12" font-weight="800" text-anchor="middle">8. EFISIENSI SENSORIS</text>
+            <text x="470" y="258" fill="#475569" font-size="10.5" text-anchor="middle">Diskriminasi Taktil &amp; Auditori Halus</text>
+
+            <rect x="635" y="205" width="280" height="75" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="2"/>
+            <text x="775" y="235" fill="#7c3aed" font-size="12" font-weight="800" text-anchor="middle">9. DETERMINASI DIRI</text>
+            <text x="775" y="258" fill="#475569" font-size="10.5" text-anchor="middle">Advokasi Mandiri Hak Aksesibilitas Publik</text>
+          </svg>
+          <div class="diagram-caption">Diagram 1: Sembilan Pilar Kurikulum Inti yang Diperluas (Expanded Core Curriculum / ECC) Menurut Heward et al. (2017)</div>
+        </div>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">3. Bagian II: Anak Berkebutuhan Khusus dengan Hambatan Pendengaran (Tunarungu)</h3>
+        <p style="margin-top: 0.75rem;">
+          Menurut <strong>Hallahan &amp; Kauffman (2005, hlm. 350–358)</strong> dan <strong>Heward et al. (2017, hlm. 296–304)</strong>, kehilangan pendengaran diklasifikasikan berdasarkan aspek anatomis dan tingkat keparahan desibel (dB):
+        </p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Tipe Kehilangan Pendengaran</th>
+                <th>Lokasi Patologi Kerusakan Organ</th>
+                <th>Karakteristik Klinis &amp; Implikasi Instruksional</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Tuli Konduktif (Conductive Hearing Loss)</strong></td>
+                <td>Telinga bagian luar (liang telinga tersumbat) atau telinga bagian tengah (kerusakan gendang telinga atau tulang pendengaran malleus, incus, stapes).</td>
+                <td>Intensitas suara teredam atau mengecil, namun kejelasan bunyi (clarity) umumnya utuh jika volume dikeraskan. Sering kali bersifat medis sementara dan dapat dibantu operasi atau alat bantu dengar (ABD).</td>
+              </tr>
+              <tr>
+                <td><strong>2. Tuli Sensorineural (Sensorineural Hearing Loss)</strong></td>
+                <td>Telinga bagian dalam (kerusakan sel rambut koklea pada organ Corti) atau kerusakan pada saraf pendengaran kranial VIII menuju otak.</td>
+                <td>Suara tidak hanya melemah volumenya, namun mengalami distorsi kejelasan parah (distorted clarity). Suara keras terasa menyakitkan (recruitment), bersifat permanen, dan dapat dipertimbangkan untuk implan koklea (cochlear implant).</td>
+              </tr>
+              <tr>
+                <td><strong>3. Tuli Campuran (Mixed Hearing Loss)</strong></td>
+                <td>Kombinasi simultan antara masalah transmisi konduktif dan kerusakan saraf sensorineural.</td>
+                <td>Menuntut intervensi medis berkelanjutan dan adaptasi alat bantu dengar yang dikalibrasi khusus.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- DIAGRAM 2: KONTINUM METODE KOMUNIKASI SISWA TULI (SVG CERAH) -->
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">3.1. Kontroversi Filosofis Metode Komunikasi Pendidikan Tunarungu</h3>
+        <p>
+          Buku teks rujukan mengulas perdebatan historis mendalam mengenai pendekatan komunikasi yang paling memanusiakan siswa Tuli:
+        </p>
+
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 260" width="100%" height="auto" style="max-height: 280px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="oralGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+              <linearGradient id="totGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ea580c"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+              <linearGradient id="manGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+            </defs>
+
+            <!-- Box 1: Pendekatan Oral/Aural -->
+            <rect x="25" y="30" width="275" height="200" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2"/>
+            <rect x="25" y="30" width="275" height="38" rx="10" fill="url(#oralGrad)"/>
+            <text x="162" y="55" fill="#ffffff" font-size="11.5" font-weight="800" text-anchor="middle">1. PENDEKATAN ORAL / AURAL</text>
+            <text x="162" y="95" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Integrasi Dunia Mendengar</text>
+            <text x="162" y="125" fill="#475569" font-size="10.5" text-anchor="middle">• Membaca bibir / ujaran (Speechreading)</text>
+            <text x="162" y="145" fill="#475569" font-size="10.5" text-anchor="middle">• Pemanfaatan sisa pendengaran maksimal</text>
+            <text x="162" y="165" fill="#475569" font-size="10.5" text-anchor="middle">• Latihan bicara oral intensif</text>
+            <text x="162" y="200" fill="#0369a1" font-size="10" font-weight="700" text-anchor="middle">"Fokus: Asimilasi Bahasa Lisan"</text>
+
+            <!-- Box 2: Komunikasi Total -->
+            <rect x="330" y="30" width="280" height="200" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+            <rect x="330" y="30" width="280" height="38" rx="10" fill="url(#totGrad)"/>
+            <text x="470" y="55" fill="#ffffff" font-size="11.5" font-weight="800" text-anchor="middle">2. KOMUNIKASI TOTAL (TC)</text>
+            <text x="470" y="95" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Jembatan Segala Modalitas</text>
+            <text x="470" y="125" fill="#475569" font-size="10.5" text-anchor="middle">• Kombinasi simultan bicara &amp; isyarat</text>
+            <text x="470" y="145" fill="#475569" font-size="10.5" text-anchor="middle">• Membaca bibir + ejaan jari (fingerspelling)</text>
+            <text x="470" y="165" fill="#475569" font-size="10.5" text-anchor="middle">• Dukungan visual gambar terintegrasi</text>
+            <text x="470" y="200" fill="#c2410c" font-size="10" font-weight="700" text-anchor="middle">"Fokus: Keluwesan Pragmatik"</text>
+
+            <!-- Box 3: Pendekatan Bilingual-Bikultural -->
+            <rect x="640" y="30" width="275" height="200" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="2"/>
+            <rect x="640" y="30" width="275" height="38" rx="10" fill="url(#manGrad)"/>
+            <text x="777" y="55" fill="#ffffff" font-size="11.5" font-weight="800" text-anchor="middle">3. BILINGUAL - BIKULTURAL (BI-BI)</text>
+            <text x="777" y="95" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Pengakuan Budaya Tuli</text>
+            <text x="777" y="125" fill="#475569" font-size="10.5" text-anchor="middle">• Bahasa Isyarat Alami sebagai bahasa ibu (L1)</text>
+            <text x="777" y="145" fill="#475569" font-size="10.5" text-anchor="middle">• Bahasa teks nasional sebagai bahasa kedua (L2)</text>
+            <text x="777" y="165" fill="#475569" font-size="10.5" text-anchor="middle">• Penanaman identitas dan rasa bangga Tuli</text>
+            <text x="777" y="200" fill="#6d28d9" font-size="10" font-weight="700" text-anchor="middle">"Fokus: Hak Bahasa &amp; Kebudayaan"</text>
+          </svg>
+          <div class="diagram-caption">Diagram 2: Tiga Pendekatan Filosofis Komunikasi Siswa Tuli Menurut Hallahan &amp; Kauffman (2005) &amp; Heward et al. (2017)</div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">3.2. Aksesibilitas Lingkungan Kelas Inklusi Ramah Sensori</h3>
+        <p>
+          Bagi guru kelas reguler, Heward et al. (2017) merumuskan panduan penataan fisik kelas:
+        </p>
+        <ul style="padding-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); line-height: 1.8;">
+          <li><strong>Bagi Siswa Tunanetra:</strong> Menjaga susunan perabot kelas tetap konsisten dan segera menginformasikan jika ada perubahan letak meja; pintu ruang kelas harus ditutup penuh atau dibuka penuh (dilarang setengah terbuka); serta menyediakan stopkontak dekat meja untuk gawai pembaca layar elektronik.</li>
+          <li><strong>Bagi Siswa Tunarungu:</strong> Mengatur formasi meja melingkar (horseshoe/U-shape) agar siswa dapat melihat wajah seluruh teman yang sedang berbicara; meminimalisir gema ruangan (ambient noise) dengan memasang karpet atau tirai kain; guru tidak boleh berbicara sambil menghadap papan tulis membelakangi siswa; serta memastikan wajah guru tidak berada dalam posisi silau membelakangi jendela (backlighting).</li>
+        </ul>
+      </article>
+
+      <!-- SESI 3: GAMES INTERAKTIF (5 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-purple">Fase 3: Game Interaktif Berbasis Suara (5 Menit)</span>
+        <h2>Uji Kasus Pedagogis: "Detektif Analisis Kebutuhan Sensori"</h2>
+        <p style="margin-top: 0.5rem;">Cermati kasus klinis-edukatif di bawah ini, aktifkan suara panduan, dan tentukan keputusan ortopedagogik yang tepat:</p>
+
+        <div class="game-card" style="border: 2px dashed #c4b5fd; background: #faf5ff;">
+          <div class="sound-toggle-bar">
+            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Pengarah: Aktif</button>
+          </div>
+
+          <div style="background: #ffffff; border: 1.5px solid #ddd6fe; border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;">
+            <p style="font-weight: 700; color: var(--gz-purple); margin-bottom: 0.4rem;">STUDI KASUS OBSERVASI KELAS INKLUSI:</p>
+            <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
+              "Bima (8 tahun) memiliki ketajaman visual Snellen $20/80$ pada mata terbaiknya setelah memakai kacamata minus tebal. Saat membaca buku cerita anak bergambar, Bima memegang buku sangat dekat ke wajahnya (sekitar 10 cm), sering menyipitkan mata, dan mengeluh pusing setelah 15 menit membaca teks cetak standar kelas 2 SD. Kepala sekolah menyarankan agar Bima langsung diajarkan huruf Braille secara penuh dan dilarang membaca teks cetak."
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-weight: 700; color: #4c1d95;">Berdasarkan kriteria pedagogis Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), evaluasi terhadap saran kepala sekolah tersebut adalah:</p>
+
+          <button class="quiz-option" onclick="evaluateSensoryGame('a')">
+            A. Saran kepala sekolah sangat tepat karena ketajaman visual Bima telah rusak sehingga huruf cetak harus segera dihentikan.
+          </button>
+          <button class="quiz-option" onclick="evaluateSensoryGame('b')">
+            B. Saran kepala sekolah salah besar secara pedagogis; Bima berada pada kategori Kurang Lihat (Low Vision Reader), bukan buta total (Braille reader). Bima berhak memaksimalkan sisa penglihatannya melalui adaptasi teks cetak besar (large print), alat bantu lup optik, dan pencahayaan khusus.
+          </button>
+          <button class="quiz-option" onclick="evaluateSensoryGame('c')">
+            C. Bima sebaiknya dipindahkan ke sekolah khusus tunanetra berasrama tanpa diberi akses kurikulum umum.
+          </button>
+          <button class="quiz-option" onclick="evaluateSensoryGame('d')">
+            D. Bima tidak memerlukan bantuan apa pun karena skor visus $20/80$ adalah penglihatan normal anak-anak.
+          </button>
+
+          <div id="sensory-feedback" class="quiz-feedback"></div>
+        </div>
+      </article>
+
+      <!-- SESI 4: TANYA JAWAB & CLOSING -->
+      <article class="content-card">
+        <span class="section-label badge-orange">Fase 4: Tanya Jawab &amp; Pernyataan Penutup</span>
+        <h2>Refleksi Akhir: Membuka Akses, Merayakan Keberagaman Modalitas</h2>
+        <p style="margin-top: 0.75rem;">
+          Kehilangan indra penglihatan atau pendengaran bukanlah akhir dari kemampuan manusia untuk berpikir, berimajinasi, dan berkarya. Tugas utama pendidikan khusus bukanlah meratapi hilangnya suatu organ sensori, melainkan menghadirkan kurikulum yang aksesibel melalui sentuhan taktil huruf Braille, kekayaan visual bahasa isyarat, dan arsitektur kelas inklusi yang ramah hambatan sensori.
+        </p>
+        <div class="quote-box" style="border-left-color: var(--gz-orange); background: #fff7ed;">
+          “Blindness separates people from things; deafness separates people from people.”
+          <footer>— Helen Keller (Tokoh Penulis &amp; Aktivis Tuli-Buta Dunia)</footer>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 2: WORKSHEET MAHASISWA (TUGAS ANALISIS KASUS - PRINTABLE PDF)
+         ========================================================================= -->
+    <section id="worksheet-view" class="view-section">
+      <div class="print-action-bar">
+        <div>
+          <h3 style="color: var(--gz-purple);">Lembar Aktivitas Mahasiswa: Analisis Kasus Disabilitas Sensori (LKM 11)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan analisis dua studi kasus klinis-edukatif di bawah ini, lalu unduh/cetak dalam format PDF.</p>
+        </div>
+        <button class="btn-download-pdf" style="background: var(--gz-purple);" onclick="window.print()">
+          <span>🖨️ Cetak / Unduh Dokumen (PDF)</span>
+        </button>
+      </div>
+
+      <div class="worksheet-paper">
+        <header style="border-bottom: 2.5px solid #0f172a; padding-bottom: 1.25rem; margin-bottom: 2rem;">
+          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.3rem; color: #0f172a;">LEMBAR KERJA ANALISIS KASUS DISABILITAS SENSORI (NETRA &amp; RUNGU) (LKM 11)</h2>
+          <p style="text-align: center; font-size: 0.9rem; color: #475569;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005) &amp; Heward et al. (2017)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <div><strong>Nama Calon Pendidik:</strong> ____________________________________</div>
+            <div><strong>NIM / Kelas:</strong> ____________________________________</div>
+            <div><strong>Tanggal Sesi:</strong> ____________________________________</div>
+            <div><strong>Nilai / Verifikasi Dosen:</strong> ____________________________________</div>
+          </div>
+        </header>
+
+        <!-- KASUS 1: ADAPTASI PEMBELAJARAN SISWA TUNANETRA DI KELAS SAINS -->
+        <div class="task-img-container">
+          <label style="color: var(--gz-purple); font-size: 1.05rem; display: block; margin-bottom: 0.5rem; font-weight: 800;">
+            KASUS ANALISIS 1: PERANCANGAN ADAPTASI KELAS SAINS BAGI SISWA PEMBACA BRAILLE (BOBOT 50%)
+          </label>
+          <p style="font-size: 0.9rem; color: #1e293b; line-height: 1.6; margin-bottom: 1rem;">
+            <strong>Profil Kasus:</strong> Nabila (10 tahun, kelas 4 SD Inklusi) mengalami kebutaan total (totally blind) sejak lahir akibat retinopati prematuritas (ROP). Nabila mahir membaca huruf Braille dan menggunakan tongkat putih secara mandiri di koridor sekolah. Pada mata pelajaran Ilmu Pengetahuan Alam (IPA) minggu depan, topik yang diajarkan guru kelas adalah <em>"Struktur Bagian Bunga Sempurna dan Siklus Metamorfosis Kupu-Kupu"</em>. Guru kelas biasanya hanya menunjukkan gambar diagram poster di papan tulis dan memutar video animasi dua dimensi tanpa narasi deskriptif audio.
+          </p>
+
+          <p style="font-size: 0.92rem; line-height: 1.6; color: #0f172a; font-weight: 700;">
+            Instruksi Analisis Mahasiswa:
+          </p>
+          <p style="font-size: 0.9rem; color: #334155; line-height: 1.6;">
+            1. Berdasarkan prinsip kompensatoris Expanded Core Curriculum (ECC) dalam <strong>Heward et al. (2017)</strong>, sebutkan 2 rintangan belajar (instructional barriers) yang dihadapi Nabila jika guru tetap mengajar dengan metode visual murni!<br>
+            2. Rancanglah <strong>3 adaptasi konkret</strong> materi pelajaran sains tersebut (mencakup media peraba taktil konkret, diagram timbul/tactile graphics, dan deskripsi verbal) agar Nabila dapat menguasai konsep anatomi bunga dan metamorfosis kupu-kupu secara setara dengan teman sekelasnya!
+          </p>
+          <textarea rows="6" placeholder="Tuliskan analisis rintangan visual dan perancangan media adaptif konkret (spesimen bunga asli, model 3D metamorfosis, grafik timbul) di sini..."></textarea>
+        </div>
+
+        <!-- KASUS 2: AUDIT LINGKUNGAN AKUSTIK KELAS BAGI SISWA IMPLAN KOKLEA -->
+        <div class="task-img-container" style="margin-top: 2rem;">
+          <label style="color: var(--gz-orange); font-size: 1.05rem; display: block; margin-bottom: 0.5rem; font-weight: 800;">
+            KASUS ANALISIS 2: AUDIT AKUSTIK &amp; STRATEGI MENGAJAR SISWA IMPLAN KOKLEA (BOBOT 50%)
+          </label>
+          <p style="font-size: 0.9rem; color: #1e293b; line-height: 1.6; margin-bottom: 1rem;">
+            <strong>Profil Kasus:</strong> Rendy (7 tahun) mengalami kehilangan pendengaran sensorineural bilateral derajat berat sejak usia 1 tahun dan telah menjalani operasi implan koklea (cochlear implant) pada usia 3 tahun. Rendy mampu berkomunikasi dengan pendekatan oral/aural, namun prosesor implannya sangat rentan menangkap suara bising latar belakang (background noise). Ruang kelas 1 tempat Rendy belajar memiliki lantai keramik tanpa karpet, kipas angin langit-langit yang berderit keras, jendela menghadap langsung ke jalan raya yang bising, dan meja siswa tersusun dalam barisan lurus tradisional menghadap ke depan. Guru sering mengajar sambil berjalan mondar-mandir dan berbicara menghadap ke papan tulis. Nilai pemahaman mendengar Rendy menurun tajam.
+          </p>
+
+          <p style="font-size: 0.92rem; line-height: 1.6; color: #0f172a; font-weight: 700;">
+            Instruksi Analisis Mahasiswa:
+          </p>
+          <p style="font-size: 0.9rem; color: #334155; line-height: 1.6;">
+            1. Mengapa suara bising lingkungan dan gema keramik (ambient noise &amp; reverberation) menjadi musuh utama bagi anak pengguna implan koklea menurut <strong>Hallahan &amp; Kauffman (2005)</strong>?<br>
+            2. Berikan <strong>3 rekomendasi penataan ulang fisik ruang kelas</strong> dan <strong>2 panduan perilaku mengajar guru</strong> yang mutlak dilakukan agar Rendy dapat membaca bibir (speechreading) dan menyimak materi pelajaran secara optimal!
+          </p>
+          <textarea rows="6" placeholder="Tuliskan evaluasi masalah gema akustik, usulan peredaman ruangan, formasi meja U-shape, serta etika mengajar guru di hadapan siswa Tuli di sini..."></textarea>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 3: INTERACTIVE PRESENTATION MODE (SLIDE INTERAKTIF DOSEN)
+         ========================================================================= -->
+    <section id="presentation-view" class="view-section">
+      
+      <div class="presentation-frame-bright">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide-item active">
+          <span class="slide-indicator" style="color: var(--gz-purple);">Slide 1 dari 6 • Orientasi Sensori</span>
+          <h2>Disabilitas Sensori: Penglihatan &amp; Pendengaran</h2>
+          <div class="slide-body">
+            <p>Membuka Saluran Kompensatoris di Ruang Kelas Inklusif:</p>
+            <ul>
+              <li>Indra jarak jauh (distance senses) sebagai gerbang utama interaksi lingkungan.</li>
+              <li>Kehilangan sensori bukan berarti penurunan kecerdasan intelektual kognitif.</li>
+              <li>Sintesis komparatif Hallahan &amp; Kauffman (2005) dan William L. Heward (2017).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen (10 Menit Awal):</strong> Awali kelas dengan memprovokasi pemikiran: "Jika Anda menutup mata selama 1 jam, apakah kecerdasan Anda berkurang? Tentu tidak. Yang berubah hanyalah cara Anda menyerap data." Arahkan fokus ke adaptasi instruksional.
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-blue);">Slide 2 dari 6 • Klasifikasi Tunanetra</span>
+          <h2>Klasifikasi Legal vs Klasifikasi Edukatif Netra</h2>
+          <div class="slide-body">
+            <p>Pembedahan Status Visus Penglihatan (Heward et al., 2017):</p>
+            <ul>
+              <li><strong>Definisi Legal-Medis:</strong> Ketajaman visus $20/200$ atau lapang pandang $\le 20^\circ$ (kebutaan legal) vs $20/70 - 20/200$ (low vision).</li>
+              <li><strong>Definisi Edukatif-Pedagogis:</strong>
+                <br>• Totally Blind: Belajar murni lewat indra taktil (Braille) dan auditori.
+                <br>• Low Vision: Memaksimalkan sisa penglihatan dengan huruf cetak besar (large print) dan alat optik lup pembesar.
+              </li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Tekankan bahwa guru dilarang memaksa anak low vision belajar huruf Braille jika anak masih mampu membaca teks cetak dengan bantuan alat pembesar optik yang memadai.
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-orange);">Slide 3 dari 6 • Kurikulum ECC</span>
+          <h2>Expanded Core Curriculum (ECC) &amp; O&amp;M</h2>
+          <div class="slide-body">
+            <p>Sembilan Ranah Keterampilan Kompensatoris Tunanetra:</p>
+            <ul>
+              <li><strong>Literasi Braille &amp; Kode Nemeth:</strong> Fondasi membaca sains dan matematika taktil.</li>
+              <li><strong>Orientasi &amp; Mobilitas (O&amp;M):</strong> Kemandirian menggunakan tongkat putih dan pemetaan mental lingkungan (mental mapping).</li>
+              <li><strong>Teknologi Asistif:</strong> Pengoperasian perangkat pembaca layar (screen reader NVDA/JAWS) dan piranti display Braille dinamis.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Jelaskan filosofi O&amp;M: Orientasi adalah mengetahui di mana diri kita berada dan ke mana kita akan pergi; Mobilitas adalah kemampuan fisik bergerak ke sana secara aman dan mandiri.
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-purple);">Slide 4 dari 6 • Patofisiologi Tunarungu</span>
+          <h2>Kehilangan Pendengaran: Konduktif vs Sensorineural</h2>
+          <div class="slide-body">
+            <p>Pembedahan Kerusakan Organ Auditori (Hallahan &amp; Kauffman, 2005):</p>
+            <ul>
+              <li><strong>Tuli Konduktif:</strong> Kerusakan telinga luar/tengah; volume suara melemah namun kejelasan kata utuh jika diperkeras.</li>
+              <li><strong>Tuli Sensorineural:</strong> Kerusakan koklea atau saraf kranial VIII; suara melemah sekaligus terdistorsi parah (distorted).</li>
+              <li>Klasifikasi Desibel (dB): Dari tingkat ringan (27–40 dB) hingga sangat berat ($>91$ dB).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Berikan pemahaman analogi: Tuli konduktif seperti mendengarkan radio dengan volume kecil; tuli sensorineural seperti mendengarkan siaran radio dengan frekuensi gelombang yang rusak dan penuh kresek distorsi.
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-blue);">Slide 5 dari 6 • Filosofi Komunikasi</span>
+          <h2>Kontroversi Komunikasi &amp; Budaya Tuli</h2>
+          <div class="slide-body">
+            <p>Tiga Poros Pendekatan Komunikasi Siswa Tuli:</p>
+            <ul>
+              <li><strong>Oral/Aural:</strong> Menekankan membaca bibir (speechreading) dan latihan bicara vokal.</li>
+              <li><strong>Komunikasi Total:</strong> Memadukan bicara, isyarat, ejaan jari, dan visual secara simultan.</li>
+              <li><strong>Bilingual-Bikultural:</strong> Menjunjung tinggi Bahasa Isyarat Alami sebagai bahasa ibu (L1) dan pengakuan terhadap entitas <strong>Budaya Tuli (Deaf Culture)</strong>.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Diskusikan perspektif sosiologis: Bagi komunitas Tuli, kehilangan pendengaran bukanlah suatu kecacatan patologis yang harus disembuhkan, melainkan sebuah identitas kebudayaan minoritas yang membanggakan.
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide-item">
+          <span class="slide-indicator" style="color: var(--gz-orange);">Slide 6 dari 6 • Rangkuman &amp; Aksi</span>
+          <h2>Closing Thought: Menata Kelas Inklusi Sensori</h2>
+          <div class="slide-body">
+            <p>Panduan Guru Kelas Reguler (Heward et al., 2017):</p>
+            <ul>
+              <li>Reduksi pantulan gema (reverberation) bagi siswa tuli dengan implan koklea.</li>
+              <li>Gunakan formasi meja tapal kuda (U-shape) agar akses visual pembacaan bibir terbuka.</li>
+              <li>Konsistensi tata letak perabot dan deskripsi verbal eksplisit bagi siswa tunanetra.</li>
+              <li>Minggu Depan (Pertemuan 12): Disabilitas Fisik, Neuromotorik, &amp; Kondisi OHI.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-bright">
+            <strong>Catatan Dosen:</strong> Arahkan mahasiswa untuk menyelesaikan tugas analisis kasus LKM 11 sebelum mengakhiri kelas.
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <footer class="slide-controls" style="border-top: 1px solid #e2e8f0;">
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+            <button class="btn-ctrl" style="background: var(--gz-purple);" onclick="changeSlide(1)">Selanjutnya ❯</button>
+          </div>
+          <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Dosen</button>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LOGIKA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Pengalihan Tab Navigasi
+    function switchView(targetViewId, buttonElement) {
+      document.querySelectorAll('.view-section').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(targetViewId).classList.add('active');
+      buttonElement.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Web Audio API Synthesizer (Efek Suara Mini Game Bawaan Browser)
+    let audioFxEnabled = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTone(type) {
+      if (!audioFxEnabled) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'success') {
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.25); // G5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } else {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+        osc.frequency.exponentialRampToValueAtTime(130.81, audioCtx.currentTime + 0.25); // C3
+        gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      }
+    }
+
+    function toggleAudioFx() {
+      audioFxEnabled = !audioFxEnabled;
+      const btn = document.getElementById('sound-btn');
+      if (audioFxEnabled) {
+        btn.classList.add('active');
+        btn.textContent = '🔊 Suara Pengarah: Aktif';
+      } else {
+        btn.classList.remove('active');
+        btn.textContent = '🔇 Suara Pengarah: Hening';
+      }
+    }
+
+    // 3. Evaluasi Mini Game Pertemuan 11
+    function evaluateSensoryGame(choice) {
+      const feedback = document.getElementById('sensory-feedback');
+      feedback.style.display = 'block';
+
+      if (choice === 'b') {
+        playTone('success');
+        feedback.style.background = '#ede9fe';
+        feedback.style.color = '#5b21b6';
+        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Menurut doktrin Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), Bima memiliki visus $20/80$, yang secara pedagogis masuk kategori Kurang Lihat (Low Vision Reader). Memaksa anak kurang lihat beralih ke huruf Braille adalah kesalahan instruksional; anak berhak mengoptimalkan sisa penglihatannya dengan teks cetak besar (large print) dan alat optik lup pembesar.';
+      } else {
+        playTone('error');
+        feedback.style.background = '#ffedd5';
+        feedback.style.color = '#9a3412';
+        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan data kasus: Bima masih memiliki sisa fungsi penglihatan yang dapat digunakan membaca teks cetak. Huruf Braille diutamakan bagi siswa yang mengalami buta total fungsional (totally blind).';
+      }
+    }
+
+    // 4. Pengendali Slide Presentasi Dosen
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+
+    function updateSlideDisplay() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+      updateSlideDisplay();
+    }
+
+    function toggleSpeakerNotes() {
+      const activeSlide = slides[currentSlide];
+      const notes = activeSlide.querySelector('.speaker-notes-bright');
+      if (notes) {
+        notes.style.display = (notes.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // Navigasi Keyboard untuk Slide
+    document.addEventListener('keydown', (e) => {
+      const presView = document.getElementById('presentation-view');
+      if (presView.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
