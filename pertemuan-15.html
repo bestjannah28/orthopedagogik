@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 15: Kemitraan Keluarga, Keragaman Budaya, &amp; Transisi Dewasa (ITP)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    / Variasi Palet Gen Z Cerah Dinamis: Pink, Hijau Muda, Merah, Ungu, dan Oranye /
+    :root {
+      --gz-pink: #ec4899;
+      --gz-pink-light: #fdf2f8;
+      --gz-lime: #10b981;
+      --gz-lime-light: #ecfdf5;
+      --gz-red: #e11d48;
+      --gz-red-light: #fff1f2;
+      --gz-purple: #7c3aed;
+      --gz-purple-light: #ede9fe;
+      --gz-orange: #ea580c;
+      --gz-orange-light: #ffedd5;
+      --gz-dark: #0f172a;
+      --gz-bg-bright: #fafcfb;
+    }
+    body {
+      background-color: var(--gz-bg-bright);
+    }
+    .badge-pink {
+      background: var(--gz-pink-light);
+      color: #be185d;
+      font-weight: 800;
+    }
+    .badge-lime {
+      background: var(--gz-lime-light);
+      color: #047857;
+      font-weight: 800;
+    }
+    .badge-purple {
+      background: var(--gz-purple-light);
+      color: var(--gz-purple);
+      font-weight: 800;
+    }
+    .badge-orange {
+      background: var(--gz-orange-light);
+      color: #c2410c;
+      font-weight: 800;
+    }
+    .card-pink-bright {
+      border-left: 4px solid var(--gz-pink);
+      background: #fdf2f8;
+    }
+    .card-lime-bright {
+      border-left: 4px solid var(--gz-lime);
+      background: #f0fdf4;
+    }
+    .card-purple-bright {
+      border-left: 4px solid var(--gz-purple);
+      background: #faf5ff;
+    }
+    .card-orange-bright {
+      border-left: 4px solid var(--gz-orange);
+      background: #fff7ed;
+    }
+
+    / Tampilan Presentasi Dosen Dinamis, Berwarna & Mudah Diakses /
+    .presentation-frame-colorful {
+      background: #ffffff;
+      color: #1e293b;
+      border: 3px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 2.75rem 2.5rem;
+      min-height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 16px 36px rgba(234, 88, 12, 0.08);
+      position: relative;
+    }
+    .slide-badge-pill {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .presentation-frame-colorful h2 {
+      font-size: clamp(1.85rem, 3.6vw, 2.45rem);
+      margin-bottom: 1.25rem;
+      line-height: 1.25;
+    }
+    .presentation-frame-colorful .slide-body {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #334155;
+    }
+    .presentation-frame-colorful .slide-body li {
+      margin-bottom: 0.9rem;
+      position: relative;
+      padding-left: 1.85rem;
+    }
+    .presentation-frame-colorful .slide-body li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      font-weight: 800;
+    }
+
+    / Slide Quick-Jump Dock Navigasi Cepat /
+    .slide-nav-dock {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .dock-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #cbd5e1;
+      background: #ffffff;
+      color: #475569;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+    .dock-btn:hover {
+      border-color: var(--gz-orange);
+      color: var(--gz-orange);
+      transform: translateY(-2px);
+    }
+    .dock-btn.active {
+      background: var(--gz-orange);
+      border-color: var(--gz-orange);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.35);
+    }
+
+    .speaker-notes-colorful {
+      margin-top: 1.5rem;
+      background: #fff7ed;
+      border-left: 4px solid var(--gz-orange);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: #9a3412;
+      display: none;
+    }
+    .lecturer-key-box {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.75rem 1rem;
+      background: #ecfdf5;
+      border-left: 4px solid var(--gz-lime);
+      border-radius: 6px;
+      font-size: 0.88rem;
+      color: #065f46;
+      line-height: 1.6;
+    }
+    .q-number {
+      font-weight: 800;
+      color: var(--gz-orange);
+      margin-right: 0.35rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span style="color: var(--gz-orange);">ORTOPEDAGOGIK</span>
+        <span class="pill badge-orange">Pertemuan 15</span>
+      </div>
+      <nav class="view-tabs" role="tablist">
+        <button class="tab-btn active" onclick="switchView('reading-view', this)">Modul Bacaan Lengkap</button>
+        <button class="tab-btn" onclick="switchView('worksheet-view', this)">Lembar Kerja &amp; 10 Soal PG</button>
+        <button class="tab-btn" onclick="switchView('presentation-view', this)">Presentasi Dosen (Berwarna)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- =========================================================================
+         BAGIAN 1: WEB PAGE PRESENTATION (BACAAN MANDIRI DOSEN & MAHASISWA)
+         ========================================================================= -->
+    <section id="reading-view" class="view-section active">
+      
+      <!-- HERO BANNER (LATAR CERAH ORANYE, HIJAU MUDA, UNGU) -->
+      <header class="hero-box" style="background: linear-gradient(135deg, #ffedd5 0%, #ecfdf5 50%, #ede9fe 100%);">
+        <span class="section-label badge-orange">Modul Keilmuan Pra-UAS</span>
+        <h1 style="color: var(--gz-dark);">Kemitraan Keluarga, Keragaman Budaya, Kolaborasi Tim, dan Transisi Menuju Kedewasaan (ITP)</h1>
+        <p>Kajian ortopedagogik menyeluruh: dinamika psikologis sistem keluarga (family systems approach), prinsip resiprositas budaya (cultural reciprocity), enam model kerja sama pengajaran (co-teaching), hingga perencanaan transisi individual pascasekolah (Individualized Transition Plan / ITP) menuju dunia kerja dan hidup mandiri.</p>
+        <div class="hero-meta">
+          <span>⏱ Durasi: 2 SKS (100 Menit)</span>
+          <span>📚 Rujukan: Hallahan &amp; Kauffman (2005, Bab 3 &amp; 4) &amp; Heward et al. (2017, Bab 3 &amp; 15)</span>
+          <span>🎯 Capaian: Analisis Kemitraan Keluarga, Desain Co-Teaching, &amp; Perancangan Dokumen ITP</span>
+        </div>
+      </header>
+
+      <!-- SESI 1: PENDAHULUAN (10 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-lime">Fase 1: Orientasi &amp; Warming Up (10 Menit)</span>
+        <h2>1. Di Balik Gerbang Sekolah: Keluarga Sebagai Ekosistem Utama Anak</h2>
+        <p style="margin-top: 0.75rem;">
+          Pendidikan khusus sering kali dipandang secara sempit hanya sebatas apa yang terjadi di dalam ruang kelas antara guru dan murid dari pukul delapan pagi hingga pukul dua siang. Namun, ketika bel pulang sekolah berbunyi, anak berkebutuhan khusus kembali ke sistem yang paling lama, paling intim, dan paling menentukan masa depannya: <strong>keluarga</strong>.
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--gz-orange); background: #fff7ed;">
+          “Families are not merely consumers of special education services; they are essential partners. A child’s development cannot be understood or enhanced apart from the family system. Effective special educators collaborate with families as equal partners with unique expertise.”
+          <footer>— William L. Heward, Sheila R. Alber-Morgan, &amp; Moira Konrad (2017, hlm. 72)</footer>
+        </div>
+
+        <div class="grid-two-col">
+          <div class="accent-card card-orange-bright">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: #c2410c;">Dinamika Sistem Keluarga (Family Systems)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Hallahan &amp; Kauffman (2005) menekankan bahwa disabilitas anak tidak hanya memengaruhi anak itu sendiri, melainkan mengguncang seluruh subsistem keluarga: hubungan suami-istri (marital subsystem), hubungan orang tua dan anak, dinamika saudara kandung (sibling subsystem), serta jaringan keluarga besar. Respons emosional orang tua bukan garis lurus, melainkan siklus adaptasi dinamis dari syok, penyangkalan, rasa bersalah, tawar-menawar, hingga penerimaan dan advokasi.
+            </p>
+          </div>
+          <div class="accent-card card-purple-bright">
+            <h3 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--gz-purple);">Resiprositas Budaya (Cultural Reciprocity)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Buku teks Heward et al. (2017) mengingatkan pendidik untuk tidak memaksakan nilai-nilai kelas menengah perkotaan kepada keluarga dengan latar belakang budaya, etnis, atau ekonomi berbeda. Guru wajib mempraktikkan <em>Cultural Reciprocity</em>: memahami nilai budaya keluarga terlebih dahulu, menjelaskan dasar profesional secara terbuka, dan mencari titik temu yang menghormati martabat tradisi keluarga.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESI 2: MATERI INTI (45 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-purple">Fase 2: Telaah Konseptual Mendalam (45 Menit)</span>
+        <h2>2. Bagian I: Kolaborasi Interdisipliner dan Model Pengajaran Bersama (Co-Teaching)</h2>
+        <p style="margin-top: 0.75rem;">
+          Di sekolah inklusif modern, guru kelas umum dan guru pembimbing khusus (GPK) tidak lagi bekerja secara terisolasi. Menurut <strong>Heward et al. (2017, hlm. 43–46)</strong>, kemitraan mengajar (co-teaching) adalah strategi di mana dua orang pendidik bersertifikat bersama-sama merencanakan, melaksanakan, dan mengevaluasi pembelajaran bagi kelompok siswa heterogen di ruang kelas yang sama:
+        </p>
+
+        <!-- DIAGRAM 1: ENAM MODEL CO-TEACHING (SVG CERAH) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 340" width="100%" height="auto" style="max-height: 360px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="ctG1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ea580c"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+              <linearGradient id="ctG2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+              <linearGradient id="ctG3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+            </defs>
+
+            <!-- Baris 1: Model 1, 2, 3 -->
+            <rect x="25" y="25" width="280" height="135" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+            <rect x="25" y="25" width="280" height="34" rx="10" fill="url(#ctG1)"/>
+            <text x="165" y="47" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">1. ONE TEACH, ONE OBSERVE</text>
+            <text x="165" y="85" fill="#c2410c" font-size="12" font-weight="700" text-anchor="middle">Satu Mengajar, Satu Mengamati</text>
+            <text x="165" y="112" fill="#475569" font-size="10" text-anchor="middle">Satu guru memimpin instruksi utama,</text>
+            <text x="165" y="130" fill="#475569" font-size="10" text-anchor="middle">guru kedua mencatat data perilaku/belajar.</text>
+
+            <rect x="330" y="25" width="280" height="135" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="2"/>
+            <rect x="330" y="25" width="280" height="34" rx="10" fill="url(#ctG2)"/>
+            <text x="470" y="47" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">2. ONE TEACH, ONE ASSIST</text>
+            <text x="470" y="85" fill="#6d28d9" font-size="12" font-weight="700" text-anchor="middle">Satu Mengajar, Satu Mendampingi</text>
+            <text x="470" y="112" fill="#475569" font-size="10" text-anchor="middle">Satu guru menyajikan konten kelas,</text>
+            <text x="470" y="130" fill="#475569" font-size="10" text-anchor="middle">guru mitra berkeliling memberi bantuan personal.</text>
+
+            <rect x="635" y="25" width="280" height="135" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="2"/>
+            <rect x="635" y="25" width="280" height="34" rx="10" fill="url(#ctG3)"/>
+            <text x="775" y="47" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">3. PARALLEL TEACHING</text>
+            <text x="775" y="85" fill="#047857" font-size="12" font-weight="700" text-anchor="middle">Pengajaran Paralel</text>
+            <text x="775" y="112" fill="#475569" font-size="10" text-anchor="middle">Kelas dibagi dua kelompok sama besar;</text>
+            <text x="775" y="130" fill="#475569" font-size="10" text-anchor="middle">kedua guru mengajarkan materi yang sama.</text>
+
+            <!-- Baris 2: Model 4, 5, 6 -->
+            <rect x="25" y="175" width="280" height="135" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="2"/>
+            <rect x="25" y="175" width="280" height="34" rx="10" fill="url(#ctG3)"/>
+            <text x="165" y="197" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">4. STATION TEACHING</text>
+            <text x="165" y="235" fill="#047857" font-size="12" font-weight="700" text-anchor="middle">Pengajaran Pos / Stasiun</text>
+            <text x="165" y="262" fill="#475569" font-size="10" text-anchor="middle">Materi dipecah menjadi beberapa pos;</text>
+            <text x="165" y="280" fill="#475569" font-size="10" text-anchor="middle">siswa berotasi dari satu pos ke pos lain.</text>
+
+            <rect x="330" y="175" width="280" height="135" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+            <rect x="330" y="175" width="280" height="34" rx="10" fill="url(#ctG1)"/>
+            <text x="470" y="197" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">5. ALTERNATIVE TEACHING</text>
+            <text x="470" y="235" fill="#c2410c" font-size="12" font-weight="700" text-anchor="middle">Pengajaran Alternatif</text>
+            <text x="470" y="262" fill="#475569" font-size="10" text-anchor="middle">Satu guru mengajar kelompok besar,</text>
+            <text x="470" y="280" fill="#475569" font-size="10" text-anchor="middle">guru mitra membimbing kelompok kecil (remedial/pengayaan).</text>
+
+            <rect x="635" y="175" width="280" height="135" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="2"/>
+            <rect x="635" y="175" width="280" height="34" rx="10" fill="url(#ctG2)"/>
+            <text x="775" y="197" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">6. TEAM TEACHING</text>
+            <text x="775" y="235" fill="#6d28d9" font-size="12" font-weight="700" text-anchor="middle">Pengajaran Tim Bersama</text>
+            <text x="775" y="262" fill="#475569" font-size="10" text-anchor="middle">Kedua guru berbagi peran secara luwes,</text>
+            <text x="775" y="280" fill="#475569" font-size="10" text-anchor="middle">berdialog mengajar bersama di depan kelas.</text>
+          </svg>
+          <div class="diagram-caption">Diagram 1: Enam Format Kemitraan Mengajar (Co-Teaching Models) Menurut Friend &amp; Cook dalam Heward et al. (2017)</div>
+        </div>
+
+        <h3 style="margin-top: 2.25rem; margin-bottom: 0.75rem;">3. Bagian II: Perencanaan Transisi Menuju Kedewasaan (Individualized Transition Plan / ITP)</h3>
+        <p style="margin-top: 0.75rem;">
+          Salah satu bagian paling krusial dalam siklus pendidikan khusus adalah mempersiapkan peserta didik meninggalkan bangku sekolah untuk memasuki fase kehidupan dewasa. Menurut <strong>Heward et al. (2017, hlm. 518–528)</strong> dan regulasi federal IDEA, sejak siswa menginjak <strong>usia 16 tahun</strong> (atau lebih awal), dokumen IEP wajib memuat Individualized Transition Plan (ITP):
+        </p>
+
+        <div class="quote-box" style="border-left-color: var(--gz-lime); background: #ecfdf5;">
+          “Transition services are a coordinated set of activities for a student with a disability, designed to be within a results-oriented process, focused on improving the academic and functional achievement of the student to facilitate movement from school to post-school activities, including postsecondary education, vocational education, integrated employment, continuing and adult education, and independent living.”
+          <footer>— Individuals with Disabilities Education Act (IDEA, dikutip dalam Heward et al., 2017, hlm. 518)</footer>
+        </div>
+
+        <!-- DIAGRAM 2: TIGA PILAR TARGET ITP TRANSISI DEWASA (SVG CERAH) -->
+        <div class="diagram-container">
+          <svg viewBox="0 0 940 300" width="100%" height="auto" style="max-height: 320px; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <linearGradient id="itpG1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ea580c"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+              <linearGradient id="itpG2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+              <linearGradient id="itpG3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+            </defs>
+
+            <!-- Pilar 1: Pendidikan Lanjut -->
+            <rect x="25" y="25" width="280" height="250" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+            <rect x="25" y="25" width="280" height="42" rx="10" fill="url(#itpG1)"/>
+            <text x="165" y="52" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">1. PENDIDIKAN TINGGI &amp; VOKASI</text>
+            <text x="165" y="95" fill="#c2410c" font-size="12" font-weight="700" text-anchor="middle">Postsecondary Education</text>
+            <text x="45" y="125" fill="#475569" font-size="10.5">• Kuliah di universitas / politeknik</text>
+            <text x="45" y="145" fill="#475569" font-size="10.5">• Pelatihan kejuruan bersertifikat</text>
+            <text x="45" y="165" fill="#475569" font-size="10.5">• Kursus keterampilan terapan mandiri</text>
+            <text x="45" y="185" fill="#475569" font-size="10.5">• Advokasi mandiri unit disabilitas kampus</text>
+            <text x="165" y="245" fill="#c2410c" font-size="10" font-weight="700" text-anchor="middle">"Peningkatan Kompetensi Intelektual"</text>
+
+            <!-- Pilar 2: Dunia Kerja -->
+            <rect x="330" y="25" width="280" height="250" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="2"/>
+            <rect x="330" y="25" width="280" height="42" rx="10" fill="url(#itpG2)"/>
+            <text x="470" y="52" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">2. KETENAGAKERJAAN TERINTEGRASI</text>
+            <text x="470" y="95" fill="#6d28d9" font-size="12" font-weight="700" text-anchor="middle">Integrated Employment</text>
+            <text x="350" y="125" fill="#475569" font-size="10.5">• Kerja Mandiri Terbuka (Competitive)</text>
+            <text x="350" y="145" fill="#475569" font-size="10.5">• Kerja Didukung (Supported Employment)</text>
+            <text x="360" y="165" fill="#475569" font-size="10">Didampingi pelatih kerja (job coach)</text>
+            <text x="350" y="185" fill="#475569" font-size="10.5">• Bengkel Kerja Terlindung (Sheltered)</text>
+            <text x="470" y="245" fill="#6d28d9" font-size="10" font-weight="700" text-anchor="middle">"Kemandirian Finansial &amp; Kontribusi"</text>
+
+            <!-- Pilar 3: Hidup Mandiri Komunitas -->
+            <rect x="635" y="25" width="280" height="250" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="2"/>
+            <rect x="635" y="25" width="280" height="42" rx="10" fill="url(#itpG3)"/>
+            <text x="775" y="52" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">3. KEMANDIRIAN KOMUNITAS</text>
+            <text x="775" y="95" fill="#047857" font-size="12" font-weight="700" text-anchor="middle">Community &amp; Independent Living</text>
+            <text x="655" y="125" fill="#475569" font-size="10.5">• Menghuni apartemen/rumah mandiri</text>
+            <text x="655" y="145" fill="#475569" font-size="10.5">• Pengelolaan keuangan &amp; perbankan</text>
+            <text x="655" y="165" fill="#475569" font-size="10.5">• Navigasi transportasi umum kota</text>
+            <text x="655" y="185" fill="#475569" font-size="10.5">• Rekreasi sosial &amp; partisipasi warga</text>
+            <text x="775" y="245" fill="#047857" font-size="10" font-weight="700" text-anchor="middle">"Integrasi Sosial Penuh di Masyarakat"</text>
+          </svg>
+          <div class="diagram-caption">Diagram 2: Tiga Ranah Utama Hasil Terukur Program Transisi Dewasa (ITP) Menurut Heward et al. (2017)</div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 0.5rem; color: var(--gz-orange);">3.1. Model Ketenagakerjaan: Supported Employment vs Sheltered Workshops</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          Hallahan &amp; Kauffman (2005) dan Heward et al. (2017) menguraikan pergeseran dari model segregasi kerja menuju integrasi ketenagakerjaan:
+        </p>
+        <ul style="padding-left: 1.5rem; margin-top: 0.3rem; color: var(--text-muted); line-height: 1.8;">
+          <li><strong>Bengkel Kerja Terlindung (Sheltered Workshops):</strong> Fasilitas kerja terpisah khusus bagi penyandang disabilitas di mana mereka melakukan tugas-tugas repetitif sederhana (seperti memasukkan barang ke kardus atau perakitan komponen) dengan upah di bawah standar upah minimum. Sering dikritik karena mengisolasi anak dari masyarakat normal.</li>
+          <li><strong>Kerja Didukung di Tempat Terbuka (Supported Employment):</strong> Model kerja modern di mana penyandang disabilitas bekerja di perusahaan umum bersama rekan kerja non-disabilitas dengan menerima upah setara upah minimum standar. Mereka didampingi oleh seorang <strong>Pelatih Kerja (Job Coach)</strong> yang memberikan pelatihan langsung di tempat kerja (on-the-job training), membantu adaptasi lingkungan, dan secara bertahap mengurangi pendampingan (fading) seiring kemandirian pekerja.</li>
+        </ul>
+      </article>
+
+      <!-- SESI 3: GAMES INTERAKTIF (5 MENIT) -->
+      <article class="content-card">
+        <span class="section-label badge-pink">Fase 3: Game Interaktif Berbasis Suara (5 Menit)</span>
+        <h2>Uji Kasus Pedagogis: "Audit Kemitraan Keluarga &amp; Transisi"</h2>
+        <p style="margin-top: 0.5rem;">Cermati skenario kemitraan sekolah dan orang tua di bawah ini, aktifkan suara pemandu, dan tentukan keputusan ortopedagogik yang tepat:</p>
+
+        <div class="game-card" style="border: 2px dashed #fbcfe8; background: #fdf2f8;">
+          <div class="sound-toggle-bar">
+            <button id="sound-btn" class="sound-btn active" onclick="toggleAudioFx()">🔊 Suara Pengarah: Aktif</button>
+          </div>
+
+          <div style="background: #ffffff; border: 1.5px solid #fbcfe8; border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;">
+            <p style="font-weight: 700; color: #be185d; margin-bottom: 0.4rem;">STUDI KASUS SIDANG TRANSISI SISWA:</p>
+            <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
+              "Bagas (16 tahun, memiliki hambatan intelektual sedang) akan segera memasuki program transisi SMA Inklusi. Dalam rapat penyusunan ITP, kepala sekolah dan guru merumuskan bahwa setelah lulus sekolah nanti, Bagas harus langsung dimasukkan ke panti asuhan penampungan khusus seumur hidup tanpa bertanya kepada Bagas dan orang tuanya. Kepala sekolah beralasan bahwa orang tua Bagas berasal dari keluarga desa yang pendiam dan anak dengan disabilitas intelektual tidak berhak memilih masa depannya sendiri."
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-weight: 700; color: #be185d;">Berdasarkan regulasi IDEA dan rujukan Heward et al. (2017) serta Hallahan &amp; Kauffman (2005), tindakan pihak sekolah tersebut melanggar prinsip:</p>
+
+          <button class="quiz-option" onclick="evaluateTransitionGame('a')">
+            A. Sekolah sudah tepat karena guru dan kepala sekolah memiliki otoritas mutlak menentukan nasib murid tanpa campur tangan orang tua.
+          </button>
+          <button class="quiz-option" onclick="evaluateTransitionGame('b')">
+            B. Sekolah melanggar prinsip <em>Parent and Student Shared Decision-Making</em>, etika <em>Cultural Reciprocity</em>, dan hak <em>Self-Determination</em> siswa; Bagas dan orang tuanya wajib diundang sebagai anggota inti sidang ITP, dan sekolah harus mengorientasikan target pada kerja didukung (Supported Employment) serta hidup mandiri di komunitas.
+          </button>
+          <button class="quiz-option" onclick="evaluateTransitionGame('c')">
+            C. Tindakan sekolah hanya melanggar tata tertib pemilihan seragam upacara.
+          </button>
+          <button class="quiz-option" onclick="evaluateTransitionGame('d')">
+            D. Sekolah seharusnya langsung menyuruh Bagas mencari pekerjaan mandiri tanpa pendampingan apa pun.
+          </button>
+
+          <div id="game-feedback" class="quiz-feedback"></div>
+        </div>
+      </article>
+
+      <!-- SESI 4: TANYA JAWAB & CLOSING -->
+      <article class="content-card">
+        <span class="section-label badge-lime">Fase 4: Tanya Jawab &amp; Pernyataan Penutup</span>
+        <h2>Refleksi Akhir: Menghubungkan Sekolah dengan Kehidupan Sejati</h2>
+        <p style="margin-top: 0.75rem;">
+          Pendidikan khusus bukanlah perjalanan yang berakhir saat siswa menerima ijazah kelulusan sekolah. Makna sejati dari seluruh ikhtiar ortopedagogik adalah bagaimana seorang anak berkebutuhan khusus mampu hidup mandiri, bekerja dengan bangga, menjalin relasi pertemanan di masyarakat, dan dihargai martabat kemanusiaannya di dunia nyata. Kolaborasi erat antara guru yang berpengetahuan dan keluarga yang penuh kasih adalah kunci pembuka pintu masa depan tersebut.
+        </p>
+        <div class="quote-box" style="border-left-color: var(--gz-lime); background: #ecfdf5;">
+          “Transition is not merely an educational requirement; it is a promise. It is the bridge that connects the sheltered support of the school to the dignity, independence, and self-determination of adult life.”
+          <footer>— William L. Heward et al. (2017)</footer>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 2: WORKSHEET MAHASISWA & 10 SOAL EVALUASI PILIHAN GANDA (LKM 15)
+         ========================================================================= -->
+    <section id="worksheet-view" class="view-section">
+      <div class="print-action-bar">
+        <div>
+          <h3 style="color: #be185d;">Lembar Portofolio Aktivitas Mahasiswa: 10 Soal Pilihan Ganda Kasus (LKM 15)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Selesaikan 10 butir soal pilihan ganda berbasis analisis kasus di bawah ini, lalu simpan atau cetak dalam format PDF.</p>
+        </div>
+        <button class="btn-download-pdf" style="background: var(--gz-orange);" onclick="window.print()">
+          <span>🖨️ Cetak / Unduh Dokumen (PDF)</span>
+        </button>
+      </div>
+
+      <div class="worksheet-paper">
+        <header style="border-bottom: 2.5px solid #0f172a; padding-bottom: 1.25rem; margin-bottom: 2rem;">
+          <h2 style="text-align: center; text-transform: uppercase; font-size: 1.3rem; color: #0f172a;">LEMBAR KERJA EVALUASI KEMITRAAN KELUARGA, CO-TEACHING, &amp; TRANSISI DEWASA (LKM 15)</h2>
+          <p style="text-align: center; font-size: 0.9rem; color: #475569;">Mata Kuliah: Ortopedagogik (2 SKS) • Rujukan: Hallahan &amp; Kauffman (2005, Bab 3 &amp; 4) &amp; Heward et al. (2017, Bab 3 &amp; 15)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; font-size: 0.9rem; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <div><strong>Nama Calon Pendidik:</strong> ____________________________________</div>
+            <div><strong>NIM / Kelas:</strong> ____________________________________</div>
+            <div><strong>Tanggal Pertemuan:</strong> ____________________________________</div>
+            <div><strong>Skor Evaluasi (100):</strong> ____________________________________</div>
+          </div>
+        </header>
+
+        <!-- 10 SOAL PILIHAN GANDA TINGKAT ANALISIS KASUS -->
+        <div class="worksheet-field">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.6rem; margin-bottom: 1.5rem;">
+            <h3 style="font-size: 1.15rem; color: #0f172a; margin: 0;">
+              UJI KOMPETENSI KASUS: 10 SOAL PILIHAN GANDA
+            </h3>
+            <button type="button" class="btn-ctrl secondary" style="font-size: 0.78rem; padding: 0.35rem 0.8rem; background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa;" onclick="promptLecturerAuth()">
+              🔒 Buka Kunci Jawaban Dosen
+            </button>
+          </div>
+          <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1.5rem;">Pilihlah salah satu opsi jawaban (A, B, C, atau D) yang paling tepat berdasarkan teks asli Hallahan &amp; Kauffman (2005) dan Heward et al. (2017):</p>
+
+          <!-- SOAL 1 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">1.</span> Menurut konsep pendekatan sistem keluarga (family systems approach) dalam Hallahan &amp; Kauffman (2005), bagaimanakah kelahiran seorang anak berkebutuhan khusus memengaruhi subsistem perkawinan orang tua?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Tidak memiliki pengaruh apa pun karena urusan anak adalah tanggung jawab pihak sekolah murni<br>
+              B. Menimbulkan beban stres finansial, emosional, dan tuntutan waktu pengasuhan yang dapat memicu ketegangan perkawinan atau sebaliknya mempererat komitmen resiliensi pasangan jika memperoleh dukungan sosial memadai<br>
+              C. Secara otomatis selalu berujung pada perceraian orang tua secara permanen<br>
+              D. Menghilangkan seluruh peran ayah dalam struktur pengasuhan keluarga
+            </p>
+            <div id="key-p15-1" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Kehadiran ABK berdampak pada dinamika interaksi seluruh anggota keluarga; resiliensi sistem keluarga ditentukan oleh ketersediaan jejaring dukungan sosial dan empati antarpasangan (Hallahan &amp; Kauffman, 2005, Bab 4).
+            </div>
+          </div>
+
+          <!-- SOAL 2 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">2.</span> Prinsip keterbalikan budaya (cultural reciprocity) dalam kemitraan antara pendidik ortopedagogik dan keluarga murid menurut Heward et al. (2017) mewajibkan guru untuk:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Memaksa orang tua mengadopsi budaya dan gaya bahasa guru tanpa syarat<br>
+              B. Menyadari asumsi nilai budaya diri sendiri terlebih dahulu, mendengarkan cara pandang budaya keluarga dengan tulus, serta mencari kompromi pedagogis yang menghormati tradisi orang tua<br>
+              C. Menghindari berbicara dengan orang tua yang berasal dari kelompok suku minoritas<br>
+              D. Mengganti kurikulum nasional dengan kurikulum tradisi setempat secara menyeluruh
+            </p>
+            <div id="key-p15-2" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Cultural reciprocity adalah komunikasi dua arah di mana profesional menyadari bias nilai budayanya sendiri dan menghormati interpretasi budaya keluarga dalam mendidik anak (Heward et al., 2017, Bab 3).
+            </div>
+          </div>
+
+          <!-- SOAL 3 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">3.</span> Dalam model pengajaran bersama (co-teaching), format di mana satu guru menyajikan materi pelajaran di depan kelas sementara guru lainnya berkeliling memberikan bantuan individual secara senyap kepada siswa yang mengalami kesulitan disebut:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Station Teaching<br>
+              B. One Teach, One Assist (Satu Mengajar, Satu Mendampingi)<br>
+              C. Parallel Teaching<br>
+              D. Alternative Teaching
+            </p>
+            <div id="key-p15-3" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Model One Teach, One Assist memadukan instruksi kelompok besar dengan bimbingan mikro tanpa mengganggu alur pelajaran utama (Heward et al., 2017, Bab 2).
+            </div>
+          </div>
+
+          <!-- SOAL 4 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">4.</span> Kapan mandat hukum IDEA mewajibkan Rencana Transisi Individual (Individualized Transition Plan / ITP) secara resmi mulai dicantumkan ke dalam dokumen IEP peserta didik?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Sejak anak lahir di rumah sakit bersalin<br>
+              B. Paling lambat ketika siswa menginjak usia 16 tahun (atau lebih muda jika dipandang perlu oleh tim)<br>
+              C. Setelah siswa resmi diberhentikan dari sekolah<br>
+              D. Ketika siswa telah mencapai usia 25 tahun
+            </p>
+            <div id="key-p15-4" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Regulasi federal IDEA menetapkan batas usia 16 tahun sebagai tenggat waktu resmi wajibnya penyusunan target transisi pascasekolah dalam dokumen IEP (Heward et al., 2017, Bab 15).
+            </div>
+          </div>
+
+          <!-- SOAL 5 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">5.</span> Manakah yang merupakan contoh rumusan target pascasekolah (postsecondary transition goal) yang tepat dan terukur pada pilar ketenagakerjaan dalam dokumen ITP?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. "Siswa akan menjadi anak yang bahagia dan tidak menyusahkan orang tua setelah lulus sekolah."<br>
+              B. "Setelah lulus SMA inklusi, Dimas akan bekerja paruh waktu di bagian logistik gudang swalayan umum dengan upah minimum kompetitif dan pendampingan pelatih kerja (job coach)."<br>
+              C. "Siswa diharapkan mampu membeli mobil mewah secara mandiri."<br>
+              D. "Siswa akan terus bersekolah di kelas 12 selamanya."
+            </p>
+            <div id="key-p15-5" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Target ITP harus berorientasi hasil terukur (results-oriented), spesifik pada seting kerja nyata di masyarakat, dan mencantumkan jenis dukungan yang dibutuhkan (Heward et al., 2017, Bab 15).
+            </div>
+          </div>
+
+          <!-- SOAL 6 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">6.</span> Dalam sistem kerja didukung (Supported Employment), peran utama dari seorang <strong>Pelatih Kerja (Job Coach)</strong> adalah:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Mengerjakan seluruh tugas pekerjaan kantor sementara penyandang disabilitas hanya duduk diam<br>
+              B. Memberikan pelatihan langsung di tempat kerja (on-the-job training), merancang penyesuaian alat bantu kerja, membina hubungan sosial dengan rekan kerja, dan mengurangi pendampingan bertahap (fading) saat pekerja sudah mandiri<br>
+              C. Menagih potongan gaji bulanan dari penyandang disabilitas untuk kas sekolah<br>
+              D. Melarang penyandang disabilitas berinteraksi dengan pekerja umum lainnya
+            </p>
+            <div id="key-p15-6" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Job coach memfasilitasi integrasi pekerja disabilitas di perusahaan terbuka melalui pendampingan intensif yang secara sistematis dikurangi (faded) seiring penguasaan tugas (Heward et al., 2017, Bab 15).
+            </div>
+          </div>
+
+          <!-- SOAL 7 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">7.</span> Mengapa model Bengkel Kerja Terlindung (Sheltered Workshops) banyak dikritik oleh aktivis hak disabilitas dan pakar ortopedagogik modern?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Karena bangunannya dicat dengan warna yang membosankan<br>
+              B. Karena mengisolasi penyandang disabilitas dari interaksi warga masyarakat umum, memberikan upah sangat rendah di bawah ketentuan upah minimum, dan jarang menghasilkan kemandirian kerja sejati<br>
+              C. Karena seluruh pekerja di bengkel kerja diwajibkan memiliki gelar sarjana<br>
+              D. Karena lokasinya selalu berada di tengah bandar udara
+            </p>
+            <div id="key-p15-7" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Sheltered workshops memisahkan penyandang disabilitas secara segregatif dan mengeksploitasi mereka pada tugas-tugas manual tanpa prospek integrasi sosial (Hallahan &amp; Kauffman, 2005, Bab 4).
+            </div>
+          </div>
+
+          <!-- SOAL 8 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">8.</span> Salah satu bentuk reaksi emosional saudara kandung (siblings) dari anak berkebutuhan khusus yang kerap luput dari perhatian guru dan konselor sekolah adalah:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Afasia motorik bawaan<br>
+              B. Rasa bersalah (guilt) karena dirinya terlahir sehat, kecemasan bahwa disabilitas dapat menular, dan rasa terabaikan akibat perhatian orang tua terserap penuh pada saudara yang berkebutuhan khusus<br>
+              C. Kebutaan visual malam hari<br>
+              D. Kehilangan memori jangka panjang secara permanen
+            </p>
+            <div id="key-p15-8" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Saudara kandung ABK sering mengalami beban emosional tersembunyi (sibling adjustment), termasuk tekanan untuk menjadi "anak sempurna" demi menyenangkan orang tua (Hallahan &amp; Kauffman, 2005, Bab 4).
+            </div>
+          </div>
+
+          <!-- SOAL 9 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">9.</span> Model pengajaran bersama di mana guru membagi ruang kelas menjadi beberapa kelompok meja kegiatan, dan seluruh siswa berotasi dari satu meja ke meja lainnya untuk mempelajari konten yang berbeda disebut:</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Team Teaching<br>
+              B. Station Teaching (Pengajaran Pos / Stasiun)<br>
+              C. One Teach, One Observe<br>
+              D. Parallel Teaching
+            </p>
+            <div id="key-p15-9" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Station teaching mengoptimalkan partisipasi aktif siswa dalam kelompok kecil dengan membagi konten pembelajaran ke stasiun-stasiun terpisah (Heward et al., 2017, Bab 2).
+            </div>
+          </div>
+
+          <!-- SOAL 10 -->
+          <div style="margin-bottom: 1.5rem;">
+            <p><span class="q-number">10.</span> Mengapa kehadiran dan keterlibatan aktif peserta didik berkebutuhan khusus itu sendiri di dalam sidang perencanaan transisi (ITP) dinilai mutlak secara pedagogis?</p>
+            <p style="padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6;">
+              A. Agar siswa dapat membawakan konsumsi makanan bagi peserta rapat<br>
+              B. Karena melatih hak penentuan diri (Self-Determination), memastikan minat dan preferensi personal anak menjadi dasar pilihan karier, serta menghargai anak sebagai agen utama masa depannya sendiri<br>
+              C. Supaya guru tidak perlu repot menyusun laporan administrasi transisi<br>
+              D. Karena nilai ujian nasional anak akan otomatis dinaikkan oleh dinas pendidikan
+            </p>
+            <div id="key-p15-10" class="lecturer-key-box">
+              <strong>Kunci: B</strong> — Prinsip self-determination mewajibkan bahwa keputusan masa depan tidak boleh dibuat tanpa melibatkan suara dan preferensi individu yang bersangkutan (Nothing about us without us) (Heward et al., 2017, Bab 15).
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         BAGIAN 3: INTERACTIVE PRESENTATION MODE (SLIDE BERWARNA & DOCK NAVIGASI)
+         ========================================================================= -->
+    <section id="presentation-view" class="view-section">
+      
+      <div class="presentation-frame-colorful">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide-item active">
+          <span class="slide-badge-pill" style="background: #ffedd5; color: #c2410c; border: 1.5px solid #fed7aa;">
+            Slide 1 dari 6 • Orientasi Kemitraan
+          </span>
+          <h2 style="color: #c2410c;">Kemitraan Keluarga &amp; Transisi Menuju Kedewasaan</h2>
+          <div class="slide-body">
+            <p>Membangun Ekosistem Kolaboratif dari Ruang Kelas Menuju Komunitas Nyata:</p>
+            <ul>
+              <li>Keluarga sebagai sistem interaktif dan mitra legal sejajar dalam pendidikan khusus.</li>
+              <li>Prinsip keterbalikan budaya (cultural reciprocity) dalam menghadapi keragaman masyarakat.</li>
+              <li>Sintesis rujukan otoritatif Hallahan &amp; Kauffman (2005) dan William L. Heward (2017).</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri (10 Menit Awal):</strong> Awali kelas dengan mengingatkan mahasiswa: "Sehebat apa pun metode yang kita rancang di kelas, jika orang tua tidak dilibatkan sebagai mitra, kemajuan anak akan berhenti di pintu gerbang sekolah. Keluarga adalah fondasi sejati keberhasilan ABK."
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #fdf2f8; color: #be185d; border: 1.5px solid #fbcfe8;">
+            Slide 2 dari 6 • Sistem Keluarga
+          </span>
+          <h2 style="color: #be185d;">Pendekatan Sistem Keluarga (Family Systems)</h2>
+          <div class="slide-body">
+            <p>Dampak Disabilitas Terhadap Seluruh Subsistem Rumah Tangga:</p>
+            <ul>
+              <li><strong>Subsistem Perkawinan:</strong> Beban stres ganda, penyesuaian peran pengasuhan, dan resiliensi pasangan.</li>
+              <li><strong>Subsistem Saudara Kandung (Siblings):</strong> Kerentanan rasa bersalah (survivor guilt) dan kebutuhan perhatian yang seimbang.</li>
+              <li><strong>Siklus Adaptasi Emosional:</strong> Syok -> Penyangkalan (denial) -> Kesedihan/Kemarahan -> Penerimaan &amp; Advokasi aktif.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Diskusikan empati guru: Jika ada orang tua yang tampak "menolak" kenyataan disabilitas anaknya, jangan menghakimi mereka. Penyangkalan adalah mekanisme pertahanan psikologis alami yang membutuhkan bimbingan bertahap.
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ede9fe; color: #6d28d9; border: 1.5px solid #ddd6fe;">
+            Slide 3 dari 6 • Keragaman Budaya
+          </span>
+          <h2 style="color: #6d28d9;">Prinsip Keterbalikan Budaya (Cultural Reciprocity)</h2>
+          <div class="slide-body">
+            <p>Komunikasi Lintas Budaya yang Memanusiakan (Heward et al., 2017):</p>
+            <ul>
+              <li>Kenali bias dan nilai kultural diri sendiri sebagai pendidik profesional.</li>
+              <li>Pahami cara pandang keluarga murid terhadap disabilitas tanpa prasangka etnosentris.</li>
+              <li>Jelaskan dasar ilmiah secara transparan dan bangun titik temu kesepakatan intervensi.</li>
+              <li>Hormati bahasa ibu dan nilai spiritual keluarga dalam proses perencanaan PPI/IEP.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Berikan contoh di Indonesia: Beberapa budaya memandang anak disabilitas sebagai berkah khusus atau ujian spiritual; guru harus merangkul nilai tersebut sebagai sumber kekuatan, bukan mencemoohnya.
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ecfdf5; color: #047857; border: 1.5px solid #a7f3d0;">
+            Slide 4 dari 6 • Kolaborasi Kelas
+          </span>
+          <h2 style="color: #047857;">Enam Model Kemitraan Mengajar (Co-Teaching)</h2>
+          <div class="slide-body">
+            <p>Sinergi Guru Kelas Reguler &amp; Guru Pembimbing Khusus (GPK):</p>
+            <ul>
+              <li><strong>One Teach, One Observe:</strong> Satu mengajar, satu mencatat data perilaku.</li>
+              <li><strong>One Teach, One Assist:</strong> Satu memimpin kelas, satu mendampingi meja siswa.</li>
+              <li><strong>Parallel &amp; Station Teaching:</strong> Membagi kelompok untuk mereduksi rasio siswa-guru.</li>
+              <li><strong>Alternative &amp; Team Teaching:</strong> Intervensi kelompok terarah dan dialog tim sejajar.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Ingatkan mahasiswa: GPK bukan "asisten pribadi" atau pesuruh guru reguler; kedua guru berstatus sejajar dengan keahlian yang saling melengkapi (content specialist + adaptation specialist).
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #ffedd5; color: #c2410c; border: 1.5px solid #fed7aa;">
+            Slide 5 dari 6 • Transisi Mandiri
+          </span>
+          <h2 style="color: #c2410c;">Perencanaan Transisi Individual (ITP)</h2>
+          <div class="slide-body">
+            <p>Menjamin Jembatan Menuju Kehidupan Pascasekolah (Usia 16+):</p>
+            <ul>
+              <li><strong>Tiga Pilar Mandat ITP:</strong> Pendidikan Tinggi/Vokasi, Ketenagakerjaan Terintegrasi, dan Kemandirian Komunitas.</li>
+              <li><strong>Supported Employment:</strong> Bekerja di perusahaan umum dengan upah standar dan pendampingan pelatih kerja (job coach).</li>
+              <li>Meninggalkan model isolatif Sheltered Workshops menuju inklusi ekonomi nyata.</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Tekankan konsep job coach: Pelatih kerja melatih keterampilan di tempat kerja riil dan secara bertahap menarik diri (fading) saat murid sudah mampu bekerja mandiri bersama rekan kerja lainnya.
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide-item">
+          <span class="slide-badge-pill" style="background: #fdf2f8; color: #be185d; border: 1.5px solid #fbcfe8;">
+            Slide 6 dari 6 • Rangkuman &amp; Aksi
+          </span>
+          <h2 style="color: #be185d;">Closing Thought: Menyiapkan Sidang UAS</h2>
+          <div class="slide-body">
+            <p>Puncak Kulminasi Keilmuan Ortopedagogik:</p>
+            <ul>
+              <li>Gunakan prinsip Self-Determination: Dengarkan suara siswa dalam setiap keputusan masa depan.</li>
+              <li>Keluarga dan sekolah adalah dua sayap yang menerbangkan potensi kemandirian anak.</li>
+              <li>Minggu Depan (Pertemuan 16): EVALUASI AKHIR SEMESTER (UAS) — Presentasi Panel Portofolio Dokumen PPI/IEP Komprehensif!</li>
+            </ul>
+          </div>
+          <div class="speaker-notes-colorful">
+            <strong>Catatan Pemateri:</strong> Berikan pengarahan persiapan teknis berkas portofolio PPI/IEP yang akan disidangkan pada Pertemuan 16 minggu depan, lalu arahkan mahasiswa mengerjakan LKM 15.
+          </div>
+        </div>
+
+        <!-- DOCK NAVIGASI CEPAT SLIDE (SLIDE QUICK-JUMP DOCK) -->
+        <div>
+          <div class="slide-nav-dock">
+            <button class="dock-btn active" onclick="jumpToSlide(0)">1</button>
+            <button class="dock-btn" onclick="jumpToSlide(1)">2</button>
+            <button class="dock-btn" onclick="jumpToSlide(2)">3</button>
+            <button class="dock-btn" onclick="jumpToSlide(3)">4</button>
+            <button class="dock-btn" onclick="jumpToSlide(4)">5</button>
+            <button class="dock-btn" onclick="jumpToSlide(5)">6</button>
+          </div>
+
+          <footer class="slide-controls" style="border-top: 1px solid #e2e8f0; margin-top: 1.25rem;">
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+              <button class="btn-ctrl" style="background: var(--gz-orange);" onclick="changeSlide(1)">Selanjutnya ❯</button>
+            </div>
+            <button class="btn-ctrl secondary" style="color: #475569; background: #f1f5f9;" onclick="toggleSpeakerNotes()">🎙️ Buka/Tutup Catatan Dosen</button>
+          </footer>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LOGIKA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Pengalihan Tab Navigasi Utama
+    function switchView(targetViewId, buttonElement) {
+      document.querySelectorAll('.view-section').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(targetViewId).classList.add('active');
+      buttonElement.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Web Audio API Synthesizer (Efek Suara Mini Game Bawaan Browser)
+    let audioFxEnabled = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTone(type) {
+      if (!audioFxEnabled) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'success') {
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.25); // G5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } else {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+        osc.frequency.exponentialRampToValueAtTime(130.81, audioCtx.currentTime + 0.25); // C3
+        gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      }
+    }
+
+    function toggleAudioFx() {
+      audioFxEnabled = !audioFxEnabled;
+      const btn = document.getElementById('sound-btn');
+      if (audioFxEnabled) {
+        btn.classList.add('active');
+        btn.textContent = '🔊 Suara Pengarah: Aktif';
+      } else {
+        btn.classList.remove('active');
+        btn.textContent = '🔇 Suara Pengarah: Hening';
+      }
+    }
+
+    // 3. Evaluasi Mini Game Pertemuan 15
+    function evaluateTransitionGame(choice) {
+      const feedback = document.getElementById('game-feedback');
+      feedback.style.display = 'block';
+
+      if (choice === 'b') {
+        playTone('success');
+        feedback.style.background = '#ecfdf5';
+        feedback.style.color = '#065f46';
+        feedback.innerHTML = '<strong>Tepat Sekali! (Skor 100)</strong><br>Menurut doktrin Hallahan &amp; Kauffman (2005) dan Heward et al. (2017), tindakan sekolah melanggar pilar kemitraan orang tua, etika resiprositas budaya, dan hak determinasi diri (self-determination). Siswa dan keluarga adalah anggota inti sidang ITP; sekolah wajib merancang program transisi menuju kerja didukung (Supported Employment) dan kehidupan mandiri di masyarakat.';
+      } else {
+        playTone('error');
+        feedback.style.background = '#fff1f2';
+        feedback.style.color = '#9f1239';
+        feedback.innerHTML = '<strong>Kurang Tepat!</strong><br>Perhatikan prinsip dasar hukum IDEA: sekolah dilarang membuat keputusan sepihak mengenai masa depan murid tanpa persetujuan keluarga dan kehadiran peserta didik (shared decision-making).';
+      }
+    }
+
+    // 4. Proteksi Kunci Jawaban Soal PG (Khusus Dosen)
+    function promptLecturerAuth() {
+      const pwd = prompt("Masukkan kata sandi dosen pengampu untuk membuka kunci jawaban & pembahasan:");
+      if (pwd === "dosenorto" || pwd === "ortopedagogik") {
+        document.querySelectorAll('.lecturer-key-box').forEach(box => {
+          box.style.display = 'block';
+        });
+        alert("Autentikasi berhasil. Kunci jawaban dan pembahasan kasus transisi telah terbuka.");
+      } else if (pwd !== null) {
+        alert("Kata sandi salah. Akses kunci jawaban hanya diperuntukkan bagi dosen pengampu.");
+      }
+    }
+
+    // 5. Pengendali Slide Presentasi Dosen & Quick-Jump Dock
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+    const dockBtns = document.querySelectorAll('.dock-btn');
+
+    function updateSlideDisplay() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+      dockBtns.forEach((btn, idx) => {
+        btn.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+      updateSlideDisplay();
+    }
+
+    function jumpToSlide(index) {
+      currentSlide = index;
+      updateSlideDisplay();
+    }
+
+    function toggleSpeakerNotes() {
+      const activeSlide = slides[currentSlide];
+      const notes = activeSlide.querySelector('.speaker-notes-colorful');
+      if (notes) {
+        notes.style.display = (notes.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // Navigasi Keyboard untuk Slide
+    document.addEventListener('keydown', (e) => {
+      const presView = document.getElementById('presentation-view');
+      if (presView.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
