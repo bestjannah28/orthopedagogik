@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Pembelajaran Ortopedagogik (Pendidikan Khusus)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styling khusus hub dashboard portal */
+    .portal-hero {
+      background: linear-gradient(135deg, #e4f4ea 0%, #ede8f8 100%);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    .portal-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 2.8rem);
+      color: #123023;
+      margin-bottom: 0.75rem;
+    }
+    .portal-hero p {
+      max-width: 760px;
+      margin: 0 auto 1.5rem auto;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .stat-chip {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--border-color);
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .session-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .session-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+    .session-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-matcha);
+    }
+    .session-card.exam {
+      border-left: 5px solid var(--accent-coral);
+      background: #fffdfc;
+    }
+    .session-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.75rem;
+      width: fit-content;
+    }
+    .badge-matcha { background: var(--accent-matcha-light); color: var(--accent-matcha); }
+    .badge-lavender { background: var(--accent-lavender-light); color: var(--accent-lavender); }
+    .badge-amber { background: #fef3c7; color: #b45309; }
+    .badge-coral { background: #fee2e2; color: var(--accent-coral); }
+
+    .session-card h3 {
+      font-size: 1.18rem;
+      margin-bottom: 0.6rem;
+      color: var(--text-main);
+    }
+    .session-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+    }
+    .btn-access {
+      background: var(--accent-matcha);
+      color: white;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.55rem 1.2rem;
+      border-radius: var(--radius-full);
+      transition: var(--transition-smooth);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .btn-access:hover {
+      background: #235d44;
+      transform: translateX(3px);
+    }
+    .btn-access.secondary {
+      background: var(--accent-lavender);
+    }
+    .btn-access.secondary:hover {
+      background: #5b4a92;
+    }
+    .reference-tag {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span>ORTOPEDAGOGIK HUB</span>
+        <span class="pill">Semester Genap / Ganjil</span>
+      </div>
+      <div style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">
+        Program Studi Pendidikan Khusus / PGSD / BK
+      </div>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- HERO BANNER -->
+    <header class="portal-hero">
+      <span class="section-label">Portal Perkuliahan Terpadu</span>
+      <h1>Dasar-Dasar Ortopedagogik</h1>
+      <p>Modul perkuliahan interaktif, materi bacaan komprehensif, lembar kerja evaluasi mandiri (*worksheet PDF*), dan slide presentasi dosen berbasis rujukan ilmiah resmi.</p>
+      
+      <div class="stats-bar">
+        <span class="stat-chip">⏱ Bobot: 2–3 SKS (16 Pertemuan)</span>
+        <span class="stat-chip">📖 Daniel P. Hallahan &amp; James M. Kauffman (2005)</span>
+        <span class="stat-chip">📚 William L. Heward et al. (2017)</span>
+      </div>
+    </header>
+
+    <!-- GRID PERTEMUAN 1-16 -->
+    <section>
+      <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+          <h2>Silabus Perkuliahan &amp; Akses Pertemuan</h2>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">Pilih salah satu pertemuan untuk mengakses materi bacaan web, lembar kerja, atau slide presentasi interaktif.</p>
+        </div>
+      </div>
+
+      <div class="session-grid">
+
+        <!-- Pertemuan 1 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-matcha">Pertemuan 1</span>
+            <h3>Konsep Dasar Ortopedagogik &amp; Distingsi Terminologi</h3>
+            <p class="session-desc">Etimologi *orthos* dan *paideia*, distingsi kuadran *Impairment*, *Disability*, dan *Handicap*, serta hakikat Anak Berkebutuhan Khusus.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 1; Hallahan Bab 1</span>
+            <a href="pertemuan-1.html" class="btn-access">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 2 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-matcha">Pertemuan 2</span>
+            <h3>Evolusi Hak Sipil, Sejarah, &amp; 6 Pilar IDEA</h3>
+            <p class="session-desc">Periodisasi perlakuan sosial (suaka, segregasi, integrasi, inklusi), jejak historis dokter Itard, dan enam prinsip hukum perlindungan hak ABK.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 1; Hallahan Bab 1</span>
+            <a href="pertemuan-2.html" class="btn-access">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 3 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-matcha">Pertemuan 3</span>
+            <h3>Identifikasi, Alur Rujukan, Kerangka RTI, &amp; UDL</h3>
+            <p class="session-desc">Kelemahan *wait-to-fail model*, alur intervensi pra-rujukan, skema tiga tingkat *Response to Intervention*, dan tiga pilar *Universal Design for Learning*.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 2; Hallahan Bab 2</span>
+            <a href="pertemuan-3.html" class="btn-access">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 4 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-matcha">Pertemuan 4</span>
+            <h3>Perancangan 7 Komponen PPI/IEP &amp; Kontinum LRE</h3>
+            <p class="session-desc">Anatomi 7 komponen legal dokumen IEP (PLAAFP hingga ITP), perumusan target SMART terukur, tim multidisipliner, dan 7 level kontinum LRE.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 2; Hallahan Bab 2</span>
+            <a href="pertemuan-4.html" class="btn-access">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 5 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-matcha">Pertemuan 5</span>
+            <h3>Hambatan Intelektual &amp; Kurikulum Fungsional</h3>
+            <p class="session-desc">Kriteria diagnostik tripartit AAIDD, tiga domain perilaku adaptif, etiologi, teknik *task analysis*, *chaining*, dan determinasi diri.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 4; Hallahan Bab 5</span>
+            <a href="pertemuan-5.html" class="btn-access">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 6 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-matcha">Pertemuan 6</span>
+            <h3>Kesulitan Belajar Spesifik (SLD) &amp; Direct Instruction</h3>
+            <p class="session-desc">Pembedahan disleksia, diskalkulia, dan disgrafia, klausul eksklusi IDEA, defisit fonologis, serta sintaks pembelajaran eksplisit *Direct Instruction*.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 5; Hallahan Bab 6</span>
+            <a href="pertemuan-6.html" class="btn-access">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 7 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-lavender">Pertemuan 7</span>
+            <h3>ADHD, Hambatan Emosi &amp; Perilaku (EBD), dan FBA</h3>
+            <p class="session-desc">Karakteristik inatensi &amp; hiperaktivitas, eksternalisasi vs internalisasi, *Functional Behavioral Assessment* (A-B-C), dan dukungan SWPBIS.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 6 &amp; 11; Hallahan Bab 7 &amp; 8</span>
+            <a href="pertemuan-7.html" class="btn-access secondary">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 8: UTS -->
+        <article class="session-card exam">
+          <div>
+            <span class="session-badge badge-coral">Pertemuan 8 • Evaluasi</span>
+            <h3>Evaluasi Tengah Semester (UTS)</h3>
+            <p class="session-desc">Ujian tulis analitis dan penyelesaian studi kasus integratif mencakup materi dasar ortopedagogik, regulasi IDEA, RTI, IEP, ID, SLD, dan EBD.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag" style="color: var(--accent-coral); font-weight: 700;">Bobot Penilaian: 25%</span>
+            <a href="pertemuan-8.html" class="btn-access" style="background: var(--accent-coral);">Akses Ujian ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 9 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-lavender">Pertemuan 9</span>
+            <h3>Spektrum Autisme (ASD) &amp; Pendekatan Terapan ABA</h3>
+            <p class="session-desc">Triad autisme DSM/IDEA, *Theory of Mind*, penanganan sensori, *Applied Behavior Analysis* (ABA), PECS, TEACCH, dan penulisan Cerita Sosial.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 7; Hallahan Bab 9</span>
+            <a href="pertemuan-9.html" class="btn-access secondary">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 10 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-lavender">Pertemuan 10</span>
+            <h3>Gangguan Komunikasi, Bicara, Bahasa, &amp; Sistem AAC</h3>
+            <p class="session-desc">Gangguan artikulasi, kelancaran (gagap), resonansi suara, defisit 5 dimensi bahasa, serta komunikasi augmentatif dan alternatif (*AAC*).</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 8; Hallahan Bab 10</span>
+            <a href="pertemuan-10.html" class="btn-access secondary">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 11 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-lavender">Pertemuan 11</span>
+            <h3>Disabilitas Sensori: Penglihatan (Netra) &amp; Pendengaran (Rungu)</h3>
+            <p class="session-desc">Braille literacy, O&amp;M, *Expanded Core Curriculum*, pendekatan oral vs bahasa isyarat, Budaya Tuli, dan modifikasi lingkungan belajar.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 9 &amp; 10; Hallahan Bab 11 &amp; 12</span>
+            <a href="pertemuan-11.html" class="btn-access secondary">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 12 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-lavender">Pertemuan 12</span>
+            <h3>Disabilitas Fisik, Neuromotorik, &amp; Gangguan Kesehatan (OHI)</h3>
+            <p class="session-desc">*Cerebral palsy*, spina bifida, distrofi otot, protokol darurat kejang epilepsi, serta teknik penanganan posisi tubuh (*handling and positioning*).</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 11 &amp; 12; Hallahan Bab 13 &amp; 14</span>
+            <a href="pertemuan-12.html" class="btn-access secondary">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 13 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-amber">Pertemuan 13</span>
+            <h3>Disabilitas Majemuk, Hambatan Berat, &amp; Deaf-Blindness</h3>
+            <p class="session-desc">Kombinasi defisit sensori-motorik ganda, komunikasi taktil, kalender objek konkret, kurikulum esensial, dan etika martabat berisiko (*dignity of risk*).</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 12; Hallahan Bab 13</span>
+            <a href="pertemuan-13.html" class="btn-access" style="background: var(--accent-amber); color: #18221c;">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 14 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-amber">Pertemuan 14</span>
+            <h3>Anak Berbakat Istimewa &amp; Twice-Exceptional (2e)</h3>
+            <p class="session-desc">Model tiga cincin Renzulli, diferensiasi kurikulum (akselerasi vs pengayaan), penugasan bertingkat (*tiered assignments*), dan paradoks anak 2e.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 13; Hallahan Bab 15</span>
+            <a href="pertemuan-14.html" class="btn-access" style="background: var(--accent-amber); color: #18221c;">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 15 -->
+        <article class="session-card">
+          <div>
+            <span class="session-badge badge-amber">Pertemuan 15</span>
+            <h3>Kemitraan Keluarga, Kolaborasi Tim, &amp; Transisi Dewasa (ITP)</h3>
+            <p class="session-desc">Pendekatan sistem keluarga, resiprositas budaya, model *co-teaching*, serta perancangan transisi vokasional dan kehidupan mandiri di masyarakat.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag">Heward Bab 3 &amp; 15; Hallahan Bab 3 &amp; 4</span>
+            <a href="pertemuan-15.html" class="btn-access" style="background: var(--accent-amber); color: #18221c;">Buka Modul ➔</a>
+          </div>
+        </article>
+
+        <!-- Pertemuan 16: UAS -->
+        <article class="session-card exam" style="border-left-color: var(--accent-matcha);">
+          <div>
+            <span class="session-badge badge-matcha">Pertemuan 16 • Evaluasi Akhir</span>
+            <h3>Evaluasi Akhir Semester (UAS): Portofolio PPI/IEP</h3>
+            <p class="session-desc">Presentasi panel unjuk kerja portofolio intervensi individual terpadu: perumusan PLAAFP, target SMART terukur, adaptasi kurikulum, dan rencana transisi.</p>
+          </div>
+          <div class="card-footer">
+            <span class="reference-tag" style="color: var(--accent-matcha); font-weight: 700;">Bobot Penilaian: 35%</span>
+            <a href="pertemuan-16.html" class="btn-access">Akses Proyek ➔</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- FOOTER INFORMASI BUKU -->
+    <footer class="content-card" style="margin-top: 1rem; text-align: center;">
+      <h4 style="margin-bottom: 0.5rem;">Dua Rujukan Otoritatif Utama Mata Kuliah</h4>
+      <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 800px; margin: 0 auto;">
+        1. <strong>Hallahan, D. P., &amp; Kauffman, J. M. (2005)</strong>. <em>Exceptional Learners: Introduction to Special Education</em> (10th Ed.). Allyn &amp; Bacon.<br>
+        2. <strong>Heward, W. L., Alber-Morgan, S. R., &amp; Konrad, M. (2017)</strong>. <em>Exceptional Children: An Introduction to Special Education</em> (11th Ed.). Pearson.
+      </p>
+      <div style="margin-top: 1rem; font-size: 0.82rem; color: var(--text-light);">
+        © 2026 Tim Dosen Pengampu Ortopedagogik • Format Responsive Web Presentation &amp; Printable LKM
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>
