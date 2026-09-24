@@ -5,21 +5,21 @@
 
 // 1. DAFTAR KATA SANDI MAHASISWA TIAP PERTEMUAN (Bisa Anda sesuaikan bebas)
 const PASSWORDS_MAHASISWA = {
-  "pertemuan_1":  "orto01",
-  "pertemuan_2":  "orto02",
-  "pertemuan_3":  "orto03",
-  "pertemuan_4":  "orto04",
-  "pertemuan_5":  "orto05",
-  "pertemuan_6":  "orto06",
-  "pertemuan_7":  "orto07",
+  "pertemuan_1":  "orto0109",
+  "pertemuan_2":  "orto0208",
+  "pertemuan_3":  "orto0307",
+  "pertemuan_4":  "orto0406",
+  "pertemuan_5":  "orto0505",
+  "pertemuan_6":  "orto0604",
+  "pertemuan_7":  "orto0703",
   "pertemuan_8":  "uts2026",   // Ujian Tengah Semester (UTS)
-  "pertemuan_9":  "orto09",
-  "pertemuan_10": "orto10",
-  "pertemuan_11": "orto11",
-  "pertemuan_12": "orto12",
-  "pertemuan_13": "orto13",
-  "pertemuan_14": "orto14",
-  "pertemuan_15": "orto15",
+  "pertemuan_9":  "orto0902",
+  "pertemuan_10": "orto1001",
+  "pertemuan_11": "orto1100",
+  "pertemuan_12": "orto1219",
+  "pertemuan_13": "orto1318",
+  "pertemuan_14": "orto1417",
+  "pertemuan_15": "orto1516",
   "pertemuan_16": "uas2026"    // Ujian Akhir Semester (UAS)
 };
 
